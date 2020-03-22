@@ -7,6 +7,7 @@ import yfinance as yf
 #This file will keep track of all the moving variables and we can slowly add to that file
 import configKeys
 
+#<<<<<<< HEAD
 # Get the data of the stock AAPL
 #data = yf.download('AAPL','2016-01-01','2018-01-01')
 

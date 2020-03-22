@@ -33,6 +33,8 @@ masterStockList = []
 
 
 for ind in df.index:
+    # Have an if statement in place in case if we don't want to pull every stock because there are a lot of stocks
+    # Program takes a long time to run if we have to webscrape every stock each time we run
     if(df['Sector'][ind] == configKeys.SECTORLIST):
         stockData = yf.download(df['Symbol'][ind], configKeys.STARTPULL, configKeys.ENDPULL)
         stock = Stock(df['Symbol'][ind], stockData, df['Sector'][ind], df['IPOyear'][ind], configKeys.STARTPULL+configKeys.ENDPULL)

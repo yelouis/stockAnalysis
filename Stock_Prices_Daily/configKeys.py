@@ -1,0 +1,4 @@
+SECTORLIST = "Technology"
+
+STARTPULL = "2018-01-01"
+ENDPULL = "2019-01-01"

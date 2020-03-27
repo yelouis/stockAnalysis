@@ -59,6 +59,8 @@ def DTW(X, Y):
 
   return d
 
+
+
 X = masterStockList
 
 # Make the Clusters

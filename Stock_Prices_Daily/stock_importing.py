@@ -34,7 +34,7 @@ for ind in df.index:
     # If there's something that's been loaded into stockData, then the length is no longer 0
     if len(stockData) > 0:
         stockData = stockData.assign(Sector = df['Sector'][ind], IPOyear = df['IPOyear'][ind])
-        stockData.to_csv(df['Symbol'][ind]+'Hourly.csv')
+        stockData.to_csv(df['Symbol'][ind]+'Daily.csv')
 
 
 

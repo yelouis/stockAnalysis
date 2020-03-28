@@ -378,8 +378,8 @@ BILL,"Bill.com Holdings, Inc.",,,2019,Technology,Computer Software: Prepackaged 
 BIO,"Bio-Rad Laboratories, Inc.",,,n/a,Capital Goods,Biotechnology: Laboratory Analytical Instruments
 BIO.B,"Bio-Rad Laboratories, Inc.",,,n/a,n/a,n/a
 BIP,Brookfield Infrastructure Partners LP,,,n/a,Consumer Services,Marine Transportation
-BIP$,Brookfield Infrastructure Partners LP,,,n/a,n/a,n/a
-BIPC$,Brookfield Infrastructure Corporation,,,n/a,n/a,n/a
+BIP,Brookfield Infrastructure Partners LP,,,n/a,n/a,n/a
+BIPC,Brookfield Infrastructure Corporation,,,n/a,n/a,n/a
 BIT,BlackRock Multi-Sector Income Trust,,,2013,n/a,n/a
 BITA,Bitauto Holdings Limited,,,2010,Technology,EDP Services
 BJ,"BJ&#39;s Wholesale Club Holdings, Inc.",,,2018,Consumer Services,Department/Specialty Retail Stores
@@ -496,7 +496,7 @@ CAL,"Caleres, Inc.",,,n/a,Consumer Non-Durables,Shoe Manufacturing
 CALX,"Calix, Inc",,,2010,Consumer Services,Telecommunications Equipment
 CANG,Cango Inc.,,,2018,Technology,Computer Software: Prepackaged Software
 CAPL,CrossAmerica Partners LP,,,2012,Energy,Oil Refining/Marketing
-CARR$,Carrier Global Corporation,,,n/a,n/a,n/a
+CARR,Carrier Global Corporation,,,n/a,n/a,n/a
 CARS,Cars.com Inc.,,,2017,Technology,EDP Services
 CAT,"Caterpillar, Inc.",,,n/a,Capital Goods,Construction/Ag Equipment/Trucks
 CATO,Cato Corporation (The),,,n/a,Consumer Services,Clothing/Shoe/Accessory Stores
@@ -546,7 +546,7 @@ CEA,China Eastern Airlines Corporation Ltd.,,,1997,Transportation,Air Freight/De
 CEE,"The Central and Eastern Europe Fund, Inc.",,,n/a,n/a,n/a
 CEIX,CONSOL Energy Inc.,,,2017,Energy,Coal Mining
 CEL,"Cellcom Israel, Ltd.",,,2007,Public Utilities,Telecommunications Equipment
-CELG~,Celgene Corporation,,,n/a,n/a,n/a
+CELG,Celgene Corporation,,,n/a,n/a,n/a
 CELP,"Cypress Environmental Partners, L.P. ",,,2014,Miscellaneous,Business Services
 CEM,ClearBridge MLP and Midstream Fund Inc.,,,2010,n/a,n/a
 CEN,Center Coast Brookfield MLP & Energy Infrastructur,,,2013,n/a,n/a
@@ -729,7 +729,7 @@ CTR,ClearBridge MLP and Midstream Total Return Fund In,,,2012,n/a,n/a
 CTRA,"Contura Energy, Inc.",,,2018,Energy,Coal Mining
 CTS,CTS Corporation,,,n/a,Technology,Electrical Products
 CTST,CannTrust Holdings Inc.,,,2019,Consumer Durables,Specialty Chemicals
-CTT           ,"CatchMark Timber Trust, Inc.",,,2013,Consumer Services,Real Estate Investment Trusts
+CTT,"CatchMark Timber Trust, Inc.",,,2013,Consumer Services,Real Estate Investment Trusts
 CTV,Qwest Corporation,,,2014,Public Utilities,Telecommunications Equipment
 CTVA,"Corteva, Inc.",,,2019,Consumer Non-Durables,Farming/Seeds/Milling
 CTY,Qwest Corporation,,,2013,Public Utilities,Telecommunications Equipment
@@ -905,12 +905,12 @@ EBR,Centrais Electricas Brasileiras S.A.- Eletrobras,,,2016,Public Utilities,Ele
 EBR.B,Centrais Electricas Brasileiras S.A.- Eletrobras,,,2016,n/a,n/a
 EBS,"Emergent Biosolutions, Inc.",,,2006,Health Care,Major Pharmaceuticals
 EC,Ecopetrol S.A.,,,n/a,Energy,Oil & Gas Production
-ECC           ,Eagle Point Credit Company Inc.,,,2014,n/a,n/a
+ECC,Eagle Point Credit Company Inc.,,,2014,n/a,n/a
 ECCB,Eagle Point Credit Company Inc.,,,2016,n/a,n/a
 ECCX,Eagle Point Credit Company Inc.,,,2018,n/a,n/a
 ECCY,Eagle Point Credit Company Inc.,,,2017,n/a,n/a
 ECL,Ecolab Inc.,,,n/a,Basic Industries,Package Goods/Cosmetics
-ECOM          ,ChannelAdvisor Corporation,,,2013,Technology,Computer Software: Prepackaged Software
+ECOM,ChannelAdvisor Corporation,,,2013,Technology,Computer Software: Prepackaged Software
 ECT,ECA Marcellus Trust I,,,2010,Energy,Oil & Gas Production
 ED,Consolidated Edison Inc,,,n/a,Public Utilities,Power Generation
 EDD,"Morgan Stanley Emerging Markets Domestic Debt Fund, Inc.",,,2007,n/a,n/a
@@ -1024,7 +1024,7 @@ ETR,Entergy Corporation,,,n/a,Public Utilities,Electric Utilities: Central
 ETRN,Equitrans Midstream Corporation,,,2018,Public Utilities,Natural Gas Distribution
 ETV,Eaton Vance Corporation,,,2005,n/a,n/a
 ETW,Eaton Vance Corporation,,,2005,n/a,n/a
-ETX           ,Eaton Vance Municipal Income 2028 Term Trust,,,2013,n/a,n/a
+ETX,Eaton Vance Municipal Income 2028 Term Trust,,,2013,n/a,n/a
 ETY,Eaton Vance Tax-Managed Diversified Equity Income Fund,,,2006,n/a,n/a
 EURN,Euronav NV,,,2015,Transportation,Marine Transportation
 EV,Eaton Vance Corporation,,,n/a,Finance,Investment Managers
@@ -1072,7 +1072,7 @@ FDX,FedEx Corporation,,,n/a,Transportation,Air Freight/Delivery Services
 FE,FirstEnergy Corp.,,,n/a,Public Utilities,Electric Utilities: Central
 FEAC.U,Flying Eagle Acquisition Corp.,,,2020,n/a,n/a
 FEDU,Four Seasons Education (Cayman) Inc.,,,2017,Consumer Services,Other Consumer Services
-FEI           ,First Trust MLP and Energy Income Fund,,,2012,n/a,n/a
+FEI,First Trust MLP and Energy Income Fund,,,2012,n/a,n/a
 FENG,Phoenix New Media Limited,,,2011,Consumer Services,Broadcasting
 FEO,First Trust/Aberdeen Emerging Opportunity Fund,,,n/a,n/a,n/a
 FET,"Forum Energy Technologies, Inc.",,,2012,Energy,Metal Fabrications
@@ -1189,7 +1189,7 @@ GE,General Electric Company,,,n/a,Energy,Consumer Electronics/Appliances
 GEF,"Greif, Inc.",,,n/a,n/a,n/a
 GEF.B,"Greif, Inc.",,,n/a,n/a,n/a
 GEL,"Genesis Energy, L.P.",,,1996,Energy,Oil Refining/Marketing
-GEN           ,"Genesis Healthcare, Inc.",,,n/a,Health Care,Hospital/Nursing Management
+GEN,"Genesis Healthcare, Inc.",,,n/a,Health Care,Hospital/Nursing Management
 GEO,Geo Group Inc (The),,,n/a,Consumer Services,Real Estate Investment Trusts
 GER,Goldman Sachs MLP Energy Renaissance Fund,,,1986,n/a,n/a
 GES,"Guess?, Inc.",,,1996,Consumer Non-Durables,Apparel
@@ -1219,7 +1219,7 @@ GIS,"General Mills, Inc.",,,n/a,Consumer Non-Durables,Packaged Foods
 GIX,"GigCapital2, Inc.",,,2019,Finance,Business Services
 GIX.U,"GigCapital2, Inc.",,,2019,n/a,n/a
 GIX.WS,"GigCapital2, Inc.",,,n/a,n/a,n/a
-GIX~,"GigCapital2, Inc.",,,n/a,n/a,n/a
+GIX,"GigCapital2, Inc.",,,n/a,n/a,n/a
 GJH,STRATS Trust,,,n/a,Finance,Finance: Consumer Services
 GJO,STRATS Trust,,,n/a,Finance,Finance: Consumer Services
 GJP,"Synthetic Fixed-Income Securities, Inc.",,,n/a,n/a,n/a
@@ -1421,7 +1421,7 @@ HUN,Huntsman Corporation,,,2005,Basic Industries,Major Chemicals
 HUYA,HUYA Inc.,,,2018,Technology,"Computer Software: Programming, Data Processing"
 HVT,"Haverty Furniture Companies, Inc.",,,n/a,Consumer Services,Other Specialty Stores
 HVT.A,"Haverty Furniture Companies, Inc.",,,n/a,n/a,n/a
-HWM$,Howmet Aerospace Inc.,,,n/a,n/a,n/a
+HWM,Howmet Aerospace Inc.,,,n/a,n/a,n/a
 HXL,Hexcel Corporation,,,n/a,Basic Industries,Major Chemicals
 HY,"Hyster-Yale Materials Handling, Inc.",,,n/a,Capital Goods,Construction/Ag Equipment/Trucks
 HYB,"New America High Income Fund, Inc. (The)",,,1988,n/a,n/a
@@ -2139,7 +2139,7 @@ ORN,"Orion Group Holdings, Inc.",,,n/a,Basic Industries,Military/Government/Tech
 OSB,Norbord Inc.,,,n/a,Basic Industries,Forest Products
 OSG,"Overseas Shipholding Group, Inc.",,,2015,Transportation,Marine Transportation
 OSK,Oshkosh Corporation,,,n/a,Capital Goods,Auto Manufacturing
-OTIS$,Otis Worldwide Corporation,,,n/a,n/a,n/a
+OTIS,Otis Worldwide Corporation,,,n/a,n/a,n/a
 OUT,OUTFRONT Media Inc.,,,2014,Consumer Services,Real Estate Investment Trusts
 OVV,Ovintiv Inc.,,,n/a,Energy,Oil & Gas Production
 OXM,"Oxford Industries, Inc.",,,n/a,Consumer Non-Durables,Apparel
@@ -2476,7 +2476,7 @@ SALT,Scorpio Bulkers Inc.,,,2013,Transportation,Marine Transportation
 SAM,"Boston Beer Company, Inc. (The)",,,n/a,Consumer Non-Durables,Beverages (Production/Distribution)
 SAN,"Banco Santander, S.A.",,,n/a,Finance,Commercial Banks
 SAN^B,"Banco Santander, S.A.",,,n/a,n/a,n/a
-SAND          ,Sandstorm Gold Ltd,,,n/a,Basic Industries,Precious Metals
+SAND,Sandstorm Gold Ltd,,,n/a,Basic Industries,Precious Metals
 SAP,SAP SE,,,n/a,Technology,Computer Software: Prepackaged Software
 SAR,Saratoga Investment Corp,,,n/a,n/a,n/a
 SAVE,"Spirit Airlines, Inc.",,,n/a,Transportation,Air Freight/Delivery Services
@@ -2604,7 +2604,7 @@ SOR,"Source Capital, Inc.",,,n/a,n/a,n/a
 SPAQ,Spartan Energy Acquisition Corp,,,2018,Finance,Business Services
 SPAQ.U,Spartan Energy Acquisition Corp,,,2018,n/a,n/a
 SPAQ.WS,Spartan Energy Acquisition Corp,,,n/a,n/a,n/a
-SPB           ,"Spectrum Brands Holdings, Inc.",,,n/a,Miscellaneous,Industrial Machinery/Components
+SPB,"Spectrum Brands Holdings, Inc.",,,n/a,Miscellaneous,Industrial Machinery/Components
 SPCE,"Virgin Galactic Holdings, Inc.",,,2017,Consumer Services,Transportation Services
 SPCE.U,"Virgin Galactic Holdings, Inc.",,,2017,n/a,n/a
 SPCE.WS,"Virgin Galactic Holdings, Inc.",,,n/a,n/a,n/a
@@ -2647,7 +2647,7 @@ SSTK,"Shutterstock, Inc.",,,2012,Technology,EDP Services
 ST,Sensata Technologies Holding plc,,,2010,Capital Goods,Industrial Machinery/Components
 STAG,"Stag Industrial, Inc.",,,2011,Consumer Services,Real Estate Investment Trusts
 STAG^C,"Stag Industrial, Inc.",,,n/a,n/a,n/a
-STAR          ,iStar Inc.,,,n/a,Consumer Services,Real Estate Investment Trusts
+STAR,iStar Inc.,,,n/a,Consumer Services,Real Estate Investment Trusts
 STAR^D,iStar Inc.,,,n/a,n/a,n/a
 STAR^G,iStar Inc.,,,n/a,n/a,n/a
 STAR^I,iStar Inc.,,,n/a,n/a,n/a

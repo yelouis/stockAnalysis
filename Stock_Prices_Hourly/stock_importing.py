@@ -1,6 +1,3 @@
-# Import the plotting library
-import matplotlib.pyplot as plt
-
 # Import the yfinance. If you get module not found error the run !pip install yfiannce from your Jupyter notebook
 import yfinance as yf
 
@@ -10,12 +7,9 @@ import configKeys
 # Get the data of the stock AAPL
 #data = yf.download('AAPL','2016-01-01','2018-01-01')
 
-# Plot the close price of the AAPL
-#data.Close.plot()
-#plt.show()
-
 import pandas as pd
 import collections
+import os
 import copy
 
 Stock = collections.namedtuple('Stock', ['symbol', 'price', 'sector', 'IPOyear', "dates"])
@@ -33,12 +27,12 @@ for ind in df.index:
 
     # Here is how to get hourly data. Only problem is that we can't get it over a large interval
     # https://pypi.org/project/yfinance/
-    stockData = yf.download(df['Symbol'][ind], period = "ytd", interval = "1h")
+    stockData = yf.download(df['Symbol'][ind], period = "ytd", interval = "60m")
 
     # If there's something that's been loaded into stockData, then the length is no longer 0
     if len(stockData) > 0:
         stockData = stockData.assign(Sector = df['Sector'][ind], IPOyear = df['IPOyear'][ind])
-        stockData.to_csv(df['Symbol'][ind]+'Hourly.csv')
+        stockData.to_csv(os.path.join(os.getcwd(), 'Hourly', df['Symbol'][ind]+'.csv'))
 
 
 

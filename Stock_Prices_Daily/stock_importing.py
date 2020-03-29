@@ -17,12 +17,17 @@ import configKeys
 import pandas as pd
 import collections
 import copy
+import os
+
+from pathlib import Path
 
 Stock = collections.namedtuple('Stock', ['symbol', 'price', 'sector', 'IPOyear', "dates"])
 
 df = pd.read_csv("companylist.csv", low_memory=False)
 
 stockTickers = df.Symbol
+
+data_folder = Path("Daily/")
 
 for ind in df.index:
     # Have an if statement in place in case if we don't want to pull every stock because there are a lot of stocks
@@ -31,14 +36,15 @@ for ind in df.index:
     # Code to get daily data
     # stockData = yf.download(df['Symbol'][ind], start=configKeys.STARTPULL, end=configKeys.ENDPULL)
 
-    # Here is how to get hourly data. Only problem is that we can't get it over a large interval
     # https://pypi.org/project/yfinance/
     stockData = yf.download(df['Symbol'][ind], start=configKeys.STARTPULL, end=configKeys.ENDPULL)
+
+
 
     # If there's something that's been loaded into stockData, then the length is no longer 0
     if len(stockData) > 0:
         stockData = stockData.assign(Sector = df['Sector'][ind], IPOyear = df['IPOyear'][ind])
-        stockData.to_csv(df['Symbol'][ind]+'Daily.csv')
+        stockData.to_csv(os.path.join(data_folder, df['Symbol'][ind]+'Daily.csv'))
 
 
 

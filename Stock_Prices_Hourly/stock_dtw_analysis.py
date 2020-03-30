@@ -96,14 +96,14 @@ X = np.array([preprocessing.scale(stock.price) for stock in masterStockList if l
 
 # Make the Clusters
 #Z = hac.linkage(X, method='average', metric='euclidean')
-Z = hac.linkage(X, method = 'average', metric=DTW)
+Z = hac.linkage(X[:100], method = 'average', metric=DTW)
 
 # Dendrogram with more information (Key part is max_d)
 plt.figure(figsize=(15, 10))
 fancy_dendrogram(
   Z,
   leaf_rotation=90.,
-  max_d=100,
+  max_d=0.1,
   annotate_above=15,
 )
 plt.show()

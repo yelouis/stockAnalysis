@@ -28,8 +28,6 @@ df = pd.read_csv("companylist.csv", low_memory=False)
 
 stockTickers = df.Symbol
 
-data_folder = Path("Daily/")
-
 sucessfulPulls = [["Symbol", "Sector"]]
 
 for ind in df.index:
@@ -49,11 +47,11 @@ for ind in df.index:
     # If there's something that's been loaded into stockData, then the length is no longer 0
     if len(stockData) > 0:
         stockData = stockData.assign(Sector = df['Sector'][ind], IPOyear = df['IPOyear'][ind])
-        stockData.to_csv(os.path.join(data_folder, df['Symbol'][ind]+'Daily.csv'))
+        stockData.to_csv(os.path.join(Path(configKeys.DATA_FOLDER), df['Symbol'][ind]+'Daily.csv'))
 
 
 #Creating a sucessful file that includes stock tickers and sectors
-with open("sucessfulPulls.csv", "w", newline="") as f:
+with open("successfulPulls.csv", "w", newline="") as f:
     writer = csv.writer(f)
     writer.writerows(sucessfulPulls)
 

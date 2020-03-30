@@ -2,3 +2,5 @@ SECTORLIST = "Technology"
 
 STARTPULL = "2016-01-01"
 ENDPULL = "2020-01-01"
+
+DATA_FOLDER = "Daily/"

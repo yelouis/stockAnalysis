@@ -1,0 +1,147 @@
+﻿Name,Source,Code,type
+"Gold, London A.M. Fixing",LBMA,LBMA/GOLD,Metal
+"Gold, London P.M. Fixing",LBMA,BMA/GOLD,Metal
+"Gold, World Gold Council",WGC,WGC/GOLD_DAILY_USD,Metal
+"Gold, Bundesbank",BUNDESBANK,BUNDESBANK/BBK01_WT5511,Metal
+"Gold, COMEX Gold Futures",COMEX,CHRIS/CME_GC1,Metal
+"Gold, Shanghai Gold Futures",SHFE,SHFE/AUV2013,Metal
+"Gold, World Bank",WORLDBANK,WORLDBANK/WLD_GOLD,Metal
+"Silver, London fixing, USD equivalent",LBMA,LBMA/SILVER,Metal
+"Silver, Shanghai Silver Futures",SHFE,SHFE/AGV2013,Metal
+"Silver, COMEX Silver Futures",COMEX,CHRIS/CME_SI1,Metal
+"Silver, World Bank",WORLDBANK,WORLDBANK/WLD_SILVER,Metal
+"Platinum, Johnson Mathey London",JOHNMATT,JOHNMATT/PLAT,Metal
+"Platinum, NYMEX Platinum Futures",NYMEX,CHRIS/CME_PL1,Metal
+"Palladium, Johnson Mathey London",JOHNMATT,JOHNMATT/PALL,Metal
+"Palladium, NYMEX Palladium Futures",NYMEX,CHRIS/CME_PA1,Metal
+Iridium,JOHNMATT,JOHNMATT/IRID,Metal
+Rhodium,JOHNMATT,JOHNMATT/RHOD,Metal
+Ruthenium,JOHNMATT,JOHNMATT/RUTH,Metal
+"Aluminum, LME",LME,LME/PR_AL,Metal
+"Aluminum, ODA",ODA,ODA/PALUM_USD,Metal
+Shanghai Aluminum Futures,SHFE,SHFE/ALV2013,Metal
+"Cobalt, LME",LME,LME/PR_CO,Metal
+"Copper, LME",LME,LME/PR_CU,Metal
+"Copper, ODA",ODA,ODA/PCOPP_USD,Metal
+Copper Futures,COMEX,CHRIS/CME_HG1,Metal
+Shanghai Copper Futures,SHFE,SHFE/CUV2013,Metal
+"Iron Ore, Tianjin (ODA)",ODA,ODA/PIORECR_USD,Metal
+"Lead, LME",LME,LME/PR_PB,Metal
+"Lead, ODA",ODA,ODA/PLEAD_USD,Metal
+Shanghai Lead Futures,SHFE,SHFE/PBV2013,Metal
+"Molybdenum, LME",LME,LME/PR_MO,Metal
+"Nickel, LME",LME,LME/PR_NI,Metal
+"Nickel, ODA",ODA,ODA/PNICK_USD,Metal
+"Steel Billet, LME",LME,LME/PR_FM,Metal
+Steel Wire,WORLDBANK,WORLDBANK/WLD_STL_JP_WIROD,Metal
+Shanghai Steel Rebar Futures,SHFE,SHFE/RBV2013,Metal
+Shanghai Steel Wire Futures,SHFE,SHFE/WRV2013,Metal
+"Tin, LME",LME,LME/PR_TN,Metal
+"Tin, ODA",ODA,ODA/PTIN_USD,Metal
+"Zinc, LME",LME,LME/PR_ZI,Metal
+"Zinc, ODA",ODA,ODA/PZINC_USD,Metal
+Shanghai Zinc Futures,SHFE,SHFE/ZNV2013,Metal
+"Barley, Western Canada (ODA)",ODA,ODA/PBARL_USD,Grain
+"Barley, Western Canada (WB)",WORLDBANK,WORLDBANK/WLD_BARLEY,Grain
+"Corn, Top Flight Grain Co-op",TFGRAIN,TFGRAIN/CORN,Grain
+"Corn, CBOT Corn Futures",CME,CHRIS/CME_C1,Grain
+"Corn, U.S. Gulf Imports",WORLDBANK,WORLDBANK/WLD_MAIZE,Grain
+"Oats, CBOT Oats Futures",CME,CHRIS/CME_O1,Grain
+"Rice, Thailand (ODA)",ODA,ODA/PRICENPQ_USD,Grain
+"Rice, CBOT Rice Futures",CME,CHRIS/CME_RR1,Grain
+"Rice, Top Flight Grain Co-op",TFGRAIN,TFGRAIN/SOYBEANS,Grain
+"Soybean, CBOT Soybean Futures",CME,CHRIS/CME_S1,Grain
+"Soybean, CBOT Soybean Meal Futures",CME,CHRIS/CME_SM1,Grain
+"Wheat, Soybean Oil",WORLDBANK,WORLDBANK/WLD_SOYBEAN_OIL,Grain
+"Wheat, CBOT Soybean Oil Futures",CME,CHRIS/CME_BO1,Grain
+"Wheat, Gulf of Mexico",ODA,ODA/PWHEAMT_USD,Grain
+"Wheat, CBOT Wheat Futures",CME,CHRIS/CME_W1,Grain
+"Dairy, CME Milk Futures",CME,CHRIS/CME_DA1,Farms and Fishery
+"Cattle, Beef (ODA)",ODA,ODA/PBEEF_USD,Farms and Fishery
+"Cattle, CME Live Cattle Futures",CME,CHRIS/CME_LC1,Farms and Fishery
+"Cattle, CME Feeder Cattle Futures",CME,CHRIS/CME_FC1,Farms and Fishery
+"Cattle, Hides, Chicago (ODA)",ODA,ODA/PHIDE_USD,Farms and Fishery
+"Poulty, Chicken, Georgia (ODA)",ODA,ODA/PPOULT_USD,Farms and Fishery
+"Pork, Pork, Chicago (ODA)",ODA,ODA/PPORK_USD,Farms and Fishery
+"Pork, CME Lean Hog Futures",CME,CHRIS/CME_LN1,Farms and Fishery
+"Fats, Lamb",ODA,ODA/PLAMB_USD,Farms and Fishery
+Wool,ODA,ODA/PWOOLC_USD,Farms and Fishery
+Salmon,ODA,ODA/PSALM_USD,Farms and Fishery
+Shrimp,ODA,ODA/PSHRI_USD,Farms and Fishery
+Fishmeal,ODA,ODA/PFISH_USD,Farms and Fishery
+NYMEX RBOB Gasoline Futures,NYMEX,CHRIS/CME_RB1,Crude Oil and Gasoline
+NYMEX Crude Oil Futures,NYMEX,CHRIS/CME_CL1,Crude Oil and Gasoline
+ICE Brent Crude Oil Futures,ICE,CHRIS/ICE_B1,Crude Oil and Gasoline
+U.S. Landed Costs of Canadian Light Sour Blend Crude Oil,DOE,DOE/I19263000008,Crude Oil and Gasoline
+Los Angeles Reformulated RBOB Regular Gasoline Spot,DOE,DOE/EER_EPMRR_PF4_Y05LA_DPG,Crude Oil and Gasoline
+"WTI Crude Oil Spot Cushing, OK FOB",DOE,DOE/RWTC,Crude Oil and Gasoline
+Europe Brent Crude Oil Spot FOB,DOE,DOE/RBRTE,Crude Oil and Gasoline
+U.S. FOB Costs of Non-OPEC Countries Crude Oil,DOE,DOE/I070000004,Crude Oil and Gasoline
+U.S. FOB Costs of OPEC Countries Crude Oil,DOE,DOE/I060000004,Crude Oil and Gasoline
+Crude Oils from 1861,BRP,BRP/CRUDE_OIL_PRICES,Crude Oil and Gasoline
+OPEC Reference Basket,OPEC,OPEC/ORB,Crude Oil and Gasoline
+Dubai Crude Oil,ODA,ODA/POILDUB_USD,Crude Oil and Gasoline
+Blended Crude Oil,ODA,ODA/POILAPSP_USD,Crude Oil and Gasoline
+WTI Crude Oil,ODA,ODA/POILWTI_USD,Crude Oil and Gasoline
+Brent Crude Oil,ODA,ODA/POILBRE_USD,Crude Oil and Gasoline
+Europe & Central Asia (all income levels): Pump for gasoline (US$ per liter),WORLDBANK,WORLDBANK/ECS_EP_PMP_SGAS_CD,Crude Oil and Gasoline
+US Midgrade Conventional Gas,FRED,FRED/GASMIDCOVW,Crude Oil and Gasoline
+"Conventional Gasolines: New York Harbor, Regular",FRED,FRED/DGASNYH,Crude Oil and Gasoline
+US Regular Conventional Gas,FRED,FRED/GASREGCOVW,Crude Oil and Gasoline
+"Conventional Gasolines: U.S. Gulf Coast, Regular",FRED,FRED/DGASUSGULF,Crude Oil and Gasoline
+Consumer Index for All Urban Consumers: Gasoline (all types),FRED,FRED/CUUR0000SETB01,Crude Oil and Gasoline
+US All Grades Conventional Gas,FRED,FRED/GASALLCOVW,Crude Oil and Gasoline
+US Premium Conventional Gas,FRED,FRED/GASPRMCOVW,Crude Oil and Gasoline
+NYMEX Natural Gas Futures,NYMEX,CHRIS/CME_NG1,Natural Gas
+ICE UK Natural Gas Futures,ICE,CHRIS/ICE_M1,Natural Gas
+Natural Gass (vs. Crude),BRP,BRP/GAS_PRICES,Natural Gas
+Germany Natural Gas,ODA,ODA/PNGASEU_USD,Natural Gas
+Henry Hub Natural Gas,ODA,ODA/PNGASUS_USD,Natural Gas
+Japan Natural Gas,ODA,ODA/PNGASJP_USD,Natural Gas
+"Natural Gas: Henry Hub, LA",FRED,FRED/GASPRICE,Natural Gas
+Import (End Use): Gas-natural,FRED,FRED/IR10110,Natural Gas
+"U.S. Coals, 1949-2005",EPI,EPI/152,Coal
+US Coals by Region,DOE,DOE/COAL,Coal
+Coals,BRP,BRP/COAL_PRICES,Coal
+"Coal, South African export Monthly",INDEXMUNDI,INDEXMUNDI/COMMODITY_COALSOUTHAFRICANEXPORTPRICE,Coal
+Coal,ODA,ODA/PCOALAU_USD,Coal
+"Coal, Australia",WORLDBANK,WORLDBANK/WLD_COAL_AUS,Coal
+"Coal Exports,s for Great Britain",FRED,FRED/M04111GBM318NNBR,Coal
+"Wholesale of Coal for Essen, Germany",FRED,FRED/M04I1ADE00ESSM372NNBR,Coal
+Arabica Coffee,ODA,ODA/PCOFFOTM_USD,Agriculture Softs
+Robusta Coffee,ODA,ODA/PCOFFROB_USD,Agriculture Softs
+Coffee Futures,ICE,CHRIS/ICE_KC1,Agriculture Softs
+Cocoa beans,ODA,ODA/PCOCO_USD,Agriculture Softs
+Cocoa Futures,ICE,CHRIS/ICE_CC1,Agriculture Softs
+Tobacco,WORLDBANK,WORLDBANK/WLD_TOBAC_US,Agriculture Softs
+Tea,ODA,ODA/PTEA_USD,Agriculture Softs
+"Tea, Mombasa auctions",WORLDBANK,WORLDBANK/WLD_TEA_MOMBASA,Agriculture Softs
+US Imports Sugar,ODA,ODA/PSUGAUSA_USD,Agriculture Softs
+Sugar No. 11 Futures,ICE,CHRIS/ICE_SB1,Agriculture Softs
+Groundnuts (Peanuts),ODA,ODA/PGNUTS_USD,Fruits and Nuts
+Oranges,ODA,ODA/PORANG_USD,Fruits and Nuts
+Orange Juice Futures,ICE,CHRIS/ICE_OJ1,Fruits and Nuts
+Bananas,ODA,ODA/PBANSOP_USD,Fruits and Nuts
+"Bananas, US",WORLDBANK,WORLDBANK/WLD_BANANA_US,Fruits and Nuts
+Rapeseed Oil,ODA,ODA/PROIL_USD,Vegetable Oil
+Sunflower Oil,ODA,ODA/PSUNO_USD,Vegetable Oil
+Olive Oil,ODA,ODA/POLVOIL_USD,Vegetable Oil
+Palm Oil,ODA,ODA/PPOIL_USD,Vegetable Oil
+Palmkernal oil,WORLDBANK,WORLDBANK/WLD_PLMKRNL_OIL,Vegetable Oil
+Groundnut oil,WORLDBANK,WORLDBANK/WLD_GRNUT_OIL,Vegetable Oil
+Hard Logs,ODA,ODA/PLOGSK_USD,Forestry
+Soft Logs,ODA,ODA/PLOGORE_USD,Forestry
+Copra,WORLDBANK,WORLDBANK/WLD_COPRA,Forestry
+Soft Sawnwood,ODA,ODA/PSAWORE_USD,Forestry
+Hard Sawnwood,ODA,ODA/PSAWMAL_USD,Forestry
+Woodpulp,WORLDBANK,WORLDBANK/WLD_WOODPULP,Forestry
+Plywood,WORLDBANK,WORLDBANK/WLD_PLYWOOD,Forestry
+Lumber Futures,CME,CHRIS/CME_LB1,Forestry
+Rubber,ODA,ODA/PRUBB_USD,Forestry
+Cotton,ODA,ODA/PCOTTIND_USD,Textiles and Fibres
+Cotton No. 2 Futures,ICE,CHRIS/ICE_CT1,Textiles and Fibres
+"Urea, E. Europe, bulk",WORLDBANK,WORLDBANK/WLD_UREA_EE_BULK,Fertilizers and Chemicals
+Phosphate rock Pric,WORLDBANK,WORLDBANK/WLD_PHOSROCK,Fertilizers and Chemicals
+Potash (Potassium Chloride),WORLDBANK,WORLDBANK/WLD_POTASH,Fertilizers and Chemicals
+TSP,WORLDBANK,WORLDBANK/WLD_TSP,Fertilizers and Chemicals
+DAP,WORLDBANK,WORLDBANK/WLD_DAP,Fertilizers and Chemicals

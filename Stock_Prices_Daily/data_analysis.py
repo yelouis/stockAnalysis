@@ -16,30 +16,46 @@ import collections
 import copy
 import os
 import csv
+import datetime
 
 from pathlib import Path
 
-df = pd.read_csv("successfulPulls.csv", low_memory=False)
-
-allStock = {}
-
-for ind in df.index:
-    stockDF = pd.read_csv(os.path.join(Path(configKeys.DATA_FOLDER), df['Symbol'][ind]+'Daily.csv'), low_memory=False)
-    allStock[df['Symbol'][ind]] = stockDF
-
-alpha = 0.1
-for counter in range(10):
-    lassoRegressionImplement(allStock, alpha)
-    alpha += 0.1
-
-def lassoRegressionImplement(allStock, alpha):
+def lassoRegressionImplement(stockDF, alpha):
     '''
     stockA, stockB, stockC
     xValues = [[stockA.vol, stockB.vol, stockC.vol],[stockA.volit, stockB.volit, stockC.volit],[stockA.lowPrice, stockB.lowPrice, stockC.lowPrice]]
     yValues = [stockA.highest, stockB.highest, stockC.highest]
     '''
 
-    
+    '''
+    Doing this!!!
+    stockA
+    xValues = [[stockA.volW1, stockA.volW2, stockA.volW3],[stockA.volitW1, stockA.volitW2, stockA.volitW3]]
+    yValues = [stockA.highestW2, stockA.highestW3, stockA.highestW4]
+    '''
+
+
+    ##############################################################################
+    '''
+    This piece of code breaks up the stocks into weeks
+    '''
+    stockWeek = []
+    specficWeek = []
+    for ind in stockDF.index:
+        stockDF.at[ind, 'Date'] = datetime.datetime.strptime(stockDF['Date'][ind], '%Y-%m-%d')
+
+        if ind == 0:
+            specficWeek.append([stockDF['Date'][ind], stockDF['Open'][ind], stockDF['High'][ind], stockDF['Low'][ind], stockDF['Close'][ind], stockDF['Adj Close'][ind], stockDF['Volume'][ind]])
+        else:
+            if (stockDF['Date'][ind] - stockDF['Date'][ind-1]).days >= 2:
+                stockWeek.append(specficWeek)
+                specficWeek = []
+            specficWeek.append([stockDF['Date'][ind], stockDF['Open'][ind], stockDF['High'][ind], stockDF['Low'][ind], stockDF['Close'][ind], stockDF['Adj Close'][ind], stockDF['Volume'][ind]])
+    ##############################################################################
+
+
+
+
 
     '''
     Standardize the x values
@@ -103,3 +119,21 @@ def lassoRegressionImplement(allStock, alpha):
         fd.write('MAD Test: ' + str(mad))
 
     print(df)
+
+##############################################################################
+'''
+This is the part that actually runs the code
+'''
+
+df = pd.read_csv("successfulPulls.csv", low_memory=False)
+
+allStock = {}
+
+for ind in df.index:
+    stockDF = pd.read_csv(os.path.join(Path(configKeys.DATA_FOLDER), df['Symbol'][ind]+'Daily.csv'), low_memory=False)
+    allStock[df['Symbol'][ind]] = stockDF
+
+alpha = 0.1
+for counter in range(10):
+    lassoRegressionImplement(allStock['JNJ'], alpha)
+    alpha += 0.1

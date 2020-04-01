@@ -15,10 +15,10 @@ for ind in df.index:
 
     fileName = str(df['Code'][ind])
 
-    mydata = quandl.get([fileName + ".1", fileName + ".2"], start_date="1980-01-01", end_date="2020-03-01")
+    mydata = quandl.get([fileName + ".1", fileName + ".2"], start_date="1995-01-01", end_date="2020-03-01")
 
     commodity_name = str(df['Name'][ind])
-    charactersToRemove = [' ', ',', '(', ')', "ODA"]
+    charactersToRemove = [' ', ',']
     for char in charactersToRemove:
         commodity_name = commodity_name.replace(char, "")
 

@@ -33,6 +33,13 @@ for counter in range(10):
     alpha += 0.1
 
 def lassoRegressionImplement(allStock, alpha):
+    '''
+    stockA, stockB, stockC
+    xValues = [[stockA.vol, stockB.vol, stockC.vol],[stockA.volit, stockB.volit, stockC.volit],[stockA.lowPrice, stockB.lowPrice, stockC.lowPrice]]
+    yValues = [stockA.highest, stockB.highest, stockC.highest]
+    '''
+
+    
 
     '''
     Standardize the x values

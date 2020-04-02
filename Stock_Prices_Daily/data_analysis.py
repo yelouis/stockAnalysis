@@ -33,6 +33,8 @@ def lassoRegressionImplement(stockDF, alpha):
     xValues = [[stockA.volW1, stockA.volW2, stockA.volW3],[stockA.volitW1, stockA.volitW2, stockA.volitW3]]
     yValues = [stockA.highestW2, stockA.highestW3, stockA.highestW4]
     '''
+    xValues = []
+    yValues = []
 
 
     ##############################################################################
@@ -40,19 +42,43 @@ def lassoRegressionImplement(stockDF, alpha):
     This piece of code breaks up the stocks into weeks
     '''
     stockWeek = []
-    specficWeek = []
+    stockDays = []
     for ind in stockDF.index:
         stockDF.at[ind, 'Date'] = datetime.datetime.strptime(stockDF['Date'][ind], '%Y-%m-%d')
 
         if ind == 0:
-            specficWeek.append([stockDF['Date'][ind], stockDF['Open'][ind], stockDF['High'][ind], stockDF['Low'][ind], stockDF['Close'][ind], stockDF['Adj Close'][ind], stockDF['Volume'][ind]])
+            stockDays.append([stockDF['Date'][ind], stockDF['Open'][ind], stockDF['High'][ind], stockDF['Low'][ind], stockDF['Close'][ind], stockDF['Adj Close'][ind], stockDF['Volume'][ind]])
         else:
             if (stockDF['Date'][ind] - stockDF['Date'][ind-1]).days >= 2:
-                stockWeek.append(specficWeek)
+                stockWeek.append(stockDays)
                 specficWeek = []
-            specficWeek.append([stockDF['Date'][ind], stockDF['Open'][ind], stockDF['High'][ind], stockDF['Low'][ind], stockDF['Close'][ind], stockDF['Adj Close'][ind], stockDF['Volume'][ind]])
+            stockDays.append([stockDF['Date'][ind], stockDF['Open'][ind], stockDF['High'][ind], stockDF['Low'][ind], stockDF['Close'][ind], stockDF['Adj Close'][ind], stockDF['Volume'][ind]])
     ##############################################################################
 
+    '''
+    This piece of code is adding the highest price per week into the yValues list.
+    This could probably be more efficient if we did a week range pull here using yFinance.
+    The only reason why I am not doing that is because pulling using yFinance is slow and we
+    would have to extract data from a data frame.
+    '''
+    for week in stockWeek:
+        overallHigh = 0
+        for day in week:
+            if day[2] > overallHigh:
+                overallHigh = day[2]
+        yValues.append(overallHigh)
+
+    ##############################################################################
+
+    '''
+    Because the xValues have to be put into [[],[],[],[]] format. I can't think of a
+    good way to put it into that format other than extracting all the different types
+    of xValues within the same for loop.
+
+    Stack overflow found me this answer: https://stackoverflow.com/questions/6473679/transpose-list-of-lists
+    '''
+
+    
 
 
 

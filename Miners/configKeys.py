@@ -1,0 +1,6 @@
+SECTORLIST = "General Sector"
+
+STARTPULL = "2007-01-01"
+ENDPULL = "2020-04-01"
+
+DATA_FOLDER = "CSVs/"

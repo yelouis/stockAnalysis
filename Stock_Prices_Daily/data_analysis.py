@@ -93,6 +93,12 @@ def lassoRegressionImplement(stockDF, alpha):
     scalerX.fit(xValues)
     xValues = scalerX.transform(xValues)
 
+    '''
+    Regarding standardizing the yValues. We might want to think about standardizing
+    it in comparison to the previous week's highs rather than standardizing it to each
+    other. That way we would be predicting how much higher or lower the high of next
+    week's stock is going to be in relation to the previous week's highs
+    '''
     # standardizedYValues = []
     # for target in yValues:
     #     standardizedYValues.append([target])

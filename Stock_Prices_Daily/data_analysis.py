@@ -35,6 +35,7 @@ def lassoRegressionImplement(stockDF, alpha):
     '''
     xValues = []
     yValues = []
+    xValueNames = []
 
 
     ##############################################################################
@@ -51,8 +52,9 @@ def lassoRegressionImplement(stockDF, alpha):
         else:
             if (stockDF['Date'][ind] - stockDF['Date'][ind-1]).days >= 2:
                 stockWeek.append(stockDays)
-                specficWeek = []
+                stockDays = []
             stockDays.append([stockDF['Date'][ind], stockDF['Open'][ind], stockDF['High'][ind], stockDF['Low'][ind], stockDF['Close'][ind], stockDF['Adj Close'][ind], stockDF['Volume'][ind]])
+    stockWeek.append(stockDays)
     ##############################################################################
 
     '''
@@ -78,10 +80,10 @@ def lassoRegressionImplement(stockDF, alpha):
     Stack overflow found me this answer: https://stackoverflow.com/questions/6473679/transpose-list-of-lists
     '''
 
-    
 
-
-
+    for week in stockWeek:
+        print(len(week))
+    quit()
 
     '''
     Standardize the x values
@@ -123,7 +125,7 @@ def lassoRegressionImplement(stockDF, alpha):
     print("MAD:", mad)
 
     df = pd.DataFrame()
-    df['Feature Name'] = name
+    df['Feature Name'] = xValueNames
     column_name = 'Alpha =' + str(alpha)
     df[column_name] = clf.coef_
 

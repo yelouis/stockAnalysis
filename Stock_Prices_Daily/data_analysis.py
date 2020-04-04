@@ -55,6 +55,13 @@ def lassoRegressionImplement(stockDF, alpha):
                 stockDays = []
             stockDays.append([stockDF['Date'][ind], stockDF['Open'][ind], stockDF['High'][ind], stockDF['Low'][ind], stockDF['Close'][ind], stockDF['Adj Close'][ind], stockDF['Volume'][ind]])
     stockWeek.append(stockDays)
+
+    # stockWeek[0] = [[Date, Open, High , Low, Close, Adj...], [...], [...]]
+    # stockWeek[1] = [[Date, Open, High , Low, Close, Adj...], [...], [...]]
+    # stockWeek[2] = [[Date, Open, High , Low, Close, Adj...], [...], [...]]
+    # stockWeek[3] = [[Date, Open, High , Low, Close, Adj...], [...], [...]]
+    # stockWeek[4] = [[Date, Open, High , Low, Close, Adj...], [...], [...]]
+
     ##############################################################################
 
     '''
@@ -70,6 +77,8 @@ def lassoRegressionImplement(stockDF, alpha):
                 overallHigh = day[2]
         yValues.append(overallHigh)
 
+    # [overallHighWeek1, overallHighWeek2, overallHighWeek3...]
+
     ##############################################################################
 
     '''
@@ -84,6 +93,15 @@ def lassoRegressionImplement(stockDF, alpha):
     for week in stockWeek:
         print(len(week))
     quit()
+
+    # overallVolatityPerWeek() => [overallVolatiltyW1, overallVolatiltyW2, overallVolatiltyW3...]
+    #
+    # IRXbyWeeks() => [IRXWeek1, IRXWeek2, IRXWeek3...]
+    #
+    # ...
+    #
+    # transpose: [overallVolatiltyW1, IRXWeek1, XvalueW1, W1, ...]
+
 
     '''
     Standardize the x values
@@ -154,7 +172,7 @@ def lassoRegressionImplement(stockDF, alpha):
 
     print(df)
 
-##############################################################################
+############################################################################################
 '''
 This is the part that actually runs the code
 '''

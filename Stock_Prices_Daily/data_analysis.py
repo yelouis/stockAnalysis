@@ -105,11 +105,17 @@ def lassoRegressionImplement(stockDF, alpha):
 
     '''
     Standardize the x values
+
+    Do we need to standardize? If so, how? We don't want information about future weeks
+    because calculating a standard deviation will take into account future weeks.
+
+    Reason why we should standardize: MAD Value easier to understand when we are looking
+    by deviation.
     '''
-    from sklearn.preprocessing import StandardScaler
-    scalerX = StandardScaler()
-    scalerX.fit(xValues)
-    xValues = scalerX.transform(xValues)
+    # from sklearn.preprocessing import StandardScaler
+    # scalerX = StandardScaler()
+    # scalerX.fit(xValues)
+    # xValues = scalerX.transform(xValues)
 
     '''
     Regarding standardizing the yValues. We might want to think about standardizing

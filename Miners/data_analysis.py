@@ -128,6 +128,17 @@ def lassoRegressionImplement(df, alpha):
     #xValues = bins[]
 
 
+
+
+
+    '''
+    xValueNames = [yvalue price, yvalue vol, xval1 price, xval1 vol, ...]
+    bins = [[datetime, [xvalue1[0], xvalue2[0], xvalue3[0], ...]], [datetime, [...[1]]]]
+
+    xValues = [[stockA.volW1, stockA.volW2, stockA.volW3],[stockA.volitW1, stockA.volitW2, stockA.volitW3]]
+    yValues = [stockA.highestW2, stockA.highestW3, stockA.highestW4]
+    '''
+
     ##############################################################################
     '''
     This piece of code breaks up X value stocks into weeks

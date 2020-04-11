@@ -42,6 +42,64 @@ def lassoRegressionImplement(stockDF, alpha):
     '''
     This piece of code breaks up the stocks into weeks
     '''
+
+    startBinDatetime, endBinDatetime = datetime.datetime.strptime(configKeys.STARTPULL, '%Y-%m-%d'), datetime.datetime.strptime(configKeys.ENDPULL, '%Y-%m-%d')
+
+    countDatetime = startBinDatetime
+    bins = []
+    datetimeBin = {}
+
+    while (countDatetime < endBinDatetime): # while the count time is not at the last week in the sequence
+        datetimeBin[countDatetime] = []
+        bins.append(datetimeBin)
+        countDatetime = countDatetime + timedelta(days=7)
+
+    #This first puts the y value into the bins list. This is to give us easy access when trying to move it to the yValues list
+
+    head = 0
+    stockWeek = []
+
+    for ind in stockDF.index:
+
+        stockDF.at[ind, 'Date'] = datetime.datetime.strptime(stockDF['Date'][ind], '%Y-%m-%d')
+
+        if (stockDF['Date'][ind] - bins[head][0]).days <= 7:
+            # We know that we've got the right index
+            stockWeek.append(stockDF['Close'][ind])
+
+        else:
+            while (stockDF['Date'][ind] - bins[head][0]).days > 7:
+                if (len(stockWeek) == 0):
+                    bins[head][1].append(None)
+                else:
+                    bins[head][1].append(statistics.mean(stockWeek))
+                head += 1
+                stockWeek = []
+
+    # We have to do this one more time to get the values from the last week
+    if (len(stockWeek) == 0):
+        bins[head][1].append(None)
+    else:
+        bins[head][1].append(statistics.mean(stockWeek))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     stockWeek = []
     stockDays = []
     for ind in stockDF.index:

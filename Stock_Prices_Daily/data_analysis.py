@@ -207,8 +207,8 @@ def lassoRegressionImplement(stockDF, alpha):
 
 # def extractWeekly(dictionary, highAvg, volumeAvg, lowAvg, highVolaility):
 #     extractWeeklyDic = {}
-#     if volume == True:
-#         extractWeeklyDic[volume] = findVolume(dictionary)
+#     if highAvg == True:
+#         extractWeeklyDic[highAvg] = highAvg(dictionary)
 #
 #     extractWeeklyDic[]
 

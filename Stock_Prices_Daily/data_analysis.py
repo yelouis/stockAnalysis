@@ -100,7 +100,11 @@ def lassoRegressionImplement(stockDF, alpha):
     #             overallHigh = day[2]
     #     yValues.append(overallHigh)
 
-    extractWeekly(datetimeBin, high=True, volume=False, volaility = True, volumeAvg = True)
+    extractWeekly(datetimeBin, "high", "average")        #high=True, volume=False, volaility = True, volumeAvg = True)
+    #extractWeekly(datetimeBin, "low", "volatility")
+    #extractWeekly(datetimeBin, "volume", "max")
+
+
 
     # [overallHighWeek1, overallHighWeek2, overallHighWeek3...]
 
@@ -205,12 +209,18 @@ def lassoRegressionImplement(stockDF, alpha):
 
 ############################################################################################
 
-# def extractWeekly(dictionary, highAvg, volumeAvg, lowAvg, highVolaility):
-#     extractWeeklyDic = {}
-#     if highAvg == True:
-#         extractWeeklyDic[highAvg] = highAvg(dictionary)
-#
-#     extractWeeklyDic[]
+def extractWeekly(dictionary, element, statistic):
+    elementDict = {'Date':0, 'Open':1, 'High':2, 'Low':3, 'Close':4, stockDF['Adj Close'][ind], stockDF['Volume'][ind]}
+
+    # going through the dictionary, look at the specified "statistic" of each week's elements at index (found above in dictionary).
+    #Add this to the list to return
+
+    
+    # extractWeeklyDic = {}
+    # if highAvg == True:
+    #     extractWeeklyDic[highAvg] = highAvg(dictionary)
+    #
+    # extractWeeklyDic[]
 
 '''
 This is the part that actually runs the code

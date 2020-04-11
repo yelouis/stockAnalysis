@@ -1358,6 +1358,7 @@ LGF.B,nan
 LGI,nan
 LH,Health Care
 LHC,Consumer Services
+LHX,Capital Goods
 LII,Capital Goods
 LIN,Basic Industries
 LINX,Technology
@@ -2105,6 +2106,7 @@ SON,Consumer Durables
 SOR,nan
 SPAQ,Finance
 SPB           ,Miscellaneous
+SPCE,Consumer Services
 SPE,nan
 SPG,Consumer Services
 SPGI,Finance
@@ -2289,7 +2291,6 @@ TSQ,Consumer Services
 TSU,Public Utilities
 TT,Capital Goods
 TTC,Capital Goods
-TTI,Energy
 TTM,Capital Goods
 TTP,nan
 TU,Public Utilities
@@ -2359,6 +2360,7 @@ UZB,Public Utilities
 UZC,Public Utilities
 V,Miscellaneous
 VAC,Finance
+VAL,Energy
 VALE,Basic Industries
 VAM,nan
 VAPO,Health Care

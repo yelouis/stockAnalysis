@@ -17,6 +17,7 @@ import copy
 import os
 import csv
 import datetime
+from datetime import timedelta
 
 from pathlib import Path
 
@@ -32,6 +33,11 @@ def lassoRegressionImplement(stockDF, alpha):
     stockA
     xValues = [[stockA.volW1, stockA.volW2, stockA.volW3],[stockA.volitW1, stockA.volitW2, stockA.volitW3]]
     yValues = [stockA.highestW2, stockA.highestW3, stockA.highestW4]
+
+    extractWeekly = {}
+    extractWeekly[vol] = [stockA.volW1, stockA.volW2, stockA.volW3]
+    extractWeekly[volit] = [stockA.volitW1, stockA.volitW2, stockA.volitW3]
+    extractWeekly[volAvg] =
     '''
     xValues = []
     yValues = []
@@ -56,63 +62,22 @@ def lassoRegressionImplement(stockDF, alpha):
 
     #This first puts the y value into the bins list. This is to give us easy access when trying to move it to the yValues list
 
-    head = 0
     stockWeek = []
+    currentBinDate = startBinDatetime
 
     for ind in stockDF.index:
 
         stockDF.at[ind, 'Date'] = datetime.datetime.strptime(stockDF['Date'][ind], '%Y-%m-%d')
-
-        if (stockDF['Date'][ind] - bins[head][0]).days <= 7:
-            # We know that we've got the right index
-            stockWeek.append(stockDF['Close'][ind])
-
+        # Current date for stock is past current bin.
+        if (stockDF['Date'][ind] - currentBinDate).days > 7:
+            datetimeBin[currentBinDate] = stockWeek
+            currentBinDate = currentBinDate + timedelta(days=7)
+            stockWeek = [[stockDF['Date'][ind], stockDF['Open'][ind], stockDF['High'][ind], stockDF['Low'][ind], stockDF['Close'][ind], stockDF['Adj Close'][ind], stockDF['Volume'][ind]]]
         else:
-            while (stockDF['Date'][ind] - bins[head][0]).days > 7:
-                if (len(stockWeek) == 0):
-                    bins[head][1].append(None)
-                else:
-                    bins[head][1].append(statistics.mean(stockWeek))
-                head += 1
-                stockWeek = []
+            stockWeek.append([stockDF['Date'][ind], stockDF['Open'][ind], stockDF['High'][ind], stockDF['Low'][ind], stockDF['Close'][ind], stockDF['Adj Close'][ind], stockDF['Volume'][ind]])
 
     # We have to do this one more time to get the values from the last week
-    if (len(stockWeek) == 0):
-        bins[head][1].append(None)
-    else:
-        bins[head][1].append(statistics.mean(stockWeek))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    stockWeek = []
-    stockDays = []
-    for ind in stockDF.index:
-        stockDF.at[ind, 'Date'] = datetime.datetime.strptime(stockDF['Date'][ind], '%Y-%m-%d')
-
-        if ind == 0:
-            stockDays.append([stockDF['Date'][ind], stockDF['Open'][ind], stockDF['High'][ind], stockDF['Low'][ind], stockDF['Close'][ind], stockDF['Adj Close'][ind], stockDF['Volume'][ind]])
-        else:
-            if (stockDF['Date'][ind] - stockDF['Date'][ind-1]).days >= 2:
-                stockWeek.append(stockDays)
-                stockDays = []
-            stockDays.append([stockDF['Date'][ind], stockDF['Open'][ind], stockDF['High'][ind], stockDF['Low'][ind], stockDF['Close'][ind], stockDF['Adj Close'][ind], stockDF['Volume'][ind]])
-    stockWeek.append(stockDays)
+    datetimeBin[currentBinDate] = stockWeek
 
     # stockWeek[0] = [[Date, Open, High , Low, Close, Adj...], [...], [...]]
     # stockWeek[1] = [[Date, Open, High , Low, Close, Adj...], [...], [...]]
@@ -128,12 +93,14 @@ def lassoRegressionImplement(stockDF, alpha):
     The only reason why I am not doing that is because pulling using yFinance is slow and we
     would have to extract data from a data frame.
     '''
-    for week in stockWeek:
-        overallHigh = 0
-        for day in week:
-            if day[2] > overallHigh:
-                overallHigh = day[2]
-        yValues.append(overallHigh)
+    # for week in stockWeek:
+    #     overallHigh = 0
+    #     for day in week:
+    #         if day[2] > overallHigh:
+    #             overallHigh = day[2]
+    #     yValues.append(overallHigh)
+
+    extractWeekly(datetimeBin, high=True, volume=False, volaility = True, volumeAvg = True)
 
     # [overallHighWeek1, overallHighWeek2, overallHighWeek3...]
 
@@ -237,6 +204,14 @@ def lassoRegressionImplement(stockDF, alpha):
     print(df)
 
 ############################################################################################
+
+# def extractWeekly(dictionary, highAvg, volumeAvg, lowAvg, highVolaility):
+#     extractWeeklyDic = {}
+#     if volume == True:
+#         extractWeeklyDic[volume] = findVolume(dictionary)
+#
+#     extractWeeklyDic[]
+
 '''
 This is the part that actually runs the code
 '''

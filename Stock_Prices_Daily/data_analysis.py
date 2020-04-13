@@ -18,7 +18,7 @@ import os
 import csv
 import datetime
 from datetime import timedelta
-
+import statistics
 from pathlib import Path
 
 def lassoRegressionImplement(stockDF, alpha):
@@ -78,6 +78,9 @@ def lassoRegressionImplement(stockDF, alpha):
 
     # We have to do this one more time to get the values from the last week
     datetimeBin[currentBinDate] = stockWeek
+
+    print(extractWeekly(datetimeBin, "Close", "average"))
+    quit()
 
     # stockWeek[0] = [[Date, Open, High , Low, Close, Adj...], [...], [...]]
     # stockWeek[1] = [[Date, Open, High , Low, Close, Adj...], [...], [...]]
@@ -210,12 +213,31 @@ def lassoRegressionImplement(stockDF, alpha):
 ############################################################################################
 
 def extractWeekly(dictionary, element, statistic):
-    elementDict = {'Date':0, 'Open':1, 'High':2, 'Low':3, 'Close':4, stockDF['Adj Close'][ind], stockDF['Volume'][ind]}
+    elementDict = {'Date':0, 'Open':1, 'High':2, 'Low':3, 'Close':4, 'Adj Close':5, 'Volume':6}
+    elementIndex = elementDict[element]
+    OutputSeries = []
+
+    for week in dictionary.keys(): # This assumes the keys are already in chronological order
+        elementList = []
+        for day in dictionary[week]:
+            elementList.append(day[elementIndex])
+        if statistic == "average":
+            OutputSeries.append(statistics.mean(elementList))
+        if statistic == "standard deviation":
+            OutputSeries.append(statistics.stdev(elementList))
+        if statistic == "variance":
+            OutputSeries.append(statistics.variance(elementList))
+        if statistic == "change":
+            OutputSeries.append(elementList[-1] - elementList[0])
+    return OutputSeries
+
 
     # going through the dictionary, look at the specified "statistic" of each week's elements at index (found above in dictionary).
     #Add this to the list to return
 
-    
+
+
+
     # extractWeeklyDic = {}
     # if highAvg == True:
     #     extractWeeklyDic[highAvg] = highAvg(dictionary)

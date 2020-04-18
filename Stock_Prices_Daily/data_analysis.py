@@ -21,30 +21,8 @@ from datetime import timedelta
 import statistics
 from pathlib import Path
 
-def lassoRegressionImplement(stockDF, alpha):
-    '''
-    stockA, stockB, stockC
-    xValues = [[stockA.vol, stockB.vol, stockC.vol],[stockA.volit, stockB.volit, stockC.volit],[stockA.lowPrice, stockB.lowPrice, stockC.lowPrice]]
-    yValues = [stockA.highest, stockB.highest, stockC.highest]
-    '''
+def GetWeekDictionary(stockDF):
 
-    '''
-    Doing this!!!
-    stockA
-    xValues = [[stockA.volW1, stockA.volW2, stockA.volW3],[stockA.volitW1, stockA.volitW2, stockA.volitW3]]
-    yValues = [stockA.highestW2, stockA.highestW3, stockA.highestW4]
-
-    extractWeekly = {}
-    extractWeekly[vol] = [stockA.volW1, stockA.volW2, stockA.volW3]
-    extractWeekly[volit] = [stockA.volitW1, stockA.volitW2, stockA.volitW3]
-    extractWeekly[volAvg] =
-    '''
-    xValues = []
-    yValues = []
-    xValueNames = []
-
-
-    ##############################################################################
     '''
     This piece of code breaks up the stocks into weeks
     '''
@@ -79,14 +57,70 @@ def lassoRegressionImplement(stockDF, alpha):
     # We have to do this one more time to get the values from the last week
     datetimeBin[currentBinDate] = stockWeek
 
-    print(extractWeekly(datetimeBin, "Close", "average"))
-    quit()
+    return datetimeBin
 
-    # stockWeek[0] = [[Date, Open, High , Low, Close, Adj...], [...], [...]]
-    # stockWeek[1] = [[Date, Open, High , Low, Close, Adj...], [...], [...]]
-    # stockWeek[2] = [[Date, Open, High , Low, Close, Adj...], [...], [...]]
-    # stockWeek[3] = [[Date, Open, High , Low, Close, Adj...], [...], [...]]
-    # stockWeek[4] = [[Date, Open, High , Low, Close, Adj...], [...], [...]]
+def extractWeekly(dictionary, element, statistic):
+    elementDict = {'Date':0, 'Open':1, 'High':2, 'Low':3, 'Close':4, 'Adj Close':5, 'Volume':6}
+    elementIndex = elementDict[element]
+    outputSeries = []
+
+    for week in dictionary.keys(): # This assumes the keys are already in chronological order
+        elementList = []
+        for day in dictionary[week]:
+            elementList.append(day[elementIndex])
+        if statistic == "average":
+            outputSeries.append(statistics.mean(elementList))
+        if statistic == "max":
+            outputSeries.append(max(elementList))
+        if statistic == "standard deviation":
+            outputSeries.append(statistics.stdev(elementList))
+        if statistic == "variance":
+            outputSeries.append(statistics.variance(elementList))
+        if statistic == "change":
+            outputSeries.append(elementList[-1] - elementList[0])
+    return outputSeries
+
+
+    # Intuition: going through the dictionary, look at the specified "statistic" of each week's elements at index (found above in dictionary).
+    # Add this to the list to return
+
+def lassoRegressionImplement(allStock, alpha):
+    '''
+    stockA, stockB, stockC
+    xValues = [[stockA.vol, stockB.vol, stockC.vol],[stockA.volit, stockB.volit, stockC.volit],[stockA.lowPrice, stockB.lowPrice, stockC.lowPrice]]
+    yValues = [stockA.highest, stockB.highest, stockC.highest]
+    '''
+
+    '''
+    Doing this!!!
+    stockA
+    xValues = [[stockA.volW1, stockA.volW2, stockA.volW3],[stockA.volitW1, stockA.volitW2, stockA.volitW3]]
+    yValues = [stockA.highestW2, stockA.highestW3, stockA.highestW4]
+
+    extractWeekly = {}
+    extractWeekly[vol] = [stockA.volW1, stockA.volW2, stockA.volW3]
+    extractWeekly[volit] = [stockA.volitW1, stockA.volitW2, stockA.volitW3]
+    extractWeekly[volAvg] =
+    '''
+    xValues = []
+    yValues = []
+    xValueNames = []
+
+    ##############################################################################
+
+    '''
+    Maybe try this to make file path and push extractWeekly(GetWeekDictionary()) functions behind the scenes
+    '''
+    #enter(["JMJ, high", "average"])
+
+
+    # THIS IS THE PART OF CODE WHICH WE MANUALLY CHANGE TO DO ANALYSIS
+    xValues = [extractWeekly(GetWeekDictionary(allStock["JMJ"]), "high", "average")[:-1],
+                ...]
+
+    yValues = extractWeekly(GetWeekDictionary(allStock["JMJ"]), "high", "average")[1:]
+
+    quit()
 
     ##############################################################################
 
@@ -96,20 +130,8 @@ def lassoRegressionImplement(stockDF, alpha):
     The only reason why I am not doing that is because pulling using yFinance is slow and we
     would have to extract data from a data frame.
     '''
-    # for week in stockWeek:
-    #     overallHigh = 0
-    #     for day in week:
-    #         if day[2] > overallHigh:
-    #             overallHigh = day[2]
-    #     yValues.append(overallHigh)
 
     extractWeekly(datetimeBin, "high", "average")        #high=True, volume=False, volaility = True, volumeAvg = True)
-    #extractWeekly(datetimeBin, "low", "volatility")
-    #extractWeekly(datetimeBin, "volume", "max")
-
-
-
-    # [overallHighWeek1, overallHighWeek2, overallHighWeek3...]
 
     ##############################################################################
 
@@ -122,17 +144,7 @@ def lassoRegressionImplement(stockDF, alpha):
     '''
 
 
-    for week in stockWeek:
-        print(len(week))
-    quit()
 
-    # overallVolatityPerWeek() => [overallVolatiltyW1, overallVolatiltyW2, overallVolatiltyW3...]
-    #
-    # IRXbyWeeks() => [IRXWeek1, IRXWeek2, IRXWeek3...]
-    #
-    # ...
-    #
-    # transpose: [overallVolatiltyW1, IRXWeek1, XvalueW1, W1, ...]
 
 
     '''
@@ -212,37 +224,6 @@ def lassoRegressionImplement(stockDF, alpha):
 
 ############################################################################################
 
-def extractWeekly(dictionary, element, statistic):
-    elementDict = {'Date':0, 'Open':1, 'High':2, 'Low':3, 'Close':4, 'Adj Close':5, 'Volume':6}
-    elementIndex = elementDict[element]
-    outputSeries = []
-
-    for week in dictionary.keys(): # This assumes the keys are already in chronological order
-        elementList = []
-        for day in dictionary[week]:
-            elementList.append(day[elementIndex])
-        if statistic == "average":
-            outputSeries.append(statistics.mean(elementList))
-        if statistic == "standard deviation":
-            outputSeries.append(statistics.stdev(elementList))
-        if statistic == "variance":
-            outputSeries.append(statistics.variance(elementList))
-        if statistic == "change":
-            outputSeries.append(elementList[-1] - elementList[0])
-    return outputSeries
-
-
-    # going through the dictionary, look at the specified "statistic" of each week's elements at index (found above in dictionary).
-    #Add this to the list to return
-
-
-
-
-    # extractWeeklyDic = {}
-    # if highAvg == True:
-    #     extractWeeklyDic[highAvg] = highAvg(dictionary)
-    #
-    # extractWeeklyDic[]
 
 '''
 This is the part that actually runs the code
@@ -258,5 +239,5 @@ for ind in df.index:
 
 alpha = 0.1
 for counter in range(10):
-    lassoRegressionImplement(allStock['JNJ'], alpha)
+    lassoRegressionImplement(allStock, alpha)
     alpha += 0.1

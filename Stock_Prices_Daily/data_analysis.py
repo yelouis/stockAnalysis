@@ -215,21 +215,21 @@ def lassoRegressionImplement(stockDF, alpha):
 def extractWeekly(dictionary, element, statistic):
     elementDict = {'Date':0, 'Open':1, 'High':2, 'Low':3, 'Close':4, 'Adj Close':5, 'Volume':6}
     elementIndex = elementDict[element]
-    OutputSeries = []
+    outputSeries = []
 
     for week in dictionary.keys(): # This assumes the keys are already in chronological order
         elementList = []
         for day in dictionary[week]:
             elementList.append(day[elementIndex])
         if statistic == "average":
-            OutputSeries.append(statistics.mean(elementList))
+            outputSeries.append(statistics.mean(elementList))
         if statistic == "standard deviation":
-            OutputSeries.append(statistics.stdev(elementList))
+            outputSeries.append(statistics.stdev(elementList))
         if statistic == "variance":
-            OutputSeries.append(statistics.variance(elementList))
+            outputSeries.append(statistics.variance(elementList))
         if statistic == "change":
-            OutputSeries.append(elementList[-1] - elementList[0])
-    return OutputSeries
+            outputSeries.append(elementList[-1] - elementList[0])
+    return outputSeries
 
 
     # going through the dictionary, look at the specified "statistic" of each week's elements at index (found above in dictionary).

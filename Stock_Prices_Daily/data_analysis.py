@@ -20,6 +20,10 @@ import datetime
 from datetime import timedelta
 import statistics
 from pathlib import Path
+import sklearn
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn import linear_model
 
 def GetWeekDictionary(stockDF):
 
@@ -45,7 +49,8 @@ def GetWeekDictionary(stockDF):
 
     for ind in stockDF.index:
 
-        stockDF.at[ind, 'Date'] = datetime.datetime.strptime(stockDF['Date'][ind], '%Y-%m-%d')
+        if isinstance(stockDF['Date'][ind], str):
+            stockDF.at[ind, 'Date'] = datetime.datetime.strptime(stockDF['Date'][ind], '%Y-%m-%d')
         # Current date for stock is past current bin.
         if (stockDF['Date'][ind] - currentBinDate).days > 7:
             datetimeBin[currentBinDate] = stockWeek
@@ -60,7 +65,7 @@ def GetWeekDictionary(stockDF):
     return datetimeBin
 
 def extractWeekly(dictionary, element, statistic):
-    elementDict = {'Date':0, 'Open':1, 'High':2, 'Low':3, 'Close':4, 'Adj Close':5, 'Volume':6}
+    elementDict = {'date':0, 'open':1, 'high':2, 'low':3, 'close':4, 'adj close':5, 'volume':6}
     elementIndex = elementDict[element]
     outputSeries = []
 
@@ -80,9 +85,14 @@ def extractWeekly(dictionary, element, statistic):
             outputSeries.append(elementList[-1] - elementList[0])
     return outputSeries
 
-
     # Intuition: going through the dictionary, look at the specified "statistic" of each week's elements at index (found above in dictionary).
     # Add this to the list to return
+
+def getX(stockDF, element, statistic):
+    return extractWeekly(GetWeekDictionary(stockDF), element, statistic)[:-1]
+
+def getY(stockDF, element, statistic):
+    return extractWeekly(GetWeekDictionary(stockDF), element, statistic)[1:]
 
 def lassoRegressionImplement(allStock, alpha):
     '''
@@ -113,25 +123,13 @@ def lassoRegressionImplement(allStock, alpha):
     '''
     #enter(["JMJ, high", "average"])
 
-
     # THIS IS THE PART OF CODE WHICH WE MANUALLY CHANGE TO DO ANALYSIS
-    xValues = [extractWeekly(GetWeekDictionary(allStock["JMJ"]), "high", "average")[:-1],
-                ...]
+    xValues = [getX(allStock["JNJ"], "high", "average"), getX(allStock["JNJ"], "high", "average")]
+    xValueNames.append("high-average")
+    xValueNames.append("high-average")
 
-    yValues = extractWeekly(GetWeekDictionary(allStock["JMJ"]), "high", "average")[1:]
+    yValues = getY(allStock["JNJ"], "high", "average")
 
-    quit()
-
-    ##############################################################################
-
-    '''
-    This piece of code is adding the highest price per week into the yValues list.
-    This could probably be more efficient if we did a week range pull here using yFinance.
-    The only reason why I am not doing that is because pulling using yFinance is slow and we
-    would have to extract data from a data frame.
-    '''
-
-    extractWeekly(datetimeBin, "high", "average")        #high=True, volume=False, volaility = True, volumeAvg = True)
 
     ##############################################################################
 
@@ -206,12 +204,7 @@ def lassoRegressionImplement(allStock, alpha):
     '''
     Write the coefficients of each feature into a file
     '''
-    path = os.path.join(Dataset.config[configKeys.TABLE_DIRECTORY] + 'lassoResult' +
-                        '_length' + str(int(actLength)) + '_wrong' + str(int(wrongAct)) + '_info' +
-                        str(int(infoAct)) + '_pause' + str(int(pauseAct)) + '_mcS' + str(int(mcScore)) +
-                        '_mcP' + str(int(mcProblem)) + '_pre' + str(int(preScore)) + '_chalAmt' +
-                        str(int(challengeAmt)) + '_preScoreM' + str(int(preScoreMedian)) + '_lowPreUser' +
-                        str(int(lowPreUsers)) + '_MAD' + str(round(madV, 3)) + '_alpha' + str(round(alpha, 1)) + '.csv')
+    path = os.path.join(Path(configKeys.OUTPUT_FOLDER) + "name" + '.csv')
 
     df.to_csv(path)
 
@@ -225,19 +218,22 @@ def lassoRegressionImplement(allStock, alpha):
 ############################################################################################
 
 
-'''
-This is the part that actually runs the code
-'''
+def main():
+    '''
+    This is the part that actually runs the code
+    '''
 
-df = pd.read_csv("successfulPulls.csv", low_memory=False)
+    df = pd.read_csv("successfulPulls.csv", low_memory=False)
 
-allStock = {}
+    allStock = {}
 
-for ind in df.index:
-    stockDF = pd.read_csv(os.path.join(Path(configKeys.DATA_FOLDER), df['Symbol'][ind]+'Daily.csv'), low_memory=False)
-    allStock[df['Symbol'][ind]] = stockDF
+    for ind in df.index:
+        stockDF = pd.read_csv(os.path.join(Path(configKeys.DATA_FOLDER), df['Symbol'][ind]+'Daily.csv'), low_memory=False)
+        allStock[df['Symbol'][ind]] = stockDF
 
-alpha = 0.1
-for counter in range(10):
-    lassoRegressionImplement(allStock, alpha)
-    alpha += 0.1
+    alpha = 0.1
+    for counter in range(1):
+        lassoRegressionImplement(allStock, alpha)
+        alpha += 0.1
+
+main()

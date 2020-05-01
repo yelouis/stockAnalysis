@@ -121,12 +121,22 @@ def lassoRegressionImplement(allStock, alpha):
     '''
     Maybe try this to make file path and push extractWeekly(GetWeekDictionary()) functions behind the scenes
     '''
-    #enter(["JMJ, high", "average"])
 
+    # input stocks/statistics of interest in this list
+    xStocks = [["JMJ", "high", "average"],
+                ["JNJ", "high", "max"],
+                ["JNJ", "close", "average"]]
+
+    for i in xStocks:
+        xValues.append(getX(allStock[i[0]], i[1], i[2]))
+        xValueNames.append(i[0] + "-" + i[1] + "-" + i[2])
+
+    '''
     # THIS IS THE PART OF CODE WHICH WE MANUALLY CHANGE TO DO ANALYSIS
     xValues = [getX(allStock["JNJ"], "high", "average"), getX(allStock["JNJ"], "high", "average")]
     xValueNames.append("high-average")
     xValueNames.append("high-average")
+    '''
 
     yValues = getY(allStock["JNJ"], "high", "average")
 
@@ -207,6 +217,8 @@ def lassoRegressionImplement(allStock, alpha):
     '''
     Write the coefficients of each feature into a file
     '''
+    
+    # Use xStocks to help specify the contents of the file
     path = os.path.join(Path(configKeys.OUTPUT_FOLDER), "name" + '.csv')
 
     df.to_csv(path)

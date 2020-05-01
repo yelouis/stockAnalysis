@@ -207,7 +207,7 @@ def lassoRegressionImplement(allStock, alpha):
     '''
     Write the coefficients of each feature into a file
     '''
-    path = os.path.join(Path(configKeys.OUTPUT_FOLDER) + "name" + '.csv')
+    path = os.path.join(Path(configKeys.OUTPUT_FOLDER), "name" + '.csv')
 
     df.to_csv(path)
 

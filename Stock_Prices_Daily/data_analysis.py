@@ -131,6 +131,9 @@ def lassoRegressionImplement(allStock, alpha):
     yValues = getY(allStock["JNJ"], "high", "average")
 
 
+
+
+
     ##############################################################################
 
     '''
@@ -141,7 +144,7 @@ def lassoRegressionImplement(allStock, alpha):
     Stack overflow found me this answer: https://stackoverflow.com/questions/6473679/transpose-list-of-lists
     '''
 
-
+    xValues = list(map(list, zip(*xValues)))
 
 
 

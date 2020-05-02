@@ -190,6 +190,18 @@ def lassoRegressionImplement(allStock, alpha):
     xValues = newXValues
     quit()
 
+    #maybe we can try this, but usgin a year's worth of "training data" at the beginning of the series?
+    newXValues = []
+    for list in xValues:
+        standardizedXList = [0] * len(list)
+        print(len(list))
+        for i in range(len(list)):
+            standardizedXList.append((list[i] - statistics.mean(list[:i + 1])) / statistics.stdev(list[:i + 1]))
+        print(standardizedXList)
+        quit()
+        newXValues.append(standardizedXList)
+    xValues = newXValues
+    quit()
 
 
     '''

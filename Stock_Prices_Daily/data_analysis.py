@@ -123,7 +123,7 @@ def lassoRegressionImplement(allStock, alpha):
     '''
 
     # input stocks/statistics of interest in this list
-    xStocks = [["JMJ", "high", "average"],
+    xStocks = [["JNJ", "high", "average"],
                 ["JNJ", "high", "max"],
                 ["JNJ", "close", "average"]]
 
@@ -139,6 +139,9 @@ def lassoRegressionImplement(allStock, alpha):
     '''
 
     yValues = getY(allStock["JNJ"], "high", "average")
+
+    # print(yValues)
+    # quit()
 
 
 

@@ -156,8 +156,11 @@ def lassoRegressionImplement(allStock, alpha):
     '''
     Instead of standardizing we can just normalize and manually calculate the normalize
     value becaue the calculation is pretty easy.
-    
+
     https://stackoverflow.com/questions/26785354/normalizing-a-list-of-numbers-in-python
+
+    Standardize vs Normalize:
+    https://towardsdatascience.com/normalization-vs-standardization-quantitative-analysis-a91e8a79cebf
     '''
 
     newXValues = []

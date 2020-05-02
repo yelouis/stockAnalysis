@@ -153,6 +153,13 @@ def lassoRegressionImplement(allStock, alpha):
     xValues with standardized values. tempScalerList is recreated at each itteration.
     '''
 
+    '''
+    Instead of standardizing we can just normalize and manually calculate the normalize
+    value becaue the calculation is pretty easy.
+    
+    https://stackoverflow.com/questions/26785354/normalizing-a-list-of-numbers-in-python
+    '''
+
     newXValues = []
     for list in xValues:
         standardizedXList = [0] * len(list)

@@ -140,10 +140,6 @@ def lassoRegressionImplement(allStock, alpha):
 
     yValues = getY(allStock["JNJ"], "high", "average")
 
-    # print(yValues)
-    # quit()
-
-
 
 
 
@@ -204,9 +200,7 @@ def lassoRegressionImplement(allStock, alpha):
     other. That way we would be predicting how much higher or lower the high of next
     week's stock is going to be in relation to the previous week's highs
     '''
-    # standardizedYValues = []
-    # for target in yValues:
-    #     standardizedYValues.append([target])
+
     # scalerY = StandardScaler()
     # scalerY.fit(standardizedYValues)
     # standardizedYValues = scalerY.transform(standardizedYValues)

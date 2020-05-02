@@ -157,14 +157,18 @@ def lassoRegressionImplement(allStock, alpha):
     for list in xValues:
         standardizedXList = []
         for i in range(len(list)):
-            tempScalerList = []
-            scalerX = StandardScaler()
-            scalerX.fit(xValues[:i])
-            tempScalerList = scalerX.transform(xValues[:i])
-            standardizedXList[i] = tempScalerList[i]
+            if i == 0:
+                standardizedXList.append(0)
+            else:
+                tempScalerList = []
+                scalerX = StandardScaler()
+                scalerX.fit(xValues[:i])
+                tempScalerList = scalerX.transform(xValues[:i])
+                standardizedXList.append(tempScalerList[i])
         newXValues.append(standardizedXList)
 
     xValues = newXValues
+    quit()
 
 
 
@@ -200,6 +204,9 @@ def lassoRegressionImplement(allStock, alpha):
     other. That way we would be predicting how much higher or lower the high of next
     week's stock is going to be in relation to the previous week's highs
     '''
+
+    # for i in range(len(yValues)):
+    #     quit()
 
     # scalerY = StandardScaler()
     # scalerY.fit(standardizedYValues)

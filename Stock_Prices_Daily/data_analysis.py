@@ -145,6 +145,29 @@ def lassoRegressionImplement(allStock, alpha):
 
 
     ##############################################################################
+    '''
+    Standardizing method. To get any specific index i value in xValues to be standardized
+    we find its deviation with respect to all values before it (assuming that all the values
+    before it have not already been standardized).
+
+    We create a temp list called tempScalerList so that we are not overwriting the
+    xValues with standardized values
+    '''
+
+    newXValues = []
+    for list in xValues:
+        standardizedXList = []
+        for i in range(len(list)):
+            tempScalerList = []
+            scalerX = StandardScaler()
+            scalerX.fit(xValues[:i])
+            tempScalerList = scalerX.transform(xValues[:i])
+            standardizedXList[i] = tempScalerList[i]
+        newXValues.append(standardizedXList)
+
+    xValues = newXValues
+
+
 
     '''
     Because the xValues have to be put into [[],[],[],[]] format. I can't think of a
@@ -217,7 +240,7 @@ def lassoRegressionImplement(allStock, alpha):
     '''
     Write the coefficients of each feature into a file
     '''
-    
+
     # Use xStocks to help specify the contents of the file
     path = os.path.join(Path(configKeys.OUTPUT_FOLDER), "name" + '.csv')
 

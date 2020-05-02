@@ -150,21 +150,31 @@ def lassoRegressionImplement(allStock, alpha):
     before it have not already been standardized).
 
     We create a temp list called tempScalerList so that we are not overwriting the
-    xValues with standardized values
+    xValues with standardized values. tempScalerList is recreated at each itteration.
     '''
 
     newXValues = []
     for list in xValues:
-        standardizedXList = []
+        standardizedXList = [0] * len(list)
+        print(len(list))
         for i in range(len(list)):
-            if i == 0:
-                standardizedXList.append(0)
-            else:
+            if i != 0:
                 tempScalerList = []
                 scalerX = StandardScaler()
                 scalerX.fit(xValues[:i])
                 tempScalerList = scalerX.transform(xValues[:i])
-                standardizedXList.append(tempScalerList[i])
+
+                # Take a look at tempScalerList after the first itteration. I don't
+                # understand why there are so many values.
+                # print(tempScalerList)
+
+                if i == 3:
+                    print(tempScalerList)
+                    quit()
+
+                standardizedXList[i] = tempScalerList[0][i]
+        print(standardizedXList)
+        quit()
         newXValues.append(standardizedXList)
 
     xValues = newXValues

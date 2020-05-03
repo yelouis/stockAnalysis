@@ -94,6 +94,20 @@ def getX(stockDF, element, statistic):
 def getY(stockDF, element, statistic):
     return extractWeekly(GetWeekDictionary(stockDF), element, statistic)[1:]
 
+def StandardizeSeries(series, window_length):
+    #maybe we can try this, but usgin a year's worth of "training data" at the beginning of the series?
+    newSeries = []
+    for list in series:
+        standardizedList = []
+        for i in range(len(list)):
+            if i < window_length - 1:
+                continue
+            else:
+                standardizedList.append((list[i] - statistics.mean(list[i + 1 - window_length:i + 1])) / statistics.stdev(list[i + 1 - window_length:i + 1]))
+        print(standardizedList)
+        newSeries.append(standardizedList)
+    return newSeries
+
 def lassoRegressionImplement(allStock, alpha):
     '''
     stockA, stockB, stockC
@@ -193,29 +207,29 @@ def lassoRegressionImplement(allStock, alpha):
     '''
 
 
-    #def StandardizeSeries(series, window_length):
-    window_length = 25
-
-    plt.plot(xValues[0])
-    plt.show()
-    #maybe we can try this, but usgin a year's worth of "training data" at the beginning of the series?
-    newXValues = []
-    for list in xValues:
-        if list != xValues[0]:
-            continue
-        standardizedXList = []
-        for i in range(len(list)):
-            if i < window_length - 1:
-                continue
-            else:
-                standardizedXList.append((list[i] - statistics.mean(list[i + 1 - window_length:i + 1])) / statistics.stdev(list[i + 1 - window_length:i + 1]))
-        print(standardizedXList)
-        newXValues.append(standardizedXList)
-    #xValues = newXValues
-    plt.plot(newXValues[0])
-    plt.show()
-
-    quit()
+    # #def StandardizeSeries(series, window_length):
+    # window_length = 25
+    #
+    # plt.plot(xValues[0])
+    # plt.show()
+    # #maybe we can try this, but usgin a year's worth of "training data" at the beginning of the series?
+    # newXValues = []
+    # for list in xValues:
+    #     if list != xValues[0]:
+    #         continue
+    #     standardizedXList = []
+    #     for i in range(len(list)):
+    #         if i < window_length - 1:
+    #             continue
+    #         else:
+    #             standardizedXList.append((list[i] - statistics.mean(list[i + 1 - window_length:i + 1])) / statistics.stdev(list[i + 1 - window_length:i + 1]))
+    #     print(standardizedXList)
+    #     newXValues.append(standardizedXList)
+    # #xValues = newXValues
+    # plt.plot(newXValues[0])
+    # plt.show()
+    #
+    # quit()
 
 
     '''

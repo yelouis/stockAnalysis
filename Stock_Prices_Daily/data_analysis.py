@@ -94,6 +94,12 @@ def getX(stockDF, element, statistic):
 def getY(stockDF, element, statistic):
     return extractWeekly(GetWeekDictionary(stockDF), element, statistic)[1:]
 
+'''
+This function takes a series in the form of [[],[],[]] (some form of array in an array)
+It standardizes the inside array by take a look at the datapoints that are within
+a window_length back. It then calculates the current datapoint's standard deviation
+with respect to the datapoints within the window_length.
+'''
 def standardizeSeries(series, window_length):
     #maybe we can try this, but usgin a year's worth of "training data" at the beginning of the series?
     newSeries = []
@@ -104,7 +110,6 @@ def standardizeSeries(series, window_length):
                 continue
             else:
                 standardizedList.append((list[i] - statistics.mean(list[i + 1 - window_length:i + 1])) / statistics.stdev(list[i + 1 - window_length:i + 1]))
-        print(standardizedList)
         newSeries.append(standardizedList)
     return newSeries
 
@@ -156,81 +161,12 @@ def lassoRegressionImplement(allStock, alpha, beta):
 
     ##############################################################################
     '''
-    Standardizing method. To get any specific index i value in xValues to be standardized
-    we find its deviation with respect to all values before it (assuming that all the values
-    before it have not already been standardized).
-
-    We create a temp list called tempScalerList so that we are not overwriting the
-    xValues with standardized values. tempScalerList is recreated at each itteration.
+    This calls the standardizeSeries which is a function that standardizes these values
+    More information in the comments at the function
     '''
-
-    '''
-    Instead of standardizing we can just normalize and manually calculate the normalize
-    value becaue the calculation is pretty easy.
-
-    https://stackoverflow.com/questions/26785354/normalizing-a-list-of-numbers-in-python
-
-    Standardize vs Normalize:
-    https://towardsdatascience.com/normalization-vs-standardization-quantitative-analysis-a91e8a79cebf
-    '''
-
-    '''
-    newXValues = []
-    for list in xValues:
-        standardizedXList = [0] * len(list)
-        print(len(list))
-        for i in range(len(list)):
-            if i != 0:
-                tempScalerList = []
-                scalerX = StandardScaler()
-                scalerX.fit(xValues[:i])
-                tempScalerList = scalerX.transform(xValues[:i])
-
-                # Take a look at tempScalerList after the first itteration. I don't
-                # understand why there are so many values.
-                # print(tempScalerList)
-
-                if i == 3:
-                    print(tempScalerList)
-                    quit()
-
-                standardizedXList[i] = tempScalerList[0][i]
-        print(standardizedXList)
-        quit()
-        newXValues.append(standardizedXList)
-
-    xValues = newXValues
-    quit()
-    '''
-
-
-    # #def StandardizeSeries(series, window_length):
-    # window_length = 25
-    #
-    # plt.plot(xValues[0])
-    # plt.show()
-    # #maybe we can try this, but usgin a year's worth of "training data" at the beginning of the series?
-    # newXValues = []
-    # for list in xValues:
-    #     if list != xValues[0]:
-    #         continue
-    #     standardizedXList = []
-    #     for i in range(len(list)):
-    #         if i < window_length - 1:
-    #             continue
-    #         else:
-    #             standardizedXList.append((list[i] - statistics.mean(list[i + 1 - window_length:i + 1])) / statistics.stdev(list[i + 1 - window_length:i + 1]))
-    #     print(standardizedXList)
-    #     newXValues.append(standardizedXList)
-    # #xValues = newXValues
-    # plt.plot(newXValues[0])
-    # plt.show()
-    #
-    # quit()
 
     xValues = standardizeSeries(xValues, 25)
     yValues = standardizeSeries([yValues], 25)[0]
-
 
     '''
     Because the xValues have to be put into [[],[],[],[]] format. I can't think of a
@@ -241,39 +177,6 @@ def lassoRegressionImplement(allStock, alpha, beta):
     '''
 
     xValues = list(map(list, zip(*xValues)))
-
-
-
-    '''
-    Standardize the x values
-
-    Do we need to standardize? If so, how? We don't want information about future weeks
-    because calculating a standard deviation will take into account future weeks.
-
-    Reason why we should standardize: MAD Value easier to understand when we are looking
-    by deviation.
-    '''
-    # from sklearn.preprocessing import StandardScaler
-    # scalerX = StandardScaler()
-    # scalerX.fit(xValues)
-    # xValues = scalerX.transform(xValues)
-
-    '''
-    Regarding standardizing the yValues. We might want to think about standardizing
-    it in comparison to the previous week's highs rather than standardizing it to each
-    other. That way we would be predicting how much higher or lower the high of next
-    week's stock is going to be in relation to the previous week's highs
-    '''
-
-    # for i in range(len(yValues)):
-    #     quit()
-
-    # scalerY = StandardScaler()
-    # scalerY.fit(standardizedYValues)
-    # standardizedYValues = scalerY.transform(standardizedYValues)
-    # yValues = []
-    # for target in standardizedYValues:
-    #     yValues.append(target[0])
 
     '''
     Split dataset in to testing, validation, and training dataset

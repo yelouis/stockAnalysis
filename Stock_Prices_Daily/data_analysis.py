@@ -197,6 +197,11 @@ def lassoRegressionImplement(allStock, alpha, beta):
     '''
     Calculate the MAD score for each of the sub datasets
     '''
+    plt.plot(y_test)
+    plt.plot(y_pred)
+    plt.show()
+    quit()
+
     madT = mean_absolute_error(y_train, y_predT)
     madV = mean_absolute_error(y_valid, y_predV)
     mad = mean_absolute_error(y_test, y_pred)

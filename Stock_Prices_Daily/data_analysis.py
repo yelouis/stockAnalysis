@@ -167,8 +167,9 @@ def lassoRegressionImplement(allStock, alpha, beta):
     More information in the comments at the function
     '''
 
-    xValues = standardizeSeries(xValues, 25)
-    yValues = standardizeSeries([yValues], 25)[0]
+    xValues = standardizeSeries(xValues, beta)
+    #yValues = standardizeSeries([yValues], beta)[0]
+    yValues = yValues[beta-1:]
 
     '''
     Because the xValues have to be put into [[],[],[],[]] format. I can't think of a

@@ -163,6 +163,7 @@ def lassoRegressionImplement(allStock, alpha):
     https://towardsdatascience.com/normalization-vs-standardization-quantitative-analysis-a91e8a79cebf
     '''
 
+    '''
     newXValues = []
     for list in xValues:
         standardizedXList = [0] * len(list)
@@ -189,18 +190,31 @@ def lassoRegressionImplement(allStock, alpha):
 
     xValues = newXValues
     quit()
+    '''
 
+
+    #def StandardizeSeries(series, window_length):
+    window_length = 25
+
+    plt.plot(xValues[0])
+    plt.show()
     #maybe we can try this, but usgin a year's worth of "training data" at the beginning of the series?
     newXValues = []
     for list in xValues:
-        standardizedXList = [0] * len(list)
-        print(len(list))
+        if list != xValues[0]:
+            continue
+        standardizedXList = []
         for i in range(len(list)):
-            standardizedXList.append((list[i] - statistics.mean(list[:i + 1])) / statistics.stdev(list[:i + 1]))
+            if i < window_length - 1:
+                continue
+            else:
+                standardizedXList.append((list[i] - statistics.mean(list[i + 1 - window_length:i + 1])) / statistics.stdev(list[i + 1 - window_length:i + 1]))
         print(standardizedXList)
-        quit()
         newXValues.append(standardizedXList)
-    xValues = newXValues
+    #xValues = newXValues
+    plt.plot(newXValues[0])
+    plt.show()
+
     quit()
 
 
@@ -306,6 +320,7 @@ def main():
         allStock[df['Symbol'][ind]] = stockDF
 
     alpha = 0.1
+    #add a beta value which normalizes based on a time_window = beta (beta = [4, 12, 26, 52])
     for counter in range(1):
         lassoRegressionImplement(allStock, alpha)
         alpha += 0.1

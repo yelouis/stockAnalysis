@@ -94,7 +94,7 @@ def getX(stockDF, element, statistic):
 def getY(stockDF, element, statistic):
     return extractWeekly(GetWeekDictionary(stockDF), element, statistic)[1:]
 
-def StandardizeSeries(series, window_length):
+def standardizeSeries(series, window_length):
     #maybe we can try this, but usgin a year's worth of "training data" at the beginning of the series?
     newSeries = []
     for list in series:
@@ -108,7 +108,7 @@ def StandardizeSeries(series, window_length):
         newSeries.append(standardizedList)
     return newSeries
 
-def lassoRegressionImplement(allStock, alpha):
+def lassoRegressionImplement(allStock, alpha, beta):
     '''
     stockA, stockB, stockC
     xValues = [[stockA.vol, stockB.vol, stockC.vol],[stockA.volit, stockB.volit, stockC.volit],[stockA.lowPrice, stockB.lowPrice, stockC.lowPrice]]
@@ -153,9 +153,6 @@ def lassoRegressionImplement(allStock, alpha):
     '''
 
     yValues = getY(allStock["JNJ"], "high", "average")
-
-
-
 
     ##############################################################################
     '''
@@ -230,6 +227,9 @@ def lassoRegressionImplement(allStock, alpha):
     # plt.show()
     #
     # quit()
+
+    xValues = standardizeSeries(xValues, 25)
+    yValues = standardizeSeries([yValues], 25)[0]
 
 
     '''
@@ -306,7 +306,7 @@ def lassoRegressionImplement(allStock, alpha):
     '''
 
     # Use xStocks to help specify the contents of the file
-    path = os.path.join(Path(configKeys.OUTPUT_FOLDER), "name" + '.csv')
+    path = os.path.join(Path(configKeys.OUTPUT_FOLDER), str(int(alpha)) +"_alpha" + str(int(beta)) + "_beta" '.csv')
 
     df.to_csv(path)
 
@@ -335,8 +335,10 @@ def main():
 
     alpha = 0.1
     #add a beta value which normalizes based on a time_window = beta (beta = [4, 12, 26, 52])
-    for counter in range(1):
-        lassoRegressionImplement(allStock, alpha)
-        alpha += 0.1
+    betaList = [4, 12, 26, 52]
+    for beta in betaList:
+        for counter in range(1):
+            lassoRegressionImplement(allStock, alpha, beta)
+            alpha += 0.1
 
 main()

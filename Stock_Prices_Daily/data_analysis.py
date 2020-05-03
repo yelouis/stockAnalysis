@@ -24,6 +24,8 @@ import sklearn
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn import linear_model
+import time
+
 
 def GetWeekDictionary(stockDF):
 
@@ -209,7 +211,11 @@ def lassoRegressionImplement(allStock, alpha, beta):
     '''
 
     # Use xStocks to help specify the contents of the file
-    path = os.path.join(Path(configKeys.OUTPUT_FOLDER), str(int(alpha)) +"_alpha" + str(int(beta)) + "_beta" '.csv')
+    alphaString = format(alpha, '.1f')
+    betaString = str(int(beta))
+    madString = format(mad, '.2f')
+
+    path = os.path.join(Path(configKeys.OUTPUT_FOLDER), madString + "_mad" + alphaString +"_alpha"+ betaString + "_beta" + '.csv')
 
     df.to_csv(path)
 
@@ -239,9 +245,11 @@ def main():
     alpha = 0.1
     #add a beta value which normalizes based on a time_window = beta (beta = [4, 12, 26, 52])
     betaList = [4, 12, 26, 52]
-    for beta in betaList:
-        for counter in range(1):
+    for counter in range(10):
+        for beta in betaList:
+            start_time = time.time()
             lassoRegressionImplement(allStock, alpha, beta)
-            alpha += 0.1
+            print("--- %s seconds ---" % (time.time() - start_time))
+        alpha += 0.1
 
 main()

@@ -168,8 +168,8 @@ def lassoRegressionImplement(allStock, alpha, beta):
     '''
 
     xValues = standardizeSeries(xValues, beta)
-    #yValues = standardizeSeries([yValues], beta)[0]
-    yValues = yValues[beta-1:]
+    yValues = standardizeSeries([yValues], beta)[0]
+    #yValues = yValues[beta-1:]
 
     '''
     Because the xValues have to be put into [[],[],[],[]] format. I can't think of a
@@ -206,9 +206,9 @@ def lassoRegressionImplement(allStock, alpha, beta):
 
     Someone needs to implement this.
     '''
-    # plt.plot(y_test)
-    # plt.plot(y_pred)
-    # plt.show()
+    plt.plot(y_test)
+    plt.plot(y_pred)
+    plt.show()
 
     madT = mean_absolute_error(y_train, y_predT)
     madV = mean_absolute_error(y_valid, y_predV)
@@ -264,6 +264,7 @@ def main():
             start_time = time.time()
             lassoRegressionImplement(allStock, alpha, beta)
             print("--- %s seconds ---" % (time.time() - start_time))
+        quit()
         alpha += 0.1
 
 main()

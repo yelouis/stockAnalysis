@@ -1,0 +1,7 @@
+,Feature Name,Alpha =0.1
+0,JNJ-high-average,0.0
+1,JNJ-high-max,0.0
+2,JNJ-close-average,0.892663549672175
+MAD Train: 0.2743781855065739
+MAD Valid: 0.19727650777206862
+MAD Test: 0.2347500180839686

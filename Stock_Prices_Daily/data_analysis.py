@@ -144,9 +144,10 @@ def lassoRegressionImplement(allStock, alpha, beta):
     '''
 
     # input stocks/statistics of interest in this list
-    xStocks = [["JNJ", "high", "average"],
-                ["JNJ", "high", "max"],
-                ["JNJ", "close", "average"]]
+    xStocks = [["GLD", "high", "average"],
+                ["GLD", "high", "max"],
+                ["GLD", "close", "average"],
+                ["^IRX", "close", "average"]]
 
     for i in xStocks:
         xValues.append(getX(allStock[i[0]], i[1], i[2]))
@@ -159,7 +160,7 @@ def lassoRegressionImplement(allStock, alpha, beta):
     xValueNames.append("high-average")
     '''
 
-    yValues = getY(allStock["JNJ"], "high", "average")
+    yValues = getY(allStock["GLD"], "close", "average")
 
     ##############################################################################
     '''
@@ -218,14 +219,6 @@ def lassoRegressionImplement(allStock, alpha, beta):
     '''
     Write the coefficients of each feature into a file.
     df is what contains all the coefficient.
-
-    TODO:
-    There should be a better way where we can directly write the
-    mad values into the df rather than reopenning the excel file
-    later on and then writing the MAD values.
-
-    The writing of the MAD value by openning excel is on line 247. Need to merge
-    into one df.
     '''
 
     df = pd.DataFrame()
@@ -233,6 +226,10 @@ def lassoRegressionImplement(allStock, alpha, beta):
     column_name = 'Alpha =' + str(alpha)
     df[column_name] = clf.coef_
 
+    # Adding MAD values to data frame
+    df['MAD Train'] = str(madT)
+    df['MAD Valid'] = str(madV)
+    df['MAD Test'] = str(mad)
 
 
     # Use xStocks to help specify the contents of the file
@@ -243,11 +240,6 @@ def lassoRegressionImplement(allStock, alpha, beta):
     path = os.path.join(Path(configKeys.OUTPUT_FOLDER), madString + "_mad" + alphaString +"_alpha"+ betaString + "_beta" + '.csv')
 
     df.to_csv(path)
-
-    with open(path, 'a') as fd:
-        fd.write("MAD Train: " + str(madT) + '\n')
-        fd.write("MAD Valid: " + str(madV) + '\n')
-        fd.write('MAD Test: ' + str(mad))
 
     print(df)
 

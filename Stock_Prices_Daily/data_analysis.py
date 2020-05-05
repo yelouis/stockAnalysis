@@ -25,6 +25,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn import linear_model
 import time
+import numpy as np
 
 
 def GetWeekDictionary(stockDF):
@@ -222,14 +223,12 @@ def lassoRegressionImplement(allStock, alpha, beta):
     '''
 
     df = pd.DataFrame()
+    xValueNames = np.append(xValueNames, ['MAD Train', 'MAD Valid', 'MAD Test'])
     df['Feature Name'] = xValueNames
-    column_name = 'Alpha =' + str(alpha)
-    df[column_name] = clf.coef_
-
-    # Adding MAD values to data frame
-    df['MAD Train'] = str(madT)
-    df['MAD Valid'] = str(madV)
-    df['MAD Test'] = str(mad)
+    column_name = 'Alpha =' + str(alpha) + " Beta =" +str(beta)
+    coefficients = clf.coef_
+    coefficients = np.append(coefficients, [str(madT), str(madV), str(mad)])
+    df[column_name] = coefficients
 
 
     # Use xStocks to help specify the contents of the file

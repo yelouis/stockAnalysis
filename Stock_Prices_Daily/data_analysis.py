@@ -223,6 +223,9 @@ def lassoRegressionImplement(allStock, alpha, beta):
     There should be a better way where we can directly write the
     mad values into the df rather than reopenning the excel file
     later on and then writing the MAD values.
+
+    The writing of the MAD value by openning excel is on line 247. Need to merge
+    into one df.
     '''
 
     df = pd.DataFrame()

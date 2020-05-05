@@ -215,14 +215,22 @@ def lassoRegressionImplement(allStock, alpha, beta):
     mad = mean_absolute_error(y_test, y_pred)
     print("MAD:", mad)
 
+    '''
+    Write the coefficients of each feature into a file.
+    df is what contains all the coefficient.
+
+    TODO:
+    There should be a better way where we can directly write the
+    mad values into the df rather than reopenning the excel file
+    later on and then writing the MAD values.
+    '''
+
     df = pd.DataFrame()
     df['Feature Name'] = xValueNames
     column_name = 'Alpha =' + str(alpha)
     df[column_name] = clf.coef_
 
-    '''
-    Write the coefficients of each feature into a file
-    '''
+
 
     # Use xStocks to help specify the contents of the file
     alphaString = format(alpha, '.1f')

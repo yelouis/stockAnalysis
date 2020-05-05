@@ -145,6 +145,10 @@ def lassoRegressionImplement(allStock, alpha, beta):
     '''
 
     # input stocks/statistics of interest in this list
+
+    # TODO Louis: Automate
+    # make xStock a loop that loops through all other stocks in the same sector
+
     xStocks = [["GLD", "high", "average"],
                 ["GLD", "high", "max"],
                 ["GLD", "close", "average"],
@@ -261,6 +265,9 @@ def main():
     alpha = 0.1
     #add a beta value which normalizes based on a time_window = beta (beta = [4, 12, 26, 52])
     betaList = [4, 12, 26, 52]
+
+    # TODO Louis: Automate
+    # Make an outerloop that includes all the stocks.
     for counter in range(10):
         for beta in betaList:
             start_time = time.time()

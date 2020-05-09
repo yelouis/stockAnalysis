@@ -19,6 +19,8 @@ import collections
 import copy
 import os
 import csv
+import datetime
+
 
 from pathlib import Path
 
@@ -30,6 +32,9 @@ stockTickers = df.Symbol
 
 sucessfulPulls = [["Symbol", "Sector"]]
 
+firstIndex =datetime.datetime.strptime(configKeys.STARTPULL, '%Y-%m-%d') + timedelta(days=1)
+lastIndex = datetime.datetime.strptime(configKeys.ENDPULL, '%Y-%m-%d') - timedelta(days=1)
+
 for ind in df.index:
     # Have an if statement in place in case if we don't want to pull every stock because there are a lot of stocks
     # Program takes a long time to run if we have to webscrape every stock each time we run
@@ -40,15 +45,11 @@ for ind in df.index:
     # https://pypi.org/project/yfinance/
     stockData = yf.download(df['Symbol'][ind], start=configKeys.STARTPULL, end=configKeys.ENDPULL)
 
-    if stockData.empty == False:
-        sucessfulPulls.append([df['Symbol'][ind], df['Sector'][ind]])
-
-
     # If there's something that's been loaded into stockData, then the length is no longer 0
-    if len(stockData) > 0:
+    if stockData.empty == False && stockData.index[0] == firstIndex && stockData.index[-1] == lastIndex:
+        sucessfulPulls.append([df['Symbol'][ind], df['Sector'][ind]])
         stockData = stockData.assign(Sector = df['Sector'][ind], IPOyear = df['IPOyear'][ind])
         stockData.to_csv(os.path.join(Path(configKeys.DATA_FOLDER), df['Symbol'][ind]+'Daily.csv'))
-
 
 #Creating a sucessful file that includes stock tickers and sectors
 with open("successfulPulls.csv", "w", newline="") as f:

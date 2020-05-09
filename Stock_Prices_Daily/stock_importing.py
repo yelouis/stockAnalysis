@@ -48,10 +48,16 @@ for ind in df.index:
     # If there's something that's been loaded into stockData, then the length is no longer 0
     if stockData.empty == False && stockData.index[0] == firstIndex && stockData.index[-1] == lastIndex:
         sucessfulPulls.append([df['Symbol'][ind], df['Sector'][ind]])
+
         stockData = stockData.assign(Sector = df['Sector'][ind], IPOyear = df['IPOyear'][ind])
         stockData.to_csv(os.path.join(Path(configKeys.DATA_FOLDER), df['Symbol'][ind]+'Daily.csv'))
 
 #Creating a sucessful file that includes stock tickers and sectors
+
+#TODO Louis:
+# Change it df.to_csv in order to auto rewrite file.
+# df.to_csv('out.zip', index=False)
+
 with open("successfulPulls.csv", "w", newline="") as f:
     writer = csv.writer(f)
     writer.writerows(sucessfulPulls)

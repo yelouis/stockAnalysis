@@ -20,6 +20,7 @@ import copy
 import os
 import csv
 import datetime
+from datetime import timedelta
 
 
 from pathlib import Path
@@ -32,8 +33,9 @@ stockTickers = df.Symbol
 
 sucessfulPulls = [["Symbol", "Sector"]]
 
-firstIndex =datetime.datetime.strptime(configKeys.STARTPULL, '%Y-%m-%d') + timedelta(days=1)
+firstIndex = datetime.datetime.strptime(configKeys.STARTPULL, '%Y-%m-%d') + timedelta(days=1)
 lastIndex = datetime.datetime.strptime(configKeys.ENDPULL, '%Y-%m-%d') - timedelta(days=1)
+
 
 for ind in df.index:
     # Have an if statement in place in case if we don't want to pull every stock because there are a lot of stocks
@@ -44,9 +46,8 @@ for ind in df.index:
 
     # https://pypi.org/project/yfinance/
     stockData = yf.download(df['Symbol'][ind], start=configKeys.STARTPULL, end=configKeys.ENDPULL)
-
     # If there's something that's been loaded into stockData, then the length is no longer 0
-    if stockData.empty == False && stockData.index[0] == firstIndex && stockData.index[-1] == lastIndex:
+    if stockData.empty == False and stockData.index[0] == firstIndex and stockData.index[-1] == lastIndex:
         sucessfulPulls.append([df['Symbol'][ind], df['Sector'][ind]])
 
         stockData = stockData.assign(Sector = df['Sector'][ind], IPOyear = df['IPOyear'][ind])

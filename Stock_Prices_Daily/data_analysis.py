@@ -26,6 +26,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn import linear_model
 import time
 import numpy as np
+import copy
+import math
 
 
 def GetWeekDictionary(stockDF):
@@ -106,15 +108,101 @@ with respect to the datapoints within the window_length.
 def standardizeSeries(series, window_length):
     #maybe we can try this, but usgin a year's worth of "training data" at the beginning of the series?
     newSeries = []
-    for list in series:
+    for series in series:
         standardizedList = []
-        for i in range(len(list)):
+        for i in range(len(series)):
             if i < window_length - 1:
                 continue
             else:
-                standardizedList.append((list[i] - statistics.mean(list[i + 1 - window_length:i + 1])) / statistics.stdev(list[i + 1 - window_length:i + 1]))
+                standardizedList.append((series[i] - statistics.mean(series[i + 1 - window_length:i + 1])) / statistics.stdev(series[i + 1 - window_length:i + 1]))
         newSeries.append(standardizedList)
     return newSeries
+
+
+
+def Calculate_Standardized_Value(series_to_standardize, window_length):
+    return standardizeSeries([series_to_standardize], window_length)[0][0]
+
+#We could try to get the math better, but it is very challenging when we are using the expected value in the standardization
+# ((standardized_value * stdev) + (sum(known_values)/window_length)) / ((window_length-1)/window_length)
+# (prediction[i] * stdev)
+def Estimate_Unstandardized(standardized_value, known_values, window_length):
+    estimated_value = int(known_values[-1])
+
+    factor = 10 ** (len(str(int(known_values[-1]))) - 1) # Take most recent value as judge of where the prediction could move (+ or - 100% max)
+
+    while(True):
+
+        if factor < 0.001: # done when we know the nearest tenth of a cent
+            break
+
+        dif = standardized_value - Calculate_Standardized_Value(known_values + [estimated_value], window_length)
+        #print(standardized_value - Calculate_Standardized_Value(known_values_with_estimated))
+
+        if dif <= 0:
+            for j in range(10):
+                if abs(dif) > abs(standardized_value - Calculate_Standardized_Value(known_values + [estimated_value - factor], window_length)):
+                    # if factor > 100:
+                    #     print("factor", factor)
+                    #     print("known values", known_values)
+                    #     print("estimated", estimated_value)
+                    #     print("real standardized", standardized_value)
+                    #     print("dif", dif)
+                    #     print("next dif", standardized_value - Calculate_Standardized_Value(known_values + [estimated_value - factor], window_length))
+                    #     print("next estimated standardized", Calculate_Standardized_Value(known_values + [estimated_value - factor], window_length))
+                    estimated_value -= factor
+                    dif = standardized_value - Calculate_Standardized_Value(known_values + [estimated_value], window_length) # update dif
+                else:
+                    break
+
+        else:
+            for j in range(10):
+                if abs(dif) > abs(standardized_value - Calculate_Standardized_Value(known_values + [estimated_value + factor], window_length)):
+                    # if factor > 100:
+                    #     print("factor", factor)
+                    #     print("known values", known_values)
+                    #     print("estimated", estimated_value)
+                    #     print("real standardized", standardized_value)
+                    #     print("dif", dif)
+                    #     print("next dif", standardized_value - Calculate_Standardized_Value(known_values + [estimated_value + factor], window_length))
+                    #     print("next estimated standardized", Calculate_Standardized_Value(known_values + [estimated_value + factor], window_length))
+                    estimated_value += factor
+                    dif = standardized_value - Calculate_Standardized_Value(known_values + [estimated_value], window_length) # update dif
+                else:
+                    break
+
+        factor = factor / 10
+
+    return estimated_value
+
+
+def Plot_Predicted_vs_Observed(coeficients, normalized_xValues, original_yValues, window_length):
+
+    observed = np.asarray(original_yValues[window_length-1:])
+
+    prediction = np.asarray([0] * len(normalized_xValues[0]))
+
+    for index in range(len(normalized_xValues)):
+        series_i_impact = np.asarray(normalized_xValues[index]) * coeficients[index]
+        prediction = prediction + series_i_impact
+
+    plt.plot(prediction)
+    # TAKE ALPHA INTO ACCOUNT (MULTIPLY BY ALPHA?)
+    plt.plot(standardizeSeries([original_yValues], window_length)[0])
+    plt.show()
+
+    real_prediction_values = []
+    for i in range(len(prediction)):
+        expected = Estimate_Unstandardized(prediction[i], original_yValues[i:i + window_length - 1], window_length)
+        real_prediction_values.append(expected)
+
+    print(len(real_prediction_values))
+    print(len(observed))
+
+    plt.plot(real_prediction_values)
+    plt.plot(observed)
+    plt.show()
+
 
 def lassoRegressionImplement(allStock, alpha, beta):
     '''
@@ -128,12 +216,8 @@ def lassoRegressionImplement(allStock, alpha, beta):
     stockA
     xValues = [[stockA.volW1, stockA.volW2, stockA.volW3],[stockA.volitW1, stockA.volitW2, stockA.volitW3]]
     yValues = [stockA.highestW2, stockA.highestW3, stockA.highestW4]
-
-    extractWeekly = {}
-    extractWeekly[vol] = [stockA.volW1, stockA.volW2, stockA.volW3]
-    extractWeekly[volit] = [stockA.volitW1, stockA.volitW2, stockA.volitW3]
-    extractWeekly[volAvg] =
     '''
+
     xValues = []
     yValues = []
     xValueNames = []
@@ -149,10 +233,14 @@ def lassoRegressionImplement(allStock, alpha, beta):
     # TODO Louis: Automate
     # make xStock a loop that loops through all other stocks in the same sector
 
-    xStocks = [["GLD", "high", "average"],
-                ["GLD", "high", "max"],
-                ["GLD", "close", "average"],
-                ["^IRX", "close", "average"]]
+    xStocks = [["^IRX", "close", "average"],
+            ["^IRX", "close", "max"],
+            ["^IRX", "low", "average"]]
+
+    # [["GLD", "high", "average"],
+    # ["GLD", "high", "max"],
+    # ["GLD", "close", "average"],
+    # ["^IRX", "close", "average"]]
 
     for i in xStocks:
         xValues.append(getX(allStock[i[0]], i[1], i[2]))
@@ -166,6 +254,7 @@ def lassoRegressionImplement(allStock, alpha, beta):
     '''
 
     yValues = getY(allStock["GLD"], "close", "average")
+    original_yValues =  copy.deepcopy(yValues)
 
     ##############################################################################
     '''
@@ -174,6 +263,7 @@ def lassoRegressionImplement(allStock, alpha, beta):
     '''
 
     xValues = standardizeSeries(xValues, beta)
+    original_normalized_xValues =  copy.deepcopy(xValues)
     yValues = standardizeSeries([yValues], beta)[0]
     #yValues = yValues[beta-1:]
 
@@ -240,6 +330,23 @@ def lassoRegressionImplement(allStock, alpha, beta):
     betaString = str(int(beta))
     madString = format(mad, '.2f')
 
+    # Can use this for verification
+    #Plot_Predicted_vs_Observed([1.001], [yValues], original_yValues, beta)
+
+    y_pred = clf.predict(xValues)
+
+    print(mean_absolute_error(yValues, [yValues[0]] + yValues[:-1]))
+    print(mean_absolute_error(yValues, y_pred))
+
+    plt.plot(yValues)
+    plt.plot([0] + yValues[:-1])
+    plt.plot(y_pred)
+    plt.show()
+    quit()
+
+    Plot_Predicted_vs_Observed(clf.coef_, original_normalized_xValues, original_yValues, beta)
+    quit()
+
     path = os.path.join(Path(configKeys.OUTPUT_FOLDER), madString + "_mad" + alphaString +"_alpha"+ betaString + "_beta" + '.csv')
 
     df.to_csv(path)
@@ -264,7 +371,7 @@ def main():
 
     alpha = 0.1
     #add a beta value which normalizes based on a time_window = beta (beta = [4, 12, 26, 52])
-    betaList = [4, 12, 26, 52]
+    betaList = [26]#[4, 12, 26, 52]
 
     # TODO Louis: Automate
     # Make an outerloop that includes all the stocks.

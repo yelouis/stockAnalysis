@@ -21,9 +21,9 @@ import os
 import csv
 import datetime
 from datetime import timedelta
-
-
 from pathlib import Path
+
+
 
 Stock = collections.namedtuple('Stock', ['symbol', 'price', 'sector', 'IPOyear', "dates"])
 
@@ -63,13 +63,14 @@ with open("successfulPulls.csv", "w", newline="") as f:
     writer = csv.writer(f)
     writer.writerows(sucessfulPulls)
 
-#USE THIS CODE WHEN READING THE CSV's INTO OTHER PYTHON FILES!!!
+
+
+# Here's another option for getting stock tickers:
+# must pip install get-all-tickers
 '''
-masterStockList = []
+from get_all_tickers import get_tickers as gt
 
-stock = Stock(df['Symbol'][ind], stockData, df['Sector'][ind], df['IPOyear'][ind], configKeys.STARTPULL+configKeys.ENDPULL)
-masterStockList.append(stock)
-
-for i in masterStockList:
-    print(i.symbol)
+list_of_tickers = gt.get_tickers()
+# if you want to save them to a CSV file:
+get.save_tickers()
 '''

@@ -82,10 +82,8 @@ def extractWeekly(dictionary, element, statistic):
             outputSeries.append(statistics.mean(elementList))
         if statistic == "max":
             outputSeries.append(max(elementList))
-        if statistic == "standard deviation":
-            outputSeries.append(statistics.stdev(elementList))
-        if statistic == "variance":
-            outputSeries.append(statistics.variance(elementList))
+        if statistic == "volatility":
+            outputSeries.append(max(elementList) - min(elementList))
         if statistic == "change":
             outputSeries.append(elementList[-1] - elementList[0])
     return outputSeries
@@ -119,7 +117,6 @@ def standardizeSeries(series, window_length):
     return newSeries
 
 
-
 def Calculate_Standardized_Value(series_to_standardize, window_length):
     return standardizeSeries([series_to_standardize], window_length)[0][0]
 
@@ -137,35 +134,17 @@ def Estimate_Unstandardized(standardized_value, known_values, window_length):
             break
 
         dif = standardized_value - Calculate_Standardized_Value(known_values + [estimated_value], window_length)
-        #print(standardized_value - Calculate_Standardized_Value(known_values_with_estimated))
 
         if dif <= 0:
             for j in range(10):
                 if abs(dif) > abs(standardized_value - Calculate_Standardized_Value(known_values + [estimated_value - factor], window_length)):
-                    # if factor > 100:
-                    #     print("factor", factor)
-                    #     print("known values", known_values)
-                    #     print("estimated", estimated_value)
-                    #     print("real standardized", standardized_value)
-                    #     print("dif", dif)
-                    #     print("next dif", standardized_value - Calculate_Standardized_Value(known_values + [estimated_value - factor], window_length))
-                    #     print("next estimated standardized", Calculate_Standardized_Value(known_values + [estimated_value - factor], window_length))
                     estimated_value -= factor
                     dif = standardized_value - Calculate_Standardized_Value(known_values + [estimated_value], window_length) # update dif
                 else:
                     break
-
         else:
             for j in range(10):
                 if abs(dif) > abs(standardized_value - Calculate_Standardized_Value(known_values + [estimated_value + factor], window_length)):
-                    # if factor > 100:
-                    #     print("factor", factor)
-                    #     print("known values", known_values)
-                    #     print("estimated", estimated_value)
-                    #     print("real standardized", standardized_value)
-                    #     print("dif", dif)
-                    #     print("next dif", standardized_value - Calculate_Standardized_Value(known_values + [estimated_value + factor], window_length))
-                    #     print("next estimated standardized", Calculate_Standardized_Value(known_values + [estimated_value + factor], window_length))
                     estimated_value += factor
                     dif = standardized_value - Calculate_Standardized_Value(known_values + [estimated_value], window_length) # update dif
                 else:
@@ -174,7 +153,6 @@ def Estimate_Unstandardized(standardized_value, known_values, window_length):
         factor = factor / 10
 
     return estimated_value
-
 
 def Plot_Predicted_vs_Observed(coeficients, normalized_xValues, original_yValues, window_length):
 
@@ -187,7 +165,6 @@ def Plot_Predicted_vs_Observed(coeficients, normalized_xValues, original_yValues
         prediction = prediction + series_i_impact
 
     plt.plot(prediction)
-    # TAKE ALPHA INTO ACCOUNT (MULTIPLY BY ALPHA?)
     plt.plot(standardizeSeries([original_yValues], window_length)[0])
     plt.show()
 
@@ -195,9 +172,6 @@ def Plot_Predicted_vs_Observed(coeficients, normalized_xValues, original_yValues
     for i in range(len(prediction)):
         expected = Estimate_Unstandardized(prediction[i], original_yValues[i:i + window_length - 1], window_length)
         real_prediction_values.append(expected)
-
-    print(len(real_prediction_values))
-    print(len(observed))
 
     plt.plot(real_prediction_values)
     plt.plot(observed)
@@ -235,7 +209,13 @@ def lassoRegressionImplement(allStock, alpha, beta):
 
     xStocks = [["^IRX", "close", "average"],
             ["^IRX", "close", "max"],
-            ["^IRX", "low", "average"]]
+            ["^IRX", "low", "average"],
+            ["^IRX", "close", "volatility"],
+            ["^IRX", "close", "change"],
+            ["^IRX", "volume", "average"]]
+
+    print(getX(allStock["^IRX"], "volume", "average"))
+    quit()
 
     # [["GLD", "high", "average"],
     # ["GLD", "high", "max"],

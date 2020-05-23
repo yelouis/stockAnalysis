@@ -45,7 +45,7 @@ def import_stocks():
         if stockData.empty == False and stockData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - stockData.index[-1] <= timedelta(days = 3):
             sucessfulPulls.append([ticker, "Stock"])
             stockData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), ticker+'.csv'))
-        quit() #remove this when starting to get all data
+        break #remove this when starting to get all data
 
 
 def import_funds():
@@ -73,7 +73,7 @@ def import_funds():
         if fundData.empty == False and fundData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - fundData.index[-1] <= timedelta(days = 3):
             sucessfulPulls.append([name, "Fund"])
             fundData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name+'.csv'))
-        quit() #remove this when starting to get all data
+        break #remove this when starting to get all data
 
 
 def import_etfs():
@@ -98,11 +98,10 @@ def import_etfs():
         # If there's something that's been loaded into stockData, then the length is no longer 0
         # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
         # this timedelta fixes the problem of trying to pull during a long weekend
-        print(etfData)
         if etfData.empty == False and etfData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - etfData.index[-1] <= timedelta(days = 3):
             sucessfulPulls.append([name, "ETF"])
             etfData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name+'.csv'))
-        quit() #remove this when starting to get all data
+        break #remove this when starting to get all data
 
 
 def import_bonds():
@@ -129,7 +128,7 @@ def import_bonds():
         if (bondData.empty == False) and (bondData.index[0] - firstIndex.date() <= timedelta(days = 2)) and (lastIndex.date() - bondData.index[-1] <= timedelta(days = 3)):
             sucessfulPulls.append([name, "Bond"])
             bondData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name+'.csv'))
-        quit() #remove this when starting to get all data
+        break #remove this when starting to get all data
 
 
 def import_commodities():
@@ -156,7 +155,7 @@ def import_commodities():
         if commodityData.empty == False and commodityData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - commodityData.index[-1] <= timedelta(days = 3):
             sucessfulPulls.append([name, "Commodity"])
             commodityData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name+'.csv'))
-        quit() #remove this when starting to get all data
+        break #remove this when starting to get all data
 
 
 def main():

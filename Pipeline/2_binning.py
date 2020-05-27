@@ -16,7 +16,7 @@ import copy
 import math
 
 
-def GetWeekDictionary(assetDF):
+def GetWeekDictionary(assetDF, include_volume):
 
     '''
     This piece of code breaks up the daily csv into weeks
@@ -45,9 +45,15 @@ def GetWeekDictionary(assetDF):
         if (datetime.datetime.strptime(assetDF['Date'][ind], '%Y-%m-%d') - currentBinDate).days > 7:
             datetimeBin[currentBinDate] = assetWeek
             currentBinDate = currentBinDate + timedelta(days=7)
-            assetWeek = [[datetime.datetime.strptime(assetDF['Date'][ind], '%Y-%m-%d'), assetDF['Open'][ind], assetDF['High'][ind], assetDF['Low'][ind], assetDF['Close'][ind], assetDF['Volume'][ind]]]
+            if include_volume == True:
+                assetWeek = [[datetime.datetime.strptime(assetDF['Date'][ind], '%Y-%m-%d'), assetDF['Open'][ind], assetDF['High'][ind], assetDF['Low'][ind], assetDF['Close'][ind], assetDF['Volume'][ind]]]
+            else:
+                assetWeek = [[datetime.datetime.strptime(assetDF['Date'][ind], '%Y-%m-%d'), assetDF['Open'][ind], assetDF['High'][ind], assetDF['Low'][ind], assetDF['Close'][ind]]]
         else:
-            assetWeek.append([datetime.datetime.strptime(assetDF['Date'][ind], '%Y-%m-%d'), assetDF['Open'][ind], assetDF['High'][ind], assetDF['Low'][ind], assetDF['Close'][ind], assetDF['Volume'][ind]])
+            if include_volume == True:
+                assetWeek.append([datetime.datetime.strptime(assetDF['Date'][ind], '%Y-%m-%d'), assetDF['Open'][ind], assetDF['High'][ind], assetDF['Low'][ind], assetDF['Close'][ind], assetDF['Volume'][ind]])
+            else:
+                assetWeek = [[datetime.datetime.strptime(assetDF['Date'][ind], '%Y-%m-%d'), assetDF['Open'][ind], assetDF['High'][ind], assetDF['Low'][ind], assetDF['Close'][ind]]]
 
     # We have to do this one more time to get the values from the last week
     datetimeBin[currentBinDate] = assetWeek
@@ -105,11 +111,11 @@ def main():
     This allows us to use the same CollapseDictionaryToWeeks() function for all asset classes
     '''
     name_element_stat = [["BA", "Close", "average"],
-                        ["BA", "Close", "max"],
+                        ["Gold", "Close", "max"],
                         ["BA", "Low", "average"],
                         ["BA", "Close", "volatility"],
-                        ["BA", "Close", "change"],
-                        ["BA", "Volume", "average"]]
+                        ["The Hartford Midcap Fund Class C", "Close", "average"],
+                        ["U.S. 30Y", "Open", "average"]]
 
     # We will use the 1successfulPulls.csv to tell us what type of asset is associated with each name/ticker
     reference_df = pd.read_csv("1successfulPulls.csv", low_memory=False)
@@ -120,14 +126,22 @@ def main():
         stat_to_get = asset[2]
 
         asset_class = find_asset_class(name, reference_df)
+        asset_class_has_volume = False
+        if asset_class == "Stock" or asset_class == "Commodity":
+            asset_class_has_volume = True
+
+        # check to see if we are trying to get the volume of an asset which does not have volume provided
+        if asset_class_has_volume != True and element == "Volume":
+            print(name + " does not have an associated volume")
+            print("Try choosing a different element")
+            quit()
 
         assetDF = pd.read_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name+".csv"), low_memory=False)
 
-        asset_dictionary = GetWeekDictionary(assetDF)
+        asset_dictionary = GetWeekDictionary(assetDF, asset_class_has_volume)
 
         week_bin_df = CollapseDictionaryToWeeks(asset_dictionary, element, stat_to_get)
         print(week_bin_df)
-        quit()
 
         #Now we throw this dataframe into a csv file and add it to a 2successfulWeekBins.csv
 

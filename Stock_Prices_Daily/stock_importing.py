@@ -19,8 +19,11 @@ import collections
 import copy
 import os
 import csv
-
+import datetime
+from datetime import timedelta
 from pathlib import Path
+
+
 
 Stock = collections.namedtuple('Stock', ['symbol', 'price', 'sector', 'IPOyear', "dates"])
 
@@ -29,6 +32,10 @@ df = pd.read_csv("companylist.csv", low_memory=False)
 stockTickers = df.Symbol
 
 sucessfulPulls = [["Symbol", "Sector"]]
+
+firstIndex = datetime.datetime.strptime(configKeys.STARTPULL, '%Y-%m-%d') + timedelta(days=1)
+lastIndex = datetime.datetime.strptime(configKeys.ENDPULL, '%Y-%m-%d') - timedelta(days=1)
+
 
 for ind in df.index:
     # Have an if statement in place in case if we don't want to pull every stock because there are a lot of stocks
@@ -39,29 +46,31 @@ for ind in df.index:
 
     # https://pypi.org/project/yfinance/
     stockData = yf.download(df['Symbol'][ind], start=configKeys.STARTPULL, end=configKeys.ENDPULL)
-
-    if stockData.empty == False:
+    # If there's something that's been loaded into stockData, then the length is no longer 0
+    if stockData.empty == False and stockData.index[0] == firstIndex and stockData.index[-1] == lastIndex:
         sucessfulPulls.append([df['Symbol'][ind], df['Sector'][ind]])
 
-
-    # If there's something that's been loaded into stockData, then the length is no longer 0
-    if len(stockData) > 0:
         stockData = stockData.assign(Sector = df['Sector'][ind], IPOyear = df['IPOyear'][ind])
         stockData.to_csv(os.path.join(Path(configKeys.DATA_FOLDER), df['Symbol'][ind]+'Daily.csv'))
 
-
 #Creating a sucessful file that includes stock tickers and sectors
+
+#TODO Louis:
+# Change it df.to_csv in order to auto rewrite file.
+# df.to_csv('out.zip', index=False)
+
 with open("successfulPulls.csv", "w", newline="") as f:
     writer = csv.writer(f)
     writer.writerows(sucessfulPulls)
 
-#USE THIS CODE WHEN READING THE CSV's INTO OTHER PYTHON FILES!!!
+
+
+# Here's another option for getting stock tickers:
+# must pip install get-all-tickers
 '''
-masterStockList = []
+from get_all_tickers import get_tickers as gt
 
-stock = Stock(df['Symbol'][ind], stockData, df['Sector'][ind], df['IPOyear'][ind], configKeys.STARTPULL+configKeys.ENDPULL)
-masterStockList.append(stock)
-
-for i in masterStockList:
-    print(i.symbol)
+list_of_tickers = gt.get_tickers()
+# if you want to save them to a CSV file:
+get.save_tickers()
 '''

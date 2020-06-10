@@ -76,7 +76,7 @@ for intrinTicker in workingTickers:
         stockDataSummary = security_api.get_security_stock_prices(intrinTicker, start_date=firstIndex, end_date=lastIndex, frequency="daily", page_size=necessaryPageSize)
 
     except ApiException as e:
-        #print("Exception when calling SecurityApi->get_security_stock_prices: %s\r\n" % e)
+        print("Exception when calling SecurityApi->get_security_stock_prices: %s\r\n" % e)
         continue
 
     #This checks if the data is within our timeframe, there's no need to check if data is empty because of the ApiException above

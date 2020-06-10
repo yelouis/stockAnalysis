@@ -1,7 +1,2 @@
-Symbol,Element,Stat
-NEM,Close,average
-NEM,Close,max
-AEM,Low,average
-AEM,Close,volatility
-XOM,Close,average
-U.S. 30Y,Open,average
+Symbol,Type
+BA,Stock

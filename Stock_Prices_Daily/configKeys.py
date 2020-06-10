@@ -4,4 +4,5 @@ STARTPULL = "2016-01-03"
 ENDPULL = "2020-01-04"
 
 DATA_FOLDER = "Daily/"
+SN_DATA_FOLDER = "SNDaily/"
 OUTPUT_FOLDER = "Output_Folder/"

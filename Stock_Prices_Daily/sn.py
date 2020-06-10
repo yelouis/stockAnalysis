@@ -58,7 +58,7 @@ print("necessaryPageSize should be 209: " + str(necessaryPageSize))
 try:
     #stockDataSummary is a list of StockPriceSummary objects, documentation for it can be found here: https://docs.intrinio.com/documentation/python/get_security_stock_prices_v2
     #NOTE: The date will always represent the last day in the period (E.g. End of the week)
-    stockDataSummary = security_api.get_security_stock_prices(intrinTicker, start_date=firstIndex, end_date=lastIndex, frequency="weekly", page_size=10)
+    stockDataSummary = security_api.get_security_stock_prices(intrinTicker, start_date=firstIndex, end_date=lastIndex, frequency="weekly", page_size=necessaryPageSize)
     #extract data
 
 except ApiException as e:
@@ -99,38 +99,24 @@ if len(stockDataSummary.stock_prices) > 0:
         stockDSList.append([sdp.date,sdp.intraperiod,sdp.frequency, sdp.open, sdp.high, sdp.low, sdp.close, sdp.volume, sdp.adj_open, sdp.adj_high, sdp.adj_low, sdp.adj_close, sdp.adj_volume])
     stockPriceDF = pd.DataFrame(stockDSList, columns = formatCols)
 
-print ("Data in row 0")
-print (stockPriceDF.iloc[[0]])
-
-
-
-
+#print ("Data in row 0")
+counter = 0
 '''
-for ind in df.index:
-    # Have an if statement in place in case if we don't want to pull every stock because there are a lot of stocks
-    # Program takes a long time to run if we have to webscrape every stock each time we run
-    stockData = []
-    # Code to get daily data
-    # stockData = yf.download(df['Symbol'][ind], start=configKeys.STARTPULL, end=configKeys.ENDPULL)
-
-    # https://pypi.org/project/yfinance/
-    stockData = yf.download(df['Symbol'][ind], start=configKeys.STARTPULL, end=configKeys.ENDPULL)
-
-    if stockData.empty == False:
-        sucessfulPulls.append([df['Symbol'][ind], df['Sector'][ind]])
+for dataPoint in stockPriceDF.head(10):
+    print (stockPriceDF.iloc[[counter]])
+    counter += 1
+    print()
+'''
+#stockPriceDF.to_csv(intrinDF.at[1, 'Symbol']+"SNDaily.csv")
 
 
-    # If there's something that's been loaded into stockData, then the length is no longer 0
-    if len(stockData) > 0:
-        stockData = stockData.assign(Sector = df['Sector'][ind], IPOyear = df['IPOyear'][ind])
-        stockData.to_csv(os.path.join(Path(configKeys.DATA_FOLDER), df['Symbol'][ind]+'Daily.csv'))
-''''''
 #Creating a sucessful file that includes stock tickers and sectors
-with open("successfulPulls.csv", "w", newline="") as f:
+with open("successfulPullsSN.csv", "w", newline="") as f:
     writer = csv.writer(f)
     writer.writerows(sucessfulPulls)
 '''
 #USE THIS CODE WHEN READING THE CSV's INTO OTHER PYTHON FILES!!!
+'''
 '''
 masterStockList = []
 

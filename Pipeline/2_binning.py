@@ -15,6 +15,9 @@ import numpy as np
 import copy
 import math
 
+global sucessfulBins
+sucessfulBins = {"Symbol" : [],
+                 "Type" : []}
 
 def GetWeekDictionary(assetDF, include_volume):
 
@@ -61,41 +64,39 @@ def GetWeekDictionary(assetDF, include_volume):
     return datetimeBin
 
 
-def CollapseDictionaryToWeeks(dictionary, element, statistic):
-    elementDict = {'Date':0, 'Open':1, 'High':2, 'Low':3, 'Close':4, 'Volume':5}
-    elementIndex = elementDict[element]
-    week_bin_list = []
-    date_bin_list = []
+def CollapseDictionaryToWeeks(dictionary, name, has_volume):
+    elementDict = {'Open':1, 'High':2, 'Low':3, 'Close':4, 'Volume':5}
+    asset_df = {"Date" : list(dictionary.keys())}
+    if has_volume:
+        list_of_elements = ['Open', 'High', 'Low', 'Close', 'Volume']
+    else:
+        list_of_elements = ['Open', 'High', 'Low', 'Close']
 
-    for week in dictionary.keys(): # This assumes the keys are already in chronological order
-        elementList = []
-        for day in dictionary[week]:
-            elementList.append(day[elementIndex])
-        if statistic == "average":
-            week_bin_list.append(statistics.mean(elementList))
-        elif statistic == "max":
-            week_bin_list.append(max(elementList))
-        elif statistic == "volatility": #maybe add another "volatility" statistic??
-            week_bin_list.append(max(elementList) - min(elementList))
-        elif statistic == "change":
-            week_bin_list.append(elementList[-1] - elementList[0])
-        else:
-            print("invalid input statistic to CollapseDictionaryToWeeks()")
-            quit()
-        date_bin_list.append(week)
+    for element in list_of_elements:
+        for statistic in ["average", "max", "volatility", "change"]:
+            elementIndex = elementDict[element]
+            week_bin_list = []
+            for week in dictionary.keys(): # This assumes the keys are already in chronological order
+                elementList = []
+                for day in dictionary[week]:
+                    elementList.append(day[elementIndex])
+                if statistic == "average":
+                    week_bin_list.append(statistics.mean(elementList))
+                elif statistic == "max":
+                    week_bin_list.append(max(elementList))
+                elif statistic == "volatility": #maybe add another "volatility" statistic??
+                    week_bin_list.append(max(elementList) - min(elementList))
+                elif statistic == "change":
+                    week_bin_list.append(elementList[-1] - elementList[0])
+                else:
+                    print("something went wrong in CollapseDictionaryToWeeks()")
+                    quit()
+            asset_df[name + "_" + element + "_" +statistic] = week_bin_list
 
-    week_bin_df = pd.DataFrame({"Date":date_bin_list,
-                         "Value":week_bin_list})
+    week_bin_df = pd.DataFrame(asset_df)
 
     return week_bin_df
 
-
-def find_asset_class(name, reference_df):
-    for index in reference_df.index:
-        if reference_df["Symbol"][index] == name:
-            return reference_df["Sector"][index]
-    print("could not find " + name + " in the reference csv")
-    quit()
 
 def main():
     '''
@@ -110,40 +111,33 @@ def main():
     Note: Thankfully, we likely won't need to use the Currency column (since it is always USD).
     This allows us to use the same CollapseDictionaryToWeeks() function for all asset classes
     '''
-    name_element_stat = [["BA", "Close", "average"],
-                        ["Gold", "Close", "max"],
-                        ["BA", "Low", "average"],
-                        ["BA", "Close", "volatility"],
-                        ["The Hartford Midcap Fund Class C", "Close", "average"],
-                        ["U.S. 30Y", "Open", "average"]]
-
     # We will use the 1successfulPulls.csv to tell us what type of asset is associated with each name/ticker
     reference_df = pd.read_csv("1successfulPulls.csv", low_memory=False)
 
-    for asset in name_element_stat:
-        name = asset[0]
-        element = asset[1]
-        stat_to_get = asset[2]
+    for index in reference_df.index[:10]:
 
-        asset_class = find_asset_class(name, reference_df)
+        name = reference_df["Symbol"][index]
+        asset_class = reference_df["Type"][index]
+
         asset_class_has_volume = False
         if asset_class == "Stock" or asset_class == "Commodity":
             asset_class_has_volume = True
-
-        # check to see if we are trying to get the volume of an asset which does not have volume provided
-        if asset_class_has_volume != True and element == "Volume":
-            print(name + " does not have an associated volume")
-            print("Try choosing a different element")
-            quit()
 
         assetDF = pd.read_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name+".csv"), low_memory=False)
 
         asset_dictionary = GetWeekDictionary(assetDF, asset_class_has_volume)
 
-        week_bin_df = CollapseDictionaryToWeeks(asset_dictionary, element, stat_to_get)
-        print(week_bin_df)
+        week_bin_df = CollapseDictionaryToWeeks(asset_dictionary, name, asset_class_has_volume)
+        week_bin_df.to_csv(os.path.join(Path(_configKeys.BINNED_FOLDER), name+".csv"), index=False)
 
-        #Now we throw this dataframe into a csv file and add it to a 2successfulWeekBins.csv
+        #Update the successful bins dataframe
+        sucessfulBins["Symbol"].append(name)
+        sucessfulBins["Type"].append(asset_class)
+
+    df = pd.DataFrame(sucessfulBins, columns = ["Symbol", "Type"])
+    #Creating a sucessful file that includes asset names/tickers
+    df.to_csv('2successfulWeekBins.csv', index=False)
+    #Now we throw this dataframe into a csv file and add it to a 2successfulWeekBins.csv
 
 
 main()

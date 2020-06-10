@@ -43,11 +43,22 @@ necessaryPageSize = math.ceil(numDays)
 #holds the stocks that have data between our start and end dates
 successfulPulls = [["Symbol", "Sector"]]
 
-#this is necessary while using the free version of intrinio because we only have access to the DOW 30 (among other international stocks)
+#this is necessary while using the free version of intrinio because we only have access to the DOW 30 and other international stocks
+workingTickers = []
+acc = 0
+for ourTicker in intrinTickers:
+    if acc == 100:
+        time.sleep(60)
+        acc = 0
+    try:
+        stockInfo = security_api.get_security_by_id(ourTicker)
+    except:
+        continue
 
+    if stockInfo.first_stock_price <= firstIndex.date():
+        workingTickers.append(ourTicker)
 
-
-for intrinTicker in intrinTickers:
+for intrinTicker in workingTickers:
     print(intrinTicker)
     #sleep takes in an integer representing the number of seconds to pause (we need to pause because of our limited access to API calls)
     time.sleep(60)

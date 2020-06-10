@@ -1,0 +1,235 @@
+Symbol,Sector
+"18    AC
+Name: Symbol, dtype: object","18    Finance
+Name: Sector, dtype: object"
+"20    ACB
+Name: Symbol, dtype: object","20    Consumer Durables
+Name: Sector, dtype: object"
+"34    ADS
+Name: Symbol, dtype: object","34    Miscellaneous
+Name: Sector, dtype: object"
+"75    AGS
+Name: Symbol, dtype: object","75    Consumer Durables
+Name: Sector, dtype: object"
+"99    AIR
+Name: Symbol, dtype: object","99    Capital Goods
+Name: Sector, dtype: object"
+"135    ALV
+Name: Symbol, dtype: object","135    Capital Goods
+Name: Sector, dtype: object"
+"166    ANTM
+Name: Symbol, dtype: object","166    Health Care
+Name: Sector, dtype: object"
+"267    AXP
+Name: Symbol, dtype: object","267    Finance
+Name: Sector, dtype: object"
+"275    AZN
+Name: Symbol, dtype: object","275    Health Care
+Name: Sector, dtype: object"
+"281    BA
+Name: Symbol, dtype: object","281    Capital Goods
+Name: Sector, dtype: object"
+"299    BAP
+Name: Symbol, dtype: object","299    Finance
+Name: Sector, dtype: object"
+"311    BBVA
+Name: Symbol, dtype: object","311    Finance
+Name: Sector, dtype: object"
+"320    BCE
+Name: Symbol, dtype: object","320    Public Utilities
+Name: Sector, dtype: object"
+"401    BMA
+Name: Symbol, dtype: object","401    Finance
+Name: Sector, dtype: object"
+"409    BMO
+Name: Symbol, dtype: object","409    Finance
+Name: Sector, dtype: object"
+"413    BNS
+Name: Symbol, dtype: object","413    Finance
+Name: Sector, dtype: object"
+"457    BVN
+Name: Symbol, dtype: object","457    Basic Industries
+Name: Sector, dtype: object"
+"489    CAI
+Name: Symbol, dtype: object","489    Technology
+Name: Sector, dtype: object"
+"499    CAT
+Name: Symbol, dtype: object","499    Capital Goods
+Name: Sector, dtype: object"
+"539    CDR
+Name: Symbol, dtype: object","539    Consumer Services
+Name: Sector, dtype: object"
+"551    CEO
+Name: Symbol, dtype: object","551    Energy
+Name: Sector, dtype: object"
+"622    CM
+Name: Symbol, dtype: object","622    Finance
+Name: Sector, dtype: object"
+"629    CMO
+Name: Symbol, dtype: object","629    Consumer Services
+Name: Sector, dtype: object"
+"703    CS
+Name: Symbol, dtype: object","703    Finance
+Name: Sector, dtype: object"
+"754    CVX
+Name: Symbol, dtype: object","754    Energy
+Name: Sector, dtype: object"
+"864    DSM
+Name: Symbol, dtype: object","864    NaN
+Name: Sector, dtype: object"
+"870    DTE
+Name: Symbol, dtype: object","870    Public Utilities
+Name: Sector, dtype: object"
+"904    EBS
+Name: Symbol, dtype: object","904    Health Care
+Name: Sector, dtype: object"
+"941    EL
+Name: Symbol, dtype: object","941    Consumer Non-Durables
+Name: Sector, dtype: object"
+"959    ENB
+Name: Symbol, dtype: object","959    Energy
+Name: Sector, dtype: object"
+"1053    FAM
+Name: Symbol, dtype: object","1053    NaN
+Name: Sector, dtype: object"
+"1159    G
+Name: Symbol, dtype: object","1159    Consumer Services
+Name: Sector, dtype: object"
+"1186    GE
+Name: Symbol, dtype: object","1186    Energy
+Name: Sector, dtype: object"
+"1290    GS
+Name: Symbol, dtype: object","1290    Finance
+Name: Sector, dtype: object"
+"1299    GSK
+Name: Symbol, dtype: object","1299    Health Care
+Name: Sector, dtype: object"
+"1305    GTN
+Name: Symbol, dtype: object","1305    Consumer Services
+Name: Sector, dtype: object"
+"1334    HD
+Name: Symbol, dtype: object","1334    Consumer Services
+Name: Sector, dtype: object"
+"1435    IBM
+Name: Symbol, dtype: object","1435    Technology
+Name: Sector, dtype: object"
+"1556    JNJ
+Name: Symbol, dtype: object","1556    Health Care
+Name: Sector, dtype: object"
+"1563    JPM
+Name: Symbol, dtype: object","1563    Finance
+Name: Sector, dtype: object"
+"1622    KO
+Name: Symbol, dtype: object","1622    Consumer Non-Durables
+Name: Sector, dtype: object"
+"1733    MC
+Name: Symbol, dtype: object","1733    Finance
+Name: Sector, dtype: object"
+"1737    MCD
+Name: Symbol, dtype: object","1737    Consumer Services
+Name: Sector, dtype: object"
+"1819    MMM
+Name: Symbol, dtype: object","1819    Health Care
+Name: Sector, dtype: object"
+"1837    MOH
+Name: Symbol, dtype: object","1837    Health Care
+Name: Sector, dtype: object"
+"1850    MRK
+Name: Symbol, dtype: object","1850    Health Care
+Name: Sector, dtype: object"
+"1868    MT
+Name: Symbol, dtype: object","1868    Basic Industries
+Name: Sector, dtype: object"
+"1978    NKE
+Name: Symbol, dtype: object","1978    Consumer Non-Durables
+Name: Sector, dtype: object"
+"2065    NVG
+Name: Symbol, dtype: object","2065    NaN
+Name: Sector, dtype: object"
+"2129    OR
+Name: Symbol, dtype: object","2129    Basic Industries
+Name: Sector, dtype: object"
+"2197    PEO
+Name: Symbol, dtype: object","2197    NaN
+Name: Sector, dtype: object"
+"2200    PFE
+Name: Symbol, dtype: object","2200    Health Care
+Name: Sector, dtype: object"
+"2208    PG
+Name: Symbol, dtype: object","2208    Basic Industries
+Name: Sector, dtype: object"
+"2239    PKO
+Name: Symbol, dtype: object","2239    NaN
+Name: Sector, dtype: object"
+"2266    POST
+Name: Symbol, dtype: object","2266    Consumer Non-Durables
+Name: Sector, dtype: object"
+"2356    RACE
+Name: Symbol, dtype: object","2356    Capital Goods
+Name: Sector, dtype: object"
+"2402    RIO
+Name: Symbol, dtype: object","2402    Basic Industries
+Name: Sector, dtype: object"
+"2457    RY
+Name: Symbol, dtype: object","2457    Finance
+Name: Sector, dtype: object"
+"2475    SAN
+Name: Symbol, dtype: object","2475    Finance
+Name: Sector, dtype: object"
+"2478    SAP
+Name: Symbol, dtype: object","2478    Technology
+Name: Sector, dtype: object"
+"2572    SM
+Name: Symbol, dtype: object","2572    Energy
+Name: Sector, dtype: object"
+"2585    SNP
+Name: Symbol, dtype: object","2585    Energy
+Name: Sector, dtype: object"
+"2658    STM
+Name: Symbol, dtype: object","2658    Technology
+Name: Sector, dtype: object"
+"2669    SU
+Name: Symbol, dtype: object","2669    Energy
+Name: Sector, dtype: object"
+"2715    TD
+Name: Symbol, dtype: object","2715    Finance
+Name: Sector, dtype: object"
+"2731    TEF
+Name: Symbol, dtype: object","2731    Public Utilities
+Name: Sector, dtype: object"
+"2733    TEL
+Name: Symbol, dtype: object","2733    Technology
+Name: Sector, dtype: object"
+"2780    TNET
+Name: Symbol, dtype: object","2780    Miscellaneous
+Name: Sector, dtype: object"
+"2814    TRP
+Name: Symbol, dtype: object","2814    Public Utilities
+Name: Sector, dtype: object"
+"2823    TRV
+Name: Symbol, dtype: object","2823    Finance
+Name: Sector, dtype: object"
+"2889    UNH
+Name: Symbol, dtype: object","2889    Health Care
+Name: Sector, dtype: object"
+"2914    UTX
+Name: Symbol, dtype: object","2914    Capital Goods
+Name: Sector, dtype: object"
+"2921    V
+Name: Symbol, dtype: object","2921    Miscellaneous
+Name: Sector, dtype: object"
+"2924    VALE
+Name: Symbol, dtype: object","2924    Basic Industries
+Name: Sector, dtype: object"
+"2939    VER
+Name: Symbol, dtype: object","2939    Consumer Services
+Name: Sector, dtype: object"
+"2994    VZ
+Name: Symbol, dtype: object","2994    Public Utilities
+Name: Sector, dtype: object"
+"3048    WMT
+Name: Symbol, dtype: object","3048    Consumer Services
+Name: Sector, dtype: object"
+"3094    XOM
+Name: Symbol, dtype: object","3094    Energy
+Name: Sector, dtype: object"

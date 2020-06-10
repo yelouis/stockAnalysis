@@ -45,6 +45,8 @@ necessaryPageSize = math.ceil(numDays)
 successfulPulls = [["Symbol", "Sector"]]
 
 for intrinTicker in intrinTickers:
+    #sleep takes in an integer representing the number of seconds to pause (we need to pause because of our limited access to API calls)
+    time.sleep(60)
     tickerRowIndex = 0
     #Result =  boolean dataframe with True at the position where the the intrinTicker is in intrinDF
     result = intrinDF.isin([intrinTicker])
@@ -66,7 +68,8 @@ for intrinTicker in intrinTickers:
     #This checks if the data is within our timeframe, there's no need to check if data is empty because of the ApiException above
     if stockDataSummary.stock_prices[-1].date == firstIndex and stockDataSummary.stock_price[0].date == lastIndex:
         successfulPulls.append(intrinTicker, intrinDF.at[tickerRowIndex, "Sector"])
-
+    else:
+        continue
 
     #accessing one of our stock prices to grab the correct keys for data collection (pop the last because it is a value called "discriminator")
     unformatCols = list(stockDataSummary.stock_prices[0].__dict__.keys())
@@ -85,8 +88,6 @@ for intrinTicker in intrinTickers:
             stockDSList.append([sdp.date,sdp.intraperiod,sdp.frequency, sdp.open, sdp.high, sdp.low, sdp.close, sdp.volume, sdp.adj_open, sdp.adj_high, sdp.adj_low, sdp.adj_close, sdp.adj_volume])
         stockPriceDF = pd.DataFrame(stockDSList, columns = formatCols)
         stockPriceDF.to_csv(os.path.join(Path(configKeys.SN_DATA_FOLDER), intrinTicker+"SNDaily.csv")
-    #sleep takes in an integer representing the number of seconds to pause (we need to pause because of our limited access to API calls)
-    time.sleep(60)
 
 #Creating a successful file that includes stock tickers and sectors
 with open("successfulPullsSN.csv", "w", newline="") as f:

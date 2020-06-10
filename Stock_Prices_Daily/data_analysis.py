@@ -113,7 +113,6 @@ def standardizeSeries(series, window_length):
                 continue
             else:
                 standardizedList.append((serie[i] - statistics.mean(serie[i + 1 - window_length:i + 1])) / statistics.stdev(serie[i + 1 - window_length:i + 1]))
-                #maybe we put a try statement here and if this doesn't work, we delete the corresponding xValueName?
         newSeries.append(standardizedList)
     return newSeries
 
@@ -238,6 +237,7 @@ def lassoRegressionImplement(allStock, alpha, beta):
         print(i[0])
         try:
             getXValues = getX(allStock[i[0]], i[1], i[2])
+            standardizeSeries([getXValues], beta)
             if statistics.stdev(getXValues) != 0 and len(getXValues) > 0:
                 xValues.append(getXValues)
                 xValueNames.append(i[0] + "-" + i[1] + "-" + i[2])
@@ -260,6 +260,7 @@ def lassoRegressionImplement(allStock, alpha, beta):
     More information in the comments at the function
     '''
 
+    #Crashing here
     xValues = standardizeSeries(xValues, beta)
     original_normalized_xValues =  copy.deepcopy(xValues)
     yValues = standardizeSeries([yValues], beta)[0]

@@ -113,6 +113,7 @@ def standardizeSeries(series, window_length):
                 continue
             else:
                 standardizedList.append((serie[i] - statistics.mean(serie[i + 1 - window_length:i + 1])) / statistics.stdev(serie[i + 1 - window_length:i + 1]))
+                #maybe we put a try statement here and if this doesn't work, we delete the corresponding xValueName?
         newSeries.append(standardizedList)
     return newSeries
 
@@ -214,10 +215,9 @@ def lassoRegressionImplement(allStock, alpha, beta):
     statisticList = ["average", "volatility", "change"]
 
     for stockTicker in list(allStock.keys()):
-        if stockTicker != yTicker:
-            for element in elementList:
-                for statistic in statisticList:
-                    xStocks.append([stockTicker, element, statistic])
+        for element in elementList:
+            for statistic in statisticList:
+                xStocks.append([stockTicker, element, statistic])
 
     # xStocks = [["^IRX", "close", "average"],
     #         ["^IRX", "close", "max"],
@@ -236,10 +236,13 @@ def lassoRegressionImplement(allStock, alpha, beta):
 
     for i in xStocks:
         print(i[0])
-        getXValues = getX(allStock[i[0]], i[1], i[2])
-        if statistics.stdev(getXValues) != 0 and len(getXValues) > 0:
-            xValues.append(getXValues)
-            xValueNames.append(i[0] + "-" + i[1] + "-" + i[2])
+        try:
+            getXValues = getX(allStock[i[0]], i[1], i[2])
+            if statistics.stdev(getXValues) != 0 and len(getXValues) > 0:
+                xValues.append(getXValues)
+                xValueNames.append(i[0] + "-" + i[1] + "-" + i[2])
+        except:
+            print("Something went wrong with importing " + str(i[0]))
 
     '''
     # THIS IS THE PART OF CODE WHICH WE MANUALLY CHANGE TO DO ANALYSIS
@@ -297,9 +300,11 @@ def lassoRegressionImplement(allStock, alpha, beta):
 
     Someone needs to implement this.
     '''
-    plt.plot(y_test)
-    plt.plot(y_pred)
-    plt.show()
+
+    # Uncomment later
+    # plt.plot(y_test)
+    # plt.plot(y_pred)
+    # plt.show()
 
     madT = mean_absolute_error(y_train, y_predT)
     madV = mean_absolute_error(y_valid, y_predV)
@@ -326,6 +331,7 @@ def lassoRegressionImplement(allStock, alpha, beta):
     madString = format(mad, '.2f')
 
     # Can use this for verification
+    # Uncomment later
     #Plot_Predicted_vs_Observed([1.001], [yValues], original_yValues, beta)
 
     y_pred = clf.predict(xValues)
@@ -333,6 +339,7 @@ def lassoRegressionImplement(allStock, alpha, beta):
     print(mean_absolute_error(yValues, [yValues[0]] + yValues[:-1]))
     print(mean_absolute_error(yValues, y_pred))
 
+    # Uncomment later
     # plt.plot(yValues)
     # plt.plot([0] + yValues[:-1])
     # plt.plot(y_pred)

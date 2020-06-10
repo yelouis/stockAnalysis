@@ -1,5 +1,6 @@
 # Import intrinio
 import intrinio_sdk as intrin
+from intrinio_sdk.rest import ApiException
 #Accesses the API with Sandbox Key
 intrin.ApiClient().configuration.api_key['api_key'] = 'OmM0YjJhNTNiNmVlMGYxMGJjODIwNWIyMTU3NGJjMzgw'
 #This file will keep track of all the moving variables and we can slowly add to that file
@@ -42,15 +43,19 @@ necessaryPageSize = math.ceil(numDays)
 #holds the stocks that have data between our start and end dates
 successfulPulls = [["Symbol", "Sector"]]
 
+#this is necessary while using the free version of intrinio because we only have access to the DOW 30 (among other international stocks)
+
+
+
 for intrinTicker in intrinTickers:
+    print(intrinTicker)
     #sleep takes in an integer representing the number of seconds to pause (we need to pause because of our limited access to API calls)
     time.sleep(60)
     tickerRowIndex = 0
     #Result =  boolean dataframe with True at the position where the the intrinTicker is in intrinDF
     result = intrinDF.isin([intrinTicker])
     #By fetching the index of the row where the boolean dataframe has the value True
-    row = result["Symbol"][result["Symbol"] == True].index
-    tickerRowIndex = row
+    tickerRowIndex = result["Symbol"][result["Symbol"] == True].index
 
     #initialization of a dataframe to help us keep track of stock price data over time for each security
     stockPriceDF = []
@@ -60,12 +65,12 @@ for intrinTicker in intrinTickers:
         stockDataSummary = security_api.get_security_stock_prices(intrinTicker, start_date=firstIndex, end_date=lastIndex, frequency="daily", page_size=necessaryPageSize)
 
     except ApiException as e:
-        print("Exception when calling SecurityApi->get_security_stock_prices: %s\r\n" % e)
+        #print("Exception when calling SecurityApi->get_security_stock_prices: %s\r\n" % e)
         continue
 
     #This checks if the data is within our timeframe, there's no need to check if data is empty because of the ApiException above
-    if stockDataSummary.stock_prices[-1].date == firstIndex and stockDataSummary.stock_price[0].date == lastIndex:
-        successfulPulls.append(intrinTicker, intrinDF.at[tickerRowIndex, "Sector"])
+    if stockDataSummary.stock_prices[-1].date == firstIndex.date() and stockDataSummary.stock_prices[0].date == lastIndex.date():
+        successfulPulls.append([intrinDF["Symbol"][tickerRowIndex], intrinDF["Sector"][tickerRowIndex]])
     else:
         continue
 
@@ -85,7 +90,7 @@ for intrinTicker in intrinTickers:
             sdp = stockDataSummary.stock_prices[i] #sdp is a Stock Data Point
             stockDSList.append([sdp.date,sdp.intraperiod,sdp.frequency, sdp.open, sdp.high, sdp.low, sdp.close, sdp.volume, sdp.adj_open, sdp.adj_high, sdp.adj_low, sdp.adj_close, sdp.adj_volume])
         stockPriceDF = pd.DataFrame(stockDSList, columns = formatCols)
-        stockPriceDF.to_csv(os.path.join(Path(configKeys.SN_DATA_FOLDER), intrinTicker+"SNDaily.csv"))
+        stockPriceDF.to_csv(os.path.join(Path(configKeys.SN_DATA_FOLDER), intrinTicker+"_SNDaily.csv"))
 
 #Creating a successful file that includes stock tickers and sectors
 with open("successfulPullsSN.csv", "w", newline="") as f:

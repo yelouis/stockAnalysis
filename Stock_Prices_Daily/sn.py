@@ -87,7 +87,7 @@ for intrinTicker in intrinTickers:
             sdp = stockDataSummary.stock_prices[i] #sdp is a Stock Data Point
             stockDSList.append([sdp.date,sdp.intraperiod,sdp.frequency, sdp.open, sdp.high, sdp.low, sdp.close, sdp.volume, sdp.adj_open, sdp.adj_high, sdp.adj_low, sdp.adj_close, sdp.adj_volume])
         stockPriceDF = pd.DataFrame(stockDSList, columns = formatCols)
-        stockPriceDF.to_csv(os.path.join(Path(configKeys.SN_DATA_FOLDER), intrinTicker+"SNDaily.csv")
+        stockPriceDF.to_csv(os.path.join(Path(configKeys.SN_DATA_FOLDER), intrinTicker+"SNDaily.csv"))
 
 #Creating a successful file that includes stock tickers and sectors
 with open("successfulPullsSN.csv", "w", newline="") as f:

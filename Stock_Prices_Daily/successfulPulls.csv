@@ -15,11 +15,9 @@ ABM,Finance
 ABR,Consumer Services
 ABT,Health Care
 AC,Finance
-ACA,Capital Goods
 ACB,Consumer Durables
 ACC,Consumer Services
 ACCO,Consumer Durables
-ACEL,Consumer Services
 ACH,Basic Industries
 ACM,Consumer Services
 ACN,Miscellaneous
@@ -28,14 +26,10 @@ ACRE,Consumer Services
 ACV,nan
 ADC,Consumer Services
 ADM,Consumer Non-Durables
-ADNT,Capital Goods
 ADS,Miscellaneous
-ADSW,Public Utilities
-ADT,Consumer Services
 ADX,nan
 AEB,Finance
 AEE,Public Utilities
-AEFC,Finance
 AEG,Finance
 AEL,Finance
 AEM,Basic Industries
@@ -47,7 +41,6 @@ AFB,nan
 AFC,nan
 AFG,Finance
 AFGH,Finance
-AFI,Consumer Non-Durables
 AFL,Finance
 AFT,nan
 AG,Basic Industries
@@ -59,7 +52,6 @@ AGN,Health Care
 AGO,Finance
 AGR,Public Utilities
 AGRO,Consumer Non-Durables
-AGS,Consumer Durables
 AGX,Basic Industries
 AHC,Consumer Services
 AHH,Finance
@@ -69,21 +61,17 @@ AIC,Consumer Services
 AIF,nan
 AIG,Finance
 AIN,Basic Industries
-AIO,nan
 AIR,Capital Goods
 AIT,Consumer Durables
 AIV,Consumer Services
 AIW,Consumer Services
 AIZ,Finance
-AIZP,Finance
 AJG,Finance
 AJRD,Capital Goods
 AJX,Consumer Services
-AJXA,Consumer Services
 AKR,Consumer Services
 AL,Technology
 ALB,Basic Industries
-ALC,Health Care
 ALE,Public Utilities
 ALEX,Consumer Services
 ALG,Capital Goods
@@ -92,23 +80,19 @@ ALL,Finance
 ALLE,Consumer Services
 ALLY,Finance
 ALSN,Capital Goods
-ALTG,Capital Goods
 ALV,Capital Goods
 ALX,Consumer Services
-AM,Public Utilities
 AMBC,Finance
 AMC,Consumer Services
 AMCR,Consumer Durables
 AME,Consumer Durables
 AMG,Finance
 AMH,Consumer Services
-AMK,Finance
 AMN,Technology
 AMOV,Public Utilities
 AMP,Finance
 AMPY,Energy
 AMRC,Basic Industries
-AMRX,Health Care
 AMT,Consumer Services
 AMX,Public Utilities
 AN,Consumer Durables
@@ -127,20 +111,13 @@ APH,Capital Goods
 APHA,Consumer Durables
 APLE,Consumer Services
 APO,Finance
-APRN,Consumer Services
 APTS,Consumer Services
 APTV,Capital Goods
-APY,Technology
 AQN,Public Utilities
-AQNA,Public Utilities
-AQNB,Public Utilities
-AQUA,Technology
 AR,Energy
-ARA,Health Care
 ARC,Consumer Services
 ARCH,Energy
 ARCO,Consumer Services
-ARD,Consumer Durables
 ARDC,nan
 ARE,Consumer Services
 ARES,Finance
@@ -148,9 +125,7 @@ ARGD,Finance
 ARGO,Finance
 ARI,Consumer Services
 ARL,Finance
-ARLO,Consumer Non-Durables
 ARMK,Consumer Services
-ARNC,Capital Goods
 AROC,Public Utilities
 ARR,Consumer Services
 ARW,Technology
@@ -160,7 +135,6 @@ ASC,Transportation
 ASG,nan
 ASGN,Technology
 ASH,Consumer Durables
-ASIX,Basic Industries
 ASPN,Consumer Services
 ASR,Transportation
 ASX,Technology
@@ -168,14 +142,11 @@ AT,Energy
 ATCO,Transportation
 ATEN,Technology
 ATGE,Consumer Services
-ATH,Finance
 ATHM,Technology
 ATI,Basic Industries
-ATKR,Miscellaneous
 ATO,Public Utilities
 ATR,Consumer Non-Durables
 ATTO,Public Utilities
-ATUS,Consumer Services
 ATV,Consumer Services
 AU,Basic Industries
 AUY,Basic Industries
@@ -185,12 +156,9 @@ AVB,Consumer Services
 AVD,Basic Industries
 AVH,Transportation
 AVK,nan
-AVLR,Technology
 AVNS,Health Care
-AVTR,Capital Goods
 AVX,Capital Goods
 AVY,Consumer Durables
-AVYA,Public Utilities
 AWF,nan
 AWI,Consumer Non-Durables
 AWK,Public Utilities
@@ -199,18 +167,14 @@ AWR,Public Utilities
 AX,Finance
 AXE,Consumer Non-Durables
 AXL,Capital Goods
-AXO,Finance
 AXP,Finance
 AXR,Consumer Services
 AXS,Finance
 AXTA,Basic Industries
 AYI,Consumer Durables
 AYR,Technology
-AYX,Technology
 AZN,Health Care
 AZO,Consumer Services
-AZRE,Public Utilities
-AZUL,Transportation
 AZZ,Consumer Durables
 B,Capital Goods
 BA,Capital Goods
@@ -218,7 +182,6 @@ BABA,Miscellaneous
 BAC,Finance
 BAF,nan
 BAH,Consumer Services
-BAK,Basic Industries
 BAM,Consumer Services
 BANC,Finance
 BAP,Finance
@@ -232,7 +195,6 @@ BBF,nan
 BBK,nan
 BBL,Energy
 BBN,nan
-BBU,Basic Industries
 BBVA,Finance
 BBW,Consumer Services
 BBX,Finance
@@ -245,19 +207,14 @@ BCH,Finance
 BCO,Transportation
 BCRH,Finance
 BCS,Finance
-BCSF,nan
 BCX,nan
 BDC,Basic Industries
 BDJ,nan
 BDN,Consumer Services
 BDX,Health Care
-BDXA,Health Care
-BE,Energy
-BEDU,Consumer Services
 BEN,Finance
 BEP,Public Utilities
 BERY,Consumer Non-Durables
-BEST,Transportation
 BFAM,Miscellaneous
 BFK,nan
 BFO,nan
@@ -268,7 +225,6 @@ BG,Consumer Non-Durables
 BGB,nan
 BGG,Energy
 BGH,nan
-BGIO,nan
 BGR,nan
 BGS,Consumer Non-Durables
 BGSF,Technology
@@ -283,15 +239,12 @@ BHLB,Finance
 BHP,Basic Industries
 BHR,Consumer Services
 BHV,nan
-BHVN,Health Care
 BIF,nan
 BIG,Consumer Services
-BILL,Technology
 BIO,Capital Goods
 BIP,Consumer Services
 BIT,nan
 BITA,Technology
-BJ,Consumer Services
 BK,Finance
 BKD,Health Care
 BKE,Consumer Services
@@ -319,21 +272,16 @@ BNY,nan
 BOE,nan
 BOH,Finance
 BOOT,Consumer Services
-BORR,Energy
 BOX,Technology
 BP,Energy
-BPMP,Energy
 BPT,Energy
 BQH,nan
 BR,Miscellaneous
-BRBR,Consumer Non-Durables
 BRC,Consumer Durables
 BRFS,Consumer Non-Durables
-BRMK,Consumer Services
 BRO,Finance
 BRT,Consumer Services
 BRX,Consumer Services
-BSA,Finance
 BSAC,Finance
 BSBR,Finance
 BSD,nan
@@ -343,19 +291,16 @@ BSL,nan
 BSM,Energy
 BSMX,Finance
 BST,nan
-BSTZ,nan
 BSX,Health Care
 BTA,nan
 BTE,Energy
 BTI,Consumer Non-Durables
 BTO,nan
 BTT,nan
-BTU,Energy
 BTZ,nan
 BUD,Consumer Non-Durables
 BUI,nan
 BURL,Consumer Services
-BV,Consumer Non-Durables
 BVN,Basic Industries
 BW,Capital Goods
 BWA,Capital Goods
@@ -363,21 +308,17 @@ BWG,nan
 BWXT,Energy
 BX,Finance
 BXC,Capital Goods
-BXG,Finance
 BXMT,Consumer Services
 BXMX,nan
 BXP,Consumer Services
 BXS,nan
-BY,Finance
 BYD,Consumer Services
 BYM,nan
 BZH,Capital Goods
 BZM,nan
 C,Finance
-CAAP,Transportation
 CABO,Consumer Services
 CACI,Technology
-CADE,Finance
 CAE,Miscellaneous
 CAF,nan
 CAG,Consumer Non-Durables
@@ -386,24 +327,19 @@ CAI,Technology
 CAJ,Miscellaneous
 CAL,Consumer Non-Durables
 CALX,Consumer Services
-CANG,Technology
 CAPL,Energy
-CARS,Technology
 CAT,Capital Goods
 CATO,Consumer Services
 CB,Finance
 CBB,Public Utilities
 CBD,Consumer Services
-CBH,nan
 CBL,Consumer Services
 CBRE,Finance
 CBT,Basic Industries
 CBU,Finance
 CBZ,Miscellaneous
 CC,Basic Industries
-CCC,Technology
 CCEP,Consumer Non-Durables
-CCH,Finance
 CCI,Consumer Services
 CCJ,Basic Industries
 CCK,Consumer Durables
@@ -413,31 +349,24 @@ CCO,Consumer Services
 CCR,Energy
 CCS,Capital Goods
 CCU,Consumer Non-Durables
-CCX,Finance
-CCZ,Consumer Services
-CDAY,Technology
 CDE,Basic Industries
 CDR,Consumer Services
 CE,Basic Industries
 CEA,Transportation
 CEE,nan
-CEIX,Energy
 CEL,Public Utilities
 CELP,Miscellaneous
 CEM,nan
 CEN,nan
 CEO,Energy
-CEPU,Public Utilities
 CEQP,Consumer Services
 CF,Basic Industries
 CFG,Finance
 CFR,Finance
 CFX,Capital Goods
-CFXA,Capital Goods
 CGA,Basic Industries
 CGC,Consumer Durables
 CHA,Public Utilities
-CHAP,Energy
 CHCT,Consumer Services
 CHD,Basic Industries
 CHE,Health Care
@@ -447,11 +376,9 @@ CHK,Energy
 CHL,Public Utilities
 CHMI,Consumer Services
 CHN,nan
-CHRA,Basic Industries
 CHS,Consumer Services
 CHT,Public Utilities
 CHU,Public Utilities
-CHWY,Consumer Services
 CI,Health Care
 CIA,Finance
 CIB,Finance
@@ -467,15 +394,12 @@ CIT,Finance
 CKH,Transportation
 CL,Consumer Non-Durables
 CLB,Energy
-CLDR,Technology
 CLDT,Consumer Services
 CLF,Basic Industries
 CLGX,Technology
 CLH,Basic Industries
 CLI,Consumer Services
-CLNC,Consumer Services
 CLNY,Consumer Services
-CLPR,Consumer Services
 CLR,Energy
 CLS,Technology
 CLW,Basic Industries
@@ -491,18 +415,13 @@ CMO,Consumer Services
 CMP,Basic Industries
 CMRE,Transportation
 CMS,Public Utilities
-CMSA,Public Utilities
-CMSC,Public Utilities
-CMSD,Public Utilities
 CMU,nan
 CNA,Finance
 CNC,Health Care
-CNF,Finance
 CNHI,Capital Goods
 CNI,Transportation
 CNK,Consumer Services
 CNMD,Health Care
-CNNE,Consumer Services
 CNO,Finance
 CNP,Public Utilities
 CNQ,Energy
@@ -512,10 +431,8 @@ CNX,Energy
 CNXM,Public Utilities
 CO,Finance
 CODI,Consumer Durables
-COE,Consumer Services
 COF,Finance
 COG,Energy
-COLD,Consumer Services
 COO,Health Care
 COP,Energy
 COR,Consumer Services
@@ -529,7 +446,6 @@ CPE,Energy
 CPF,Finance
 CPG,Energy
 CPK,Public Utilities
-CPLG,Consumer Services
 CPRI,Consumer Non-Durables
 CPS,Capital Goods
 CPT,Consumer Services
@@ -549,42 +465,29 @@ CSLT,Technology
 CSTM,Basic Industries
 CSU,Health Care
 CSV,Consumer Services
-CTAA,Public Utilities
 CTB,Consumer Durables
-CTBB,Public Utilities
-CTDD,Public Utilities
-CTK,Technology
 CTL,Public Utilities
 CTLT,Health Care
 CTR,nan
-CTRA,Energy
 CTS,Technology
-CTST,Consumer Durables
 CTT           ,Consumer Services
 CTV,Public Utilities
-CTVA,Consumer Non-Durables
 CTY,Public Utilities
 CTZ,Public Utilities
 CUB,Capital Goods
-CUBB,Finance
 CUBE,Consumer Services
 CUBI,Finance
 CUK,Consumer Services
 CULP,Basic Industries
-CURO,Finance
 CUZ,Consumer Services
 CVA,Basic Industries
 CVE,Energy
 CVEO,Consumer Services
 CVI,Energy
-CVIA,Basic Industries
-CVNA,Consumer Durables
 CVS,Health Care
 CVX,Energy
 CW,Technology
 CWEN,Public Utilities
-CWH,Consumer Durables
-CWK,Finance
 CWT,Public Utilities
 CX,Capital Goods
 CXE,nan
@@ -599,18 +502,14 @@ D,Public Utilities
 DAC,Transportation
 DAL,Transportation
 DAN,Capital Goods
-DAO,Consumer Services
 DAR,Consumer Non-Durables
-DAVA,Technology
 DB,Finance
 DBD,Miscellaneous
 DBI,Consumer Services
 DBL,nan
-DCF,nan
 DCI,Capital Goods
 DCO,Capital Goods
 DCP,Public Utilities
-DCUE,Public Utilities
 DD,Basic Industries
 DDD,Technology
 DDF,nan
@@ -620,11 +519,8 @@ DE,Capital Goods
 DEA,Consumer Services
 DECK,Consumer Non-Durables
 DEI,Consumer Services
-DELL,Technology
 DEO,Consumer Non-Durables
-DESP,Consumer Services
 DEX,nan
-DFIN,Consumer Services
 DFP,nan
 DFS,Finance
 DG,Consumer Services
@@ -643,14 +539,11 @@ DKS,Consumer Services
 DL,Consumer Services
 DLB,Miscellaneous
 DLNG,Consumer Services
-DLPH,Capital Goods
 DLR,Consumer Services
 DLX,Consumer Durables
-DLY,nan
 DMB,nan
 DMO,nan
 DNI,nan
-DNK,Consumer Services
 DNOW,Energy
 DNP,nan
 DNR,Energy
@@ -658,7 +551,6 @@ DO,Energy
 DOC,Consumer Services
 DOOR,Basic Industries
 DOV,Technology
-DOW,Basic Industries
 DPG,nan
 DPZ,Consumer Non-Durables
 DQ,Technology
@@ -667,25 +559,17 @@ DRE,Consumer Services
 DRH,Consumer Services
 DRI,Consumer Services
 DRQ,Energy
-DRUA,Public Utilities
 DS,Consumer Services
 DSE,nan
 DSL,nan
 DSM,nan
-DSSI,Consumer Services
 DSU,nan
 DSX,Transportation
-DT,Technology
 DTE,Public Utilities
 DTF,nan
-DTJ,Public Utilities
-DTP,Public Utilities
 DTQ,Public Utilities
-DTW,Public Utilities
-DTY,Public Utilities
 DUC,nan
 DUK,Public Utilities
-DUKB,Public Utilities
 DUKH,Public Utilities
 DVA,Health Care
 DVD,Consumer Services
@@ -698,19 +582,13 @@ DY,Basic Industries
 E,Energy
 EAB,Public Utilities
 EAE,Public Utilities
-EAF,Energy
-EAI,Public Utilities
 EARN,Consumer Services
 EAT,Consumer Services
-EB,Technology
 EBF,Consumer Services
 EBR,Public Utilities
 EBS,Health Care
 EC,Energy
 ECC           ,nan
-ECCB,nan
-ECCX,nan
-ECCY,nan
 ECL,Basic Industries
 ECOM          ,Technology
 ECT,Energy
@@ -722,10 +600,8 @@ EDN,Public Utilities
 EDU,Consumer Services
 EE,Public Utilities
 EEA,nan
-EEX,Miscellaneous
 EFC,Finance
 EFF,nan
-EFL,nan
 EFR,nan
 EFT,nan
 EFX,Finance
@@ -737,35 +613,25 @@ EGP,Consumer Services
 EGY,Energy
 EHC,Health Care
 EHI,nan
-EHT,nan
-EIC,nan
 EIG,Finance
 EIX,Public Utilities
 EL,Consumer Non-Durables
-ELAN,Health Care
 ELC,Public Utilities
-ELF,Consumer Non-Durables
-ELJ,Public Utilities
 ELP,Public Utilities
 ELS,Consumer Services
 ELU,Public Utilities
-ELVT,Finance
 ELY,Consumer Non-Durables
 EMD,nan
 EME,Capital Goods
 EMF,nan
 EMN,Basic Industries
 EMO,nan
-EMP,Public Utilities
 EMR,Energy
 ENB,Energy
-ENBA,Energy
 ENBL,Public Utilities
 ENIA,Public Utilities
-ENIC,Public Utilities
 ENJ,Public Utilities
 ENLC,Public Utilities
-ENO,Public Utilities
 ENR,Miscellaneous
 ENS,Consumer Non-Durables
 ENV,Miscellaneous
@@ -781,9 +647,7 @@ EPAM,Technology
 EPC,Consumer Non-Durables
 EPD,Public Utilities
 EPR,Consumer Services
-EPRT,Consumer Services
 EQC,Consumer Services
-EQH,Finance
 EQM,Public Utilities
 EQNR,Energy
 EQR,Consumer Services
@@ -799,7 +663,6 @@ ESI,Basic Industries
 ESNT,Finance
 ESRT,Consumer Services
 ESS,Consumer Services
-ESTC,Technology
 ESTE,Energy
 ET,Public Utilities
 ETB,nan
@@ -810,7 +673,6 @@ ETM,Consumer Services
 ETN,Technology
 ETO,nan
 ETR,Public Utilities
-ETRN,Public Utilities
 ETV,nan
 ETW,nan
 ETX           ,nan
@@ -842,8 +704,6 @@ FAF,Finance
 FAM,nan
 FBC,Finance
 FBHS,Basic Industries
-FBK,Finance
-FBM,Consumer Services
 FBP,Finance
 FC,Consumer Services
 FCAU,Capital Goods
@@ -857,7 +717,6 @@ FDP,Consumer Non-Durables
 FDS,Technology
 FDX,Transportation
 FE,Public Utilities
-FEDU,Consumer Services
 FEI           ,nan
 FENG,Consumer Services
 FEO,nan
@@ -866,22 +725,17 @@ FF,Basic Industries
 FFA,nan
 FFC,nan
 FFG,Finance
-FG,Finance
 FGB,nan
 FHI,Finance
 FHN,Finance
 FI,Energy
 FICO,Miscellaneous
 FIF,nan
-FINS,nan
-FINV,Finance
 FIS,Miscellaneous
 FIT,Technology
-FIV,nan
 FIX,Capital Goods
 FL,Consumer Services
 FLC,nan
-FLNG,Consumer Services
 FLO,Consumer Non-Durables
 FLOW,Technology
 FLR,Basic Industries
@@ -896,15 +750,12 @@ FMX,Consumer Non-Durables
 FMY,nan
 FN,Public Utilities
 FNB,Finance
-FND,Consumer Services
 FNF,Finance
 FNV,Basic Industries
 FOE,Basic Industries
 FOF,nan
 FOR,Finance
-FPAC,Technology
 FPF,nan
-FPH,Finance
 FPI,Consumer Services
 FPL,nan
 FR,Consumer Services
@@ -915,20 +766,15 @@ FRT,Consumer Services
 FSB,Finance
 FSD,nan
 FSK,nan
-FSLY,Technology
 FSM,Basic Industries
 FSS,Capital Goods
 FT,nan
 FTAI,nan
-FTCH,Miscellaneous
 FTI,Energy
 FTK,Basic Industries
 FTS,Public Utilities
-FTSI,Energy
-FTV,Capital Goods
 FUL,Basic Industries
 FUN,Consumer Services
-FVRR,Miscellaneous
 G,Consumer Services
 GAB,nan
 GAM,nan
@@ -939,7 +785,6 @@ GBX,Capital Goods
 GCAP,Finance
 GCI,Consumer Services
 GCO,Consumer Services
-GCP,Basic Industries
 GCV,nan
 GD,Capital Goods
 GDDY,Technology
@@ -957,7 +802,6 @@ GES,Consumer Non-Durables
 GF,nan
 GFF,Capital Goods
 GFI,Basic Industries
-GFL,Public Utilities
 GFY,nan
 GGB,Capital Goods
 GGG,Capital Goods
@@ -965,7 +809,6 @@ GGM,nan
 GGT,nan
 GGZ,nan
 GHC,Consumer Services
-GHG,Consumer Services
 GHL,Finance
 GHM,Technology
 GHY,nan
@@ -973,7 +816,6 @@ GIB,Consumer Services
 GIL,Consumer Non-Durables
 GIM,nan
 GIS,Consumer Non-Durables
-GIX,Finance
 GJH,Finance
 GJO,Finance
 GJP,nan
@@ -983,7 +825,6 @@ GJT,Finance
 GKOS,Health Care
 GL,Finance
 GLD,Basic Industries
-GLEO,Finance
 GLOB,Technology
 GLOG,Consumer Services
 GLOP,Consumer Services
@@ -993,9 +834,6 @@ GLW,Basic Industries
 GM,Capital Goods
 GME,Consumer Services
 GMED,Health Care
-GMRE,Consumer Services
-GMS,Consumer Services
-GMTA,Consumer Services
 GMZ,nan
 GNC,Consumer Non-Durables
 GNE,Public Utilities
@@ -1007,20 +845,15 @@ GNW,Finance
 GOF,nan
 GOL,Transportation
 GOLD,Basic Industries
-GOLF,Consumer Non-Durables
-GOOS,Consumer Non-Durables
 GPC,Capital Goods
 GPI,Consumer Durables
-GPJA,Public Utilities
 GPK,Consumer Durables
 GPM,nan
-GPMT,Consumer Services
 GPN,Miscellaneous
 GPRK,Energy
 GPS,Consumer Services
 GPX,Consumer Services
 GRA,Basic Industries
-GRAF,Finance
 GRAM,Basic Industries
 GRC,Capital Goods
 GRUB,Miscellaneous
@@ -1030,13 +863,9 @@ GSBD,nan
 GSH,Transportation
 GSK,Health Care
 GSL,Transportation
-GSLD,Transportation
-GSX,Consumer Services
-GTES,Technology
 GTN,Consumer Services
 GTS,Finance
 GTT,Public Utilities
-GTX,Capital Goods
 GTY,Finance
 GUT,nan
 GVA,Basic Industries
@@ -1048,17 +877,13 @@ H,Consumer Services
 HAE,Health Care
 HAL,Energy
 HASI,Consumer Services
-HBB,Consumer Durables
 HBI,Consumer Services
 HBM,Basic Industries
 HCA,Health Care
-HCC,Energy
 HCFT,Consumer Services
 HCHC,Capital Goods
 HCI,Finance
 HCR,Basic Industries
-HCXY,nan
-HCXZ,nan
 HD,Consumer Services
 HDB,Finance
 HE,Public Utilities
@@ -1066,13 +891,8 @@ HEI,Capital Goods
 HEP,Energy
 HEQ,nan
 HES,Energy
-HESM,Energy
-HEXO,Consumer Durables
 HFC,Energy
-HFRO,nan
 HGH,Finance
-HGLB,nan
-HGV,Consumer Services
 HHC,Consumer Services
 HHS,Technology
 HI,Consumer Durables
@@ -1084,14 +904,12 @@ HIO,nan
 HIW,Consumer Services
 HIX,nan
 HJV,Finance
-HKIB,Finance
 HL,Basic Industries
 HLF,Health Care
 HLI,Finance
 HLT,Consumer Services
 HLX,Energy
 HMC,Capital Goods
-HMI,Technology
 HMLP,Consumer Services
 HMN,Finance
 HMY,Basic Industries
@@ -1099,7 +917,6 @@ HNGR,Health Care
 HNI,Consumer Durables
 HNP,Public Utilities
 HOG,Consumer Non-Durables
-HOME,Consumer Services
 HON,Capital Goods
 HOV,Capital Goods
 HP,Energy
@@ -1125,17 +942,13 @@ HSY,Consumer Non-Durables
 HT,Consumer Services
 HTA,Consumer Services
 HTD,nan
-HTFA,nan
 HTGC,nan
 HTH,Finance
 HTY,nan
-HTZ,Consumer Services
 HUBB,Capital Goods
 HUBS,Technology
-HUD,Consumer Services
 HUM,Health Care
 HUN,Basic Industries
-HUYA,Technology
 HVT,Consumer Services
 HXL,Basic Industries
 HY,Capital Goods
@@ -1145,7 +958,6 @@ HYT,nan
 HZN,Capital Goods
 HZO,Consumer Services
 I,Consumer Services
-IAA,Consumer Durables
 IAE,nan
 IAG,Basic Industries
 IBA,Consumer Non-Durables
@@ -1160,9 +972,7 @@ IDE,nan
 IDT,Public Utilities
 IEX,Capital Goods
 IFF,Basic Industries
-IFFT,Basic Industries
 IFN,nan
-IFS,Finance
 IGA,nan
 IGD,nan
 IGI,nan
@@ -1171,12 +981,9 @@ IGT,Consumer Services
 IHC,Finance
 IHD,nan
 IHG,Consumer Services
-IHIT,nan
-IHTA,nan
 IID,nan
 IIF,nan
 IIM,nan
-IIPR,Finance
 IMAX,Miscellaneous
 INFO,Technology
 INFY,Technology
@@ -1184,11 +991,8 @@ ING,Finance
 INGR,Consumer Non-Durables
 INN,Consumer Services
 INSI,nan
-INSP,Health Care
 INST,Technology
-INSW,Consumer Services
 INT,Energy
-INVH,Finance
 IO,Energy
 IP,Basic Industries
 IPG,Technology
@@ -1196,7 +1000,6 @@ IPHI,Technology
 IPI,Basic Industries
 IQI,nan
 IQV,Health Care
-IR,Technology
 IRET,Consumer Services
 IRL,nan
 IRM,Consumer Services
@@ -1217,7 +1020,6 @@ IVZ,Finance
 IX,Finance
 J,Basic Industries
 JAX,Consumer Services
-JBGS,Consumer Services
 JBK,Finance
 JBL,Technology
 JBN,Finance
@@ -1226,31 +1028,22 @@ JBT,Technology
 JCAP,Consumer Services
 JCE,nan
 JCI,Consumer Services
-JCO,nan
 JCP,Consumer Services
 JDD,nan
 JE,Public Utilities
 JEF,Finance
-JELD,Basic Industries
-JEMD,nan
 JEQ,nan
 JFR,nan
 JGH,nan
-JHAA,nan
-JHB,nan
-JHG,Finance
 JHI,nan
 JHS,nan
 JHX,Capital Goods
 JHY,nan
-JIH,Finance
-JILL,Consumer Non-Durables
 JKS,Technology
 JLL,Finance
 JLS,nan
 JMEI,Consumer Services
 JMF,nan
-JMIA,Consumer Services
 JMLP,nan
 JMM,nan
 JMP,Finance
@@ -1263,13 +1056,11 @@ JPC,nan
 JPI,nan
 JPM,Finance
 JPS,nan
-JPT,nan
 JQC,nan
 JRI,nan
 JRO,nan
 JRS,nan
 JSD,nan
-JT,Technology
 JTA,nan
 JTD,nan
 JWN,Consumer Services
@@ -1280,7 +1071,6 @@ KAR,Consumer Durables
 KB,Finance
 KBH,Capital Goods
 KBR,Basic Industries
-KDMN,Health Care
 KDP,Consumer Non-Durables
 KEM,Capital Goods
 KEN,Public Utilities
@@ -1295,7 +1085,6 @@ KGC,Basic Industries
 KIM,Consumer Services
 KIO,nan
 KKR,Finance
-KL,Basic Industries
 KMB,Consumer Durables
 KMF,nan
 KMI,Public Utilities
@@ -1314,15 +1103,12 @@ KOS,Energy
 KR,Consumer Services
 KRA,Basic Industries
 KRC,Consumer Services
-KREF,Consumer Services
 KRG,Consumer Services
 KRO,Basic Industries
-KRP,Energy
 KSM,nan
 KSS,Consumer Services
 KSU,Transportation
 KT,Public Utilities
-KTB,Consumer Non-Durables
 KTF,nan
 KTH,Finance
 KTN,Finance
@@ -1334,10 +1120,8 @@ L,Finance
 LAC,Basic Industries
 LAD,Consumer Durables
 LADR,Consumer Services
-LAIX,Consumer Services
 LAZ,Finance
 LB,Consumer Services
-LBRT,Energy
 LC,Finance
 LCI,Health Care
 LCII,Capital Goods
@@ -1351,29 +1135,20 @@ LEG,Consumer Durables
 LEJU,Finance
 LEN,Basic Industries
 LEO,nan
-LEVI,Consumer Non-Durables
 LFC,Finance
-LGC,Technology
-LGF.B,nan
 LGI,nan
 LH,Health Care
-LHC,Consumer Services
 LHX,Capital Goods
 LII,Capital Goods
 LIN,Basic Industries
-LINX,Technology
 LITB,Consumer Services
 LL,Consumer Services
 LLY,Health Care
 LM,Finance
-LMHA,Finance
-LMHB,Finance
 LMT,Capital Goods
-LN,Technology
 LNC,Finance
 LND,Consumer Non-Durables
 LNN,Capital Goods
-LOMA,Capital Goods
 LOW,Consumer Services
 LPG,Transportation
 LPI,Energy
@@ -1382,12 +1157,10 @@ LPX,Basic Industries
 LRN,Consumer Services
 LSI,Consumer Services
 LTC,Consumer Services
-LTHM,Basic Industries
 LTM,Transportation
 LUB,Consumer Services
 LUV,Transportation
 LVS,Consumer Services
-LW,Consumer Non-Durables
 LXFR,Basic Industries
 LXP,nan
 LXU,Basic Industries
@@ -1410,7 +1183,6 @@ MBI,Finance
 MBT,Public Utilities
 MC,Finance
 MCA,nan
-MCB,Finance
 MCC,nan
 MCD,Consumer Services
 MCI,nan
@@ -1424,24 +1196,18 @@ MCX,nan
 MCY,Finance
 MD,Health Care
 MDC,Capital Goods
-MDLA,Technology
-MDLQ,Finance
-MDLX,Finance
 MDLY,Finance
 MDP,Consumer Services
 MDT,Health Care
 MDU,Basic Industries
-MEC,Capital Goods
 MED,Consumer Non-Durables
 MEI,Capital Goods
 MEN,nan
 MET,Finance
 MFA,Consumer Services
-MFAC,Finance
 MFC,Finance
 MFD,nan
 MFG,Finance
-MFGP,Technology
 MFL,nan
 MFM,nan
 MFO,Consumer Services
@@ -1451,10 +1217,7 @@ MG,Consumer Services
 MGA,Capital Goods
 MGF,nan
 MGM,Consumer Services
-MGP,Consumer Services
-MGR,Finance
 MGU,nan
-MGY,Energy
 MHD,nan
 MHE,nan
 MHF,nan
@@ -1489,11 +1252,9 @@ MNE,nan
 MNK,Health Care
 MNP,nan
 MNR,Consumer Services
-MNRL,Energy
 MO,Consumer Non-Durables
 MOD,Capital Goods
 MODN,Technology
-MOGU,Miscellaneous
 MOH,Health Care
 MOS,Basic Industries
 MOV,Consumer Non-Durables
@@ -1512,7 +1273,6 @@ MRO,Energy
 MS,Finance
 MSA,Health Care
 MSB,Basic Industries
-MSC,Consumer Services
 MSCI,Miscellaneous
 MSD,nan
 MSG,Consumer Services
@@ -1546,7 +1306,6 @@ MUS,nan
 MUSA,Consumer Durables
 MUX,Basic Industries
 MVC,nan
-MVCD,nan
 MVF,nan
 MVO,Energy
 MVT,nan
@@ -1562,7 +1321,6 @@ MYF,nan
 MYI,nan
 MYJ,nan
 MYN,nan
-MYOV,Health Care
 MZA,nan
 NAC,nan
 NAD,nan
@@ -1586,30 +1344,21 @@ NEA,nan
 NEE,Public Utilities
 NEM,Basic Industries
 NEP,Public Utilities
-NET,Technology
 NEU,Basic Industries
 NEV,nan
-NEW,Consumer Services
 NEWR,Technology
-NEX,Energy
-NEXA,Basic Industries
 NFG,Public Utilities
-NFH,Finance
 NFJ,Finance
 NGG,Public Utilities
 NGL,Energy
 NGS,Energy
 NGVC,Consumer Services
-NGVT,Basic Industries
-NHA,nan
 NHF,nan
 NHI,Consumer Services
 NI,Public Utilities
 NID,nan
 NIE,nan
 NIM,nan
-NINE,Energy
-NIO,Capital Goods
 NIQ,nan
 NJR,Public Utilities
 NJV,nan
@@ -1621,9 +1370,7 @@ NLS,Consumer Non-Durables
 NLSN,Miscellaneous
 NLY,Consumer Services
 NM,Transportation
-NMCO,nan
 NMFC,nan
-NMFX,nan
 NMI,nan
 NMM,Transportation
 NMR,Finance
@@ -1642,7 +1389,6 @@ NOK,Technology
 NOM,nan
 NOMD,Consumer Non-Durables
 NOV,Energy
-NOVA,Public Utilities
 NOW,Technology
 NP,Basic Industries
 NPK,Capital Goods
@@ -1653,23 +1399,18 @@ NPV,nan
 NQP,nan
 NR,Energy
 NRG,Public Utilities
-NRGX,nan
 NRK,nan
 NRP,Energy
 NRT,Energy
-NRUC,Finance
 NRZ,Consumer Services
 NS,Energy
 NSA,Consumer Services
 NSC,Transportation
-NSCO,Technology
 NSL,nan
 NSP,Technology
 NSS,nan
-NTB,Finance
 NTG,nan
 NTP,Finance
-NTR,Basic Industries
 NTZ,Consumer Durables
 NUE,Basic Industries
 NUM,nan
@@ -1683,8 +1424,6 @@ NVO,Health Care
 NVR,Capital Goods
 NVRO,Health Care
 NVS,Health Care
-NVST,Health Care
-NVT,Technology
 NVTA,Health Care
 NWE,Public Utilities
 NWHM,Capital Goods
@@ -1702,10 +1441,8 @@ NYT,Consumer Services
 NYV,nan
 NZF,nan
 O,Consumer Services
-OAC,Finance
 OBE,Energy
 OC,Capital Goods
-OCFT,Technology
 OCN,Finance
 ODC,Consumer Durables
 OEC,Basic Industries
@@ -1726,21 +1463,14 @@ OMF,Finance
 OMI,Health Care
 OMN,Basic Industries
 ONDK,Finance
-ONE,Consumer Services
-ONTO,Capital Goods
 OOMA,Technology
-OPP,nan
 OPY,Finance
-OR,Basic Industries
 ORA,Public Utilities
 ORAN,Public Utilities
 ORC,Consumer Services
-ORCC,nan
 ORCL,Technology
 ORI,Finance
 ORN,Basic Industries
-OSB,Basic Industries
-OSG,Transportation
 OSK,Capital Goods
 OUT,Consumer Services
 OVV,Energy
@@ -1749,10 +1479,8 @@ OXY,Energy
 PAA,Energy
 PAC,Transportation
 PACD,Energy
-PACK,Consumer Durables
 PAG,Consumer Durables
 PAGP,Energy
-PAGS,Technology
 PAI,nan
 PAM,Public Utilities
 PANW,Technology
@@ -1762,14 +1490,12 @@ PAYC,Technology
 PB,Finance
 PBA,Energy
 PBB,nan
-PBC,nan
 PBF,Energy
 PBFX,Energy
 PBH,Health Care
 PBI,Miscellaneous
 PBR,Energy
 PBT,Energy
-PBY,nan
 PCF,nan
 PCG,Public Utilities
 PCI,nan
@@ -1777,7 +1503,6 @@ PCK,nan
 PCM,nan
 PCN,nan
 PCQ,nan
-PD,Technology
 PDI,nan
 PDM,Consumer Services
 PDS,Energy
@@ -1811,31 +1536,23 @@ PHG,Energy
 PHI,Public Utilities
 PHK,nan
 PHM,Capital Goods
-PHR,Miscellaneous
 PHT,nan
 PHX,Energy
-PIC,Finance
 PII,Capital Goods
 PIM,nan
-PINE,Consumer Services
-PING,Technology
-PINS,Technology
 PIPR,Finance
 PIY,Finance
 PJH,Finance
 PJT,Finance
-PK,Consumer Services
 PKE,Capital Goods
 PKG,Consumer Durables
 PKI,Capital Goods
 PKO,nan
 PKX,Basic Industries
-PLAN,Technology
 PLD,Consumer Services
 PLNT,Consumer Services
 PLOW,Capital Goods
 PLT,Public Utilities
-PLYM,Consumer Services
 PM,Consumer Non-Durables
 PMF,nan
 PML,nan
@@ -1857,34 +1574,25 @@ PPL,Public Utilities
 PPR,nan
 PPT,nan
 PPX,Public Utilities
-PQG,Basic Industries
 PRA,Finance
 PRGO,Health Care
 PRH,Finance
 PRI,Finance
 PRLB,Capital Goods
-PRMW,Consumer Non-Durables
 PRO,Technology
-PROS,Finance
-PRS,Finance
-PRSP,Technology
-PRT,Energy
 PRTY,Consumer Services
 PRU,Finance
 PSA,Consumer Services
 PSB,Consumer Services
 PSF,nan
-PSN,Technology
 PSO,Consumer Services
 PSTG,Technology
-PSTL,Consumer Services
 PSV,Transportation
 PSX,Energy
 PSXP,Energy
 PTR,Energy
 PTY,nan
 PUK,Finance
-PUMP,Energy
 PVG,Basic Industries
 PVH,Consumer Non-Durables
 PVL,Energy
@@ -1896,20 +1604,14 @@ PYT,Finance
 PYX,Consumer Services
 PZC,nan
 PZN,Finance
-QD,Finance
 QEP,Energy
-QES,Energy
 QGEN,Health Care
-QHC,Health Care
 QSR,Consumer Services
 QTS,Consumer Services
 QTWO,Technology
 QUAD,Miscellaneous
 QUOT,Consumer Services
-QVCC,Consumer Services
-QVCD,Consumer Services
 R,Consumer Services
-RA,nan
 RACE,Capital Goods
 RAD,Health Care
 RAMP,Technology
@@ -1917,13 +1619,9 @@ RBA,Miscellaneous
 RBC,Consumer Durables
 RBS,Finance
 RC,Consumer Services
-RCA,Consumer Services
-RCB,Consumer Services
 RCI,Consumer Services
 RCL,Consumer Services
-RCP,Consumer Services
 RCS,nan
-RCUS,Health Care
 RDN,Finance
 RDY,Health Care
 RE,Finance
@@ -1932,13 +1630,10 @@ RENN,Technology
 RES,Energy
 RESI,Finance
 REV,Consumer Non-Durables
-REVG,Capital Goods
 REX,Basic Industries
 REXR,Consumer Services
-REZI,Capital Goods
 RF,Finance
 RFI,nan
-RFL,Finance
 RFP,Basic Industries
 RGA,Finance
 RGR,Capital Goods
@@ -1949,7 +1644,6 @@ RHI,Technology
 RHP,Consumer Services
 RIG,Energy
 RIO,Basic Industries
-RIV,nan
 RJF,Finance
 RL,Consumer Non-Durables
 RLGY,Finance
@@ -1959,13 +1653,8 @@ RLJ,Consumer Services
 RM,Finance
 RMAX,Finance
 RMD,Health Care
-RMED,Health Care
-RMG,Finance
-RMI,nan
-RMM,nan
 RMT,nan
 RNG,Technology
-RNGR,Energy
 RNP,nan
 RNR,Finance
 ROG,Basic Industries
@@ -1974,7 +1663,6 @@ ROL,Finance
 ROP,Capital Goods
 ROYT,Energy
 RPAI,Consumer Services
-RPLA,Finance
 RPM,Basic Industries
 RPT,Consumer Services
 RQI,nan
@@ -1982,32 +1670,24 @@ RRC,Energy
 RRD,Miscellaneous
 RRTS,Transportation
 RS,Basic Industries
-RSF,nan
 RSG,Public Utilities
 RST,Technology
 RTN,Capital Goods
 RTW,Consumer Services
 RUBI,Technology
-RVI,Finance
-RVLV,Consumer Services
 RVT,nan
 RWT,Consumer Services
 RXN,Technology
 RY,Finance
 RYAM,Basic Industries
-RYB,Consumer Services
 RYCE,Consumer Non-Durables
 RYI,Basic Industries
 RYN,Consumer Services
 RZA,Finance
-RZB,Finance
 S,Public Utilities
 SA,Basic Industries
-SAF,nan
-SAFE,Consumer Services
 SAH,Consumer Durables
 SAIC,Technology
-SAIL,Technology
 SALT,Transportation
 SAM,Consumer Non-Durables
 SAN,Finance
@@ -2016,11 +1696,9 @@ SAP,Technology
 SAR,nan
 SAVE,Transportation
 SB,Transportation
-SBE,Finance
 SBH,Consumer Services
 SBI,nan
 SBNA,Transportation
-SBOW,Energy
 SBR,Energy
 SBS,Public Utilities
 SBSW,nan
@@ -2031,13 +1709,10 @@ SCHW,Finance
 SCI,Consumer Services
 SCL,Basic Industries
 SCM,nan
-SCPE,Finance
 SCS,Consumer Durables
 SCU,Finance
 SCX,Capital Goods
-SD,Energy
 SDRL,Energy
-SE,Consumer Services
 SEAS,Consumer Services
 SEE,Basic Industries
 SEM,Health Care
@@ -2045,26 +1720,20 @@ SERV,Consumer Services
 SF,Finance
 SFE,Finance
 SFL,Transportation
-SFTW,Finance
 SFUN,Technology
 SGU,Consumer Services
 SHAK,Consumer Services
 SHG,Finance
 SHI,Basic Industries
-SHLL,Finance
 SHLX,Energy
 SHO,Consumer Services
 SHOP,Technology
 SHW,Consumer Services
-SI,Finance
 SID,Capital Goods
 SIG,Consumer Services
 SITC,Consumer Services
-SITE,Consumer Non-Durables
 SIX,Consumer Services
 SJI,Public Utilities
-SJIJ,Public Utilities
-SJIU,Public Utilities
 SJM,Consumer Non-Durables
 SJR,Consumer Services
 SJT,Energy
@@ -2078,16 +1747,12 @@ SLCA,Basic Industries
 SLF,Finance
 SLG,Consumer Services
 SM,Energy
-SMAR,Technology
 SMFG,Finance
 SMG,Basic Industries
-SMHI,Transportation
 SMLP,Public Utilities
 SMM,nan
 SMP,Capital Goods
 SNA,Capital Goods
-SNAP,Technology
-SNDR,Transportation
 SNE,Consumer Non-Durables
 SNN,Health Care
 SNP,Energy
@@ -2095,25 +1760,16 @@ SNR,Consumer Services
 SNV,Finance
 SNX,Technology
 SO,Public Utilities
-SOGO,Technology
-SOI,Energy
 SOJA,Public Utilities
-SOJB,Public Utilities
-SOJC,Public Utilities
 SOL,Technology
-SOLN,Public Utilities
 SON,Consumer Durables
 SOR,nan
-SPAQ,Finance
 SPB           ,Miscellaneous
-SPCE,Consumer Services
 SPE,nan
 SPG,Consumer Services
 SPGI,Finance
 SPH,Consumer Services
 SPLP,Capital Goods
-SPN,Energy
-SPOT,Consumer Services
 SPR,Capital Goods
 SPXC,Technology
 SPXX,nan
@@ -2123,7 +1779,6 @@ SQNS,Technology
 SR,Public Utilities
 SRC,Consumer Services
 SRE,Public Utilities
-SREA,Public Utilities
 SRF,nan
 SRG,Finance
 SRI,Capital Goods
@@ -2140,7 +1795,6 @@ STAG,Consumer Services
 STAR          ,Consumer Services
 STC,Finance
 STE,Health Care
-STG,Consumer Services
 STK,nan
 STL,Finance
 STM,Technology
@@ -2156,15 +1810,10 @@ SUI,Consumer Services
 SUM,Basic Industries
 SUN,Energy
 SUP,Capital Goods
-SUPV,Finance
 SUZ,Basic Industries
-SWCH,Technology
-SWI,Technology
 SWK,Capital Goods
 SWM,Basic Industries
 SWN,Energy
-SWP,Capital Goods
-SWT,Capital Goods
 SWX,Public Utilities
 SWZ,nan
 SXC,Basic Industries
@@ -2179,16 +1828,12 @@ T,Public Utilities
 TAC,Public Utilities
 TAK,Health Care
 TAL,Consumer Services
-TALO,Energy
 TAP,Consumer Non-Durables
 TARO,Health Care
-TBB,Public Utilities
-TBC,Public Utilities
 TBI,Technology
 TCI,Consumer Services
 TCO,Consumer Services
 TCP,Public Utilities
-TCRW,nan
 TCRZ,nan
 TCS,Consumer Services
 TD,Finance
@@ -2203,7 +1848,6 @@ TDOC,Health Care
 TDS,Public Utilities
 TDW,Consumer Services
 TDY,Capital Goods
-TEAF,nan
 TECK,Basic Industries
 TEF,Public Utilities
 TEI,nan
@@ -2243,7 +1887,6 @@ TLRA,Technology
 TLRD,Consumer Services
 TLYS,Consumer Services
 TM,Capital Goods
-TME,Consumer Services
 TMHC,Capital Goods
 TMO,Capital Goods
 TMST,Basic Industries
@@ -2253,14 +1896,12 @@ TNK,Consumer Services
 TNP,Transportation
 TOL,Capital Goods
 TOT,Energy
-TPB,Consumer Non-Durables
 TPC,Basic Industries
 TPH,Capital Goods
 TPL,Energy
 TPR,Consumer Non-Durables
 TPRE,Finance
 TPVG,nan
-TPVY,nan
 TPX,Consumer Durables
 TPZ,nan
 TR,Consumer Non-Durables
@@ -2270,16 +1911,13 @@ TREX,Basic Industries
 TRGP,Public Utilities
 TRI,Consumer Services
 TRN,Capital Goods
-TRNE,Finance
 TRNO,Finance
 TROX,Basic Industries
 TRP,Public Utilities
 TRQ,Basic Industries
 TRTN,Technology
-TRTX,Consumer Services
 TRU,Finance
 TRV,Finance
-TRWH,Consumer Services
 TS,Basic Industries
 TSE,Basic Industries
 TSI,nan
@@ -2291,16 +1929,15 @@ TSQ,Consumer Services
 TSU,Public Utilities
 TT,Capital Goods
 TTC,Capital Goods
+TTI,Energy
 TTM,Capital Goods
 TTP,nan
 TU,Public Utilities
-TUFN,Technology
 TUP,Consumer Non-Durables
 TV,Consumer Services
 TVC,Public Utilities
 TVE,Public Utilities
 TWI,Basic Industries
-TWLO,Technology
 TWN,nan
 TWO,Consumer Services
 TWTR,Technology
@@ -2313,7 +1950,6 @@ UA,Consumer Non-Durables
 UAA,Consumer Non-Durables
 UAN,Basic Industries
 UBA,Consumer Services
-UBER,Miscellaneous
 UBP,Consumer Services
 UBS,Finance
 UDR,Consumer Services
@@ -2334,7 +1970,6 @@ UNF,Consumer Services
 UNFI,Consumer Non-Durables
 UNH,Health Care
 UNM,Finance
-UNMA,Finance
 UNP,Transportation
 UNT,Energy
 UNVR,Consumer Durables
@@ -2344,11 +1979,9 @@ USA,nan
 USAC,Public Utilities
 USB,Finance
 USDP,Transportation
-USFD,Consumer Non-Durables
 USM,Public Utilities
 USNA,Consumer Durables
 USPH,Health Care
-USX,Transportation
 UTF,nan
 UTI,Consumer Services
 UTL,Public Utilities
@@ -2362,12 +1995,9 @@ V,Miscellaneous
 VAC,Finance
 VAL,Energy
 VALE,Basic Industries
-VAM,nan
-VAPO,Health Care
 VAR,Health Care
 VAW,General Sector
 VBF,nan
-VCIF,nan
 VCR,General Sector
 VCRA,Capital Goods
 VCV,nan
@@ -2375,7 +2005,6 @@ VDE,General Sector
 VEC,Consumer Services
 VEDL,Capital Goods
 VEEV,Technology
-VEL,Finance
 VER,Consumer Services
 VET,Energy
 VFC,Consumer Non-Durables
@@ -2385,9 +2014,7 @@ VGM,nan
 VGR,Consumer Non-Durables
 VGT,General Sector
 VHI,Basic Industries
-VICI,Consumer Services
 VIPS,Consumer Services
-VIST,Energy
 VIV,Public Utilities
 VJET,Capital Goods
 VKQ,nan
@@ -2399,56 +2026,43 @@ VMI,Capital Goods
 VMO,nan
 VMW,Technology
 VNCE,Consumer Services
-VNE,Capital Goods
 VNO,Consumer Services
 VNQ,General Sector
-VNTR,Basic Industries
 VOC,Energy
 VOYA,Finance
 VPG,Capital Goods
 VPU,General Sector
 VPV,nan
-VRS,Basic Industries
-VRT,Capital Goods
 VRTV,Consumer Services
 VSH,Capital Goods
 VSLR,Capital Goods
-VST,Public Utilities
 VSTO,Capital Goods
 VTA,nan
 VTN,nan
 VTR,Consumer Services
 VVI,Miscellaneous
-VVNT,Finance
 VVR,nan
-VVV,Basic Industries
 VZ,Public Utilities
 W,Consumer Services
-WAAS,Public Utilities
 WAB,Capital Goods
 WAL,Finance
-WALA,Finance
 WAT,Capital Goods
 WBAI,Consumer Services
 WBC,Capital Goods
 WBK,Finance
 WBS,Finance
-WBT,Technology
 WCC,Consumer Non-Durables
 WCN,Public Utilities
 WD,Finance
 WDR,Finance
 WEA,nan
 WEC,Public Utilities
-WEI,Finance
 WELL,Consumer Services
 WES,Public Utilities
 WEX,Miscellaneous
 WF,Finance
 WFC,Finance
 WGO,Consumer Non-Durables
-WH,Consumer Services
-WHD,Energy
 WHG,Finance
 WHR,Consumer Durables
 WIA,nan
@@ -2467,8 +2081,6 @@ WMT,Consumer Services
 WNC,Capital Goods
 WNS,Miscellaneous
 WOR,Capital Goods
-WORK,Consumer Services
-WOW,Consumer Services
 WPC,Consumer Services
 WPG,Consumer Services
 WPM,Basic Industries
@@ -2485,9 +2097,7 @@ WST,Basic Industries
 WTI,Energy
 WTM,Finance
 WTRG,Public Utilities
-WTRU,Public Utilities
 WTS,Capital Goods
-WTTR,Energy
 WU,Miscellaneous
 WUBA,Technology
 WWE,Consumer Services
@@ -2497,28 +2107,19 @@ WYND,Consumer Services
 X,Basic Industries
 XAN,Consumer Services
 XEC,Energy
-XFLT,nan
 XHR,Consumer Services
 XIN,Basic Industries
 XOM,Energy
 XPO,Consumer Services
-XRF,Finance
 XRX,Technology
-XYF,Finance
 XYL,Capital Goods
 Y,Finance
 YELP,Consumer Services
-YETI,Consumer Non-Durables
-YEXT,Technology
 YPF,Energy
 YRD,Finance
 YUM,Consumer Services
-YUMC,Consumer Services
 ZBH,Health Care
 ZEN,Technology
 ZNH,Transportation
-ZTO,Transportation
 ZTR,nan
 ZTS,Health Care
-ZUO,Technology
-ZYME,Health Care

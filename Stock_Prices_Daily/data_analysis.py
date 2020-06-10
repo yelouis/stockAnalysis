@@ -106,13 +106,13 @@ with respect to the datapoints within the window_length.
 def standardizeSeries(series, window_length):
     #maybe we can try this, but usgin a year's worth of "training data" at the beginning of the series?
     newSeries = []
-    for series in series:
+    for serie in series:
         standardizedList = []
-        for i in range(len(series)):
+        for i in range(len(serie)):
             if i < window_length - 1:
                 continue
             else:
-                standardizedList.append((series[i] - statistics.mean(series[i + 1 - window_length:i + 1])) / statistics.stdev(series[i + 1 - window_length:i + 1]))
+                standardizedList.append((serie[i] - statistics.mean(serie[i + 1 - window_length:i + 1])) / statistics.stdev(serie[i + 1 - window_length:i + 1]))
         newSeries.append(standardizedList)
     return newSeries
 
@@ -195,6 +195,7 @@ def lassoRegressionImplement(allStock, alpha, beta):
     xValues = []
     yValues = []
     xValueNames = []
+    yTicker = "GLD"
 
     ##############################################################################
 
@@ -207,15 +208,26 @@ def lassoRegressionImplement(allStock, alpha, beta):
     # TODO Louis: Automate
     # make xStock a loop that loops through all other stocks in the same sector
 
-    xStocks = [["^IRX", "close", "average"],
-            ["^IRX", "close", "max"],
-            ["^IRX", "low", "average"],
-            ["^IRX", "close", "volatility"],
-            ["^IRX", "close", "change"],
-            ["^IRX", "volume", "average"]]
+    # Remember to remove "[:10]"
+    xStocks = []
+    elementList = ['open', 'high', 'low', 'close', 'volume']
+    statisticList = ["average", "volatility", "change"]
 
-    print(getX(allStock["^IRX"], "volume", "average"))
-    quit()
+    for stockTicker in list(allStock.keys()):
+        if stockTicker != yTicker:
+            for element in elementList:
+                for statistic in statisticList:
+                    xStocks.append([stockTicker, element, statistic])
+
+    # xStocks = [["^IRX", "close", "average"],
+    #         ["^IRX", "close", "max"],
+    #         ["^IRX", "low", "average"],
+    #         ["^IRX", "close", "volatility"],
+    #         ["^IRX", "close", "change"],
+    #         ["^IRX", "volume", "average"]]
+
+    # print(getX(allStock["^IRX"], "volume", "average"))
+    # quit()
 
     # [["GLD", "high", "average"],
     # ["GLD", "high", "max"],
@@ -223,8 +235,11 @@ def lassoRegressionImplement(allStock, alpha, beta):
     # ["^IRX", "close", "average"]]
 
     for i in xStocks:
-        xValues.append(getX(allStock[i[0]], i[1], i[2]))
-        xValueNames.append(i[0] + "-" + i[1] + "-" + i[2])
+        print(i[0])
+        getXValues = getX(allStock[i[0]], i[1], i[2])
+        if statistics.stdev(getXValues) != 0 and len(getXValues) > 0:
+            xValues.append(getXValues)
+            xValueNames.append(i[0] + "-" + i[1] + "-" + i[2])
 
     '''
     # THIS IS THE PART OF CODE WHICH WE MANUALLY CHANGE TO DO ANALYSIS
@@ -233,7 +248,7 @@ def lassoRegressionImplement(allStock, alpha, beta):
     xValueNames.append("high-average")
     '''
 
-    yValues = getY(allStock["GLD"], "close", "average")
+    yValues = getY(allStock[yTicker], "close", "average")
     original_yValues =  copy.deepcopy(yValues)
 
     ##############################################################################
@@ -318,16 +333,14 @@ def lassoRegressionImplement(allStock, alpha, beta):
     print(mean_absolute_error(yValues, [yValues[0]] + yValues[:-1]))
     print(mean_absolute_error(yValues, y_pred))
 
-    plt.plot(yValues)
-    plt.plot([0] + yValues[:-1])
-    plt.plot(y_pred)
-    plt.show()
-    quit()
+    # plt.plot(yValues)
+    # plt.plot([0] + yValues[:-1])
+    # plt.plot(y_pred)
+    # plt.show()
+    #
+    # Plot_Predicted_vs_Observed(clf.coef_, original_normalized_xValues, original_yValues, beta)
 
-    Plot_Predicted_vs_Observed(clf.coef_, original_normalized_xValues, original_yValues, beta)
-    quit()
-
-    path = os.path.join(Path(configKeys.OUTPUT_FOLDER), madString + "_mad" + alphaString +"_alpha"+ betaString + "_beta" + '.csv')
+    path = os.path.join(Path(configKeys.OUTPUT_FOLDER), madString + "_mad" + alphaString +"_alpha"+ betaString + "_beta" + "louTest" + '.csv')
 
     df.to_csv(path)
 
@@ -345,6 +358,7 @@ def main():
 
     allStock = {}
 
+    # Remember to remove the "[:10]"
     for ind in df.index:
         stockDF = pd.read_csv(os.path.join(Path(configKeys.DATA_FOLDER), df['Symbol'][ind]+'Daily.csv'), low_memory=False)
         allStock[df['Symbol'][ind]] = stockDF
@@ -360,7 +374,7 @@ def main():
             start_time = time.time()
             lassoRegressionImplement(allStock, alpha, beta)
             print("--- %s seconds ---" % (time.time() - start_time))
-        quit()
+            quit()
         alpha += 0.1
 
 main()

@@ -1,5 +1,3 @@
-# Import the plotting library
-import matplotlib.pyplot as plt
 # Import intrinio
 import intrinio_sdk as intrin
 #Accesses the API with Sandbox Key

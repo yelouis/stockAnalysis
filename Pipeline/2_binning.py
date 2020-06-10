@@ -73,7 +73,7 @@ def CollapseDictionaryToWeeks(dictionary, name, has_volume):
         list_of_elements = ['Open', 'High', 'Low', 'Close']
 
     for element in list_of_elements:
-        for statistic in ["average", "max", "volatility", "change"]:
+        for statistic in ["average", "max", "volatility", "change%"]:
             elementIndex = elementDict[element]
             week_bin_list = []
             for week in dictionary.keys(): # This assumes the keys are already in chronological order
@@ -86,8 +86,8 @@ def CollapseDictionaryToWeeks(dictionary, name, has_volume):
                     week_bin_list.append(max(elementList))
                 elif statistic == "volatility": #maybe add another "volatility" statistic??
                     week_bin_list.append(max(elementList) - min(elementList))
-                elif statistic == "change":
-                    week_bin_list.append(elementList[-1] - elementList[0])
+                elif statistic == "change%":
+                    week_bin_list.append(100 * (elementList[-1] - elementList[0]) / elementList[0])
                 else:
                     print("something went wrong in CollapseDictionaryToWeeks()")
                     quit()
@@ -133,6 +133,8 @@ def main():
         #Update the successful bins dataframe
         sucessfulBins["Symbol"].append(name)
         sucessfulBins["Type"].append(asset_class)
+
+        break
 
     df = pd.DataFrame(sucessfulBins, columns = ["Symbol", "Type"])
     #Creating a sucessful file that includes asset names/tickers

@@ -28,6 +28,7 @@ import time
 import numpy as np
 import copy
 import math
+import json
 
 
 def GetWeekDictionary(stockDF):
@@ -179,6 +180,9 @@ def Plot_Predicted_vs_Observed(coeficients, normalized_xValues, original_yValues
 
 
 def lassoRegressionImplement(allStock, alpha, beta):
+
+
+
     '''
     stockA, stockB, stockC
     xValues = [[stockA.vol, stockB.vol, stockC.vol],[stockA.volit, stockB.volit, stockC.volit],[stockA.lowPrice, stockB.lowPrice, stockC.lowPrice]]
@@ -237,10 +241,15 @@ def lassoRegressionImplement(allStock, alpha, beta):
         print(i[0])
         try:
             getXValues = getX(allStock[i[0]], i[1], i[2])
-            standardizeSeries([getXValues], beta)
-            if statistics.stdev(getXValues) != 0 and len(getXValues) > 0:
+            standardizedGetXValues = standardizeSeries([getXValues], beta)[0]
+            array_sum = np.sum(standardizedGetXValues)
+            array_has_nan = np.isnan(array_sum)
+            if statistics.stdev(standardizedGetXValues) != 0 and len(standardizedGetXValues) > 0 and array_has_nan == False:
                 xValues.append(getXValues)
                 xValueNames.append(i[0] + "-" + i[1] + "-" + i[2])
+            else:
+                print(str(i[0]) + " failed the if statement")
+                print(standardizedGetXValues)
         except:
             print("Something went wrong with importing " + str(i[0]))
 
@@ -261,6 +270,8 @@ def lassoRegressionImplement(allStock, alpha, beta):
     '''
 
     #Crashing here
+    print(xValues)
+
     xValues = standardizeSeries(xValues, beta)
     original_normalized_xValues =  copy.deepcopy(xValues)
     yValues = standardizeSeries([yValues], beta)[0]

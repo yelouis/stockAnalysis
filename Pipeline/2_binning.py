@@ -87,7 +87,10 @@ def CollapseDictionaryToWeeks(dictionary, name, has_volume):
                 elif statistic == "volatility": #maybe add another "volatility" statistic??
                     week_bin_list.append(max(elementList) - min(elementList))
                 elif statistic == "change%":
-                    week_bin_list.append(100 * (elementList[-1] - elementList[0]) / elementList[0])
+                    if elementList[0] == 0:
+                        week_bin_list.append(100 * (elementList[-1] - elementList[0]) / 1) #Treat a start of 0 as starting with 1 to avoid dividion by 0 (this came up with a stock with 0 volume)
+                    else:
+                        week_bin_list.append(100 * (elementList[-1] - elementList[0]) / elementList[0])
                 else:
                     print("something went wrong in CollapseDictionaryToWeeks()")
                     quit()
@@ -114,9 +117,10 @@ def main():
     # We will use the 1successfulPulls.csv to tell us what type of asset is associated with each name/ticker
     reference_df = pd.read_csv("1successfulPulls.csv", low_memory=False)
 
-    for index in reference_df.index[:10]:
+    for index in reference_df.index:
 
         name = reference_df["Symbol"][index]
+        print(name)
         asset_class = reference_df["Type"][index]
 
         asset_class_has_volume = False
@@ -133,8 +137,6 @@ def main():
         #Update the successful bins dataframe
         sucessfulBins["Symbol"].append(name)
         sucessfulBins["Type"].append(asset_class)
-
-        break
 
     df = pd.DataFrame(sucessfulBins, columns = ["Symbol", "Type"])
     #Creating a sucessful file that includes asset names/tickers

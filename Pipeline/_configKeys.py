@@ -4,3 +4,5 @@ ENDPULL = "05/01/2020"
 
 DATA_FOLDER = "1Data/"
 BINNED_FOLDER = "2Binned/"
+STANDARDIZED_FOLDER = "3Standardized_Binned/"
+LASSO_RESULTS_FOLDER = "4Lasso_Results"

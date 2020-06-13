@@ -15,8 +15,8 @@ import numpy as np
 import copy
 import math
 
-global sucessfulBins
-sucessfulBins = {"Symbol" : [],
+global successfulBins
+successfulBins = {"Symbol" : [],
                  "Type" : []}
 
 
@@ -27,6 +27,45 @@ def find_asset_class(name, reference_df):
     print("could not find " + name + " in the reference csv")
     quit()
 
+def standardizeSeries(series, window_length):
+    #input: a list of values (series), and a time frame (window_length - in weeks)
+    #output: standardized list of values
+    #maybe we can try this, but usgin a year's worth of "training data" at the beginning of the series?
+    standardizedList = []
+    for i in range(len(series)):
+        if i < window_length - 1:
+            continue
+        else:
+            #lookup 'how to standardize data' and try to understand equation a bit
+            standardizedList.append((series[i] - statistics.mean(series[i + 1 - window_length:i + 1])) / statistics.stdev(series[i + 1 - window_length:i + 1]))
+    return standardizedList
+
+
+def StandardizeDF(assetDF, window_length):
+    standardizedDict = {}
+    colNameList = []
+    for colName in assetDF:
+        if colName == 'Date' or '%' in colName:
+            #no changes to data
+            columnList = list(assetDF[colName].values)
+            #this will cut off the first weeks to keep it the srame as the other columns
+            standardizedDict[colName] = columnList[(window_length-1):]
+        else:
+            columnList = list(assetDF[colName].values)
+            try:
+                standardizedSeries = standardizeSeries(columnList, window_length)
+                if np.isnan(np.sum(standardizedSeries)) == False:
+                    standardizedDict[colName] = standardizedSeries
+                    colNameList.append(colName)
+
+                else:
+                    print(colName)
+                    print(standardizedSeries)
+            except:
+                print("standardizing failed")
+                print(colName)
+    standardizedDF = pd.DataFrame(standardizedDict, columns = colNameList)
+    return standardizedDF
 
 def main():
     '''
@@ -43,30 +82,31 @@ def main():
     '''
 
     # We will use the 1successfulPulls.csv to tell us what type of asset is associated with each name/ticker
-    reference_df = pd.read_csv("1successfulPulls.csv", low_memory=False)
-
-    for asset in name_element_stat:
+    reference_df = pd.read_csv("2successfulWeekBins.csv", low_memory=False)
+    window_length = _configKeys.WINDOW_LENGTH
+    #index is an asset row
+    for index in reference_df.index:
         name = reference_df["Symbol"][index]
         asset_class = reference_df["Type"][index]
 
+        '''
         asset_class_has_volume = False
         if asset_class == "Stock" or asset_class == "Commodity":
             asset_class_has_volume = True
+        '''
+        assetDF = pd.read_csv(os.path.join(Path(_configKeys.BINNED_FOLDER), name+".csv"), low_memory=False)
 
-        assetDF = pd.read_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name+".csv"), low_memory=False)
+        standardizedDF = StandardizeDF(assetDF, window_length)
 
-        asset_dictionary = GetWeekDictionary(assetDF, asset_class_has_volume)
-
-        week_bin_df = CollapseDictionaryToWeeks(asset_dictionary, name, asset_class_has_volume)
-        week_bin_df.to_csv(os.path.join(Path(_configKeys.BINNED_FOLDER), name+".csv"), index=False)
+        standardizedDF.to_csv(os.path.join(Path(_configKeys.STANDARDIZED_FOLDER), name+".csv"), index=False)
 
         #Update the successful bins dataframe
-        sucessfulBins["Symbol"].append(name)
-        sucessfulBins["Type"].append(asset_class)
+        successfulBins["Symbol"].append(name)
+        successfulBins["Type"].append(asset_class)
 
-    df = pd.DataFrame(sucessfulBins, columns = ["Symbol", "Type"])
+    df = pd.DataFrame(successfulBins, columns = ["Symbol", "Type"])
     #Creating a sucessful file that includes asset names/tickers
-    df.to_csv('2successfulWeekBins.csv', index=False)
+    df.to_csv('3successfulStandardizedBins.csv', index=False)
     #Now we throw this dataframe into a csv file and add it to a 2successfulWeekBins.csv
 
 

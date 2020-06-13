@@ -113,7 +113,8 @@ def main():
         path = os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), str(_configKeys.YVALUETICKER) + str(format(alpha, '.1f')) +"_alpha"+ str(int(beta)) + "_beta" + '.csv')
         allYValueResults.to_csv(path)
         print("--- %s seconds ---" % (time.time() - start_time))
-        quit()
         alpha += 0.1
+
+    reference_df.to_csv('4successfulLasso.csv', index=False)
 
 main()

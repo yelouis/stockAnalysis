@@ -8,6 +8,8 @@ import os
 import csv
 import datetime
 from datetime import timedelta
+from sklearn.model_selection import train_test_split
+from sklearn import linear_model
 import statistics
 from pathlib import Path
 import time
@@ -29,31 +31,33 @@ def lassoRegressionImplement(xValues, yValues, xValueNames, yValueName, alpha, b
     madT = mean_absolute_error(y_train, y_predT)
     madV = mean_absolute_error(y_valid, y_predV)
     mad = mean_absolute_error(y_test, y_pred)
-    print("MAD:", mad)
+    # print("MAD:", mad)
 
     df = pd.DataFrame()
-    xValueNames = np.append(xValueNames, ['MAD Train', 'MAD Valid', 'MAD Test'])
+    xValueNames = np.append(['yValueName', 'MAD Train', 'MAD Valid', 'MAD Test'], xValueNames)
     df['Feature Name'] = xValueNames
     column_name = 'Alpha =' + str(alpha) + " Beta =" +str(beta)
     coefficients = clf.coef_
-    coefficients = np.append(coefficients, [str(madT), str(madV), str(mad)])
+    coefficients = np.append([str(yValueName), str(madT), str(madV), str(mad)], coefficients)
     df[column_name] = coefficients
 
 
     # Use xStocks to help specify the contents of the file
-    alphaString = format(alpha, '.1f')
-    betaString = str(int(beta))
-    madString = format(mad, '.2f')
+    # alphaString = format(alpha, '.1f')
+    # betaString = str(int(beta))
+    # madString = format(mad, '.2f')
 
     # These two lines of print statement are just asking whether we did better
     # with our predication than with just a one unit lag.
-    y_pred = clf.predict(xValues)
-    print(mean_absolute_error(yValues, [yValues[0]] + yValues[:-1]))
-    print(mean_absolute_error(yValues, y_pred))
+    # y_pred = clf.predict(xValues)
+    # print(mean_absolute_error(yValues, [yValues[0]] + yValues[:-1]))
+    # print(mean_absolute_error(yValues, y_pred))
 
-    path = os.path.join(Path(configKeys.LASSO_RESULTS_FOLDER), yValueName + madString + "_mad" + alphaString +"_alpha"+ betaString + "_beta" + '.csv')
+    return df
 
-    df.to_csv(path)
+    # path = os.path.join(Path(configKeys.LASSO_RESULTS_FOLDER), yValueName + madString + "_mad" + alphaString +"_alpha"+ betaString + "_beta" + '.csv')
+    #
+    # df.to_csv(path)
 
 
 def readXValues(successfulPullsDic, filter_asset_class):
@@ -65,10 +69,22 @@ def readXValues(successfulPullsDic, filter_asset_class):
             tickerDF = pd.read_csv(os.path.join(Path(_configKeys.STANDARDIZED_FOLDER), str(ticker)+".csv"), low_memory=False)
             for column_name in tickerDF:
                 if column_name != "Date":
-                    allXValues.append(list(ticketDF[column_name].values))
+                    currentXValue = list(tickerDF[column_name].values)
+                    lengthOfCurrentXValue = len(currentXValue)
+                    #We need to cut the xValues down by 1 time unit
+                    allXValues.append(currentXValue[:lengthOfCurrentXValue-1])
                     allXValueNames.append(column_name)
-
     return (allXValues, allXValueNames)
+
+def readYValues():
+    yValueDF = pd.read_csv(os.path.join(Path(_configKeys.STANDARDIZED_FOLDER), str(_configKeys.YVALUETICKER)+".csv"), low_memory=False)
+    allYValues = {}
+    for yValueColName in yValueDF:
+        if yValueColName != "Date":
+            #We need to increase yValues by 1 time unit
+            allYValues[yValueColName] = list(yValueDF[yValueColName].values[1:])
+    return allYValues
+
 
 def main():
 
@@ -83,17 +99,21 @@ def main():
 
     xValues = list(map(list, zip(*xValues)))
 
-    # Where do I get the yValues? Need to clear this up. Maybe make a configKeys variable for the yValue?
-    # Can I just put yValueName in as a configKey variable. I can probably get the yValues as long
-    # as I know the yValueName
-    yValues = ...something[1:] #Need the [1:] to lag out the first yValue
-    yValueName = ...
+    beta = _configKeys.WINDOW_LENGTH
+    yValueDict = readYValues()
 
-    alpha = 0.1
+    alpha = 1
     for counter in range(10):
+        allYValueResults = pd.DataFrame()
         start_time = time.time()
-        lassoRegressionImplement(xValues, yValues, xValueNames, yValueName, alpha, beta)
+        for yValueName in yValueDict:
+            yValues = yValueDict[yValueName]
+            singleYValueResult = lassoRegressionImplement(xValues, yValues, xValueNames, yValueName, alpha, beta)
+            allYValueResults = pd.concat([allYValueResults, singleYValueResult], axis=1, sort=False)
+        path = os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), str(_configKeys.YVALUETICKER) + str(format(alpha, '.1f')) +"_alpha"+ str(int(beta)) + "_beta" + '.csv')
+        allYValueResults.to_csv(path)
         print("--- %s seconds ---" % (time.time() - start_time))
+        quit()
         alpha += 0.1
 
 main()

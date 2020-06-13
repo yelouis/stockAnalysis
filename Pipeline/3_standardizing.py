@@ -55,7 +55,7 @@ def StandardizeDF(assetDF, window_length):
             columnList = list(assetDF[colName].values)
             try:
                 standardizedSeries = standardizeSeries(columnList, window_length)
-                if np.isnan(np.sum(standardizedSeries)) == False:
+                if np.isnan(np.sum(standardizedSeries)) == False and math.isinf(np.sum(standardizedSeries)) == False:
                     standardizedDict[colName] = standardizedSeries
                     colNameList.append(colName)
                 else:

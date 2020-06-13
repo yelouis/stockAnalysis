@@ -19,7 +19,6 @@ global successfulBins
 successfulBins = {"Symbol" : [],
                  "Type" : []}
 
-
 def find_asset_class(name, reference_df):
     for index in reference_df.index:
         if reference_df["Symbol"][index] == name:
@@ -87,6 +86,7 @@ def main():
     #index is an asset row
     for index in reference_df.index:
         name = reference_df["Symbol"][index]
+        print(name)
         asset_class = reference_df["Type"][index]
 
         '''

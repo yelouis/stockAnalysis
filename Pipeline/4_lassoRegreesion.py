@@ -22,7 +22,7 @@ def lassoRegressionImplement(xValues, yValues, xValueNames, yValueName, alpha, b
     X_train, X_test, y_train, y_test = train_test_split(xValues, yValues, test_size=0.3, random_state=20)
     x_valid, X_test, y_valid, y_test = train_test_split(X_test, y_test, test_size=0.5, random_state=20)
 
-    clf = linear_model.Lasso(alpha=alpha)
+    clf = linear_model.Lasso(alpha=alpha, tol=0.01, max_iter=1000000000)
     clf.fit(X_train, y_train)
     y_predT = clf.predict(X_train)
     y_pred = clf.predict(X_test)
@@ -68,7 +68,7 @@ def readXValues(successfulPullsDic, filter_asset_class):
         if successfulPullsDic[ticker] != filter_asset_class:
             tickerDF = pd.read_csv(os.path.join(Path(_configKeys.STANDARDIZED_FOLDER), str(ticker)+".csv"), low_memory=False)
             for column_name in tickerDF:
-                if column_name != "Date":
+                if column_name != "Date" and "%" not in column_name:
                     currentXValue = list(tickerDF[column_name].values)
                     lengthOfCurrentXValue = len(currentXValue)
                     #We need to cut the xValues down by 1 time unit
@@ -102,7 +102,7 @@ def main():
     beta = _configKeys.WINDOW_LENGTH
     yValueDict = readYValues()
 
-    alpha = 1
+    alpha = .3
     for counter in range(10):
         allYValueResults = pd.DataFrame()
         start_time = time.time()

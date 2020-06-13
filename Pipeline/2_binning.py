@@ -73,7 +73,7 @@ def CollapseDictionaryToWeeks(dictionary, name, has_volume):
         list_of_elements = ['Open', 'High', 'Low', 'Close']
 
     for element in list_of_elements:
-        for statistic in ["average", "max", "volatility", "change%"]:
+        for statistic in ["average", "max", "volatility", "change"]:
             elementIndex = elementDict[element]
             week_bin_list = []
             for week in dictionary.keys(): # This assumes the keys are already in chronological order
@@ -86,11 +86,8 @@ def CollapseDictionaryToWeeks(dictionary, name, has_volume):
                     week_bin_list.append(max(elementList))
                 elif statistic == "volatility": #maybe add another "volatility" statistic??
                     week_bin_list.append(max(elementList) - min(elementList))
-                elif statistic == "change%":
-                    if elementList[0] == 0:
-                        week_bin_list.append(100 * (elementList[-1] - elementList[0]) / 1) #Treat a start of 0 as starting with 1 to avoid dividion by 0 (this came up with a stock with 0 volume)
-                    else:
-                        week_bin_list.append(100 * (elementList[-1] - elementList[0]) / elementList[0])
+                elif statistic == "change":
+                        week_bin_list.append(elementList[-1] - elementList[0])
                 else:
                     print("something went wrong in CollapseDictionaryToWeeks()")
                     quit()

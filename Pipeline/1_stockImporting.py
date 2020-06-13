@@ -29,7 +29,7 @@ def import_stocks():
     firstIndex = datetime.datetime.strptime(_configKeys.STARTPULL, '%d/%m/%Y')
     lastIndex = datetime.datetime.strptime(_configKeys.ENDPULL, '%d/%m/%Y')
 
-    for ticker in list_of_stock_tickers[:100]:
+    for ticker in list_of_stock_tickers[:2500]:
 
         # Have an if statement in place in case if we don't want to pull every stock because there are a lot of stocks
         # Program takes a long time to run if we have to webscrape every stock each time we run
@@ -57,7 +57,7 @@ def import_funds():
     firstIndex = datetime.datetime.strptime(_configKeys.STARTPULL, '%d/%m/%Y')
     lastIndex = datetime.datetime.strptime(_configKeys.ENDPULL, '%d/%m/%Y')
 
-    for name in list_of_fund_names[:100]:
+    for name in list_of_fund_names[:2500]:
 
         # Have an if statement in place in case if we don't want to pull every fund because there are a lot of funds
         # Program takes a long time to run if we have to webscrape every fund each time we run
@@ -85,7 +85,7 @@ def import_etfs():
     firstIndex = datetime.datetime.strptime(_configKeys.STARTPULL, '%d/%m/%Y')
     lastIndex = datetime.datetime.strptime(_configKeys.ENDPULL, '%d/%m/%Y')
 
-    for name in list_of_etf_names[:100]:
+    for name in list_of_etf_names[:2500]:
 
         # Have an if statement in place in case if we don't want to pull every etf because there are a lot of stocks
         # Program takes a long time to run if we have to webscrape every etf each time we run
@@ -113,7 +113,7 @@ def import_bonds():
     firstIndex = datetime.datetime.strptime(_configKeys.STARTPULL, '%d/%m/%Y')
     lastIndex = datetime.datetime.strptime(_configKeys.ENDPULL, '%d/%m/%Y')
 
-    for name in list_of_bond_names[:100]:
+    for name in list_of_bond_names[:2500]:
 
         # Have an if statement in place in case if we don't want to pull every etf because there are a lot of stocks
         # Program takes a long time to run if we have to webscrape every etf each time we run
@@ -140,7 +140,7 @@ def import_commodities():
     firstIndex = datetime.datetime.strptime(_configKeys.STARTPULL, '%d/%m/%Y')
     lastIndex = datetime.datetime.strptime(_configKeys.ENDPULL, '%d/%m/%Y')
 
-    for name in list_of_commodity_names[:100]:
+    for name in list_of_commodity_names[:2500]:
 
         # Have an if statement in place in case if we don't want to pull every etf because there are a lot of stocks
         # Program takes a long time to run if we have to webscrape every etf each time we run

@@ -50,6 +50,7 @@ def StandardizeDF(assetDF, window_length):
             columnList = list(assetDF[colName].values)
             #this will cut off the first weeks to keep it the srame as the other columns
             standardizedDict[colName] = columnList[(window_length-1):]
+            colNameList.append(colName)
         else:
             columnList = list(assetDF[colName].values)
             try:
@@ -57,7 +58,6 @@ def StandardizeDF(assetDF, window_length):
                 if np.isnan(np.sum(standardizedSeries)) == False:
                     standardizedDict[colName] = standardizedSeries
                     colNameList.append(colName)
-
                 else:
                     print(colName)
                     print(standardizedSeries)

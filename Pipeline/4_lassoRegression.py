@@ -85,15 +85,18 @@ def readYValues():
             allYValues[yValueColName] = list(yValueDF[yValueColName].values[1:])
     return allYValues
 
-
-def main():
-
-    reference_df = pd.read_csv("3successfulStandardizedBins.csv", low_memory=False)
+def readSuccessfulFile(reference_df):
     referenceDict = {}
     for index in reference_df.index:
         name = reference_df["Symbol"][index]
         asset_class = reference_df["Type"][index]
         referenceDict[name] = asset_class
+    return referenceDict
+
+def main():
+
+    reference_df = pd.read_csv("3successfulStandardizedBins.csv", low_memory=False)
+    referenceDict = readSuccessfulFile(reference_df)
 
     (xValues, xValueNames) = readXValues(referenceDict, "")
 

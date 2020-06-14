@@ -19,6 +19,16 @@ import math
 from sklearn.metrics import mean_absolute_error
 
 
+def readSuccessfulFile(reference_df):
+    referenceDict = {}
+    for index in reference_df.index:
+        name = reference_df["Symbol"][index]
+        asset_class = reference_df["Type"][index]
+        referenceDict[name] = asset_class        
+
+
+
+
 def main():
     quit()
 

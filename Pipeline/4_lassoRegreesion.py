@@ -102,7 +102,7 @@ def main():
     beta = _configKeys.WINDOW_LENGTH
     yValueDict = readYValues()
 
-    alpha = .3
+    alpha = .1
     for counter in range(10):
         allYValueResults = pd.DataFrame()
         start_time = time.time()

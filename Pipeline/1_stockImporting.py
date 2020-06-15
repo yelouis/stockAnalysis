@@ -30,22 +30,24 @@ def import_stocks():
     lastIndex = datetime.datetime.strptime(_configKeys.ENDPULL, '%d/%m/%Y')
 
     for ticker in list_of_stock_tickers[:2500]:
+        try:
+            # Have an if statement in place in case if we don't want to pull every stock because there are a lot of stocks
+            # Program takes a long time to run if we have to webscrape every stock each time we run
+            stockData = []
 
-        # Have an if statement in place in case if we don't want to pull every stock because there are a lot of stocks
-        # Program takes a long time to run if we have to webscrape every stock each time we run
-        stockData = []
-
-        stockData = investpy.get_stock_historical_data(stock=ticker,
-                                            country='united states',
-                                            from_date=_configKeys.STARTPULL,
-                                            to_date=_configKeys.ENDPULL)
-        # If there's something that's been loaded into stockData, then the length is no longer 0
-        # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
-        # this timedelta fixes the problem of trying to pull during a long weekend
-        if stockData.empty == False and stockData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - stockData.index[-1] <= timedelta(days = 3):
-            sucessfulPulls["Symbol"].append(ticker)
-            sucessfulPulls["Type"].append("Stock")
-            stockData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), ticker+'.csv'))
+            stockData = investpy.get_stock_historical_data(stock=ticker,
+                                                country='united states',
+                                                from_date=_configKeys.STARTPULL,
+                                                to_date=_configKeys.ENDPULL)
+            # If there's something that's been loaded into stockData, then the length is no longer 0
+            # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
+            # this timedelta fixes the problem of trying to pull during a long weekend
+            if stockData.empty == False and stockData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - stockData.index[-1] <= timedelta(days = 3):
+                sucessfulPulls["Symbol"].append(ticker)
+                sucessfulPulls["Type"].append("Stock")
+                stockData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), ticker+'.csv'))
+        except:
+            print("Something went wrong when importing: " + ticker)
 
 
 def import_funds():
@@ -71,9 +73,9 @@ def import_funds():
         # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
         # this timedelta fixes the problem of trying to pull during a long weekend
         if fundData.empty == False and fundData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - fundData.index[-1] <= timedelta(days = 3):
-            sucessfulPulls["Symbol"].append(name)
+            sucessfulPulls["Symbol"].append(name.replace("/", ""))
             sucessfulPulls["Type"].append("Fund")
-            fundData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name+'.csv'))
+            fundData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name.replace("/", "")+'.csv'))
 
 
 def import_etfs():
@@ -86,22 +88,24 @@ def import_etfs():
     lastIndex = datetime.datetime.strptime(_configKeys.ENDPULL, '%d/%m/%Y')
 
     for name in list_of_etf_names[:2500]:
+        try:
+            # Have an if statement in place in case if we don't want to pull every etf because there are a lot of stocks
+            # Program takes a long time to run if we have to webscrape every etf each time we run
+            etfData = []
 
-        # Have an if statement in place in case if we don't want to pull every etf because there are a lot of stocks
-        # Program takes a long time to run if we have to webscrape every etf each time we run
-        etfData = []
-
-        etfData = investpy.get_etf_historical_data(etf=name,
-                                            country='united states',
-                                            from_date=_configKeys.STARTPULL,
-                                            to_date=_configKeys.ENDPULL)
-        # If there's something that's been loaded into stockData, then the length is no longer 0
-        # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
-        # this timedelta fixes the problem of trying to pull during a long weekend
-        if etfData.empty == False and etfData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - etfData.index[-1] <= timedelta(days = 3):
-            sucessfulPulls["Symbol"].append(name)
-            sucessfulPulls["Type"].append("ETF")
-            etfData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name+'.csv'))
+            etfData = investpy.get_etf_historical_data(etf=name,
+                                                country='united states',
+                                                from_date=_configKeys.STARTPULL,
+                                                to_date=_configKeys.ENDPULL)
+            # If there's something that's been loaded into stockData, then the length is no longer 0
+            # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
+            # this timedelta fixes the problem of trying to pull during a long weekend
+            if etfData.empty == False and etfData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - etfData.index[-1] <= timedelta(days = 3):
+                sucessfulPulls["Symbol"].append(name.replace("/", ""))
+                sucessfulPulls["Type"].append("ETF")
+                etfData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name.replace("/", "")+'.csv'))
+        except:
+            print("Something went wrong when importing: " + name)
 
 
 def import_bonds():
@@ -114,21 +118,23 @@ def import_bonds():
     lastIndex = datetime.datetime.strptime(_configKeys.ENDPULL, '%d/%m/%Y')
 
     for name in list_of_bond_names[:2500]:
+        try:
+            # Have an if statement in place in case if we don't want to pull every etf because there are a lot of stocks
+            # Program takes a long time to run if we have to webscrape every etf each time we run
+            bondData = []
 
-        # Have an if statement in place in case if we don't want to pull every etf because there are a lot of stocks
-        # Program takes a long time to run if we have to webscrape every etf each time we run
-        bondData = []
-
-        bondData = investpy.get_bond_historical_data(bond=name,
-                                            from_date=_configKeys.STARTPULL,
-                                            to_date=_configKeys.ENDPULL)
-        # If there's something that's been loaded into stockData, then the length is no longer 0
-        # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
-        # this timedelta fixes the problem of trying to pull during a long weekend
-        if (bondData.empty == False) and (bondData.index[0] - firstIndex.date() <= timedelta(days = 2)) and (lastIndex.date() - bondData.index[-1] <= timedelta(days = 3)):
-            sucessfulPulls["Symbol"].append(name)
-            sucessfulPulls["Type"].append("Bond")
-            bondData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name+'.csv'))
+            bondData = investpy.get_bond_historical_data(bond=name,
+                                                from_date=_configKeys.STARTPULL,
+                                                to_date=_configKeys.ENDPULL)
+            # If there's something that's been loaded into stockData, then the length is no longer 0
+            # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
+            # this timedelta fixes the problem of trying to pull during a long weekend
+            if (bondData.empty == False) and (bondData.index[0] - firstIndex.date() <= timedelta(days = 2)) and (lastIndex.date() - bondData.index[-1] <= timedelta(days = 3)):
+                sucessfulPulls["Symbol"].append(name.replace("/", ""))
+                sucessfulPulls["Type"].append("Bond")
+                bondData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name.replace("/", "")+'.csv'))
+        except:
+            print("Something went wrong when importing: " + name)
 
 
 def import_commodities():
@@ -141,21 +147,24 @@ def import_commodities():
     lastIndex = datetime.datetime.strptime(_configKeys.ENDPULL, '%d/%m/%Y')
 
     for name in list_of_commodity_names[:2500]:
+        try:
+            # Have an if statement in place in case if we don't want to pull every etf because there are a lot of stocks
+            # Program takes a long time to run if we have to webscrape every etf each time we run
+            commodityData = []
 
-        # Have an if statement in place in case if we don't want to pull every etf because there are a lot of stocks
-        # Program takes a long time to run if we have to webscrape every etf each time we run
-        commodityData = []
-
-        commodityData = investpy.get_commodity_historical_data(commodity=name,
-                                            from_date=_configKeys.STARTPULL,
-                                            to_date=_configKeys.ENDPULL)
-        # If there's something that's been loaded into stockData, then the length is no longer 0
-        # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
-        # this timedelta fixes the problem of trying to pull during a long weekend
-        if commodityData.empty == False and commodityData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - commodityData.index[-1] <= timedelta(days = 3):
-            sucessfulPulls["Symbol"].append(name)
-            sucessfulPulls["Type"].append("Commodity")
-            commodityData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name+'.csv'))
+            commodityData = investpy.get_commodity_historical_data(commodity=name,
+                                                country='united states',
+                                                from_date=_configKeys.STARTPULL,
+                                                to_date=_configKeys.ENDPULL)
+            # If there's something that's been loaded into stockData, then the length is no longer 0
+            # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
+            # this timedelta fixes the problem of trying to pull during a long weekend
+            if commodityData.empty == False and commodityData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - commodityData.index[-1] <= timedelta(days = 3):
+                sucessfulPulls["Symbol"].append(name)
+                sucessfulPulls["Type"].append("Commodity")
+                commodityData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name+'.csv'))
+        except:
+            print("Something went wrong when importing: " + name)
 
 
 def main():
@@ -163,8 +172,8 @@ def main():
 
     print("Importing Stocks")
     import_stocks()
-    print("Importing Funds")
-    import_funds()
+    #print("Importing Funds")
+    #import_funds()
     print("Importing ETFs")
     import_etfs()
     print("Importing Bonds")

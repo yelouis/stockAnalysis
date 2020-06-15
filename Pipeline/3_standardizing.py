@@ -36,6 +36,7 @@ def standardizeSeries(series, window_length):
             continue
         else:
             #lookup 'how to standardize data' and try to understand equation a bit
+            #(Data point for week i - (Data point from week (i + 1 - window) to week i)) /  Standard Deviation of data points from week (i + 1 - window) to week i
             standardizedList.append((series[i] - statistics.mean(series[i + 1 - window_length:i + 1])) / statistics.stdev(series[i + 1 - window_length:i + 1]))
     return standardizedList
 
@@ -97,8 +98,6 @@ def main():
         assetDF = pd.read_csv(os.path.join(Path(_configKeys.BINNED_FOLDER), name+".csv"), low_memory=False)
 
         standardizedDF = StandardizeDF(assetDF, window_length)
-
-        standardizedDF.to_csv(os.path.join(Path(_configKeys.STANDARDIZED_FOLDER), name+".csv"), index=False)
 
         #Update the successful bins dataframe
         successfulBins["Symbol"].append(name)

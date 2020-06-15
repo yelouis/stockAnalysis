@@ -34,30 +34,14 @@ def lassoRegressionImplement(xValues, yValues, xValueNames, yValueName, alpha, b
     # print("MAD:", mad)
 
     df = pd.DataFrame()
-    xValueNames = np.append(['yValueName', 'MAD Train', 'MAD Valid', 'MAD Test'], xValueNames)
     df['Feature Name'] = xValueNames
-    column_name = 'Alpha =' + str(alpha) + " Beta =" +str(beta)
     coefficients = clf.coef_
-    coefficients = np.append([str(yValueName), str(madT), str(madV), str(mad)], coefficients)
-    df[column_name] = coefficients
+    df[str(yValueName)] = coefficients
 
+    df2 = pd.DataFrame()
+    df2[str(yValueName)+'_Toggles'] = ['madT =' + str(madT), 'madV =' + str(madV), 'mad =' + str(mad), 'Alpha =' + str(alpha), 'Beta =' +str(beta)]
 
-    # Use xStocks to help specify the contents of the file
-    # alphaString = format(alpha, '.1f')
-    # betaString = str(int(beta))
-    # madString = format(mad, '.2f')
-
-    # These two lines of print statement are just asking whether we did better
-    # with our predication than with just a one unit lag.
-    # y_pred = clf.predict(xValues)
-    # print(mean_absolute_error(yValues, [yValues[0]] + yValues[:-1]))
-    # print(mean_absolute_error(yValues, y_pred))
-
-    return df
-
-    # path = os.path.join(Path(configKeys.LASSO_RESULTS_FOLDER), yValueName + madString + "_mad" + alphaString +"_alpha"+ betaString + "_beta" + '.csv')
-    #
-    # df.to_csv(path)
+    return pd.concat([df, df2], axis=1, sort=False)
 
 
 def readXValues(successfulPullsDic, filter_asset_class):
@@ -117,6 +101,7 @@ def main():
         allYValueResults.to_csv(path)
         print("--- %s seconds ---" % (time.time() - start_time))
         alpha += 0.1
+        quit()
 
     reference_df.to_csv('4successfulLasso.csv', index=False)
 

@@ -98,6 +98,7 @@ def main():
         assetDF = pd.read_csv(os.path.join(Path(_configKeys.BINNED_FOLDER), name+".csv"), low_memory=False)
 
         standardizedDF = StandardizeDF(assetDF, window_length)
+        standardizedDF.to_csv(os.path.join(Path(_configKeys.STANDARDIZED_FOLDER), name+".csv"), index=False)
 
         #Update the successful bins dataframe
         successfulBins["Symbol"].append(name)

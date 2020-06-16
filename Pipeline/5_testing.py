@@ -27,32 +27,6 @@ def readSuccessfulFile(reference_df):
         referenceDict[name] = asset_class
     return referenceDict
 
-def readXValues(successfulPullsDic, filter_asset_class):
-    #Gets all the standardized xValues out of the csv files.
-    allXValues = []
-    allXValueNames = []
-    for ticker in successfulPullsDic:
-        if successfulPullsDic[ticker] != filter_asset_class:
-            tickerDF = pd.read_csv(os.path.join(Path(_configKeys.STANDARDIZED_FOLDER), str(ticker)+".csv"), low_memory=False)
-            for column_name in tickerDF:
-                if column_name != "Date" and "%" not in column_name:
-                    currentXValue = list(tickerDF[column_name].values)
-                    lengthOfCurrentXValue = len(currentXValue)
-                    #We need to cut the xValues down by 1 time unit
-                    allXValues.append(currentXValue[:lengthOfCurrentXValue-1])
-                    allXValueNames.append(column_name)
-    return (allXValues, allXValueNames)
-
-def readYValues():
-    yValueDF = pd.read_csv(os.path.join(Path(_configKeys.STANDARDIZED_FOLDER), str(_configKeys.YVALUETICKER)+".csv"), low_memory=False)
-    allYValues = {}
-    for yValueColName in yValueDF:
-        if yValueColName != "Date":
-            #We need to increase yValues by 1 time unit
-            allYValues[yValueColName] = list(yValueDF[yValueColName].values[1:])
-    return allYValues
-
-
 def main():
     reference_df = pd.read_csv("3successfulStandardizedBins.csv", low_memory=False)
     referenceDict = readSuccessfulFile(reference_df)
@@ -70,3 +44,92 @@ def main():
 
 
 main()
+
+'''
+pseudocode:
+
+initialize a total prediction list with all 0's
+for every Feature Name in the Feature Name column:
+    1) check the coefficient to see if its absolut value is over a threshhold (0.1?)
+    2) if above the threshhold: (ex: ALIM_Volume_average | 1.3)
+        Open the ALIM.csv file from the standardized folder
+        get the element_statistic column (Volume_average) and index from [0:length - 1]
+        multiply this column's values by the coefficient (1.3) and add them to the total prediction list
+add the total prediction list to a data frame (noting the value it is predicting and the fact that it is the prediction)
+add the actual standardized values of the value we are trying to predict
+
+Note: yValueName consists of yStock_Element_Statistic
+
+df1:
+{Date: [List of Dates (Yavlues so it wil probably start with 4/3/16, aka index 1)]
+ 'yValueName'_Predicted_Standardized: [total prediction list]
+ 'yValueName'_Actual_Standardized: [(Go to yStock file and find the matching yStock_Element_Statistic)[1:end] (in folder 3)]
+}
+
+We want to get df2 from df1:
+{Date: [List of Dates (Yavlues so it wil probably start with 4/3/16, aka index 1)]
+ 'yValueName'_Predicted: [total prediction list (Unstandardized)]
+ 'yValueName'_Actual: [(Go to yStock file and find the matching yStock_Element_Statistic)[window_length(beta) + 1:end] (in folder 2)]
+}
+
+To do this, we need to use the unstandardizing function.
+
+Final step:
+Initialize a df3 that is empty
+
+concatnate all df2s into df3
+
+Write df3 into an csv with the name: 'yStock'.csv @ location 5testing_Results
+
+'''
+
+
+def Calculate_Standardized_Value(series_to_standardize, window_length):
+    return standardizeSeries([series_to_standardize], window_length)[0][0]
+
+#We could try to get the math better, but it is very challenging when we are using the expected value in the standardization
+# ((standardized_value * stdev) + (sum(known_values)/window_length)) / ((window_length-1)/window_length)
+# (prediction[i] * stdev)
+def Estimate_Unstandardized(standardized_value, known_values, window_length):
+
+    '''
+    known_values: the beta-1 weeks before the week of interest [$12, $14, $13.4, ...]
+    window_length: the beta value
+    standardized_value: the standardized value of the week we are trying to predict
+
+    alg: [$12, $14, $13.4, ...] append x (estimated_value) variable
+    keep changing x to get the predicted standardized value as close to the given standardized_value
+
+    x - mean([$12, $14, $13.4, ... x])/ stdev([$12, $14, $13.4, ... x])
+    Needs to get as close as possible to standardized_value
+    '''
+
+    estimated_value = int(known_values[-1])
+
+    factor = 10 ** (len(str(int(known_values[-1]))) - 1) # Take most recent value as judge of where the prediction could move (+ or - 100% max)
+
+    while(True):
+
+        if factor < 0.001: # done when we know the nearest tenth of a cent
+            break
+
+        dif = standardized_value - Calculate_Standardized_Value(known_values + [estimated_value], window_length)
+
+        if dif <= 0:
+            for j in range(10):
+                if abs(dif) > abs(standardized_value - Calculate_Standardized_Value(known_values + [estimated_value - factor], window_length)):
+                    estimated_value -= factor
+                    dif = standardized_value - Calculate_Standardized_Value(known_values + [estimated_value], window_length) # update dif
+                else:
+                    break
+        else:
+            for j in range(10):
+                if abs(dif) > abs(standardized_value - Calculate_Standardized_Value(known_values + [estimated_value + factor], window_length)):
+                    estimated_value += factor
+                    dif = standardized_value - Calculate_Standardized_Value(known_values + [estimated_value], window_length) # update dif
+                else:
+                    break
+
+        factor = factor / 10
+
+    return estimated_value

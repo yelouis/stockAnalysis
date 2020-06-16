@@ -82,16 +82,18 @@ def makeUnstandardizedTestingDF(stdDF, window_length):
             #actualList = list(stdDF[actualCol].values)
 
             unstandardizedListPredicted = []
-
+            unstandardizedListPredicted = calculate_unstandardized(predList, actualList, window_length)
+            '''
             for i in range(len(predList)):
                 unstandardizedValuePredicted = Estimate_Unstandardized(predList[i], actualList[i:i+window_length], window_length)
                 unstandardizedListPredicted.append(unstandardizedValuePredicted)
+            '''
             print(str(len(unstandardizedListPredicted)) + "Predicted")
             unstdDF[col] = unstandardizedListPredicted
 
         if "Actual" in col:
             print(str(len(actualList)) + "Actual")
-            unstdDF[col] = actualList
+            unstdDF[col] = actualList[:-window_length]
 
     return unstdDF
 
@@ -218,6 +220,25 @@ Really it is the just the same name as the file you read in to get the coefficie
 
 '''
 
+def calculate_unstandardized(predictionSTDList, series, window_length):
+    '''
+    print(str(len(predictionSTDList)) + "predicted")
+    print(str(len(series)) + "actual")
+    print(str(window_length) + "WINDOW_LENGTH")
+    '''
+    unstandardizedList = []
+    for i in range(len(series) - 1):
+        if i < window_length - 1:
+            continue
+        else:
+            if i + 1 - window_length >= 196:
+                print("oooooooo")
+            #lookup 'how to standardize data' and try to understand equation a bit
+            #(Data point for week i - (Data point from week (i + 1 - window) to week i)) /  Standard Deviation of data points from week (i + 1 - window) to week i
+            #std eqn: standardizedList.append((series[i] - statistics.mean(series[i + 1 - window_length:i + 1])) / statistics.stdev(series[i + 1 - window_length:i + 1]))
+            unstandardizedList.append(predictionSTDList[i + 1 - window_length] * statistics.stdev(series[i + 1 - window_length: i + 1]) + statistics.mean(series[i + 1 - window_length:i+1]))
+    return unstandardizedList
+
 
 def Calculate_Standardized_Value(series_to_standardize, window_length):
     return standardizeSeries([series_to_standardize], window_length)[0][0]
@@ -239,6 +260,7 @@ def standardizeSeries(series, window_length):
 #We could try to get the math better, but it is very challenging when we are using the expected value in the standardization
 # ((standardized_value * stdev) + (sum(known_values)/window_length)) / ((window_length-1)/window_length)
 # (prediction[i] * stdev)
+
 def Estimate_Unstandardized(standardized_value, known_values, window_length):
 
     '''

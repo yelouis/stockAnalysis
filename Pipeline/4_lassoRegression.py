@@ -36,7 +36,7 @@ def lassoRegressionImplement(xValues, yValues, xValueNames, yValueName, alpha, b
     df = pd.DataFrame()
     df['Feature Name'] = xValueNames
     coefficients = clf.coef_
-    df[str(yValueName)+'_coefficents'] = coefficients
+    df[str(yValueName)+'_coefficients'] = coefficients
 
     df2 = pd.DataFrame()
     df2[str(yValueName)+'_toggles'] = ['madT =' + str(madT), 'madV =' + str(madV), 'mad =' + str(mad), 'Alpha =' + str(alpha), 'Beta =' +str(beta)]

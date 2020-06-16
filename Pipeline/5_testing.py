@@ -79,7 +79,9 @@ Initialize a df3 that is empty
 
 concatnate all df2s into df3
 
-Write df3 into an csv with the name: 'yStock'.csv @ location 5testing_Results
+Write df3 into an csv with the name: 'yStock'_alpha_beta.csv @ location 5testing_Results
+Example: Gold0.3_alpha13_beta.csv @ location 5testing_Results
+Really it is the just the same name as the file you read in to get the coefficient
 
 '''
 

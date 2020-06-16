@@ -36,7 +36,7 @@ def lassoRegressionImplement(xValues, yValues, xValueNames, yValueName, alpha, b
     df = pd.DataFrame()
     df['Feature Name'] = xValueNames
     coefficients = clf.coef_
-    df[str(yValueName)] = coefficients
+    df[str(yValueName)+'_coefficents'] = coefficients
 
     df2 = pd.DataFrame()
     df2[str(yValueName)+'_toggles'] = ['madT =' + str(madT), 'madV =' + str(madV), 'mad =' + str(mad), 'Alpha =' + str(alpha), 'Beta =' +str(beta)]
@@ -89,7 +89,7 @@ def main():
     beta = _configKeys.WINDOW_LENGTH
     yValueDict = readYValues()
 
-    alpha = .1
+    alpha = .3
     for counter in range(10):
         allYValueResults = pd.DataFrame()
         start_time = time.time()

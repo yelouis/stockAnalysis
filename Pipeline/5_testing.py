@@ -36,6 +36,7 @@ def main():
 
     #lassoDF: reading in the df file from the lasso folder
     #lassoDF = pd.read_csv("Gold0.3_alpha13_beta.csv", low_memory=False)
+    #Generalize lassoDF (thinking make a list of DFs for each file containing the ticker within LASSO_RESULTS_FOLDER)
     lassoDF = pd.read_csv(os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), str(_configKeys.YVALUETICKER)+"0.3_alpha13_beta.csv"), low_memory=False)
     threshold = _configKeys.THRESHOLD
 
@@ -45,7 +46,27 @@ def main():
     unstandardizedTestingDF = makeUnstandardizedTestingDF(standardizedTestingDF, window_length)
     unstandardizedTestingDF.to_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), str(_configKeys.YVALUETICKER)+"_test_results.csv"))
 
+'''
+s is standardized predicted and a is unstandardized predicted
+We know nothing about a6 or s6
 
+[a1, a2, a3, a4, a5]
+
+for a in a's:
+    (a - mean([a's]))/ std.[a's]
+[s1, s2, s3, s4, s5]
+
+s6: get from Lasso. Lasso didn't anything that required a6.
+
+how do you get a6?
+known: a2, a3, a4, a5
+
+(a6 - mean([a2, a3, a4, a5, a6]))/ std.[a2, a3, a4, a5, a6] = s6
+Using a guess a6 (first guess is a5):
+calc: (a6 - mean([a2, a3, a4, a5, a6]))/ std.[a2, a3, a4, a5, a6] -> guess s6
+    compare with predicted s6 (58)
+
+'''
 
 
 '''
@@ -65,9 +86,8 @@ def makeUnstandardizedTestingDF(stdDF, window_length):
 
     unstdDF = pd.DataFrame(columns = columnList)
     unstdDF["Date"] = stdDF["Date"]
-
-
     binnedDF = pd.read_csv(os.path.join(Path(_configKeys.BINNED_FOLDER), ticker+".csv"))
+
     for i in range(1, len(stdDF.columns)):
         col = stdDF.columns[i]
         #print (col):
@@ -82,6 +102,7 @@ def makeUnstandardizedTestingDF(stdDF, window_length):
             #actualList = list(stdDF[actualCol].values)
 
             unstandardizedListPredicted = []
+            #TODO: Need to use Cole's list
             unstandardizedListPredicted = calculate_unstandardized(predList, actualList, window_length)
             '''
             for i in range(len(predList)):
@@ -93,7 +114,8 @@ def makeUnstandardizedTestingDF(stdDF, window_length):
 
         if "Actual" in col:
             print(str(len(actualList)) + "Actual")
-            unstdDF[col] = actualList[:-window_length]
+            #TODO: Need to index through the actualList correctly
+            unstdDF[col] = actualList[1:]
 
     return unstdDF
 
@@ -127,7 +149,7 @@ def makeStandardizedTestingDF(predictionsDict):
     # [yValueName_Actual] = empty list to be overwritten later (do this here because it will be easier later when working with data frames to fill in premade spaces)
 def makePredictionsDict(lassoDF, threshold):
     predictionsDict = {}
-    dateDF = pd.read_csv(os.path.join(Path(_configKeys.STANDARDIZED_FOLDER), _configKeys.YVALUETICKER.capitalize()+".csv"))
+    dateDF = pd.read_csv(os.path.join(Path(_configKeys.STANDARDIZED_FOLDER), _configKeys.YVALUETICKER+".csv"))
     dates = list(dateDF["Date"].values)
     #print (len(predictionsDict))
     predictionsDict ["Date"] = dates[1:]
@@ -135,7 +157,6 @@ def makePredictionsDict(lassoDF, threshold):
     xValueNames = list(lassoDF['Feature Name'].values)
 
     for column in lassoDF.columns:
-        #tell louis to change
         if "_coefficents" in str(column):
 
             predictionList = [] #predictionList is a list where each index corresponds with a week and the value at each index is the
@@ -144,8 +165,8 @@ def makePredictionsDict(lassoDF, threshold):
             #count() returns the number of non-NAN rows in a dataframe
             #shape() returns a tuple containing the dimension of the dataframe as: (height, width)
 
-            for i in range(dateDF.shape[0]-1):
-                predictionList.append(0)
+            #Changed initialization of predictionList -------------------------------------
+            predictionList = [0]*(dateDF.shape[0]-1)
 
             coefficients = list(lassoDF[column].values)
             yValueName = column.split("_")[:-1]
@@ -162,15 +183,20 @@ def makePredictionsDict(lassoDF, threshold):
                     #This code gives us the weekly data for the affecting feature
                     #print (featureStockDF.columns)
                     #print()
-                    for featureStockCol in featureStockDF.columns:
-                        if featureStockCol == xValueName:
-                            #print (str(featureStockCol))
-                            featureWeekList = list(featureStockDF[featureStockCol].values[:-1])
-                            #print (len(featureWeekList)) #CORRECT SIZE
-                            for x in range(len(featureWeekList[:-1])):
-                                #Multiplies this column's values by the coefficient and adds the result to the total prediction list
-                                featureWeekDataPoint = featureWeekList[x]
-                                predictionList[x] += coefficient * featureWeekDataPoint
+
+                    #Changed accessing correct column ------------------------------
+
+                    #print (str(featureStockCol))
+                    featureWeekList = list(featureStockDF[xValueName].values[:-1])
+                    #print (len(featureWeekList)) #CORRECT SIZE
+                    for x in range(len(featureWeekList[:-1])):
+                        #Multiplies this column's values by the coefficient and adds the result to the total prediction list
+
+                        #look into np.arrays
+                        #np.array(featureWeekList) * coefficient
+                        #predictionList + featureWeekList (if both ar np.arrays)
+                        featureWeekDataPoint = featureWeekList[x]
+                        predictionList[x] += coefficient * featureWeekDataPoint
 
 
             predictionsDict[yValueName+"_Predicted"] = predictionList
@@ -231,8 +257,6 @@ def calculate_unstandardized(predictionSTDList, series, window_length):
         if i < window_length - 1:
             continue
         else:
-            if i + 1 - window_length >= 196:
-                print("oooooooo")
             #lookup 'how to standardize data' and try to understand equation a bit
             #(Data point for week i - (Data point from week (i + 1 - window) to week i)) /  Standard Deviation of data points from week (i + 1 - window) to week i
             #std eqn: standardizedList.append((series[i] - statistics.mean(series[i + 1 - window_length:i + 1])) / statistics.stdev(series[i + 1 - window_length:i + 1]))
@@ -262,6 +286,10 @@ def standardizeSeries(series, window_length):
 # (prediction[i] * stdev)
 
 def Estimate_Unstandardized(standardized_value, known_values, window_length):
+    '''
+    Nathaniel idea:
+        idea for later: maybe lets compare the unstandardized values given from the known values and compare them to these values
+    '''
 
     '''
     known_values: the beta-1 weeks before the week of interest [$12, $14, $13.4, ...]

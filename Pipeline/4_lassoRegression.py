@@ -85,6 +85,7 @@ def main():
     (xValues, xValueNames) = readXValues(referenceDict, "")
 
     xValues = list(map(list, zip(*xValues)))
+    listOfSuccessfulLasso = []
 
     beta = _configKeys.WINDOW_LENGTH
     yValueDict = readYValues()
@@ -98,11 +99,13 @@ def main():
             singleYValueResult = lassoRegressionImplement(xValues, yValues, xValueNames, yValueName, alpha, beta)
             allYValueResults = pd.concat([allYValueResults, singleYValueResult], axis=1, sort=False)
         path = os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), str(_configKeys.YVALUETICKER) + str(format(alpha, '.1f')) +"_alpha"+ str(int(beta)) + "_beta" + '.csv')
+        listOfSuccessfulLasso.append(str(_configKeys.YVALUETICKER) + str(format(alpha, '.1f')) +"_alpha"+ str(int(beta)) + "_beta")
         allYValueResults.to_csv(path)
         print("--- %s seconds ---" % (time.time() - start_time))
         alpha += 0.1
-        quit()
 
-    reference_df.to_csv('4successfulLasso.csv', index=False)
+    successfulDict = {"FileName" : listOfSuccessfulLasso}
+    df = pd.DataFrame(successfulDict, columns = ["FileName"])
+    df.to_csv('4successfulLasso.csv', index=False)
 
 main()

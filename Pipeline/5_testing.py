@@ -37,14 +37,28 @@ def main():
     #lassoDF: reading in the df file from the lasso folder
     #lassoDF = pd.read_csv("Gold0.3_alpha13_beta.csv", low_memory=False)
     #Generalize lassoDF (thinking make a list of DFs for each file containing the ticker within LASSO_RESULTS_FOLDER)
-    lassoDF = pd.read_csv(os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), str(_configKeys.YVALUETICKER)+"0.3_alpha13_beta.csv"), low_memory=False)
+
+    #this allows us to loop through each one of the different lasso files from 0.3 to 1.2 by incrementing 0.1
+    floatStepList = list(np.arange(0.3, 1.2, 0.1))
     threshold = _configKeys.THRESHOLD
 
+    for num in floatStepList:
+        #for some reason, when num should be 0.6, it is approx 0.600000000001 so we round it to a single decimal point here
+        num = round(num, 1)
+        lassoDF = pd.read_csv(os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), str(_configKeys.YVALUETICKER)+str(num)+"_alpha13_beta.csv"), low_memory=False)
+        #predictList will contain a list of values
+        predictionsDict = makePredictionsDict(lassoDF, threshold)
+        standardizedTestingDF = makeStandardizedTestingDF(predictionsDict)
+        unstandardizedTestingDF = makeUnstandardizedTestingDF(standardizedTestingDF, window_length)
+        unstandardizedTestingDF.to_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), str(_configKeys.YVALUETICKER)+"_"+str(num)+"_test_results.csv"))
+
+    #lassoDF = pd.read_csv(os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), str(_configKeys.YVALUETICKER)+"0.3_alpha13_beta.csv"), low_memory=False)
+    '''
     #predictList will contain a list of values
     predictionsDict = makePredictionsDict(lassoDF, threshold)
     standardizedTestingDF = makeStandardizedTestingDF(predictionsDict)
     unstandardizedTestingDF = makeUnstandardizedTestingDF(standardizedTestingDF, window_length)
-
+    '''
 
     unstandardizedTestingDF.to_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), str(_configKeys.YVALUETICKER)+"_test_results.csv"))
 
@@ -107,19 +121,18 @@ def makeUnstandardizedTestingDF(stdDF, window_length):
             #TODO: Need to use Cole's list
             # unstandardizedListPredicted = calculate_unstandardized(predList, actualList, window_length)
             for i in range(len(predList)):
-                unstandardizedListPredicted.append(Estimate_Unstandardized(predList[i], actualList, window_length))
+                unstandardizedListPredicted.append(Estimate_Unstandardized(predList[i], actualList[i:i+window_length-1], window_length))
 
             '''
             for i in range(len(predList)):
                 unstandardizedValuePredicted = Estimate_Unstandardized(predList[i], actualList[i:i+window_length], window_length)
                 unstandardizedListPredicted.append(unstandardizedValuePredicted)
             '''
-            print(str(len(unstandardizedListPredicted)) + "Predicted")
+            #print(str(len(unstandardizedListPredicted)) + "Predicted")
             unstdDF[col] = unstandardizedListPredicted
 
         if "Actual" in col:
-            print(str(len(actualList)) + "Actual")
-            #TODO: Need to index through the actualList correctly
+            #print(str(len(actualList)) + "Actual")
             unstdDF[col] = actualList[window_length:]
 
     return unstdDF
@@ -269,10 +282,17 @@ def calculate_unstandardized(predictionSTDList, series, window_length):
     return unstandardizedList
 
 
-def Calculate_Standardized_Value(series, window_length):
-    lastIndex = len(series) - 1
 
-    return (series[lastIndex] - statistics.mean(series[lastIndex + 1 - window_length: lastIndex+1])) / statistics.stdev(series[lastIndex + 1 - window_length:lastIndex + 1])
+
+
+def Calculate_Standardized_Value(series, window_length):
+    series = list(map(float, series))
+    #lastIndex = len(series) - 1
+    if statistics.stdev(series) == 0:
+        print("ERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERROR")
+    standardizedValue = (series[-1] - statistics.mean(series)) / statistics.stdev(series)
+    #print(standardizedValue)
+    return standardizedValue
     #return standardizeSeries([series], window_length)[-1]
 
 def standardizeSeries(series, window_length):
@@ -300,7 +320,7 @@ def Estimate_Unstandardized(standardized_value, known_values, window_length):
     '''
 
     '''
-    known_values: the beta-1 weeks before the week of interest [$12, $14, $13.4, ...]
+    known_values: the beta-1 weeks before the week of interest [$12, $14, $13.4, ...] -- ex: if window_length is 13, we want the 12 weeks before and we're going to append an estimate for the
     window_length: the beta value
     standardized_value: the standardized value of the week we are trying to predict
 

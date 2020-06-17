@@ -44,6 +44,8 @@ def main():
     predictionsDict = makePredictionsDict(lassoDF, threshold)
     standardizedTestingDF = makeStandardizedTestingDF(predictionsDict)
     unstandardizedTestingDF = makeUnstandardizedTestingDF(standardizedTestingDF, window_length)
+
+
     unstandardizedTestingDF.to_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), str(_configKeys.YVALUETICKER)+"_test_results.csv"))
 
 '''
@@ -103,7 +105,10 @@ def makeUnstandardizedTestingDF(stdDF, window_length):
 
             unstandardizedListPredicted = []
             #TODO: Need to use Cole's list
-            unstandardizedListPredicted = calculate_unstandardized(predList, actualList, window_length)
+            # unstandardizedListPredicted = calculate_unstandardized(predList, actualList, window_length)
+            for i in range(len(predList)):
+                unstandardizedListPredicted.append(Estimate_Unstandardized(predList[i], actualList, window_length))
+
             '''
             for i in range(len(predList)):
                 unstandardizedValuePredicted = Estimate_Unstandardized(predList[i], actualList[i:i+window_length], window_length)
@@ -115,7 +120,7 @@ def makeUnstandardizedTestingDF(stdDF, window_length):
         if "Actual" in col:
             print(str(len(actualList)) + "Actual")
             #TODO: Need to index through the actualList correctly
-            unstdDF[col] = actualList[1:]
+            unstdDF[col] = actualList[window_length:]
 
     return unstdDF
 
@@ -126,7 +131,7 @@ def makeUnstandardizedTestingDF(stdDF, window_length):
 # [yValueName_Actual] =  actual yValues found in the csv of the stock in question in the STANDARDIZED_FOLDER
 def makeStandardizedTestingDF(predictionsDict):
     columnList = list(predictionsDict.keys())
-    #print(len(columnList))
+    print(columnList)
     ticker = columnList[1].split("_")[0]
     actualDF = pd.read_csv(os.path.join(Path(_configKeys.STANDARDIZED_FOLDER), ticker+".csv"))
 
@@ -157,7 +162,7 @@ def makePredictionsDict(lassoDF, threshold):
     xValueNames = list(lassoDF['Feature Name'].values)
 
     for column in lassoDF.columns:
-        if "_coefficents" in str(column):
+        if "_coefficients" in str(column):
 
             predictionList = [] #predictionList is a list where each index corresponds with a week and the value at each index is the
             #summation of the multiplications of every coefficient and the corresponding value of the feature name at the corresponding week
@@ -264,8 +269,11 @@ def calculate_unstandardized(predictionSTDList, series, window_length):
     return unstandardizedList
 
 
-def Calculate_Standardized_Value(series_to_standardize, window_length):
-    return standardizeSeries([series_to_standardize], window_length)[0][0]
+def Calculate_Standardized_Value(series, window_length):
+    lastIndex = len(series) - 1
+
+    return (series[lastIndex] - statistics.mean(series[lastIndex + 1 - window_length: lastIndex+1])) / statistics.stdev(series[lastIndex + 1 - window_length:lastIndex + 1])
+    #return standardizeSeries([series], window_length)[-1]
 
 def standardizeSeries(series, window_length):
     #input: a list of values (series), and a time frame (window_length - in weeks)

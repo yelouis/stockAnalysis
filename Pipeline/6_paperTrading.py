@@ -37,7 +37,7 @@ class Portfolio:
 
     #buyStock will attempt to buy the amount of stock A specified and if the Portfolio doesn't have enough money, will buy as much of stock A as possible
     def buyStock(self, transaction):
-        while(!self.validTransaction(transaction)):
+        while(self.validTransaction(transaction) == False):
             transaction.oneLessShare()
         self.transactions.append(transaction)
         self.numSharesOwned += transaction.getNumShares()
@@ -87,20 +87,37 @@ class Transaction:
 
 def main():
     startBalance = 1000
-
+    window_length = _configKeys.WINDOW_LENGTH
     myPortfolio = Portfolio(startBalance)
     controlPortfolio = Portfolio(startBalance)
 
+    meanErrorList = [] #meanErrorList is a list of tuples equal to a (featureName, meanErrorForFeatureName)
 
+    testingDF = pd.read_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), "GOLD0.3_alpha13_beta_test_results.csv"))
+    dataDF = pd.read_csv(os.path.join(Path(_configKeys.DATA_FOLDER), "GOLD.csv"), skiprows = range(1, window_length))
 
+    for i in range(2, len(testingDF.columns)-1):
+        col = testingDF.columns[i]
+        nextCol = testingDF.columns[i+1]
 
+        if "Predicted" in col:
+            colName = col.split("_")[:-1]
+            colName = str(colName[0]) + "_" + str(colName[1]) + "_" + str(colName[2])
+
+            predList = list(testingDF[col].values)
+            actList = list(testingDF[nextCol].values)
+
+            meanError = calculateMeanError(actList, predList)
+            meanErrorList.append((colName, meanError))
+
+    print(meanErrorList)
 
     lassoProfit = myPortfolio.getTotalProfit()
     controlProfit = controlPortfolio.getTotalProfit()
     print ("Lasso Profit: " + str(lassoProfit))
     print ("Control Profit: " + str(controlProfit))
 
-#calculateMeanError will find the mean error
+#calculateMeanError will find the mean error between two lists: predictionList: the predicted data for a feature, actualList: the actual data for a feature
 def calculateMeanError(actualList, predictionList):
     totalMean = 0
     for i in range(len(actualList)):

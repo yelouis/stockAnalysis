@@ -39,18 +39,20 @@ def main():
     #Generalize lassoDF (thinking make a list of DFs for each file containing the ticker within LASSO_RESULTS_FOLDER)
 
     #this allows us to loop through each one of the different lasso files from 0.3 to 1.2 by incrementing 0.1
-    floatStepList = list(np.arange(0.3, 1.2, 0.1))
-    threshold = _configKeys.THRESHOLD
 
-    for num in floatStepList:
-        #for some reason, when num should be 0.6, it is approx 0.600000000001 so we round it to a single decimal point here
-        num = round(num, 1)
-        lassoDF = pd.read_csv(os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), str(_configKeys.YVALUETICKER)+str(num)+"_alpha13_beta.csv"), low_memory=False)
+    #read in from 4successfulLasso.csv and just iterate through a list of those names to access successfully lassoed filenames
+    #floatStepList = list(np.arange(0.3, 1.3, 0.1))
+    threshold = _configKeys.THRESHOLD
+    successfulLassoDF = pd.read_csv("4successfulLasso.csv", low_memory=False)
+
+    for name in list(successfulLassoDF["FileName"].values):
+        #name = str(name)
+        lassoDF = pd.read_csv(os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), name+".csv"), low_memory=False)
         #predictList will contain a list of values
         predictionsDict = makePredictionsDict(lassoDF, threshold)
         standardizedTestingDF = makeStandardizedTestingDF(predictionsDict)
         unstandardizedTestingDF = makeUnstandardizedTestingDF(standardizedTestingDF, window_length)
-        unstandardizedTestingDF.to_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), str(_configKeys.YVALUETICKER)+"_"+str(num)+"_test_results.csv"))
+        unstandardizedTestingDF.to_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), name+"_test_results.csv"))
 
     #lassoDF = pd.read_csv(os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), str(_configKeys.YVALUETICKER)+"0.3_alpha13_beta.csv"), low_memory=False)
     '''
@@ -60,7 +62,7 @@ def main():
     unstandardizedTestingDF = makeUnstandardizedTestingDF(standardizedTestingDF, window_length)
     '''
 
-    unstandardizedTestingDF.to_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), str(_configKeys.YVALUETICKER)+"_test_results.csv"))
+    #unstandardizedTestingDF.to_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), str(_configKeys.YVALUETICKER)+"_test_results.csv"))
 
 '''
 s is standardized predicted and a is unstandardized predicted
@@ -121,6 +123,7 @@ def makeUnstandardizedTestingDF(stdDF, window_length):
             #TODO: Need to use Cole's list
             # unstandardizedListPredicted = calculate_unstandardized(predList, actualList, window_length)
             for i in range(len(predList)):
+                #indexing
                 unstandardizedListPredicted.append(Estimate_Unstandardized(predList[i], actualList[i:i+window_length-1], window_length))
 
             '''
@@ -289,25 +292,12 @@ def Calculate_Standardized_Value(series, window_length):
     series = list(map(float, series))
     #lastIndex = len(series) - 1
     if statistics.stdev(series) == 0:
-        print("ERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERROR")
+        print("CANNOT DIVIDE BY 0 -- problem standardizing data using eqn")
     standardizedValue = (series[-1] - statistics.mean(series)) / statistics.stdev(series)
     #print(standardizedValue)
     return standardizedValue
     #return standardizeSeries([series], window_length)[-1]
 
-def standardizeSeries(series, window_length):
-    #input: a list of values (series), and a time frame (window_length - in weeks)
-    #output: standardized list of values
-    #maybe we can try this, but usgin a year's worth of "training data" at the beginning of the series?
-    standardizedList = []
-    for i in range(len(series)):
-        if i < window_length - 1:
-            continue
-        else:
-            #lookup 'how to standardize data' and try to understand equation a bit
-            #(Data point for week i - (Data point from week (i + 1 - window) to week i)) /  Standard Deviation of data points from week (i + 1 - window) to week i
-            standardizedList.append((series[i] - statistics.mean(series[i + 1 - window_length:i + 1])) / statistics.stdev(series[i + 1 - window_length:i + 1]))
-    return standardizedList
 
 #We could try to get the math better, but it is very challenging when we are using the expected value in the standardization
 # ((standardized_value * stdev) + (sum(known_values)/window_length)) / ((window_length-1)/window_length)

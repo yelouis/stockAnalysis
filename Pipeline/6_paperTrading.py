@@ -28,6 +28,7 @@ class Portfolio:
     def addBalance(self, add):
         self.balance += add
 
+    #getTotalProfit will return the total profit a Portfolio has gained
     def getTotalProfit(self):
         return self.balance - self.initialBalance
 
@@ -59,11 +60,10 @@ class Portfolio:
             return False
 
 class Transaction:
-    def __init__(self, ticker, shareCost, numShares, totalPrice, date, transactionType):
+    def __init__(self, ticker, shareCost, numShares, date, transactionType):
         self.ticker = ticker
         self.shareCost = shareCost
         self.numShares = numShares
-        self.totalPrice = totalPrice
         self.date = date
         self.transactionType = transactionType # transactionType will be a string "Buy" or "Sell"
         self.totalPrice = transaction.shareCost * transaction.numShares
@@ -86,6 +86,7 @@ class Transaction:
         self.totalPrice = transaction.shareCost * transaction.numShares
 
 def main():
+    #for friday: have control algorithm run, and have algorithm #1 run, and output it somehow with a csv
     startBalance = 1000
     window_length = _configKeys.WINDOW_LENGTH
     myPortfolio = Portfolio(startBalance)
@@ -94,7 +95,7 @@ def main():
     meanErrorList = [] #meanErrorList is a list of tuples equal to a (featureName, meanErrorForFeatureName)
 
     testingDF = pd.read_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), "GOLD0.3_alpha13_beta_test_results.csv"))
-    dataDF = pd.read_csv(os.path.join(Path(_configKeys.DATA_FOLDER), "GOLD.csv"), skiprows = range(1, window_length))
+    dataDF = pd.read_csv(os.path.join(Path(_configKeys.DATA_FOLDER), "GOLD.csv"))
 
     for i in range(2, len(testingDF.columns)-1):
         col = testingDF.columns[i]
@@ -119,10 +120,20 @@ def main():
 
 #calculateMeanError will find the mean error between two lists: predictionList: the predicted data for a feature, actualList: the actual data for a feature
 def calculateMeanError(actualList, predictionList):
+    #maybe lets actually just do sqrt(variance)??
     totalMean = 0
     for i in range(len(actualList)):
         totalMean += abs(actualList[i] - predictionList[i])
     return totalMean/len(actualList)
+
+'''
+Possible algorithms: Should work with different featureNames in order to see which feature is the best indicator
+1. Use predictions for next week and when next week comes, compare important actual values to predicted weekly values and when actual approaches predicted, sell / buy
+2. Mean Error???
+3. Using multi armed bandit on all our algorithms to figure out which has least regret
+#. Control algorithm: Buy beginning of the week, sell at the end
+'''
+
 
 #Inital: Both Control Reward and Lasso Reward start with a set amount of dollar
 

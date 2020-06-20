@@ -73,7 +73,7 @@ def CollapseDictionaryToWeeks(dictionary, name, has_volume):
         list_of_elements = ['Open', 'High', 'Low', 'Close']
 
     for element in list_of_elements:
-        for statistic in ["average", "max", "volatility", "change"]:
+        for statistic in ["average", "max", "min", "volatility", "change"]:
             elementIndex = elementDict[element]
             week_bin_list = []
             for week in dictionary.keys(): # This assumes the keys are already in chronological order
@@ -84,6 +84,8 @@ def CollapseDictionaryToWeeks(dictionary, name, has_volume):
                     week_bin_list.append(statistics.mean(elementList))
                 elif statistic == "max":
                     week_bin_list.append(max(elementList))
+                elif statistic == "min":
+                    week_bin_list.append(min(elementList))
                 elif statistic == "volatility": #maybe add another "volatility" statistic??
                     week_bin_list.append(max(elementList) - min(elementList))
                 elif statistic == "change":

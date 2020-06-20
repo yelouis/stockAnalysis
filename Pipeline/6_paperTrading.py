@@ -18,11 +18,13 @@ import math
 from sklearn.metrics import mean_absolute_error
 
 class Portfolio:
-    def __init__(self, balance):
+    def __init__(self, balance, ticker):
         self.balance = balance
         self.transactions = []
         self.numSharesOwned = 0
         self.initialBalance = balance
+        #in this simplified version of a portfolio, we will only be able to purchase a single stock
+        self.ticker = ticker
 
     #addBalance will increase the Portfolio balance by add
     def addBalance(self, add):
@@ -59,6 +61,9 @@ class Portfolio:
         else:
             return False
 
+    def getTickerName(self):
+        return self.ticker
+
 class Transaction:
     def __init__(self, ticker, shareCost, numShares, date, transactionType):
         self.ticker = ticker
@@ -89,13 +94,15 @@ def main():
     #for friday: have control algorithm run, and have algorithm #1 run, and output it somehow with a csv
     startBalance = 1000
     window_length = _configKeys.WINDOW_LENGTH
-    myPortfolio = Portfolio(startBalance)
-    controlPortfolio = Portfolio(startBalance)
+    myPortfolio = Portfolio(startBalance, _configKeys.YVALUETICKER)
+    controlPortfolio = Portfolio(startBalance, _configKeys.YVALUETICKER)
 
     meanErrorList = [] #meanErrorList is a list of tuples equal to a (featureName, meanErrorForFeatureName)
 
     testingDF = pd.read_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), "GOLD0.3_alpha13_beta_test_results.csv"))
     dataDF = pd.read_csv(os.path.join(Path(_configKeys.DATA_FOLDER), "GOLD.csv"))
+    weeksDict = daysInWeekDict(dataDF)
+
 
     for i in range(2, len(testingDF.columns)-1):
         col = testingDF.columns[i]
@@ -118,6 +125,54 @@ def main():
     print ("Lasso Profit: " + str(lassoProfit))
     print ("Control Profit: " + str(controlProfit))
 
+
+#Take in day dataDF
+#Will return a dicionary with the weekly dates as keys and a DataFrame of daily values during that week
+
+def daysInWeekDict(dataDF):
+    #TODO: make this return what we want (a DataFrame with all trading days for a specific week)
+    reference_df = pd.read_csv("1successfulPulls.csv", low_memory=False)
+    asset_class_has_volume = False
+    if asset_class == "Stock" or asset_class == "Commodity":
+        asset_class_has_volume = True
+    return daysInWeekDict = GetWeekDictionary(dataDF, asset_class_has_volume)
+
+
+
+def algorithm_MeanError(portfolio, testingDF, dataDF, weekDict):
+    ticker = portfolio.getTickerName()
+    for week in list(testingDF["Date"].values):
+        #grabbing daily values for this week (we have the daily data in a DataFrame with 5 values)
+        daysDF = weekDict[week] #TODO: make into a dataframe with [Date, Open High, Low, Close, Volume] as the headers
+
+        #these are values we want to compare each daily ACTUAL value (Formatting -- maybe just make every word start with a capital Letter -- bring up in meeting)
+        list(testingDF[ticker + "_Open_max_Predicted"].values)
+
+        for day in list(daysDF["Date"].values):
+
+
+def algorithm_HighLowThreshold(portfolio, testingDF, dataDF, weekDict):
+    ticker = portfolio.getTickerName()
+    #Idea: ex- If the actual average High of first week of trading is greater than the predicted average high of second week, we do no buying at all no matter what
+
+    #list of features we want to track
+    featureList = [ticker+"_Open_max_Predicted",ticker+"_High_volatility_Predicted", ticker+"_High_max_Predicted"]
+
+    #for each week in our testingDF, get desired predictedFEATURE(s) from the list
+    for week in list(testingDF["Date"].values):
+        weekDF = weekDict[week]
+        #for each daily value in the weekDF
+        for day in list(weekDF["Date"].values):
+            open = weekDF[""]
+            close =
+
+            #compare if that daily value is withing predicted value within threshold
+                #if "low" in predictedFeature - think about this
+                    #buy shares beginning of next trading day
+                #if "high" in predictedFeature
+                    #sell shares beginning of next trading day
+    pass()
+
 #calculateMeanError will find the mean error between two lists: predictionList: the predicted data for a feature, actualList: the actual data for a feature
 def calculateMeanError(actualList, predictionList):
     #maybe lets actually just do sqrt(variance)??
@@ -127,11 +182,11 @@ def calculateMeanError(actualList, predictionList):
     return totalMean/len(actualList)
 
 '''
+Using multi armed bandit on all our algorithms to figure out which has least regret
 Possible algorithms: Should work with different featureNames in order to see which feature is the best indicator
 1. Use predictions for next week and when next week comes, compare important actual values to predicted weekly values and when actual approaches predicted, sell / buy
-2. Mean Error???
-3. Using multi armed bandit on all our algorithms to figure out which has least regret
-#. Control algorithm: Buy beginning of the week, sell at the end
+2. Mean Error as decider of how many shares to buy
+3. Control algorithm: Buy beginning of the week, sell at the end
 '''
 
 

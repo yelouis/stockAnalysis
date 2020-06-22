@@ -7,15 +7,12 @@ import os
 import csv
 import datetime
 from datetime import timedelta
-from sklearn.model_selection import train_test_split
-from sklearn import linear_model
 import statistics
 from pathlib import Path
 import time
 import numpy as np
 import copy
 import math
-from sklearn.metrics import mean_absolute_error
 
 class Portfolio:
     def __init__(self, balance, ticker):
@@ -56,7 +53,7 @@ class Portfolio:
 
     #validTransaction will return whether we can complete a transaction
     def validTransaction(self, transaction):
-        if (transaction.getTotalPrice() <= balance):
+        if (transaction.getTotalPrice() <= self.balance):
             return True
         else:
             return False
@@ -65,13 +62,15 @@ class Portfolio:
         return self.ticker
 
 class Transaction:
-    def __init__(self, ticker, shareCost, numShares, date, transactionType):
+    def __init__(self, ticker, shareCost, numShares, date, transactionType, time):
         self.ticker = ticker
         self.shareCost = shareCost
         self.numShares = numShares
         self.date = date
         self.transactionType = transactionType # transactionType will be a string "Buy" or "Sell"
+        self.time = time # time will be either "open" or "close" to determine if we are buying/selling at open or close
         self.totalPrice = transaction.shareCost * transaction.numShares
+
 
     #getTotalPrice will return the total price of the transaction
     def getTotalPrice(self):
@@ -85,7 +84,7 @@ class Transaction:
     def getTransactionType(self):
         return self.transactionType
 
-    #oneLessShare allows us to decrease the number of shares wanted and is used when trying to buy or sell as much as possible of stock A
+    #oneLessShare allows us to decrease the number of shares by 1 and is used when trying to buy or sell as much as possible of stock A
     def oneLessShare(self):
         self.numShares -=1
         self.totalPrice = transaction.shareCost * transaction.numShares
@@ -131,15 +130,64 @@ def main():
 
 def daysInWeekDict(dataDF):
     #TODO: make this return what we want (a DataFrame with all trading days for a specific week)
-    reference_df = pd.read_csv("1successfulPulls.csv", low_memory=False)
-    asset_class_has_volume = False
-    if asset_class == "Stock" or asset_class == "Commodity":
-        asset_class_has_volume = True
-    return daysInWeekDict = GetWeekDictionary(dataDF, asset_class_has_volume)
+    retDict = {}
+    firstIndex = datetime.datetime.strptime(_configKeys.STARTPULL, '%d/%m/%Y')
+    lastIndex = datetime.datetime.strptime(_configKeys.ENDPULL, '%d/%m/%Y')
+    difference = lastIndex.date() - firstIndex.date()
+    #we start at the first week and will update currentDate to match what we want (first day of week)
+    date = firstIndex.date() + timedelta(days=1)
+    placeholderDict = {} # will contain weekly values in dict
+
+    numWeeks = int(difference.days/7)
+    print(numWeeks)
+
+    for i in range(numWeeks):
+        retDict[date] = pd.DataFrame(columns = dataDF.columns)
+        date += datetime.timedelta(days=7)
+        dates = [] # keeps track of valid dates for a given week
+        for i in range(5):
+
+            currentDate = date + datetime.timedelta(days=i)
+            if str(currentDate) in list(dataDF["Date"].values):
+                dates.append(str(currentDate))
+                print(str(currentDate))
+
+        print(dataDF.loc[dates])
+        quit()
+        retDict[date] += dataDF.loc[dates]
+
+    return retDict
+'''
+    rows = dataDF.iterrows()
+    print(rows[1])
+    index = 0
+    for i in range(int(difference.days)):
+        date += datetime.timedelta(days=1)
+        if date in list(dataDF["Date"].values):
+            #if this is first day of new week
+            if int((date - firstIndex.date()).days) == 0:
+                placeholderDict[currentDate] = dataDF.iloc[index]
+                index += 1
+
+            #if difference in days is less than 5 - within same week
+            elif int((date - firstIndex.date()).days) < 5:
+                prevDF = placeholderDict[currentDate]
+
+'''
+
+
+
+
+    #reference_df = pd.read_csv("1successfulPulls.csv", low_memory=False)
+    #weekDF = []
+    #for date in list(df["Date"].values):
+
+    #return daysInWeekDict = GetWeekDictionary(dataDF, asset_class_has_volume)
 
 
 
 def algorithm_MeanError(portfolio, testingDF, dataDF, weekDict):
+    #only use error for a specific window
     ticker = portfolio.getTickerName()
     for week in list(testingDF["Date"].values):
         #grabbing daily values for this week (we have the daily data in a DataFrame with 5 values)
@@ -148,10 +196,12 @@ def algorithm_MeanError(portfolio, testingDF, dataDF, weekDict):
         #these are values we want to compare each daily ACTUAL value (Formatting -- maybe just make every word start with a capital Letter -- bring up in meeting)
         list(testingDF[ticker + "_Open_max_Predicted"].values)
 
-        for day in list(daysDF["Date"].values):
+        #for day in list(daysDF["Date"].values):
 
 
-def algorithm_HighLowThreshold(portfolio, testingDF, dataDF, weekDict):
+#idea- buy, and only sell if it goes above a predicted max
+
+def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict):
     ticker = portfolio.getTickerName()
     #Idea: ex- If the actual average High of first week of trading is greater than the predicted average high of second week, we do no buying at all no matter what
 
@@ -163,15 +213,15 @@ def algorithm_HighLowThreshold(portfolio, testingDF, dataDF, weekDict):
         weekDF = weekDict[week]
         #for each daily value in the weekDF
         for day in list(weekDF["Date"].values):
-            open = weekDF[""]
-            close =
+            open = weekDF.iloc()
+            close = weekDF
 
             #compare if that daily value is withing predicted value within threshold
                 #if "low" in predictedFeature - think about this
                     #buy shares beginning of next trading day
                 #if "high" in predictedFeature
                     #sell shares beginning of next trading day
-    pass()
+
 
 #calculateMeanError will find the mean error between two lists: predictionList: the predicted data for a feature, actualList: the actual data for a feature
 def calculateMeanError(actualList, predictionList):
@@ -190,6 +240,49 @@ Possible algorithms: Should work with different featureNames in order to see whi
 '''
 
 
+def GetWeekDictionary(assetDF, include_volume):
+
+    '''
+    This piece of code breaks up the daily csv into weeks
+    '''
+
+    startBinDatetime, endBinDatetime = datetime.datetime.strptime(_configKeys.STARTPULL, '%d/%m/%Y'), datetime.datetime.strptime(_configKeys.ENDPULL, '%d/%m/%Y')
+
+    countDatetime = startBinDatetime
+    #bins = [] might not need this anymore
+    datetimeBin = {}
+
+    while (countDatetime < endBinDatetime): # while the count time is not at the last week in the sequence
+        datetimeBin[countDatetime] = []
+        #bins.append(datetimeBin) we might not need this code anymore
+        countDatetime = countDatetime + timedelta(days=7)
+
+
+    #This first puts the y value into the bins list. This is to give us easy access when trying to move it to the yValues list
+
+    assetWeek = []
+    currentBinDate = startBinDatetime
+
+    for ind in assetDF.index:
+
+        # Current date for stock is past current bin.
+        if (datetime.datetime.strptime(assetDF['Date'][ind], '%Y-%m-%d') - currentBinDate).days > 7:
+            datetimeBin[currentBinDate] = assetWeek
+            currentBinDate = currentBinDate + timedelta(days=7)
+            if include_volume == True:
+                assetWeek = [[datetime.datetime.strptime(assetDF['Date'][ind], '%Y-%m-%d'), assetDF['Open'][ind], assetDF['High'][ind], assetDF['Low'][ind], assetDF['Close'][ind], assetDF['Volume'][ind]]]
+            else:
+                assetWeek = [[datetime.datetime.strptime(assetDF['Date'][ind], '%Y-%m-%d'), assetDF['Open'][ind], assetDF['High'][ind], assetDF['Low'][ind], assetDF['Close'][ind]]]
+        else:
+            if include_volume == True:
+                assetWeek.append([datetime.datetime.strptime(assetDF['Date'][ind], '%Y-%m-%d'), assetDF['Open'][ind], assetDF['High'][ind], assetDF['Low'][ind], assetDF['Close'][ind], assetDF['Volume'][ind]])
+            else:
+                assetWeek = [[datetime.datetime.strptime(assetDF['Date'][ind], '%Y-%m-%d'), assetDF['Open'][ind], assetDF['High'][ind], assetDF['Low'][ind], assetDF['Close'][ind]]]
+
+    # We have to do this one more time to get the values from the last week
+    datetimeBin[currentBinDate] = assetWeek
+
+    return datetimeBin
 #Inital: Both Control Reward and Lasso Reward start with a set amount of dollar
 
 #Goals: What happens if we bought the stock and just held on to it? (Control Reward)
@@ -202,4 +295,13 @@ Possible algorithms: Should work with different featureNames in order to see whi
 # if mean error > predicted increase, then don't buy
 
 # also maybe consider volatility
+
+
+
+
+
+
+
+#wireframe next week: outline of app with buttons but no functionality required
+
 main()

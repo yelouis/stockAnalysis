@@ -130,12 +130,16 @@ def main():
 
         asset_dictionary = GetWeekDictionary(assetDF, asset_class_has_volume)
 
-        week_bin_df = CollapseDictionaryToWeeks(asset_dictionary, name, asset_class_has_volume)
-        week_bin_df.to_csv(os.path.join(Path(_configKeys.BINNED_FOLDER), name+".csv"), index=False)
+        try:
+            week_bin_df = CollapseDictionaryToWeeks(asset_dictionary, name, asset_class_has_volume)
+            week_bin_df.to_csv(os.path.join(Path(_configKeys.BINNED_FOLDER), name+".csv"), index=False)
 
-        #Update the successful bins dataframe
-        sucessfulBins["Symbol"].append(name)
-        sucessfulBins["Type"].append(asset_class)
+            #Update the successful bins dataframe
+            sucessfulBins["Symbol"].append(name)
+            sucessfulBins["Type"].append(asset_class)
+        except:
+            print(str(name) + "has missing data or doesn't bin correctly")
+
 
     df = pd.DataFrame(sucessfulBins, columns = ["Symbol", "Type"])
     #Creating a sucessful file that includes asset names/tickers

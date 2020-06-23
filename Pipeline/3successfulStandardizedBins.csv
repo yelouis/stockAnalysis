@@ -11,8 +11,8 @@ MSFT,Stock
 AA,Stock
 F,Stock
 EBAY,Stock
+DELL,Stock
 DIS,Stock
-DOW,Stock
 CSCO,Stock
 DE,Stock
 FDX,Stock
@@ -31,6 +31,7 @@ MRK,Stock
 MSI,Stock
 MMM,Stock
 ODP,Stock
+PMMAF,Stock
 VRTX,Stock
 MNST,Stock
 TEVA,Stock
@@ -578,6 +579,7 @@ RGLD,Stock
 TSLA,Stock
 TTWO,Stock
 YNDX,Stock
+CBBI,Stock
 DLTR,Stock
 AAME,Stock
 AAON,Stock
@@ -713,7 +715,6 @@ BDSI,Stock
 BEAT,Stock
 BEBE,Stock
 BECN,Stock
-BELFA,Stock
 BELFB,Stock
 BERK,Stock
 BFIN,Stock
@@ -908,7 +909,6 @@ DENN,Stock
 ASRT,Stock
 DESTQ,Stock
 DGICA,Stock
-DGICB,Stock
 DGII,Stock
 DGLY,Stock
 DHIL,Stock
@@ -926,6 +926,7 @@ DRRX,Stock
 DSGX,Stock
 DSPG,Stock
 DSWL,Stock
+DUSA,Stock
 DVAX,Stock
 DWSN,Stock
 DXCM,Stock
@@ -1075,6 +1076,7 @@ GNTX,Stock
 GOOD,Stock
 GPRE,Stock
 GRFS,Stock
+GRIF,Stock
 GROW,Stock
 GRVY,Stock
 GSBC,Stock
@@ -1205,6 +1207,7 @@ KBAL,Stock
 KELYA,Stock
 KEQU,Stock
 KFFB,Stock
+SMPL,Stock
 KFRC,Stock
 KGJI,Stock
 KINS,Stock
@@ -1306,6 +1309,7 @@ MNTX,Stock
 MOFG,Stock
 MORN,Stock
 MOSY,Stock
+USWS,Stock
 MPB,Stock
 TELL,Stock
 MPWR,Stock
@@ -1487,6 +1491,7 @@ PVH,Stock
 UDR,Stock
 TRIP,Stock
 SBAC,Stock
+IT,Stock
 UHS,Stock
 LKQ,Stock
 BR,Stock
@@ -1529,7 +1534,9 @@ QRVO,Stock
 WRK,Stock
 HPE,Stock
 UA,Stock
+FTV,Stock
 ARNC,Stock
+LW,Stock
 KEX,Stock
 MATX,Stock
 CAR,Stock
@@ -1559,6 +1566,7 @@ SIM,Stock
 AMS,Stock
 BGI,Stock
 BWLa,Stock
+CUO,Stock
 ELMD,Stock
 EVBN,Stock
 GSV,Stock
@@ -1583,7 +1591,6 @@ ACU,Stock
 AE,Stock
 ACY,Stock
 APT,Stock
-DIT,Stock
 PLAG,Stock
 AMPE,Stock
 MICR,Stock
@@ -1591,6 +1598,7 @@ AWX,Stock
 BTN,Stock
 BCV,Stock
 BHB,Stock
+BRN,Stock
 LCTX,Stock
 BDR,Stock
 CVU,Stock
@@ -1602,6 +1610,7 @@ CPHI,Stock
 GLV,Stock
 GLQ,Stock
 GLO,Stock
+CIX,Stock
 LODE,Stock
 CTO,Stock
 MCF,Stock
@@ -1727,6 +1736,7 @@ SDPI,Stock
 AINC,Stock
 VNRX,Stock
 CRHM,Stock
+RHE,Stock
 EGHT,Stock
 HCI,Stock
 AMRX,Stock
@@ -1798,7 +1808,6 @@ CCU,Stock
 CNQ,Stock
 CYD,Stock
 EBR,Stock
-EDU,Stock
 EPR,Stock
 GPK,Stock
 MLP,Stock
@@ -1860,6 +1869,7 @@ SJI,Stock
 SMP,Stock
 STWD,Stock
 TRTN,Stock
+TAPa,Stock
 ARCO,Stock
 AWR,Stock
 CSU,Stock
@@ -1903,6 +1913,7 @@ SFE,Stock
 SQNS,Stock
 BCEI,Stock
 BIO,Stock
+BKI,Stock
 CFR,Stock
 CIR,Stock
 EGP,Stock
@@ -1936,7 +1947,6 @@ MEI,Stock
 NTP,Stock
 NUS,Stock
 ODC,Stock
-ONE,Stock
 PDS,Stock
 PEB,Stock
 OBE,Stock
@@ -2079,6 +2089,7 @@ EGO,Stock
 ELY,Stock
 FCN,Stock
 FOR,Stock
+GDI,Stock
 GEFb,Stock
 GPX,Stock
 HNI,Stock
@@ -2107,6 +2118,7 @@ H,Stock
 HSBC,Stock
 HL,Stock
 TRQ,Stock
+JAG,Stock
 KOS,Stock
 LAD,Stock
 SR,Stock
@@ -2282,12 +2294,12 @@ EDN,Stock
 GGG,Stock
 AVVIY,Stock
 SKHHY,Stock
+NJDCY,Stock
 VEOEY,Stock
 YZCAY,Stock
 CCHGY,Stock
 SIEGY,Stock
 ZTCOY,Stock
-SWMAY,Stock
 LVMUY,Stock
 MHGVY,Stock
 TCEHY,Stock
@@ -2337,7 +2349,6 @@ BAESY,Stock
 BAFYY,Stock
 BDORY,Stock
 BACHY,Stock
-BKEAY,Stock
 BKRKY,Stock
 AGRPY,Stock
 BASFY,Stock
@@ -2364,22 +2375,85 @@ CJPRY,Stock
 CPYYY,Stock
 CICHY,Stock
 CIHKY,Stock
+AAM S&P 500 Sector High Dividend,ETF
+AAM S&P EM Sector High Dividend,ETF
+Ranger Equity Bear,ETF
+AdvisorShares Focused Equity,ETF
 WCMBNY Mellon Focused Growth ADR,ETF
 Peritus High Yield,ETF
+Newfleet Multi-Sector Income,ETF
+AdvisorShares Vice ETF,ETF
+AdvisorShares Pacific Asset Enhanced Fl Rate,ETF
+AdvisorShares Wilshire Buyback,ETF
 Madrona Global Bond,ETF
+AdvisorShares Cornerstone Small Cap,ETF
 Star Global Buy-Write,ETF
+Alpha Architect Value Momentum Trend,ETF
+MomentumShares U.S. Quantitative Momentum,ETF
+MomentumShares International Quantitative Momentum,ETF
+ALPS Alerian MLP,ETF
+ALPS Sector Dividend Dogs,ETF
+ALPS Internatl Sector Dividends Dogs,ETF
+ALPS RiverFront Strategic Income,ETF
+ALPS Medical Breakthroughs,ETF
+ALPS Sprott Junior Gold Miners,ETF
+ALPS Sprott Gold Miners,ETF
+ALPS Disruptive Technologies,ETF
+ALPS Alerian Energy Infrastructure,ETF
+ALPS Emerging Sector Dividend Dogs,ETF
+ALPS Equal Sector Weight,ETF
+American Century STOXX U.S. Quality Value,ETF
+American Century Diversified Corporate Bond,ETF
+Amplify Online Retail,ETF
+Amplify YieldShares CWP Dividend Option Income,ETF
+ARK Innovation,ETF
+ARK Web X.0,ETF
+ARK Genomic Revolution Multi-Sector,ETF
+ARK Industrial Innovation,ETF
+The 3D Printing,ETF
+ARK Israeli Innovation Hedged,ETF
+Arrow Reserve Capital Management,ETF
 Arrow Dow Jones Global Yield,ETF
+Arrow Dogs of the World,ETF
+Arrow QVM Equity Factor,ETF
+Arrow Investments DWA Tactical,ETF
+Assured Guaranty Municipal Holdings Inc,ETF
 iPath Bloomberg Commodity Total Return Exp 12 June,ETF
+Barclays ETN Plus Select MLP,ETF
 iPath S&P GSCI Crude Oil Total Return,ETF
 iPath Bloomberg Cocoa Subindex Total Return Exp 24,ETF
+Barclays Bank iPath S&P MLP,ETF
+Barclays + Shiller CAPE Exp 12 Oct 2022,ETF
 iPath Bloomberg Natural Gas Subindex Total Return,ETF
+Barclays + S&P VEQTOR Exp 08 Sep 2020,ETF
+Barclays FI Enhanced Europe 50 B,ETF
 iPath Pure Beta Crude Oil Exp 18 Apr 2041,ETF
+iPath S&P 500 Dynamic VIX Exp 18 Aug 2021,ETF
+Barclays Women in Leadership,ETF
 iPath Pure Beta Broad Commodity Exp 18 Apr 2041,ETF
 iPath GSCI Total Return Exp 12 Jun 2036,ETF
 BioShares Biotechnology Products,ETF
 BioShares Biotechnology Clinical Trials,ETF
+BlackRock MuniAssets Closed Fund,ETF
+Cambria Tail Risk,ETF
+Cambria Global Value,ETF
+Cambria Global Momentum,ETF
+Cambria Emerging Shareholder Yield,ETF
+Cambria Global Asset Allocation,ETF
+Cambria Shareholder Yield,ETF
+Cambria Core Equity,ETF
+Cambria Value and Momentum,ETF
+Cambria Foreign Shareholder Yield,ETF
+Cambria Sovereign Bond,ETF
+Citigroup C-Tracks MillerHoward MLP Fundamental,ETF
+Citigroup C-Tracks MillerHoward Strategic Dividen,ETF
 Columbia EM Consumer,ETF
+Columbia EM Core ex-China,ETF
 Columbia India Consumer,ETF
+Columbia Sustainable US Equity Income,ETF
+Columbia Sustainable International Equity Income,ETF
+Columbia Sustainable Global Equity Income,ETF
+Columbia Diversified Fixed Income Allocation,ETF
 Victory CEMP Developed Enhanced Volatility Weighte,ETF
 Victory CEMP US Discovery Enhanced Volatility Weig,ETF
 Victory CEMP US 500 Volatility Weighted,ETF
@@ -2389,65 +2463,180 @@ Victory CEMP US EQ Income Enhanced Volatility Weig,ETF
 Victory CEMP US 500 Enhanced Volatility Weighted,ETF
 Victory CEMP International High Dividend Volatilit,ETF
 Victory CEMP International Volatility Weighted,ETF
+Credit Suisse X-Links Monthly Pay 2xLeveraged Mort,ETF
+Credit Suisse X-Links Monthly Pay 2xLeveraged Aler,ETF
 Credit Suisse X Links Gold Shares Covered Call,ETF
 Credit Suisse X Links Silver Shares Covered Call,ETF
+Credit Suisse FI Large Cap Growth Enhanced,ETF
+Credit Suisse X Links Multi Asset High Income,ETF
+CSOP FTSE China A50 US,ETF
+Davis Select Financial,ETF
+Davis Select Worldwide,ETF
+DeltaShares S&P 500 Managed Risk,ETF
+DeltaShares S&P International Managed Risk,ETF
 DB Gold Double Short,ETF
+Deutsche X-trackers Harvest CSI 300 China A-Shares,ETF
 Deutsche X-trackers MSCI EAFE Hedged Equity,ETF
 Deutsche X-trackers MSCI Japan Hedged Equity,ETF
+Deutsche X-trackers MSCI Europe Hedged Equity,ETF
+Deutsche X-trackers High Yield Corporate,ETF
+Deutsche X-trackers MSCI EAFE High Dividend Yield,ETF
+Xtrackers International Real Estate,ETF
+Deutsche X-trackers Municipal Infrastructure Reven,ETF
 Deutsche X-trackers MSCI Emerging Markets Hedged E,ETF
+Deutsche X trackers Russell 1000,ETF
+Deutsche X-trackers Investment Grade Bond Interest,ETF
+Deutsche X-trackers Harvest CSI 500,ETF
 Deutsche X-trackers MSCI All World ex US Hedged Eq,ETF
 Deutsche X-trackers MSCI All World ex US High Divi,ETF
+Deutsche X trackers FTSE Developed,ETF
 Deutsche X-trackers JPX-Nikkei 400 Equity,ETF
+Deutsche X-trackers MSCI Eurozone,ETF
+Deutsche X-trackers MSCI All China Equity,ETF
+Deutsche X-trackers Emerging Markets Bond Interest,ETF
+Deutsche X-trackers High Yield Corporate Bond Inte,ETF
+Deutsche X-trackers MSCI Germany Hedged Equity,ETF
+Deutsche Xtrackers MSCI Southern EU,ETF
+Deutsche X-trackers CSI 300 China A-Shares Hedged,ETF
 Direxion Daily S P Oil Gas Exp Bull,ETF
 Direxion Daily Gold Miners Bull 3X Shares,ETF
 Direxion Daily Gold Miners Bear 3X Shares,ETF
 Direxion Daily Junior Gold Miners Bear 3X Shares,ETF
 Direxion Daily S&P 500 Bear 3X Shares,ETF
+Direxion Daily Semiconductor Bear 3X Shares,ETF
 Direxion Daily Junior Gold Miners Bull 3X Shares,ETF
+Direxion Daily Natural Gas Related Bull 3X Shares,ETF
 Direxion Daily Small Cap Bear 3X Shares,ETF
 Direxion Daily S&P 500 Bull 3X Shares,ETF
 Direxion Daily Energy Bull 3X Shares,ETF
 Direxion Daily Small Cap Bull 3X Shares,ETF
 Direxion Daily SP Biotech Bear 3X,ETF
+Direxion Daily Technology Bear 3X Shares,ETF
 Direxion Daily FTSE China Bull 3x Shares,ETF
+Direxion Daily SP Biotech Bull 3X,ETF
 Direxion Daily 20+ Year Treasury Bear 3X Shares,ETF
+Direxion Daily 20+ Year Treasury Bull 3X Shares,ETF
+Direxion Daily S P Oil Gas Exp Bear,ETF
+Direxion Daily Semiconductor Bull 3X Shares,ETF
 Direxion Daily Financial Bull 3X Shares,ETF
 Direxion Daily Financial Bear 3X Shares,ETF
+Direxion Daily CSI China Internet Bull 2X Shares,ETF
 Direxion Daily Energy Bear 3X Shares,ETF
+Direxion Daily CSI 300 China A Shar,ETF
 Direxion Daily FTSE CHINA Bear 3x Shares,ETF
+Direxion Daily South Korea Bull 3X Shares,ETF
+Direxion Daily Technology Bull 3X Shares,ETF
 Direxion Daily Russia Bear 3X Shares,ETF
 Direxion Daily Emerging Markets Bull 3X Shares,ETF
+Direxion NASDAQ-100 Equal Weighted Shares,ETF
+Direxion Daily Natural Gas Related Bear 3X,ETF
 Direxion Daily Emerging Markets Bear 3X Shares,ETF
+Direxion Daily Homebuilders & Supplies Bull 3X Sha,ETF
 Direxion Daily Real Estate Bull 3X Shares,ETF
+Direxion Daily Healthcare Bull 3X Shares,ETF
+Direxion Zacks MLP High Income Shares,ETF
 Direxion Daily Real Estate Bear 3X Shares,ETF
+Direxion Daily Utilities Bull 3X Shares,ETF
+Direxion Daily Retail Bull 3X Shares,ETF
+Direxion Daily Aerospace & Defense Bull 3X Shares,ETF
+Direxion Daily Transportation Bull 3X Shares,ETF
+Direxion Daily Regional Banks Bull 3X Shares,ETF
 Direxion Daily MSCI India Bull 3X Shares,ETF
+Direxion Daily 7-10 Year Treasury Bear 3X Shares,ETF
+Direxion Daily Mid Cap Bull 3X Shares,ETF
 Direxion Daily Russia Bull 3X Shares,ETF
 Direxion Daily Developed Markets Bull 3X,ETF
+Direxion Daily S&P 500 Bull 2X Shares,ETF
+Direxion All Cap Insider Sentiment Shares,ETF
 Direxion Daily Latin America Bull 3X Shares,ETF
+Direxion Daily Industrials Bull 3X Shares,ETF
+Direxion Daily FTSE Europe Bull 3X Shares,ETF
+Direxion Daily Regional Banks Bear 3X Shares,ETF
+Direxion Daily CSI 300 China,ETF
+Direxion Daily Pharmaceutical & Medical Bull 2X Sh,ETF
+Direxion Daily SP 500 Bull,ETF
 Direxion Daily Developed Markets Bear 3X,ETF
+Direxion Daily S&P 500 Bear 1X Shares,ETF
+Direxion Daily 7-10 Year Treasury Bull 3X Shares,ETF
+Direxion Daily Mid Cap Bear 3X Shares,ETF
+Direxion Daily MSCI Mexico Bull 3X Shares,ETF
+Direxion Daily Japan Bull 3x Shares,ETF
+Direxion Daily 20+ Year Treasury Bear 1X Shares,ETF
+Direxion Auspice Broad Commodity Strategy,ETF
+Direxion Daily European Financials Bull 2X Shares,ETF
+Direxion Daily Small Cap Bull 2X Shares,ETF
+Direxion Daily Small Cap Bull 1.25X Shares,ETF
+Direxion Daily Total Bond Market Bear 1X Shares,ETF
+Doubleline Opportunistic Credit,ETF
 Rogers International Commodity Total Return,ETF
 Rogers International Commodity Agriculture Total R,ETF
 Rogers International Commodity Energy Total Return,ETF
 Rogers International Commodity Metals Total Return,ETF
 Swedish Export Credit ELEMENTS Linked to MLCX Grai,ETF
+ELEMENTS SPECTRUM Large CAP US Momentum,ETF
+Entrepreneur 30 Fund,ETF
+ROBO Global Robotics Automation,ETF
+EMQQ Emerging Markets Internet and Ecommerce,ETF
+Hull Tactical US,ETF
+InfraCap MLP,ETF
+AI Powered Equity,ETF
+Etho Climate Leadership US,ETF
 BlueStar TA-BIGITech Israel Tech,ETF
 ETFS Physical Swiss Gold Shares,ETF
 ETFS Physical Silver Shares,ETF
 ETFS Physical Platinum Shares,ETF
 ETFS Physical Precious Metal Basket Shares,ETF
 ETFS Physical Palladium Shares,ETF
+ETFS Bloomberg All Commodity Strategy K-1 Free,ETF
+ETFS Bloomberg All Commodity Longer Dated Strategy,ETF
+U.S. Global GO GOLD and Precious Metal Miners,ETF
+Deep Value,ETF
 AlphaClone Alternative Alpha,ETF
+Aptus Behavioral Momentum,ETF
+Change Finance Diversified Imp US Large Cap Fossil,ETF
 Loncar Cancer Immunotherapy,ETF
+American Energy Independence,ETF
+American Customer Satisfaction Core Alpha,ETF
 AlphaMark Actively Managed Small,ETF
+Fidelity MSCI Real Estate,ETF
+Fidelity MSCI Information Technology,ETF
+Fidelity MSCI Utilities,ETF
+Fidelity Total Bond,ETF
+Fidelity MSCI Energy,ETF
+Fidelity MSCI Financials,ETF
+Fidelity Core Dividend,ETF
+Fidelity MSCI Industrials,ETF
+Fidelity MSCI Consumer Staples,ETF
+Fidelity MSCI Health Care,ETF
+Fidelity Corporate Bond,ETF
+Fidelity MSCI Consumer Discretionary,ETF
+Fidelity MSCI Telecommunications Services,ETF
+Fidelity Low Volatility,ETF
+Fidelity Dividend for Rising Rates,ETF
+Fidelity Value,ETF
+Fidelity MSCI Materials,ETF
 Fidelity NASDAQ Composite,ETF
+Fidelity Limited Term Bond,ETF
+Fidelity Quality,ETF
+Fidelity Momentum,ETF
+First Trust Developed International Equity Select,ETF
+First Trust Mid Cap US Equity Select,ETF
+First Trust Small Cap US Equity Select,ETF
+First Trust Large Cap US Equity Select,ETF
+First Trust Emerging Markets Equity Select,ETF
+First Trust US Equity Dividend Select,ETF
 First Trust NASDAQ-100 Equal Weighted,ETF
+First Trust Preferred Securities And Income,ETF
+First Trust Value Line Dividend,ETF
 First Trust Enhanced Short Maturity,ETF
 First Trust North American Energy Infrastructure,ETF
 First Trust ISE-Revere Natural Gas,ETF
 First Trust Consumer Staples AlphaDEX,ETF
 First Trust Low Duration Opportunities,ETF
 First Trust Senior Loan,ETF
+First Trust Financial AlphaDEX,ETF
 First Trust Large Cap Core AlphaDEX,ETF
+First Trust Dow Jones Internet,ETF
 First Trust Dorsey Wright International Focus 5,ETF
 First Trust NASDAQ Rising Dividend Achievers,ETF
 First Trust STOXX European Select Dividend,ETF
@@ -2457,6 +2646,7 @@ First Trust Capital Strength,ETF
 First Trust Dorsey Wright Focus 5,ETF
 First Trust Morningstar Dividend Leaders,ETF
 First Trust Managed Municipal,ETF
+First Trust Dorsey Wright Dynamic Focus 5,ETF
 First Trust Latin America AlphaDEX,ETF
 First Trust BICK,ETF
 First Trust Tactical High Yield,ETF
@@ -2472,13 +2662,20 @@ First Trust Technology AlphaDEX,ETF
 First Trust Germany AlphaDEX,ETF
 First Trust Large Cap Value AlphaDEX,ETF
 First Trust Mid Cap Value AlphaDEX,ETF
+First Trust US IPO,ETF
 First Trust IndustrialsProducer Durables AlphaDEX,ETF
 First Trust Multi-Asset Diversified Income,ETF
 First Trust NASDAQ Technology Dividend,ETF
 First Trust Mid Cap Core AlphaDEX,ETF
+First Trust Energy AlphaDEX,ETF
+First Trust Nasdaq Bank,ETF
 First Trust Large Cap Growth AlphaDEX,ETF
+First Trust Horizon Managed Volatility DM,ETF
 First Trust Switzerland AlphaDEX,ETF
+First Trust NYSE Arca Biotechnology,ETF
 First Trust Europe AlphaDEX,ETF
+First Trust Institutional Preferred Securities and,ETF
+First Trust Health Care AlphaDEX,ETF
 First Trust Consumer Discretionary AlphaDEX,ETF
 First Trust S&P REIT,ETF
 First Trust Materials AlphaDEX,ETF
@@ -2487,95 +2684,248 @@ First Trust Global Tactical Commodity Strategy,ETF
 First Trust Small Cap Value AlphaDEX,ETF
 First Trust Emerging Markets Local Currency Bond,ETF
 First Trust ISE Global Wind Energy,ETF
+First Trust Horizon Managed Volatility Domestic,ETF
 First Trust ISE Water,ETF
+First Trust LongShort Equity,ETF
 First Trust Small Cap Core AlphaDEX,ETF
 First Trust Brazil AlphaDEX,ETF
+First Trust Nasdaq Semiconductor,ETF
 First Trust Strategic Income,ETF
 First Trust Emerging Markets Small Cap AlphaDEX,ETF
 First Trust NASDAQ Clean Edge Green Energy,ETF
 First Trust RBA American Industrial Renaissance,ETF
+First Trust Municipal High Income,ETF
 First Trust NASDAQ Smartphone,ETF
 First Trust International IPO,ETF
 First Trust High Income,ETF
+First Trust RiverFront Dynamic DM,ETF
 First Trust Japan AlphaDEX,ETF
 First Trust NASDAQ ABA Community Bank,ETF
+First Trust Dow 30 Equal Weight,ETF
 First Trust ISE Chindia,ETF
+First Trust Alternative Absolute Return Strategy,ETF
 First Trust NASDAQ-100 Ex-Technology Sector,ETF
+First Trust Dow Jones Select MicroCap,ETF
+First Trust Dorsey Wright Peoples Portfolio,ETF
 First Trust Total US Market AlphaDEX,ETF
 First Trust United Kingdom AlphaDEX,ETF
+First Trust SMID Cap Rising Dividend Achievers,ETF
 First Trust Eurozone AlphaDEX,ETF
+First Trust RiverFront Dynamic EM,ETF
+First Trust Value Line 100 Exchange-Traded,ETF
 First Trust Asia Pacific Ex-Japan AlphaDEX,ETF
 First Trust ISE Global Engineering & Construction,ETF
 First Trust Multi Cap Growth AlphaDEX,ETF
 First Trust Multi Cap Value AlphaDEX,ETF
 First Trust FTSE EPRANAREIT Global Developed Mark,ETF
+First Trust RiverFront Dynamic Asia Pacific,ETF
 First Trust Intl Multi-Asset Diversified Inc,ETF
 First Trust Global Natural Resources Income,ETF
+First Trust CEF Income Opportunity,ETF
+First Trust Nasdaq Food & Beverage,ETF
 First Trust Mega Cap AlphaDEX,ETF
 First Trust NASDAQ Clean Edge Smart Grid Infrastru,ETF
 First Trust Taiwan AlphaDEX,ETF
+First Trust Nasdaq Oil & Gas,ETF
+First Trust Nasdaq Retail,ETF
 First Trust NASDAQ Global Auto,ETF
+First Trust RiverFront Dynamic Europe,ETF
 First Trust Canada AlphaDEX,ETF
+First Trust Municipal CEF Income Opportunity,ETF
+First Trust Nasdaq Transport,ETF
 First Trust Developed Markets ex-US Small Cap Alph,ETF
 First Trust Australia AlphaDEX,ETF
+First Trust Morningstar Managed Futures Strategy,ETF
+First Trust South Korea AlphaDEX,ETF
+EquityCompass Tactical Risk Manager,ETF
+EquityCompass Equity Risk Manager,ETF
 FlexShares Morningstar Global Upstream Natural Res,ETF
+FlexShares International Quality Dividend,ETF
+FlexShares International Quality Dividend Dynamic,ETF
+FlexShares Quality Dividend,ETF
+FlexShares Global Quality Real Estate,ETF
+FlexShares iBoxx 3-Year Target Duration TIPS,ETF
 FlexShares Morningstar Dev Mkts exUS Factors Tilt,ETF
+FlexShares iBoxx 5-Year Target Duration TIPS,ETF
+FlexShares STOXX Global Broad Infrastructure,ETF
 FlexShares Morningstar Emerging Markets Factors Ti,ETF
+FlexShares Quality Dividend Defensive,ETF
 FlexShares Ready Access Variable Income,ETF
+FlexShares Morningstar US Market Factor Tilt,ETF
+FlexShares Core Select,ETF
 FlexShares US Quality Large Cap,ETF
 FlexShares Credit-Scored US Corp Bond,ETF
 FlexShares Credit-Scored US Long Corporate Bond,ETF
 FlexShares Real Assets Allocation,ETF
 FlexShares Disciplined Duration MBS,ETF
+FlexShares International Quality Dividend Defensiv,ETF
+FlexShares STOXX Global ESG Impact,ETF
+FlexShares Currency Hedged Morningstar EM,ETF
+FlexShares STOXX US ESG Impact,ETF
+FlexShares Quality Dividend Dynamic,ETF
+FlexShares Currency Hedged Morningstar DM ex-US,ETF
+Franklin LibertyQ US,ETF
+Franklin Liberty Investment Grade Corporate,ETF
+Franklin FTSE Japan,ETF
+Franklin Short Dur US Gov,ETF
+Franklin Liberty US Low Volatility,ETF
+Franklin FTSE China,ETF
+Franklin FTSE South Korea,ETF
+Franklin LibertyQ Emerging Markets,ETF
+Franklin FTSE United Kingdom,ETF
+Franklin LibertyQ Global Dividend,ETF
+Franklin FTSE France,ETF
+Franklin LibertyQ US Small Cap Equity,ETF
+Franklin FTSE Taiwan,ETF
+Franklin FTSE Australia,ETF
+Franklin FTSE Hong Kong,ETF
+Franklin Liberty International Opportunities,ETF
+Franklin FTSE Brazil,ETF
+Franklin FTSE Canada,ETF
+Franklin FTSE Italy,ETF
+Franklin FTSE Germany,ETF
+Franklin LibertyQ Int Eq Hdg,ETF
+Franklin LibertyQ U.S. Mid Cap Equity,ETF
+Franklin FTSE Mexico,ETF
+Franklin FTSE Japan Hedged,ETF
+Franklin FTSE Europe,ETF
+Franklin LibertyQ Global Equity,ETF
+GaveKal Knowledge Leaders Developed World,ETF
 Global X MLP,ETF
+Global X US Infrastructure Development,ETF
+Global X Robotics & AI USD,ETF
 Global X SuperDividend REIT,ETF
+Global X SuperDividend US,ETF
+Global X MLP & Energy Infrastructure,ETF
 Global X SuperDividend,ETF
+Global X US Preferred,ETF
 Global X Lithium,ETF
 Global X Silver Miners,ETF
+Global X MSCI Pakistan,ETF
 Global X FTSE Greece 20,ETF
 Global X Copper Miners,ETF
+Global X SuperIncome Preferred,ETF
 Global X Uranium,ETF
 Global X China Consumer,ETF
+Global X FinTech Thematic,ETF
 Global X MSCI Norway,ETF
+Global X Millennials Thematic,ETF
+Global X Internet of Things Thematic USD,ETF
+Global X MSCI Portugal,ETF
 Global X MSCI Argentina,ETF
 Global X MSCI Colombia,ETF
 Global X China Financials,ETF
 Global X Yieldco,ETF
+Global X Conscious Companies,ETF
+Global X S&P 500 Catholic Values,ETF
 Global X Gold Explorers,ETF
+Global X MSCI SuperDividend EAFE,ETF
 Global X Social Media,ETF
 Global X SuperDividend Alternatives,ETF
+Global X MSCI Nigeria,ETF
+Global X SuperDividend Emerging Mar,ETF
 Global X Guru,ETF
+Global X Longevity Thematic,ETF
 Global X Southeast Asia,ETF
 Global X China Industrials,ETF
+Global X Scientific Beta Europe,ETF
+Global X Scientific Beta US,ETF
+Global X Next Emerging & Frontier,ETF
 Global X FTSE Nordic Region,ETF
+Global X Scientific Beta Asia ex Japan,ETF
+Global X MSCI China Communication Services,ETF
+Global X Scientific Beta Japan,ETF
 Global X FertilizersPotash,ETF
+Global X China Materials,ETF
+Global X China Energy,ETF
+Goldman Sachs ActiveBeta International Equity,ETF
+Goldman Sachs ActiveBeta US Large Cap Equity,ETF
+Goldman Sachs TreasuryAccess 0-1,ETF
+Goldman Sachs ActiveBeta Emerging Markets Equity,ETF
+Goldman Sachs Equal Weight U.S. Large Cap Equity,ETF
+Goldman Sachs ActiveBeta Japan Equity,ETF
+Goldman Sachs Hedge Industry VIP,ETF
+Goldman Sachs ActiveBeta Europe Equity,ETF
+Claymore CEF GS Connect Due 12102037,ETF
 GS Connect S&P GSCI Enhanced Commodity Total Retur,ETF
+GraniteShares Gold Trust,ETF
+GraniteShares HIPS US High Income,ETF
+Guggenheim Invest S&P 500 Pure Value,ETF
+Guggenheim Enhanced Short Duration,ETF
 Guggenheim Invest S&P 500 Equal Weight,ETF
 Guggenheim CurrencyShares Euro,ETF
 Guggenheim Solar,ETF
 Guggenheim CurrencyShares Japanese Yen,ETF
 Guggenheim Invest China Technology,ETF
 Guggenheim Invest S&P Global Water,ETF
+Guggenheim Invest S&P 500 Pure Growth,ETF
+Guggenheim Invest Defensive Equity,ETF
+Guggenheim Invest S&P 500 Equal Weight Technology,ETF
+Guggenheim Invest Mid-Cap Core,ETF
 Invesco Shipping ETF,ETF
+Guggenheim S&P 500 Top 50,ETF
+Guggenheim Invest S&P SmallCap 600 Pure Value,ETF
 Guggenheim CurrencyShares Australian Dollar,ETF
+Guggenheim Invest S&P 500 Equal Weight Energy,ETF
 Guggenheim CurrencyShares British Pound Sterling,ETF
+Guggenheim Invest S&P MidCap 400 Pure Value,ETF
+Guggenheim Invest Multi-Asset Income,ETF
+Guggenheim Invest S&P 500 Equal Weight Utilities,ETF
+Guggenheim Total Return Bond,ETF
 Guggenheim CurrencyShares Swiss Franc,ETF
+Guggenheim Invest S&P 500 Equal Weight Consumer St,ETF
+Guggenheim Invest S&P 500 Equal Weight Health Care,ETF
+Guggenheim Invest S&P 500 Equal Weight Financials,ETF
+Guggenheim Dow Jones Industrial Average Dividend,ETF
 Guggenheim CurrencyShares Canadian Dollar,ETF
+Guggenheim Invest Raymond James SB-1 Equity,ETF
+Guggenheim Invest Frontier Markets,ETF
+Guggenheim S&P Spin-Off,ETF
 Guggenheim MSCI Global Timber,ETF
 Guggenheim Invest China Small Cap,ETF
+Guggenheim Invest S&P 500 Equal Weight Industrials,ETF
+Guggenheim Invest S&P SmallCap 600 Pure Growth,ETF
 Guggenheim Invest China Real Estate,ETF
+Guggenheim S&P 500 Equal Weight Real Estate,ETF
+Guggenheim Invest S&P 500 Equal Weight Materials,ETF
+Guggenheim Invest S&P MidCap 400 Pure Growth,ETF
 Guggenheim Invest BRIC,ETF
+Guggenheim SP High Income Infrastr,ETF
+Guggenheim Invest S&P 500 Equal Weight Consumer Di,ETF
+Guggenheim S&P SmallCap 600 EW,ETF
+Guggenheim Invest Insider Sentiment,ETF
+Guggenheim S&P MidCap 400 EW,ETF
 Guggenheim Invest S&P Global Dividend Opptys,ETF
 Guggenheim MSCI EM Equal Country Weight,ETF
 Guggenheim CurrencyShares Swedish Krona,ETF
-Guggenheim CurrencyShares Chinese Renminbi,ETF
+Hartford Total Return Bond,ETF
+Hartford Municipal Opportunities,ETF
+Hartford Multifactor Low Volatility US Equity,ETF
+Hartford Multifactor Low Volatility International,ETF
+Horizons SP 500 Covered Call,ETF
 Horizons DAX Germany,ETF
+Innovator IBD 50,ETF
+Elkhorn Lunt Low Vol High Beta Tactical,ETF
+Elkhorn S&P High Quality Preferred,ETF
+Innovator IBD ETF Leaders,ETF
+Invesco 1-30 Laddered Treasury,ETF
+Invesco Buyback Achievers,ETF
+iPath Series B S&P GSCI Crude Oil TR,ETF
 IQ Merger Arbitrage,ETF
+IQ Chaikin US Large Cap,ETF
+IQ Chaikin US Small Cap,ETF
 IQ Hedge Multi-Strategy Tracker,ETF
+IQ 50 Percent Hedged FTSE International,ETF
 IQ US Real Estate Small Cap,ETF
+IQ Enhanced Core Plus Bond US,ETF
 IQ Global Resources,ETF
+IQ Leaders GTAA Tracker,ETF
+IQ 50 Percent Hedged FTSE Europe,ETF
 IQ Hedge Macro Tracker,ETF
+IQ 50 Percent Hedged FTSE Japan,ETF
 IQ Global Agribusiness Small Cap,ETF
+IQ Hedge Event-Driven Tracker,ETF
+IQ Enhanced Core Bond US,ETF
 IQ Real Return,ETF
 IQ Hedge Market Neutral Tracker,ETF
 iShares MSCI Emerging Markets,ETF
@@ -2598,15 +2948,19 @@ iShares JPMorgan USD EM Bond,ETF
 ishares S&P 500,ETF
 iShares US Preferred Stock,ETF
 iShares MSCI South Korea Capped,ETF
+iShares US Home Construction,ETF
 iShares MSCI ACWI,ETF
 iShares MSCI Eurozone,ETF
 iShares Core S&P Small-Cap,ETF
 iShares Core US Aggregate Bond,ETF
 iShares MSCI Taiwan Capped,ETF
 iShares Short Treasury Bond,ETF
+iShares Core US Treasury Bond,ETF
 iShares MSCI Hong Kong,ETF
 iShares MSCI India,ETF
 iShares Latin America 40,ETF
+iShares Edge MSCI USA Momentum Factor,ETF
+iShares Short Maturity Bond,ETF
 iShares MSCI Australia,ETF
 iShares MSCI Canada,ETF
 iShares Russell 1000 Value,ETF
@@ -2617,11 +2971,16 @@ iShares MSCI EAFE Value,ETF
 iShares MSCI Germany,ETF
 iShares MSCI All Country Asia ex Japan,ETF
 iShares MSCI United Kingdom,ETF
+iShares Edge MSCI USA Quality Factor,ETF
+iShares 0-5 Year High Yield Corporate Bond,ETF
 iShares Floating Rate Bond,ETF
+iShares Ultra Short Term Bond,ETF
 iShares Core MSCI Europe,ETF
 iShares Nasdaq Biotechnology,ETF
 iShares Core S&P Total US Stock Market,ETF
+iShares Edge MSCI USA Value Factor,ETF
 iShares Core MSCI Total International Stock,ETF
+iShares Core Dividend Growth,ETF
 iShares Russell 2000 Value,ETF
 iShares S&P 500 Value,ETF
 iShares MBS,ETF
@@ -2637,6 +2996,7 @@ iShares Russell 1000 Growth,ETF
 iShares MSCI Switzerland Capped,ETF
 iShares Russell Mid-Cap,ETF
 iShares Russell 1000,ETF
+iShares National AMT-Free Muni Bond,ETF
 iShares S&P Midcap 400,ETF
 iShares MSCI ACWI ex US,ETF
 iShares MSCI Spain Capped,ETF
@@ -2651,7 +3011,9 @@ iShares Global Energy,ETF
 iShares MSCI Global Metals & Mining Producers,ETF
 iShares International Select Dividend,ETF
 iShares Core Total USD Bond Market,ETF
+iShares North American Tech-Software,ETF
 iShares Russell 2000 Growth,ETF
+iShares Russell Mid-Cap Growth,ETF
 iShares 0-5 Year Invest Grade Corporate Bond,ETF
 iShares Core US Growth,ETF
 iShares US Energy,ETF
@@ -2659,26 +3021,40 @@ iShares MSCI Italy Capped,ETF
 iShares MSCI Indonesia,ETF
 iShares MSCI Turkey,ETF
 iShares MSCI Malaysia,ETF
+iShares US Financials,ETF
 iShares Mortgage Real Estate Capped,ETF
 iShares Europe,ETF
 iShares PHLX Semiconductor,ETF
+iShares US Medical Devices,ETF
 iShares MSCI Pacific ex Japan,ETF
+iShares S&P 500 Growth,ETF
+iShares Morningstar Mid-Cap Growth,ETF
+iShares Russell Mid-Cap Value,ETF
 iShares US Aerospace & Defense,ETF
 iShares Broad USD Investment Grade Corporate Bond,ETF
+iShares Broad USD High Yield Corporate Bond,ETF
 iShares MSCI Global Gold Miners,ETF
 iShares Transportation Average,ETF
 iShares Real Estate 50,ETF
 iShares S&P 100,ETF
+iShares Russell 3000,ETF
 iShares Global Clean Energy,ETF
 iShares MSCI South Africa,ETF
 iShares Edge MSCI Min Vol Global,ETF
 iShares Edge MSCI Intl Quality Factor,ETF
+iShares Core High Dividend,ETF
+iShares Intermediate GovtCredit Bond,ETF
 iShares Residential Real Estate Capped,ETF
+iShares Edge MSCI Multifactor USA,ETF
+iShares Edge MSCI Min Vol USA Small-Cap,ETF
 iShares US Telecommunications,ETF
 iShares MSCI Sweden Capped,ETF
 iShares Currency Hedged MSCI EAFE,ETF
 iShares Currency Hedged MSCI Japan,ETF
 iShares MSCI Philippines,ETF
+iShares MSCI EM ESG Optimized,ETF
+iShares Edge MSCI Multifactor Intl,ETF
+iShares Long-Term Corporate Bond,ETF
 iShares Global Healthcare,ETF
 iShares iBonds Dec 2020 Corporate,ETF
 iShares MSCI Russia Capped,ETF
@@ -2686,97 +3062,169 @@ iShares Global REIT,ETF
 iShares MSCI Netherlands,ETF
 iShares MSCI Saudi Arabia Capped,ETF
 iShares US Oil & Gas Exploration & Production,ETF
+iShares iBonds Dec 2021 Corporate,ETF
 iShares S&P GSCI Commodity-Indexed,ETF
 iShares MSCI Poland Capped,ETF
 iShares S&P Small-Cap 600 Value,ETF
+iShares Int Agg Bond,ETF
+iShares iBonds Dec 2022 Corporate,ETF
 iShares Emerging Markets Local Currency Bond,ETF
+iShares Morningstar Mid-Cap,ETF
 iShares International Treasury Bond,ETF
+iShares 0-5 Year TIPS Bond,ETF
 iShares Cohen & Steers REIT,ETF
 iShares MSCI Thailand Capped,ETF
+iShares iBonds Dec 2024 Corporate,ETF
+iShares Short-Term National AMT-Free Muni Bond,ETF
 iShares US Regional Banks,ETF
 iShares Global Infrastructure,ETF
+iShares North American Natural Resources,ETF
 iShares Exponential Technologies,ETF
+iShares MSCI EAFE ESG Optimized,ETF
 iShares S&P Small-Cap 600 Growth,ETF
 iShares Core Moderate Allocation,ETF
 iShares MSCI Belgium Capped,ETF
 iShares Core Conservative Allocation,ETF
 iShares MSCI Austria Capped,ETF
+iShares iBonds Dec 2023 Corporate,ETF
 iShares Core MSCI Pacific,ETF
+iShares Russell Top 200 Growth,ETF
 iShares MSCI Global Silver Miners,ETF
+iShares US Healthcare Providers,ETF
+iShares S&P Mid-Cap 400 Growth,ETF
 iShares Core Growth Allocation,ETF
 iShares Emerging Markets High Yield Bond,ETF
+iShares California AMT-Free Muni Bond,ETF
 iShares iBonds Dec 2021 AMT Free Municipal,ETF
 MSCI Frontier 100,ETF
 iShares India 50,ETF
 iShares iBonds Dec 2025 Corporate,ETF
 iShares Emerging Markets Dividend,ETF
+iShares 10-20 Year Treasury Bond,ETF
+iShares MSCI China A,ETF
+iShares Fallen Angels USD Bd,ETF
 iShares US Technology,ETF
 iShares MSCI World,ETF
 iShares Yield Optimized Bond,ETF
+iShares Currency Hedged MSCI Eurozo,ETF
 iShares Edge MSCI Intl Value Factor,ETF
+iShares iBonds Dec 2027 Term Corporate,ETF
+iShares MSCI United Kingdom Small-Cap,ETF
 iShares Global Tech,ETF
+iShares US Financial Services,ETF
+iShares US Healthcare,ETF
+iShares Convertible Bond,ETF
+iShares Morningstar Large-Cap Growth,ETF
+iShares Short Maturity Muni Bond,ETF
+iShares Edge MSCI Intl Momentum Factor,ETF
 iShares S&P Mid-Cap 400 Value,ETF
+iShares Core 10Y US Bd,ETF
+iShares Core MSCI International Developed Market,ETF
 iShares International Preferred Stock,ETF
+iShares iBonds Dec 2026 Term Corporate,ETF
 iShares US Basic Materials,ETF
 iShares US Utilities,ETF
 iShares Global Consumer Staples,ETF
+iShares MSCI USA ESG Optimized,ETF
 iShares Treasury Floating Rate Bond,ETF
+iShares Edge MSCI Multifactor USA Small-Cap,ETF
+iShares US Industrials,ETF
+iShares US Oil Equipment & Services,ETF
 iShares Global Timber & Forestry,ETF
+iShares Russell Top 200,ETF
 iShares Core Aggressive Allocation,ETF
 iShares MSCI All Peru Capped,ETF
+iShares Edge MSCI Multifactor Emerg,ETF
+iShares Micro-Cap,ETF
+iShares Russell Top 200 Value,ETF
 iShares MSCI India Small-Cap,ETF
 iShares Morningstar Multi-Asset Income,ETF
 iShares iBonds Dec 2022 AMT Free Municipal,ETF
 iShares MSCI Emerging Markets Small-Cap,ETF
+iShares MSCI KLD 400 Social,ETF
 iShares International Developed Property,ETF
+iShares CMBS,ETF
 iShares Global 100,ETF
 iShares US Consumer Goods,ETF
 iShares Currency Hedged MSCI ACWI ex US,ETF
+iShares Edge MSCI USA Size Factor,ETF
+iShares Aaa - A Rated Corporate Bond,ETF
 iShares Currency Hedged MSCI EAFE Small Cap,ETF
 iShares Commodities Strategy,ETF
 iShares MSCI Brazil Small-Cap,ETF
+iShares New York AMT-Free Muni Bond,ETF
+iShares MSCI USA Equal Weighted,ETF
 iShares Edge MSCI Min Vol Europe,ETF
 iShares Global Financials,ETF
 iShares iBonds Sep 2020 AMT Free Municipal,ETF
 iShares MSCI New Zealand Capped,ETF
 iShares Currency Hedged MSCI Germany,ETF
+iShares North American Tech,ETF
 iShares US Consumer Services,ETF
 iShares Global High Yield Corporate Bond,ETF
+iShares iBonds Dec 2023 Term Muni Bond,ETF
 iShares Dow Jones US,ETF
 iShares Global Telecom,ETF
 iShares International Developed Real Estate,ETF
 iShares Asia 50,ETF
+iShares Agency Bond,ETF
 iShares US Broker Dealers,ETF
 iShares MSCI Kokusai,ETF
+iShares MSCI Colombia Capped,ETF
 iShares Currency Hedged MSCI United Kingdom,ETF
+iShares MSCI USA ESG Select,ETF
 iShares Currency Hedged MSCI Emerging Markets,ETF
 iShares MSCI Emerging Markets Asia,ETF
 iShares Global Utilities,ETF
+iShares Morningstar Large-Cap Value,ETF
 iShares Emerging Markets Corporate Bond,ETF
+iShares iBoxx High Yld ex Oil & Gas Corp Bd,ETF
 iShares MSCI Finland Capped,ETF
 iShares GNMA Bond,ETF
 iShares Morningstar Mid-Cap Value,ETF
 iShares MSCI ACWI Low Carbon Target,ETF
+iShares iBonds Mar 2020 Corporate,ETF
+iShares MSCI Global Impact,ETF
+iShares Core 5-10,ETF
+iShares Edge US Fxd Incm Bal Rsk,ETF
+iShares Morningstar Large-Cap,ETF
+iShares Interest Rate Hedged 10Y,ETF
+iShares US Pharmaceuticals,ETF
+iShares iBonds Mar 2020 Corp ex-Financials,ETF
 iShares Edge MSCI Intl Size Factor,ETF
 iShares MSCI Israel Capped,ETF
+iShares Russell 2500,ETF
+iShares Currency Hedged MSCI Canada,ETF
 iShares MSCI Europe Small-Cap,ETF
+iShares MSCI Argentina and Global Exposure,ETF
+iShares Morningstar Small-Cap Growth,ETF
 iShares MSCI Ireland,ETF
 iShares Interest Rate Hedged High Yield Bond,ETF
 iShares MSCI Global Energy Producers,ETF
+iShares North American Tech-Multimedia Networking,ETF
+iShares Morningstar Small-Cap Value,ETF
 iShares MSCI BRIC,ETF
 iShares Global Industrials,ETF
+iShares Edge MSCI Multifactor Global,ETF
 iShares MSCI Norway Capped,ETF
+iShares GovernmentCredit Bond,ETF
 iShares Global Materials,ETF
 iShares AsiaPacific Dividend,ETF
+iShares Int Div Grwth,ETF
 iShares MSCI Germany Small-Cap,ETF
 iShares MSCI Japan Small-Cap,ETF
+iShares US Insurance,ETF
 iShares Emerg Markets Infrastructure,ETF
 iShares Interest Rate Hedged Corproate Bond,ETF
 iShares Europe Developed Real Estate,ETF
+iShares Morningstar Small-Cap,ETF
 iShares Global Consumer Discretionary,ETF
 iShares MSCI Denmark Capped,ETF
+iShares iBonds Mar 2023 Corporate,ETF
 Shares JPX-Nikkei 400,ETF
+iShares MSCI EM ex China,ETF
 iShares Currency Hedged MSCI Australia,ETF
+iShares U.S. Dividend and Buyback,ETF
 iShares MSCI Global Agriculture Producers,ETF
 iShares MSCI China Small-Cap,ETF
 iShares Edge MSCI Min Vol Japan,ETF
@@ -2785,43 +3233,165 @@ iShares Currency Hedged MSCI Italy,ETF
 iShares MSCI Qatar Capped,ETF
 iShares Int High Yield Bond,ETF
 iShares MSCI UAE Capped,ETF
+iShares Adapt Cur Hdg MSCI EAFE,ETF
+iShares iBonds Mar 2023 Corp ex-Financials,ETF
 iShares Currency Hedged MSCI Spain,ETF
 iShares Currency Hedged MSCI Switzerland,ETF
 iShares Currency Hedged MSCI South Korea,ETF
+iShares Currency Hdg JPX Nikkei 400,ETF
+Janus Short Duration Income,ETF
+Janus Long-Term Care,ETF
+Janus SmallMid Cap Growth Alpha,ETF
+Janus Small Cap Growth Alpha,ETF
+Janus Obesity,ETF
+Janus Organics,ETF
 John Hancock Multifactor Mid Cap,ETF
+John Hancock Multifactor Small Cap,ETF
 John Hancock Multifactor Large Cap,ETF
+John Hancock Multifactor DM,ETF
+John Hancock Multifactor Utilities,ETF
 John Hancock Multifactor Financials,ETF
+John Hancock Multifactor Energy,ETF
 John Hancock Multifactor Technology,ETF
+John Hancock Multifactor Industrials,ETF
 John Hancock Multifactor Health Care,ETF
 John Hancock Multifactor Consumer Discretionary,ETF
+John Hancock Multifactor Consumer Staples,ETF
+John Hancock Multifactor Materials,ETF
+JPMorgan Ultra Short Income,ETF
+JP Morgan Chase Alerian Exp 24 May 2024,ETF
+JPMorgan Diversified Return International Equity,ETF
+JPMorgan Diversified Return US Small Cap Equity,ETF
+JPMorgan Diversified Return Emergin,ETF
+JPMorgan Diversified Return US Mid Cap Equity,ETF
+JPMorgan Diversified Alternative,ETF
+JPMorgan Disciplined High Yield,ETF
 JPMorgan Diversified Return US Equity,ETF
+JPMorgan Global Bond Opportunities ETF,ETF
 JPMorgan Diversified Return Global Equity,ETF
+JPMorgan Managed Futures Strategy,ETF
+JPMorgan Diversified Return Europe Equity,ETF
+JPMorgan Event Driven,ETF
+KraneShares CSI China Internet,ETF
 KraneShares Bosera MSCI China A Share,ETF
+KraneShares Zacks New China,ETF
+KraneShares EM Consumer Technology,ETF
 KraneShares E China Commercial Paper,ETF
+KraneShares MSCI One Belt One Road,ETF
+Kraneshares MSCI China Environment,ETF
+Hartford Developed Markets ex US,ETF
 Hartford US Equity,ETF
 Hartford Global Small Cap,ETF
+Hartford Emerging Markets,ETF
+Hartford Multifactor REIT,ETF
 Legg Mason Low Volatility High Dividend,ETF
+Legg Mason International Low Volatility High Divid,ETF
+Legg Mason EM Low Volatility High Dividend,ETF
+ClearBridge All Cap Growth,ETF
+Main Sector Rotation,ETF
+iPath  US Treasury 10-year Bear,ETF
+iPath US Treasury Long Bond Bear,ETF
+Barclays Inverse US Treasury Aggregate,ETF
+iPath US Treasury 2 year Bear,ETF
+iPath US Treasury 5-year Bear,ETF
 Morgan Stanley Cushing MLP High Income Exp 21 Mar,ETF
+Nationwide Risk-Based International Equity,ETF
+Natixis Seeyond International Minimum Volatility,ETF
+Natixis Loomis Sayles Short Duration Income,ETF
+Neuberger Berman MLP IF,ETF
 NexPoint Credit Strategies,ETF
+Anfield Capital Diversified Alternatives,ETF
+Inspire Global Hope,ETF
+NuShares ESG Large-Cap Value,ETF
+NuShares ESG Large-Cap Growth,ETF
+NuShares ESG Small-Cap,ETF
+NuShares ESG US Aggregate Bond,ETF
+NuShares Enhanced Yield US Aggregate Bond,ETF
+NuShares ESG Mid-Cap Growth,ETF
+NuShares ESG Mid-Cap Value,ETF
+Oppenheimer Russell 1000 Dynamic Multifactor,ETF
+Oppenheimer Ultra Div Revenue,ETF
+Oppenheimer Large Cap Revenue,ETF
+Oppenheimer Mid Cap Revenue,ETF
+Oppenheimer Small Cap Revenue,ETF
+Oppenheimer Fin Revenue,ETF
+Oppenheimer Russell 2000 Dynamic Multifactor,ETF
+Oppenheimer Russell 1000 Yield Factor,ETF
+Oppenheimer Global ESG Revenue,ETF
+Oppenheimer Russell 1000 Value Factor,ETF
+Oppenheimer ESG Revenue,ETF
+Oppenheimer Russell 1000 Low Volatility Factor,ETF
+Oppenheimer Russell 1000 Momentum Factor,ETF
+Oppenheimer Russell 1000 Size Factor,ETF
+Oppenheimer Russell 1000 Quality Factor,ETF
+ETFMG Alternative Harvest ETF,ETF
+YieldShares High Income,ETF
 Tortoise North American Pipeline,ETF
+Schwab 1000,ETF
+Pacer WealthShield,ETF
+NuStar Logistics 7.625% Fixed To Floating Rate Sub,ETF
+Reaves Utilities,ETF
+Principal US Mega-Cap Multi-Factor,ETF
+Premise Capital Frontier Advantage Diversified Tac,ETF
+Saba Interest Rate Hedged CEF,ETF
 Allied Capital 6.875% Notes Exp 15 Apr 2047,ETF
+VictoryShares Dividend Accelerator,ETF
+US Global Jets,ETF
+TrimTabs Float Shrink,ETF
+VictoryShares US Multi-Factor Minimum Volatility,ETF
+VictoryShares EM High Div Volatility Wtd,ETF
+Forensic Accounting Long-Short,ETF
 Reality Shares DIVS,ETF
+Reverse Cap Weighted U.S. Large Cap,ETF
 Virtus Newfleet Multi-Sector Unconstrained Bond,ETF
+Principal Active Global Dividend Income,ETF
+Reality Shares Divcon Leaders Dividend,ETF
+US Tax Reform Fund,ETF
+Reality Shares Divcon Dividend Defender,ETF
+Point Bridge GOP Stock Tracker,ETF
+Virtus Newfleet Dynamic Credit,ETF
+Sit Rising Rate,ETF
 Validea Market Legends,ETF
+Virtus Glovista EM,ETF
+Pacer Trendpilot 750,ETF
+Pacer Trendpilot 450,ETF
+Pacer Trendpilot 100,ETF
+Pacer US Cash Cows 100,ETF
+Pacer Trendpilot European,ETF
 PIMCO Enhanced Short Maturity Active Exchange-Trad,ETF
+PIMCO Total Return Active Exchange-Traded,ETF
+PIMCO 0-5 Year High Yield Corporate Bond,ETF
 PIMCO Low Duration Active,ETF
+PIMCO 1-5 Year US TIPS Exchange-Traded,ETF
+PIMCO 25+ Year Zero Coupon US Treasury,ETF
 PIMCO 15+ Year US TIPS Exchange-Traded,ETF
+PIMCO Intermediate Municipal Bond Active,ETF
+PIMCO Investment Grade Corporate Bond,ETF
+PIMCO RAFI Dynamic Multi-Factor EM Equity,ETF
+PIMCO RAFI Dynamic Multi-Factor Intl Equity,ETF
+PIMCO Short Term Municipal Bond Active Exchange-Tr,ETF
 PIMCO Broad US TIPS Exchange-Traded,ETF
+PIMCO RAFI Dynamic Multi-Factor U.S. Equity,ETF
 Invesco QQQ Trust Series 1,ETF
+PowerShares Senior Loan Portfolio,ETF
+Powershares S&P 500 Low Volatility Portfolio,ETF
 PowerShares Preferred Portfolio,ETF
+PowerShares S&P MidCap Low Volatility Portfolio,ETF
+PowerShares S&P 500 High Quality,ETF
 PowerShares Emerging Markets Sovereign Debt,ETF
 PowerShares DB Optimum Yield Diversified Commodity,ETF
 PowerShares DB US Dollar Bullish,ETF
 PowerShares Dynamic Large Cap Value,ETF
 PowerShares DB Commodity Tracking,ETF
+PowerShares S&P 500 High Div Low Vol,ETF
+PowerShares Financial Preferred,ETF
 PowerShares DB Oil,ETF
+Invesco S and P 500 GARP,ETF
 PowerShares KBW Bank Portfolio,ETF
+PowerShares S&P SmallCap Low Volatility Portfolio,ETF
 PowerShares FTSE RAFI Emerging Markets,ETF
+PowerShares CEF Income Composite Portfolio,ETF
+PowerShares amental High Yield Corporate Bond Port,ETF
 PowerShares DWA Utilities Momentum Portfolio,ETF
 PowerShares DWA Momentum Portfolio,ETF
 PowerShares Variable Rate Preferred Portfolio,ETF
@@ -2829,12 +3399,21 @@ PowerShares National AMT-Free Municipal Bond Portf,ETF
 PowerShares High Yield Equity Dividend Achievers P,ETF
 PowerShares DB Agriculture,ETF
 PowerShares S&P Intl Developed Low Volatility Port,ETF
+PowerShares Build America Bond Port,ETF
 PowerShares DWA EM Momentum,ETF
 PowerShares WilderHill Clean Energy,ETF
+Powershares S&P 500 High Beta Portfolio,ETF
 PowerShares DB Base Metals,ETF
 PowerShares S&P Emerging Markets Low Volatility,ETF
+PowerShares FTSE RAFI US 1000 Portfolio,ETF
 PowerShares DWA Financial Momentum Portfolio,ETF
+PowerShares Dynamic Software,ETF
 PowerShares International Dividend Achievers Portf,ETF
+PowerShares California AMT-Free Municipal Bond Por,ETF
+ProShares Long Online Short Stores,ETF
+PowerShares Variable Rate Investment Grade,ETF
+Invesco S and P MidCap Momentum,ETF
+PowerShares Aerospace & Defense,ETF
 PowerShares DB Precious Metals,ETF
 PowerShares KBW Premium Yield Equity REIT Portfoli,ETF
 PowerShares Water Resources,ETF
@@ -2843,61 +3422,104 @@ PowerShares Global Listed Private Equity,ETF
 PowerShares KBW High Dividend Yield Financial,ETF
 PowerShares DB US Dollar Bearish,ETF
 PowerShares DB Energy,ETF
+PowerShares Global Short Term High Yield Bond Port,ETF
+PowerShares S&P 500 BuyWrite Portfolio,ETF
 PowerShares DWA Consumer Staples Momentum Portfoli,ETF
 PowerShares S&P 500 Momentum Portfolio,ETF
 PowerShares FTSE RAFI US 1500 Small Mid,ETF
+PowerShares SP 500 ex-Rate Sensiti,ETF
 PowerShares KBW Property & Casualty Insurance Port,ETF
+PowerShares Dynamic Pharmaceuticals,ETF
 PowerShares S&P SmallCap Energy,ETF
 PowerShares DWA SmallCap Momentum Portfolio,ETF
 PowerShares DB Gold,ETF
+PowerShares S&P 500 Downside Hedged Portfolio,ETF
 PowerShares Russell 1000 Equal Weight Portfolio,ETF
 PowerShares FTSE RAFI Developed Markets ex-US,ETF
+PowerShares Dynamic Energy Exploration & Productio,ETF
 PowerShares DWA Technology Momentum Portfolio,ETF
+PowerShares mntl Invest Grade Corp Bond Portfolio,ETF
+PowerShares DWA Tactical Multi-Asset Income,ETF
 PowerShares Active US Real Estate,ETF
+PowerShares VRDO Tax-Free Weekly Portfolio,ETF
 PowerShares Cleantech,ETF
+PowerShares Dynamic Semiconductors,ETF
+PowerShares Dynamic Large Cap Growth,ETF
+PowerShares New York AMT-Free Municipal Bond Portf,ETF
 PowerShares Golden Dragon China Port,ETF
 PowerShares Nasdaq Internet,ETF
 DB Gold Double Long Exp 15 Feb 2038,ETF
 PowerShares Global Clean Energy,ETF
 PowerShares DWA Healthcare Momentum Portfolio,ETF
 PowerShares S&P Int Dev Qual Port,ETF
+PowerShares Dynamic Building & Construction,ETF
+PowerShares S&P SmallCap High Dividend Low Volatil,ETF
 PowerShares Global Water Portfolio,ETF
 PowerShares S&P SmallCap Information Technology,ETF
 PowerShares FTSE RAFI Developed Markets ex-US Smal,ETF
+PowerShares SP 500 Value Portfolio,ETF
+Invesco S and P SmallCap Value with Momentum,ETF
 PowerShares S&P SmallCap Health Care,ETF
 PowerShares S&P SmallCap Financials,ETF
 PowerShares Dynamic Oil & Gas Services,ETF
 PowerShares International BuyBack Achievers,ETF
 PowerShares Russell 1000 Low Beta Equal Weight,ETF
 PowerShares India Portfolio,ETF
+PowerShares Dynamic Biotechnology & Genome,ETF
+ProShares Decline of the Retail Store,ETF
+Invesco S and P SmallCap Momentum,ETF
 PowerShares DWA Consumer Cyclicals Momentum Portfo,ETF
 PowerShares DWA Tactical Sector Rotation Portfolio,ETF
 PowerShares International Corporate Bond,ETF
+Invesco S and P 500 Value with Momentum,ETF
+PowerShares Dynamic Networking,ETF
 PowerShares KBW Regional Banking Portfolio,ETF
 PowerShares FTSE International Low Beta Equal Weig,ETF
 PowerShares S&P SmallCap Utilities,ETF
 PowerShares DWA Energy Momentum Portfolio,ETF
+PowerShares Dynamic Food & Beverage,ETF
+PowerShares Dynamic Media,ETF
 PowerShares DWA Industrials Momentum Portfolio,ETF
+PowerShares PureBeta US Aggregate Bond Portfolio,ETF
 BLDRS Emerging Markets 50 ADR,ETF
+Invesco S and P MidCap Quality,ETF
+PowerShares Dynamic Leisure & Entertainment,ETF
 PowerShares S&P SmallCap Industrials,ETF
 PowerShares LadderRite 0-5 Year Corporate Bond,ETF
 PowerShares S&P SmallCap Materials,ETF
+PowerShares S&P EM Momentum Port,ETF
+Invesco S and P MidCap Value with Momentum,ETF
 PowerShares DB Silver,ETF
+PowerShares Russell Top 200 Equal Weight,ETF
 PowerShares DWA Basic Materials Momentum Portfolio,ETF
+PowerShares PureBeta MSCI USA Portfolio,ETF
+PowerShares Dynamic Market,ETF
 PowerShares DWA NASDAQ Momentum Portfolio,ETF
+PowerShares Dynamic Retail,ETF
 PowerShares S&P SmallCap Consumer Discretionary,ETF
 BLDRS Asia 50 ADR,ETF
+PowerShares S&P SmallCap Quality Portfolio,ETF
+PowerShares S&P International Developed High Divid,ETF
+PowerShares PureBeta FTSE Developed ex-North Ameri,ETF
+PowerShares PureBeta MSCI USA Small Cap Portfolio,ETF
+PowerShares S&P Int Dev Momentum Port,ETF
+PowerShares PureBeta FTSE EM Portfolio,ETF
 DB Crude Oil Double Short Exp 01 Jun 2038,ETF
 BLDRS Europe Select ADR,ETF
 PowerShares DB G10 Currency Harvest,ETF
 DB Gold Short Exp 15 Feb 2038,ETF
+PowerShares PureBeta 0-5 US TIPS Portfolio,ETF
 PowerShares S&P SmallCap Consumer Staples,ETF
+Principal Millennials,ETF
 Principal EDGE Active Income,ETF
+Principal Shareholder Yield,ETF
+Principal Healthcare Innovators,ETF
 ProShares UltraPro QQQ,ETF
 ProShares UltraPro Short QQQ,ETF
 ProShares Ultra VIX Short-Term Futures,ETF
 ProShares UltraShort S&P500,ETF
 ProShares UltraPro Short S&P500,ETF
+ProShares Short S&P500,ETF
 ProShares UltraShort 20+ Year Treasury,ETF
 ProShares UltraShort Bloomberg Crude Oil,ETF
 ProShares UltraPro S&P500,ETF
@@ -2906,154 +3528,330 @@ ProShares UltraShort QQQ,ETF
 ProShares Ultra Bloomberg Crude Oil,ETF
 ProShares Short QQQ,ETF
 ProShares Short VIX Short-Term Futures,ETF
+ProShares UltraPro 3x Crude Oil,ETF
 ProShares UltraPro Short Dow 30,ETF
+ProShares Short 20+ Yr Treasury,ETF
 ProShares Ultra S&P500,ETF
+ProShares UltraPro 3x Short Crude Oil,ETF
 ProShares UltraShort Russell2000,ETF
 ProShares Ultra Bloomberg Natural Gas,ETF
 ProShares UltraShort Dow30,ETF
 ProShares Ultra QQQ,ETF
+ProShares UltraPro Short Russell2000,ETF
 ProShares UltraPro Dow30,ETF
+ProShares Short Dow30,ETF
+ProShares Short Russell2000,ETF
 ProShares Ultra Dow30,ETF
 ProShares Ultra Silver,ETF
+ProShares S&P 500 Dividend Aristocrats,ETF
+ProShares UltraPro Russell2000,ETF
 ProShares Ultra Oil & Gas,ETF
 ProShares Ultra Russell2000,ETF
 ProShares UltraShort MSCI Brazil Capped,ETF
 ProShares Ultra Nasdaq Biotechnology,ETF
 ProShares Short MSCI Emerging Markets,ETF
+ProShares Russell 2000 Dividend Gro,ETF
 ProShares Ultra Gold,ETF
 ProShares UltraShort Bloomberg Natural Gas,ETF
+ProShares UltraPro Short 20+ Year Treasury,ETF
 ProShares UltraShort Silver,ETF
+ProShares Ultra MidCap400,ETF
 ProShares UltraShort Gold,ETF
+ProShares Short High Yield,ETF
+ProShares Ultra Financials,ETF
+ProShares Ultra Semiconductors,ETF
+ProShares Ultra Technology,ETF
 ProShares Ultra Real Estate,ETF
+ProShares UltraShort Oil and Gas,ETF
+ProShares VIX Mid Term Futures,ETF
+ProShares SP MidCap 400 Dividend,ETF
+ProShares Large Cap Core Plus,ETF
 ProShares UltraShort Nasdaq Biotechnology,ETF
+ProShares Investment Grade-Interest Rate Hedged,ETF
 ProShares UltraShort FTSE China 50,ETF
 ProShares UltraShort Euro,ETF
 ProShares Ultra Basic Materials,ETF
 ProShares UltraShort Real Estate,ETF
 Proshares UltraPro NASDAQ Biotechnology,ETF
 ProShares Ultra FTSE Europe,ETF
+ProShares UltraPro Short Financial Select Sector,ETF
 ProShares MSCI EAFE Dividend Growers,ETF
+ProShares Ultra Utilities,ETF
 ProShares UltraShort Industrials,ETF
 ProShares UltraShort Financials,ETF
 ProShares UltraShort MSCI Emerging Markets,ETF
+ProShares K-1 Free Crude Oil Strategy,ETF
 ProShares UltraShort Technology,ETF
 ProShares Ultra FTSE China 50,ETF
+ProShares UltraPro Short MidCap400,ETF
+ProShares UltraShort MidCap400,ETF
 ProShares UltraShort Basic Materials,ETF
+ProShares UltraPro Financial Select Sector,ETF
 ProShares Ultra Euro,ETF
+ProShares UltraShort Utilities,ETF
+ProShares UltraShort 7-10 Year Treasury,ETF
+ProShares Ultra Health Care,ETF
+ProShares DJ Brookfield Global Infr,ETF
 ProShares Short MSCI EAFE,ETF
 ProShares UltraShort Yen,ETF
+ProShares Short Financials,ETF
 ProShares Hedge Replication,ETF
 ProShares Short FTSE China 50,ETF
 ProShares Ultra 20+ Year Treasury,ETF
+ProShares UltraShort Semiconductors,ETF
+ProShares Ultra 7-10 Year Treasury,ETF
 ProShares Short Real Estate,ETF
 ProShares Inflation Expectations,ETF
 ProShares UltraShort FTSE Europe,ETF
+ProShares High Yield Interest Rate,ETF
 ProShares Ultra MSCI Emerging Markets,ETF
 ProShares UltraShort MSCI Japan,ETF
 ProShares Ultra Yen,ETF
 ProShares Ultra MSCI Brazil Capped,ETF
 ProShares UltraPro Short NASDAQ Biotechnology,ETF
+ProShares Ultra Industrials,ETF
 ProShares Ultra MSCI EAFE,ETF
+ProShares Short Oil & Gas,ETF
+ProShares MSCI EM Dividend Growers,ETF
+ProShares UltraPro MidCap400,ETF
+ProShares Short 7-10 Year Treasury,ETF
 ProShares MSCI Europe Dividend Growers,ETF
+ProShares Short MidCap400,ETF
+ProShares UltraShort Consumer Goods,ETF
+ProShares Ultra Consumer Services,ETF
+ProShares Global Listed Private Equity,ETF
+ProShares UltraShort SmallCap600,ETF
+ProShares UltraShort Health Care,ETF
 ProShares UltraShort MSCI EAFE,ETF
 ProShares Ultra MSCI Japan,ETF
+ProShares Ultra Consumer Goods,ETF
 ProShares UltraShort Consumer Services,ETF
+ProShares SP 500 ex Health Care,ETF
+ProShares Short SmallCap600,ETF
 ProShares Morningstar Alternatives Solution,ETF
+ProShares Equities for Rising Rates,ETF
 ProShares S&P 500 ex Energy,ETF
+ProShares Ultra SmallCap600,ETF
+ProShares Merger,ETF
+ProShares Managed Futures Strategy,ETF
+ProShares Short Term USD EM Bond,ETF
 ProShares Short Euro,ETF
+ProShares Ultra Telecommunications,ETF
+ProShares RAFI LongShort,ETF
+ProShares Ultra High Yield,ETF
 ProShares UltraShort Australian Dollar,ETF
+PureFunds ISE Junior Silver,ETF
 PureFunds ISE Mobile Payments,ETF
+PureFunds ISE Cyber Security,ETF
+PureFunds Video Game Tech,ETF
+PureFunds Drone Economy Strategy,ETF
+QuantShares US Market Neutral Anti-Beta,ETF
 QuantShares Hedged Dividend Income,ETF
+QuantShares US Market Neutral Momentum,ETF
+QuantShares US Market Neutral Value,ETF
 Horizons NASDAQ 100 Covered Call,ETF
+Renaissance IPO,ETF
+Renaissance International IPO,ETF
+RiverFront Dynamic Core Income,ETF
+RiverFront Dynamic US Dividend Advantage,ETF
+RiverFront Dynamic US Flex-Cap,ETF
+RiverFront Dynamic Unconstrained Income,ETF
 Schwab International Equity,ETF
+Schwab US Large-Cap,ETF
 Schwab Emerging Markets Equity,ETF
+Schwab Short Term US Treasury,ETF
+Schwab US Broad Market,ETF
+Schwab US Dividend Equity,ETF
 Charles Schwab US REIT,ETF
+Schwab US Aggregate Bond,ETF
+Schwab Intermediate Term US Treasury,ETF
+Schwab US Small-Cap,ETF
+Schwab amental US Large Company,ETF
+Schwab amental Intl Large Company,ETF
+Schwab US Mid-Cap,ETF
+Schwab US TIPS,ETF
+Schwab US Large-Cap Value,ETF
+Schwab amental EM Large Company,ETF
+Schwab US Large-Cap Growth,ETF
+Schwab amental US Small Company,ETF
 Schwab International Small-Cap Equity,ETF
+Schwab amental Intl Small Company,ETF
+Schwab amental US Broad Market,ETF
 SPDR S&P 500,ETF
 SPDR S&P Oil & Gas Exploration & Production,ETF
 Financial Select Sector SPDR,ETF
+Utilities Select Sector SPDR,ETF
 Energy Select Sector SPDR,ETF
 Consumer Staples Select Sector SPDR,ETF
 Industrial Select Sector SPDR,ETF
 Health Care Select Sector SPDR,ETF
 SPDR Gold Shares,ETF
+Technology Select Sector SPDR,ETF
 SPDR Barclays High Yield Bond,ETF
 SPDR S&P Regional Banking,ETF
 Real Estate Select Sector SPDR,ETF
 SPDR S&P 500 Value,ETF
 SPDR S&P Retail,ETF
 Materials Select Sector SPDR,ETF
+SPDR Barclays Short Term High Yield Bond,ETF
+SPDR S&P 400 Mid Cap Value,ETF
 SPDR S&P Biotech,ETF
 SPDR S&P Metals & Mining,ETF
 Consumer Discretionary Select Sector SPDR,ETF
 SPDR S&P Bank,ETF
 SPDR S&P Homebuilders,ETF
 SPDR DJIA,ETF
+SPDR Barclays Aggregate Bond,ETF
 SPDR Euro Stoxx 50,ETF
+SPDR Barclays Invest Grade Floating Rate,ETF
+SPDR Barclays 1-3 Month T-Bill,ETF
+SPDR Barclays Long Term Treasury,ETF
 SPDR S&P World ex US,ETF
 SPDR S&P MidCap 400,ETF
 SPDR S&P Oil & Gas Equipment & Services,ETF
+SPDR Barclays Short Term Corporate Bond,ETF
+SPDR Barclays Intermediate Term Corporate Bond,ETF
 SPDR MSCI ACWI ex-US,ETF
+SPDR Russell 1000,ETF
+SPDR S&P 500 Growth,ETF
+SPDR Barclays Convertible Securities,ETF
+SPDR Barclays Short Term Treasury,ETF
+SPDR BlackstoneGSO Senior Loan,ETF
 SPDR S&P Dividend,ETF
 SPDR S&P 500 High Dividend,ETF
 SPDR S&P Emerging Markets,ETF
 SPDR Barclays Emerging Markets Local Bond,ETF
 SPDR Russell 3000,ETF
+SPDR DoubleLine Total Return Tactic,ETF
 SPDR S&P 600 Small Cap,ETF
 SPDR Portfolio MSCI Global,ETF
+SPDR Russell 2000,ETF
 SPDR Dow Jones International Real Estate,ETF
+SPDR Barclays Long Term Corporate Bond,ETF
+SPDR Wells Fargo Preferred Stock,ETF
+SPDR Russell Small Cap Completeness,ETF
+SPDR Portfolio Mortgage Backed Bond,ETF
 SPDR Barclays International Treasury Bond,ETF
+SPDR Nuveen Barclays Short Term Municipal Bond,ETF
+SPDR Nuveen Barclays Municipal Bond,ETF
 SPDR S&P China,ETF
 SPDR S&P Global Natural Resources,ETF
+SPDR Portfolio Intermediate Term Treasury,ETF
+SPDR Russell 1000 Low Volatility,ETF
 SPDR S&P Insurance,ETF
 SPDR Portfolio TIPS,ETF
+SPDR S&P 600 Small Cap Value,ETF
+SPDR S&P Transportation,ETF
+SPDR S&P 600 Small Cap Growth,ETF
 SPDR Dow Jones REIT,ETF
+SPDR S&P 400 Mid Cap Growth,ETF
 SPDR S&P Emerging Asia Pacific,ETF
+SPDR Nuveen S&P High Yield Municipal Bond,ETF
 SPDR Dow Jones Global Real Estate,ETF
 SPDR S&P Emerging Markets Small Cap,ETF
+SPDR S&P Aerospace & Defense,ETF
 SPDR S&P Semiconductor,ETF
 SPDR S&P International Dividend,ETF
+SPDR MSCI USA StrategicFactors,ETF
 SPDR S&P Pharmaceuticals,ETF
+SPDR SSgA Ultra Short Term Bond,ETF
 SPDR S&P International Small Cap,ETF
+SPDR Russell 2000 Low Volatility,ETF
+SPDR Russell 1000 Low Volatility,ETF
+SPDR Dorsey Wright Fixed Income Allocation,ETF
+SPDR Portfolio High Yield Bond,ETF
 SPDR S&P Emerging Markets Dividend,ETF
+SPDR Morgan Stanley Technology,ETF
 SPDR Barclays Short Term Intl Treasury Bond,ETF
+SPDR S&P Health Care Services,ETF
+SPDR S&P North American Natural Resources,ETF
 SPDR SSgA Income Allocation,ETF
+SPDR S&P Health Care Equipment,ETF
+SPDR Barclays 1-10 Year TIPS,ETF
 SPDR Barclays International Corporate Bond,ETF
+SPDR S&P Software & Services,ETF
 SPDR MFS Systematic Core Equity,ETF
+SPDR DoubleLine EM Fixed Income,ETF
+SPDR S&P Global Dividend,ETF
 SPDR MSCI EAFE StrategicFactors,ETF
+SPDR S&P 500 Fossil Fuel Reserves Free,ETF
+SPDR DoubleLine Short Term TR Tactical,ETF
 SPDR S&P Global Infrastructure,ETF
 SPDR SSgA Multi-Asset Real Return,ETF
 SPDR SSgA Global Allocation,ETF
 SPDR Citi International Government Inflation-Prote,ETF
+SPDR Portfolio Corporate Bond,ETF
+SPDR MSCI EAFE Fossil Fuel Reserves Free,ETF
+SPDR FactSet Innovative Technology,ETF
 SPDR MSCI Emer Mkts StrategicFactors,ETF
 SPDR Portfolio Europe,ETF
+SPDR S&P Internet,ETF
+SPDR SSGA Gender Diversity,ETF
+SPDR S&P Telecom,ETF
+SPDR S&P Kensho Future Security,ETF
+SPDR S&P 1500 Momentum Tilt,ETF
 SPDR MSCI World StrategicFactors,ETF
 SPDR MFS Systematic Growth Equity,ETF
 SPDR S&P Capital Markets,ETF
+SPDR Russell 1000 Momentum,ETF
+SPDR S&P Technology Hardware,ETF
 SPDR Solactive Canada,ETF
 SPDR Solactive Japan,ETF
 SPDR MSCI ACWI Low Carbon Target,ETF
+SPDR S&P 1500 Value Tilt,ETF
 SPDR Global Dow,ETF
+SPDR S&P Kensho Smart Mobility,ETF
+SPDR Russell 1000 Yield Focus,ETF
+SPDR SP 500 Buyback,ETF
+SPDR S&P Kensho Intelligent Structures,ETF
+SPDR MSCI EM Fossil Fuel Free,ETF
+SPDR Solactive United Kingdom,ETF
 SPDR MFS Systematic Value Equity,ETF
 SPDR Solactive Germany,ETF
+SPDR EURO STOXX Small Cap,ETF
+Fieldstone UVA Unconstrained Medium-Term Fixed Inc,ETF
 Sprott Physical Silver,ETF
 Sprott Physical Gold,ETF
+US Market Rotation Strategy,ETF
+EcoLogical Strategy,ETF
 Teucrium Sugar,ETF
 Teucrium Corn,ETF
+Teucrium Wheat,ETF
+Teucrium Soybean,ETF
 Teucrium Agricultural,ETF
+UBS E-TRACS Alerian MLP Infrastructure Exp 02 Apr,ETF
+UBS E-TRACS Alerian MLP,ETF
+UBS ETRACS 2xMonthly Leveraged Alerian MLP Infra B,ETF
 UBS E-TRACS Monthly Pay 2xLeveraged Mortgage REIT,ETF
 UBS ETRACS Monthly Pay 2X,ETF
+UBS ETRACS ProShares Daily 3x Long Crude,ETF
+UBS ETRACS ProShares Daily 3x Inverse Crude,ETF
 UBS AG ETRACS Monthly Pay 2X US Small Cap High Div,ETF
 UBS E-TRACS Bloomberg CMCI,ETF
+UBS E-TRACS 2xLeveraged Long Wells Fargo Business,ETF
+UBS E-TRACS Linked to the Wells Fargo Business Dev,ETF
 UBS ETRACS Monthly Pay 2X US High Dividend Low Vol,ETF
+UBS AG FI Enhanced Global High Yield,ETF
 UBS ETRACS Monthly Pay 2X Diversified High Income,ETF
+UBS ETRACS 2xMonthly Leveraged S&P MLP B,ETF
+UBS ETRACS Monthly Pay 2xLeveraged,ETF
 UBS AG FI Enhanced Large Cap Growth,ETF
 UBS AG ETRACS Monthly Reset 2X ISE Exclusively Hom,ETF
+UBS AG FI Enhanced Europe 50,ETF
 UBS ETRACS Bloomberg CMCI Agriculture,ETF
 UBS ETRACS Monthly Pay 2X Wells Fargo MLP ex Energ,ETF
 UBS E-TRACS linked to DBloomberg Commodity Total R,ETF
-UBS E-TRACS Bloomberg CMCI Gold,ETF
+UBS E-TRACS Monthly Pay 2xLeveraged S&P Dividend,ETF
+UBS E-TRACS Monthly Pay 2xLeveraged Dow Jones Sele,ETF
+UBS E-TRACS Alerian Natural Gas MLP,ETF
+UBS ETRACS S&P GSCI Crude Oil TR,ETF
 UBS E-TRACS Bloomberg CMCI Food,ETF
+USAA Core Intermediate-Term Bond,ETF
+USAA MSCI USA Small Cap Value Momentum Blend,ETF
+USAA MSCI USA Value Momentum Blend,ETF
+USAA MSCI International Value Momentum Blend,ETF
+USAA MSCI EM Value Momentum Blend,ETF
+USAA Core Short-Term Bond,ETF
 United States Oil,ETF
 United States Natural Gas,ETF
 United States Brent Oil,ETF
@@ -3062,41 +3860,57 @@ United States Copper,ETF
 United States Gasoline,ETF
 United States 12 Month Natural Gas,ETF
 United States 12 Month Oil,ETF
+USCF SummerHaven SHPEI,ETF
+ValueShares Int Quantitative Value,ETF
+ValueShares US Quantitative Value,ETF
 VanEck Vectors Gold Miners,ETF
 VanEck Vectors Junior Gold Miners,ETF
 VanEck Vectors Oil Services,ETF
 VanEck Vectors Russia,ETF
 VanEck Vectors JP Morgan EM Local Currency Bd,ETF
+VanEck Vectors Morningstar Wide Moat,ETF
 VanEck Vectors Vietnam,ETF
 VanEck Vectors High-Yield Municipal,ETF
+VanEck Pref Secs ex Finls,ETF
+VanEck Vectors AMT-Free Intermediate Municipal,ETF
+VanEck Vectors-Investment Grade Floating Rate,ETF
 VanEck Short High-Yield Muni,ETF
 VanEck Emg Mkts High Yield Bd,ETF
 VanEck Vectors Rare EarthStrategic Metals,ETF
 VanEck Vectors Egypt,ETF
 VanEck Vectors Mortgage REIT Income,ETF
+VanEck Vectors BDC Income,ETF
 VanEck Vectors Pharmaceutical,ETF
 VanEck Vectors International High Yield Bond,ETF
 VanEck Vectors ChinaAMC SME-ChiNext,ETF
+VanEck Vectors AMT-Free Long Municipal,ETF
 VanEck Merk Gold Trust,ETF
 VanEck Vectors Emerging Markets Aggregate Bond,ETF
 VanEck Vectors Africa,ETF
+VanEck Vectors CEF Municipal Income,ETF
 VanEck Vectors Agribusiness,ETF
 VanEck Vectors Biotech,ETF
 VanEck Vectors Indonesia,ETF
 VanEck Vectors India Small-Cap,ETF
 VanEck Vectors Coal,ETF
+VanEck Vectors AMT-Free Short Municipal,ETF
 VanEck Vectors Steel,ETF
 VanEck Vectors Unconventional Oil & Gas,ETF
 VanEck Vectors Brazil Small-Cap,ETF
+VanEck Vectors High Income MLP,ETF
 VanEck Vectors Morningstar International Moat,ETF
+VanEck Vectors NDR CMG Long Flat Allocation,ETF
 VanEck Vectors Oil Refiners,ETF
 VanEck Vectors ChinaAMC A-Share,ETF
 VanEck Vectors Natural Resources,ETF
 VanEck Vectors Low Carbon Energy,ETF
+VanEck Vectors Green Bond,ETF
 VanEck Vectors Uranium+Nuclear Energy,ETF
 Morgan Stanley Market Vectors 2X Euro,ETF
 VanEck Vectors Russia Small-Cap,ETF
 VanEck Vectors ChinaAMC China Bond,ETF
+VanEck Vectors Israel,ETF
+VanEck Vectors Environmental Services,ETF
 Morgan Stanley Market Vectors Double Short Euro,ETF
 Morgan Stanley Market Vectors Renminbi USD,ETF
 Vanguard FTSE Emerging Markets,ETF
@@ -3114,13 +3928,16 @@ Vanguard Value,ETF
 Vanguard Total World Stock,ETF
 Vanguard Total International Bond,ETF
 Vanguard Mortgage-Backed Securities,ETF
+Vanguard High Dividend Yield,ETF
 Vanguard Tax-Exempt Bond,ETF
 Vanguard Dividend Appreciation,ETF
 Vanguard Short-Term Bond,ETF
 Vanguard Intermediate-Term Bond,ETF
 Vanguard Growth,ETF
+Vanguard Financials,ETF
 Vanguard Short-Term Government Bond,ETF
 Vanguard Long-Term Bond,ETF
+Vanguard Information Technology,ETF
 Vanguard Sht-Term Inflation-Protected Securities,ETF
 Vanguard Long-Term Corporate Bond,ETF
 Vanguard Small-Cap Value,ETF
@@ -3129,28 +3946,48 @@ Vanguard Small-Cap,ETF
 Vanguard Consumer Staples,ETF
 Vanguard Global ex-US Real Estate,ETF
 Vanguard Intermediate-Term Government Bond,ETF
+Vanguard Energy,ETF
 Vanguard Mid-Cap Value,ETF
+Vanguard Mid-Cap,ETF
 Vanguard Russell 1000 Growth,ETF
 Vanguard Long-Term Government Bond,ETF
+Vanguard S&P Small Cap 600,ETF
 Vanguard Russell 2000,ETF
 Vanguard Small-Cap Growth,ETF
 Vanguard Utilities,ETF
+Vanguard Extended Duration,ETF
 Vanguard Emerging Markets Government Bond,ETF
+Vanguard Large-Cap,ETF
+Vanguard Health Care,ETF
 Vanguard FTSE All-World ex-US Small-Cap,ETF
+Vanguard Extended Market,ETF
 Vanguard Mid-Cap Growth,ETF
 Vanguard Mega Cap Growth,ETF
 Vanguard Mega Cap Value,ETF
+Vanguard Int Div Appreciation,ETF
 Vanguard Telecommunication Services,ETF
+Vanguard Industrials,ETF
 Vanguard Russell 1000 Value,ETF
+Vanguard Intl High Div Yld,ETF
+Vanguard S&P 500 Value,ETF
+Vanguard S&P 500 Growth,ETF
 Vanguard Mega Cap,ETF
 Vanguard Materials,ETF
 Vanguard Consumer Discretionary,ETF
+Vanguard Total Corporate Bond Shares,ETF
 Vanguard Russell 1000,ETF
+Vanguard S&P Mid Cap 400,ETF
 Vanguard Russell 2000 Value,ETF
+Vanguard S&P Mid Cap 400 Value,ETF
+Vanguard S&P Small Cap 600 Value,ETF
 Vanguard Russell 2000 Growth,ETF
+Vanguard S&P Mid Cap 400 Growth,ETF
 Vanguard Russell 3000,ETF
+Vanguard S&P Small Cap 600 Growth,ETF
 VelocityShares 3x Long Natural Gas linked to S&P G,ETF
 VelocityShares Daily 2x VIX Short Term linked to S,ETF
+VelocityShares 3x Inverse Crude S&P GSCI ER,ETF
+VelocityShares 3x Long Crude S&P GSCI ER,ETF
 VelocityShares 3x Inverse Natural Gas linked to S&,ETF
 VelocityShares 3x Long Silver linked to S&P GSCI S,ETF
 VelocityShares 3x Inverse Silver linked to S&P GSC,ETF
@@ -3158,7 +3995,16 @@ VelocityShares 3x Long Gold linked to SP GSCI Gold,ETF
 VelocityShares 3x Inverse Gold linked to S&P GSCI,ETF
 VelocityShares VIX Short Term linked to SP 500 VIX,ETF
 VelocityShares Daily Inverse VIX Medium Term,ETF
+VelocityShares 1x Long VSTOXX Futures,ETF
+VelocityShares Daily 4X Long USD vs. EUR,ETF
+VelocityShares Daily 4X Long EUR vs. USD,ETF
+VelocityShares 1x Daily Inverse VSTOXX Futures,ETF
+VelocityShares Daily 4X Long USD vs. CHF,ETF
+Vident International Equity,ETF
+Vident Core U.S. Equity,ETF
+Vident Core U.S. Bond Strategy,ETF
 WBI Tactical Income Shares,ETF
+WBI Power Factor High Dividend,ETF
 WBI Tactical LCY,ETF
 WBI Tactical LCV,ETF
 WBI Tactical LCS,ETF
@@ -3167,40 +4013,70 @@ WisdomTree Japan Hedged Equity,ETF
 WisdomTree India Earnings,ETF
 WisdomTree Bloomberg Floating Rate Treasury,ETF
 WisdomTree Europe Hedged Equity,ETF
+WisdomTree Barclays Yield Enhanced US Aggregate Bo,ETF
 WisdomTree Emerging Markets High Dividend,ETF
+WisdomTree MidCap Dividend,ETF
+WisdomTree MidCap Earnings,ETF
+WisdomTree SmallCap Dividend,ETF
 WisdomTree Emerging Markets SmallCap Dividend,ETF
 WisdomTree US Quality Dividend Growth,ETF
+WisdomTree LargeCap Dividend,ETF
+WisdomTree SmallCap Earnings,ETF
 WisdomTree Emerging Markets ex-State-Owned Enterpr,ETF
+WisdomTree Earnings 500,ETF
 WisdomTree International SmallCap Dividend,ETF
+WisdomTree International Quality Dividend Growth,ETF
 WisdomTree International Equity,ETF
 WisdomTree International High Dividend,ETF
 WisdomTree International Hedged Quality Dividend G,ETF
+WisdomTree Total Dividend,ETF
 WisdomTree Continuous Commodity,ETF
 WisdomTree Intenational LargeCap Dividend,ETF
 WisdomTree Interest Rate Hedged High Yield Bond Fd,ETF
+WisdomTree US Multifactor,ETF
+WisdomTree Dynamic Currency Hedged International E,ETF
 WisdomTree Barclays Interest Rate Hedge US Aggrega,ETF
+WisdomTree High Dividend,ETF
+WisdomTree CBOE S&P 500 PutWrite Strategy,ETF
 WisdomTree Emerging Markets Local Debt,ETF
 WisdomTree Europe SmallCap Dividend,ETF
+Wisdom Tree Dividend Ex-Financials,ETF
 WisdomTree Middle East Dividend,ETF
 WisdomTree US SmallCap Quality Dividend Growth,ETF
 WisdomTree Managed Futures Strategy,ETF
+WisdomTree Dynamic LongShort U.S. Equity,ETF
 WisdomTree International MidCap Dividend,ETF
+WisdomTree Dynamic Currency Hedged International S,ETF
 WisdomTree Global High Dividend,ETF
+WisdomTree Negative Duration High Yield Bond,ETF
+WisdomTree Fundamental U.S. High Yield Corporate B,ETF
 WisdomTree Global ex US Quality Dividend Growth,ETF
+WisdomTree EM Dividend Fund,ETF
 WisdomTree Japan SmallCap Dividend,ETF
 WisdomTree China ex-State-Owned Enterprises,ETF
 WisdomTree Global ex-US Real Estate,ETF
 WisdomTree Emerging Markets Quality Dividend Growt,ETF
 WisdomTree Japan Hedged SmallCap Equity,ETF
+WisdomTree Europe Hedged SmallCap Equity,ETF
 WisdomTree Barclays Negative Duration US Aggregate,ETF
 Wisdom Tree International Dividend Ex-Financials,ETF
 WisdomTree Europe Quality Dividend Growth,ETF
+WisdomTree Balanced Income,ETF
+WisdomTree Dynamic Bearish U.S. Equity Fund,ETF
 WisdomTree Emerging Markets Consumer Growth,ETF
 WisdomTree Bloomberg US Dollar Bullish,ETF
 WisdomTree Emerging Currency Strategy,ETF
 WisdomTree Chinese Yuan Strategy,ETF
+WisdomTree Total Earnings,ETF
+WisdomTree LargeCap Value,ETF
+WisdomTree Dynamic Currency Hedged International Q,ETF
+WisdomTree ICBCCS S&P China 500,ETF
 WisdomTree Emerging Markets Corporate Bond,ETF
+WisdomTree Japan Multifactor,ETF
 WisdomTree Asia-Pacific ex-Japan,ETF
+WisdomTree Europe Multifactor,ETF
+Xtrackers Low Beta High Yield Bond,ETF
+Xtrackers Short Duration High Yield,ETF
 U.S. 30Y,Bond
 U.S. 10Y,Bond
 U.S. 7Y,Bond

@@ -131,7 +131,7 @@ def main():
     IDEA FOR THRESHOLDS: By looking at the mean change in low avg / high max in a window lenght, we may be able to optimize our profits by dynamically changing the threshold according to the window length
 
     '''
-    '''
+
     #Threshold Testing:
     for i in range(48, 68):
         numShares = 10
@@ -163,6 +163,7 @@ def main():
     for i in range(0,10):
         print ("Num shares"  + str((i+1)*10) + ": Max Profit with best num shares: " + str(shareListLimit[i]))
         print()
+    '''
 
     print ("Control Profit: " + str(controlPortfolio.getTotalProfit()))
 
@@ -336,7 +337,6 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
     #list of features we want to track
     #featureList = [ticker+"_Open_max_Predicted",ticker+"_High_volatility_Predicted", ticker+"_High_max_Predicted"]
     featureList = ["Gold_Low_average_Predicted", "Gold_High_max_Predicted"]
-    lastDate = list(dataDF["Date"].values)[-1]
 
     #for each week in our testingDF, get desired predictedFEATURE(s) from the list
     for week in list(testingDF["Date"].values):
@@ -347,8 +347,7 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
         lowAvgP = testingDF.at[weekRowIndex, featureList[0]]
         highMaxP = testingDF.at[weekRowIndex, featureList[1]]
 
-
-        #Get the dataframe holding the weekly values for this week
+        #Get the dataframe holding the daily values for this week
         weekDF = weekDict[week]
 
         for day in list(weekDF["Date"].values): #For each daily value in the weekDF
@@ -364,7 +363,7 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
             if (list(weekDF["Date"].values).index(day) != len(list(weekDF["Date"].values))-1):
                 tomorrow = dataDF.at[dayRowIndex + 1, "Date"]
                 tomorrowOpen = dataDF.at[dayRowIndex + 1, "Open"]
-                if (low < lowAvgP + threshold): #Num shares bought is 20% of total available shares
+                if (low < lowAvgP + threshold): #Num shares bought is of total available shares
                     transaction = Transaction("GOLD", tomorrowOpen, numShares, tomorrow, "Buy", "Open")
                     portfolio.buyStock(transaction)
                     '''
@@ -373,7 +372,7 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
                     print ("High max predicted" + str(highMaxP))
                     '''
                 #If the actual high is within our predicted high minus some threshold, we sell the next trading day
-                if (high > highMaxP - threshold):
+                if (high > highMaxP - threshold): #maybe we want to compare the open price instead because this is the actual price that we are selling at
                     transaction = Transaction("GOLD", tomorrowOpen, numShares, tomorrow, "Sell", "Open")
                     portfolio.sellStock(transaction)
                     '''

@@ -174,8 +174,8 @@ def main():
 
     #algorithms being run on portfolios
     runControl(controlPortfolio, testingDF, dataDF, weeksDict)
-    runThresh(thresholdPortfolio, testingDF, dataDF, weeksDict)
-    runLimit(testingDF, dataDF, weeksDict)
+    runThresh(thresholdPortfolio, testingDF, dataDF, weeksDict, startBalance)
+    runLimit(testingDF, dataDF, weeksDict, startBalance)
 
     '''
     IDEA FOR THRESHOLDS: By looking at the mean change in low avg / high max in a window lenght, we may be able to optimize our profits by dynamically changing the threshold according to the window length
@@ -187,7 +187,7 @@ def runControl(controlPortfolio, testingDF, dataDF, weeksDict):
     algorithm_Control(controlPortfolio, testingDF, dataDF, weeksDict)
     print ("Control Profit: " + str(controlPortfolio.getTotalProfit()))
 
-def runThresh(thresholdPortfolio, testingDF, dataDF, weeksDict):
+def runThresh(thresholdPortfolio, testingDF, dataDF, weeksDict, startBalance):
     #Threshold Testing:
     profitList = []
     for i in range(48, 68):
@@ -208,7 +208,7 @@ def runThresh(thresholdPortfolio, testingDF, dataDF, weeksDict):
         print (prof)
         print()
 
-def runLimit(testingDF, dataDF, weeksDict):
+def runLimit(testingDF, dataDF, weeksDict, startBalance):
     numSharesLimit = 50
     shareListLimit = []
     for j in range(0,11):
@@ -403,14 +403,14 @@ def algorithm_Limits(portfolio, testingDF, dataDF, weekDict, numShares):
                 portfolio.sellStock(transaction)
 
 
-def dynamicThreshold():
+#def dynamicThreshold():
     #make an empty thresholdList (Will be of size WINDOW_LENGTH, whenever we would go over WINDOW_LENGTH we pop the first element and add new WINDOW_LENGTH index element to the end of the list)
     #the list will hold tuples of the threshold and profit for the week
     #calculate a starting threshold (calcThreshForCurrentWeek)
     #use that starting threshold for the first week
     #every week for WINDOW_LENGTH weeks we calculate a threshold for that week
     #when we get to WINDOW_LENGTH + 1 weeks, remove first element of the list, add the threshold that yielded the best profit out of the past 13 weeks
-    pass()
+    #pass()
 
 #portfolio is a portfolio, price is the close price of a week
 def bestThreshold(testingDF, dataDF,weekDict,threshold, numShares, price):
@@ -420,16 +420,16 @@ def bestThreshold(testingDF, dataDF,weekDict,threshold, numShares, price):
     portfolio_profit_list = []
     thresholdList = []
 
-        for i in range(startThres, endThres):
-            #portfolio = MainThresholdPortfolio
-            #algorithm_ApproachThreshold(portfolio, testingDF(from current week - WINDOW_LENGTH), dataDF, weekDict, i / 1000, numShares, price)
+    for i in range(startThres, endThres):
+        #portfolio = MainThresholdPortfolio
+        #algorithm_ApproachThreshold(portfolio, testingDF(from current week - WINDOW_LENGTH), dataDF, weekDict, i / 1000, numShares, price)
 
-            portfolio = Portfolio(1000, _configKeys.YVALUETICKER)
-            algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, i / 1000, numShares, price)
-            portfolio_profit_list.append(portfolio.getTotalProfit())
-            thresholdList.append(i / 1000)
+        portfolio = Portfolio(1000, _configKeys.YVALUETICKER)
+        algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, i / 1000, numShares, price)
+        portfolio_profit_list.append(portfolio.getTotalProfit())
+        thresholdList.append(i / 1000)
 
-        return thresholdList[portfolio_profit_list.index(max(portfolio_profit_list))]
+    return thresholdList[portfolio_profit_list.index(max(portfolio_profit_list))]
 
             #append(portfilio profit, threshold)
         #look at the list of length = window_length of THRESHOLDS

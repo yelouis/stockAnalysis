@@ -450,7 +450,7 @@ def bestThreshold(testingDF, dataDF,weekDict,threshold, numShares, price):
         #algorithm_ApproachThreshold(portfolio, testingDF(from current week - WINDOW_LENGTH), dataDF, weekDict, i / 1000, numShares, price)
 
         portfolio = Portfolio(1000, _configKeys.YVALUETICKER)
-        algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, i / 1000, numShares, price)
+        algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, i / 1000, numShares)
         portfolio_profit_list.append(portfolio.getTotalProfit())
         thresholdList.append(i / 1000)
 
@@ -482,7 +482,7 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
         #Get the dataframe holding the weekly values for this week
         weekDF = weekDict[week]
 
-        transactionCount = 0
+        daytradeCount = 0
         for day in list(weekDF["Date"].values): #For each daily value in the weekDF
             #Get the index of the current day within the weekly dataframe
             dayRowIndex = dataDF.index[dataDF['Date'] == day][0]
@@ -497,43 +497,68 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
 
             #lowThreshold = calculateMeanError()
             #highThreshold = calculateMeanError
+            notLast = False
             #convert this to elif logic -- can buy/sell at open/close but we want to avoid day trading
-
+            if day == list(weekDF["Date"].values)[-1]:
+                notLast = True
             #Allows for 3 day trade days at the most
-            if (transactionCount < 3):
+            if (daytradeCount < 3 and notLast == False):
                 #Open threshold checks
                 if (nearOpen < lowAvgP + threshold):
                     transaction = Transaction("GOLD", nearOpen, numShares, day, "Buy", "Open")
                     #portfolio.buyStock(transaction)
                     #portfolio.buyMax(transaction)
                     portfolio.nonRecursionBuyMax(nearOpen, day, "Open")
-                    transactionCount += 1
+                    transMadeToday = True
                 elif (nearOpen > highMaxP - threshold):
                     transaction = Transaction("GOLD", nearOpen, numShares, day, "Sell", "Open")
                     #portfolio.sellStock(transaction)
                     portfolio.sellMax(nearOpen, day, "Open")
-                    transactionCount += 1
+                    transMadeToday = True
+
                 #Close thresholds checks
-                if (nearClose < lowAvgP + threshold):
-                    transaction = Transaction("GOLD", nearClose, numShares, day, "Buy", "Close")
-                    #portfolio.buyStock(transaction)
-                    transactionCount += 1
-                    #portfolio.buyMax(transaction)
-                    portfolio.nonRecursionBuyMax(nearClose, day, "Close")
+                #if we have not max day traded, then we do this
+                if daytradeCount < 3:
+                    if (nearClose < lowAvgP + threshold):
+                        transaction = Transaction("GOLD", nearClose, numShares, day, "Buy", "Close")
+                        #portfolio.buyStock(transaction)
+                        if transMadeToday:
+                            daytradeCount += 1
+                        #portfolio.buyMax(transaction)
+                        portfolio.nonRecursionBuyMax(nearClose, day, "Close")
 
-                elif (nearClose > highMaxP - threshold):
-                    transaction = Transaction("GOLD", nearClose, numShares, day, "Sell", "Close")
-                    #portfolio.sellStock(transaction)
-                    portfolio.sellMax(nearClose, day, "Close")
-                    transactionCount += 1
-            #If we are in the last day of the trading week, sell all we have
+                    elif (nearClose > highMaxP - threshold):
+                        transaction = Transaction("GOLD", nearClose, numShares, day, "Sell", "Close")
+                        #portfolio.sellStock(transaction)
+                        portfolio.sellMax(nearClose, day, "Close")
+                        if transMadeToday:
+                            daytradeCount += 1
+
+                elif (transMadeToday == False):
+                    if (nearClose < lowAvgP + threshold):
+                        transaction = Transaction("GOLD", nearClose, numShares, day, "Buy", "Close")
+                        #portfolio.buyStock(transaction)
+                        #portfolio.buyMax(transaction)
+                        portfolio.nonRecursionBuyMax(nearClose, day, "Close")
+
+                    elif (nearClose > highMaxP - threshold):
+                        transaction = Transaction("GOLD", nearClose, numShares, day, "Sell", "Close")
+                        #portfolio.sellStock(transaction)
+                        portfolio.sellMax(nearClose, day, "Close")
+            #If we are in the last day of the trading week, sell all we have -- idea- maybe we would like to check to see if we wanna sell at open?
             if (day == list(weekDF["Date"].values)[-1]):
-                portfolio.sellMax(nearClose, day, "Close")
+                    if (nearOpen > highMaxP - threshold):
+                        transaction = Transaction("GOLD", nearOpen, numShares, day, "Sell", "Open")
+                        #portfolio.sellStock(transaction)
+                        portfolio.sellMax(nearOpen, day, "Open")
+                    else:
+                        portfolio.sellMax(nearClose, day, "Close")
 
 
 
 
 
+            '''
             #Sell on last day always to liquidate assets
             if day == lastDate:
                 dayRowIndex = dataDF.index[dataDF['Date'] == day][0]
@@ -541,7 +566,7 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
                 transaction = Transaction("GOLD", price, 700, day, "Sell", "Close")
                 #ticker, shareCost, numShares, date, transactionType, time
                 portfolio.sellStock(transaction)
-
+            '''
 
 
 #calculateMeanError will find the mean error between two lists: predictionList: the predicted data for a feature, actualList: the actual data for a feature

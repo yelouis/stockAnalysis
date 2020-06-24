@@ -113,14 +113,7 @@ class Portfolio:
             return True
         else:
             return False
-    '''
-    #same as validBuyTransaction, but for selling
-    def validSellTransaction(self, transaction):
-        if (transaction.getTotalPrice() >= self.getNumShares() * transaction.):
-            return True
-        else:
-            return False
-    '''
+
     def getTickerName(self):
         return self.ticker
 
@@ -169,38 +162,15 @@ def main():
     thresholdPortfolio = Portfolio(startBalance, _configKeys.YVALUETICKER)
     controlPortfolio = Portfolio(startBalance, _configKeys.YVALUETICKER)
 
-    meanErrorList = [] #meanErrorList is a list of tuples equal to a (featureName, meanErrorForFeatureName)
-
     testingDF = pd.read_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), "GOLD0.3_alpha13_beta_test_results.csv"))
     dataDF = pd.read_csv(os.path.join(Path(_configKeys.DATA_FOLDER), "GOLD.csv"))
     weeksDict = daysInWeekDict(dataDF)
 
-    '''
-    for i in range(2, len(testingDF.columns)-1):
-        col = testingDF.columns[i]
-        nextCol = testingDF.columns[i+1]
-
-        if "Predicted" in col:
-            colName = col.split("_")[:-1]
-            colName = str(colName[0]) + "_" + str(colName[1]) + "_" + str(colName[2])
-
-            predList = list(testingDF[col].values)
-            actList = list(testingDF[nextCol].values)
-
-            meanError = calculateMeanError(actList, predList)
-            meanErrorList.append((colName, meanError))
-    '''
-    #print(meanErrorList)
-
     #algorithms being run on portfolios
     runControl(controlPortfolio, testingDF, dataDF, weeksDict)
     runThresh(thresholdPortfolio, testingDF, dataDF, weeksDict, startBalance)
-    runLimit(testingDF, dataDF, weeksDict, startBalance)
+    #runLimit(testingDF, dataDF, weeksDict, startBalance)
 
-    '''
-    IDEA FOR THRESHOLDS: By looking at the mean change in low avg / high max in a window lenght, we may be able to optimize our profits by dynamically changing the threshold according to the window length
-
-    '''
 
 
 def runControl(controlPortfolio, testingDF, dataDF, weeksDict):
@@ -215,6 +185,7 @@ def runThresh(thresholdPortfolio, testingDF, dataDF, weeksDict, startBalance):
 
 
     '''
+    CAN IGNORE- we are keeping this code incase we have any reason to manually test thresholds/numshares by incrementing in the future
     profitList = []
     for i in range(48, 68):
         numShares = 50
@@ -304,34 +275,8 @@ def algorithm_Control(portfolio, testingDF, dataDF, weekDict):
                 portfolio.sellStock(transaction)
 
 
-
-def algorithm_MeanError(portfolio, testingDF, dataDF, weekDict):
-    #only use error for a specific window
-    #nextPrice - currPrice - meanError is positive -> buy
-    ticker = portfolio.getTickerName()
-    for week in list(testingDF["Date"].values):
-        #grabbing daily values for this week (we have the daily data in a DataFrame with 5 values)
-        weekDF = weekDict[week]
-        weekIndex = dataDF.index[dataDF['Date'] == day][0]
-
-        openPred = testingDF.at(weekIndex, _configKeys.YVALUETICKER + "_Open_max_Predicted")
-        closePred = testingDF.at(weekIndex, _configKeys.YVALUETICKER + "_Close_average_Predicted")
-        volitilityPred = testingDF.at(weekIndex, _configKeys.YVALUETICKER + "_Open_volatility_Predicted")
-        '''
-        openMeanError = calculateMeanError
-        closeMeanError =
-        volitilityMeanError =
-        #these are values we want to compare each daily ACTUAL value (Formatting -- maybe just make every word start with a capital Letter -- bring up in meeting)
-        for day in list(weekDF["Date"].values):
-        '''
-
-        #for day in list(daysDF["Date"].values):
-
-
-#idea- buy, and only sell if it goes above a predicted max
-
-
 '''
+CAN IGNORE-- we may want to still consider a changing the num shares we buy
 Smarter Threshold algorithm:
     1. More speciic buying / selling (E.g. if a stock is within the predicted high minus the threshold, sell x# of stock, if it's within the predicted high + threshold, sell x#*2 of stock)
     2. Looking at past week actuals versus current week predicted
@@ -346,6 +291,7 @@ counter:
     now stonk goes down to 8
 '''
 
+#our algo trader without thresholds
 def algorithm_Limits(portfolio, testingDF, dataDF, weekDict, numShares):
     ticker = portfolio.getTickerName()
 
@@ -377,9 +323,6 @@ def algorithm_Limits(portfolio, testingDF, dataDF, weekDict, numShares):
             #Get the index of the current day within the weekly dataframe
             dayRowIndex = dataDF.index[dataDF['Date'] == day][0]
             #Get the low and high values of the current day AT THE END OF THE DAY (3:59EST) IN ORDER TO MAKE PURCHASE AT OPEN OF NEXT DAY
-            #low = dataDF.at[dayRowIndex, "Low"]
-            #high = dataDF.at[dayRowIndex, "High"]
-
             #we approximate the 9:30:01AM EST (when we would actually buy/sell) value of the stock with the close price (In practice, we would simply get the stock price at that point and run it through our buy / sell algorithm)
             nearOpen = dataDF.at[dayRowIndex, "Open"]
             #we approximate the 3:59:59PM EST (when we would actually buy/sell) value of the stock with the close price (In practice, we would simply get the stock price at that point and run it through our buy / sell algorithm)
@@ -402,28 +345,6 @@ def algorithm_Limits(portfolio, testingDF, dataDF, weekDict, numShares):
                 transaction = Transaction("GOLD", nearClose, numShares, day, "Sell", "Close")
                 portfolio.sellStock(transaction)
 
-
-
-            '''
-                #If statement
-            if (list(weekDF["Date"].values).index(day) != len(list(weekDF["Date"].values))-1):
-                tomorrow = dataDF.at[dayRowIndex + 1, "Date"]
-                tomorrowOpen = dataDF.at[dayRowIndex + 1, "Open"]
-
-                #If the actual low is within our predicted low plus some threshold, we buy the next trading day
-                if (tomorrowOpen < lowAvgP + threshold):
-                    transaction = Transaction("GOLD", tomorrowOpen, numShares, tomorrow, "Buy", "Open")
-                    portfolio.buyStock(transaction)
-
-                    print(str(transaction))
-                    print ("Low average predicted" + str(lowAvgP))
-                    print ("High max predicted" + str(highMaxP))
-
-                #If the actual high is within our predicted high minus some threshold, we sell the next trading day
-                if (high > highMaxP - threshold):
-                    transaction = Transaction("GOLD", tomorrowOpen, numShares, tomorrow, "Sell", "Open")
-                    portfolio.sellStock(transaction)
-            '''
             #Sell on last day always to liquidate assets
             if day == lastDate:
                 dayRowIndex = dataDF.index[dataDF['Date'] == day][0]
@@ -431,16 +352,6 @@ def algorithm_Limits(portfolio, testingDF, dataDF, weekDict, numShares):
                 transaction = Transaction("GOLD", price, 700, day, "Sell", "Close")
                 #ticker, shareCost, numShares, date, transactionType, time
                 portfolio.sellStock(transaction)
-
-
-#def dynamicThreshold():
-    #make an empty thresholdList (Will be of size WINDOW_LENGTH, whenever we would go over WINDOW_LENGTH we pop the first element and add new WINDOW_LENGTH index element to the end of the list)
-    #the list will hold tuples of the threshold and profit for the week
-    #calculate a starting threshold (calcThreshForCurrentWeek)
-    #use that starting threshold for the first week
-    #every week for WINDOW_LENGTH weeks we calculate a threshold for that week
-    #when we get to WINDOW_LENGTH + 1 weeks, remove first element of the list, add the threshold that yielded the best profit out of the past 13 weeks
-    #pass()
 
 #portfolio is a portfolio, price is the close price of a week
 def bestThreshold(testingDF, dataDF,weekDict, date, price, threshold):
@@ -459,15 +370,12 @@ def bestThreshold(testingDF, dataDF,weekDict, date, price, threshold):
     testingIntervalDF = pd.DataFrame(columns = testingDF.columns)
 
     if weeksElapsed >= window_length:
-        iterDate = date - timedelta(days=window_length*7)
+        iterDate = date - timedelta(days=window_length*7) # using this to iter through currentDate - window_length to currentDate
 
         for i in range(window_length):
             weekRow = testingDF.loc[testingDF['Date'] == datetime.datetime.strftime(iterDate, '%Y-%m-%d')]
             testingIntervalDF = testingIntervalDF.append(weekRow)
             iterDate = iterDate + timedelta(days=7)
-
-
-
 
         for i in range(startThres, endThres):
             #portfolio = MainThresholdPortfolio
@@ -482,15 +390,10 @@ def bestThreshold(testingDF, dataDF,weekDict, date, price, threshold):
     else:
         return threshold
 
-            #append(portfilio profit, threshold)
-        #look at the list of length = window_length of THRESHOLDS
-            #pick the threshold that yielded the most profit for that week
-
-
 
 def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshold, isTest):
     ticker = portfolio.getTickerName()
-    endWeekPrice = 0
+    endWeekPrice = 0 # initializing to keep track so we can feed this to best threshold algorithm to test thresholds appropriately
 
     firstDate = list(testingDF["Date"].values)[0] #Set this to be the first day of the testingDF
     lastDate = list(dataDF["Date"].values)[-1]
@@ -513,9 +416,6 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
         for day in list(weekDF["Date"].values): #For each daily value in the weekDF
             #Get the index of the current day within the weekly dataframe
             dayRowIndex = dataDF.index[dataDF['Date'] == day][0]
-            #Get the low and high values of the current day AT THE END OF THE DAY (3:59EST) IN ORDER TO MAKE PURCHASE AT OPEN OF NEXT DAY
-            #low = dataDF.at[dayRowIndex, "Low"]
-            #high = dataDF.at[dayRowIndex, "High"]
 
             #we approximate the 9:30:01AM EST (when we would actually buy/sell) value of the stock with the close price (In practice, we would simply get the stock price at that point and run it through our buy / sell algorithm)
             nearOpen = dataDF.at[dayRowIndex, "Open"]
@@ -528,49 +428,34 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
             #convert this to elif logic -- can buy/sell at open/close but we want to avoid day trading
             if day == list(weekDF["Date"].values)[-1]:
                 notLast = True
-            #Allows for 3 day trade days at the most
+            #Allows for 3 day trade days at the most and will run on every trading day except last (on last day, we only sell)
             if (daytradeCount < 3 and notLast == False):
                 #Open threshold checks
                 if (nearOpen < lowAvgP + threshold):
-                    #transaction = Transaction("GOLD", nearOpen, numShares, day, "Buy", "Open")
-                    #portfolio.buyStock(transaction)
-                    #portfolio.buyMax(transaction)
                     portfolio.nonRecursionBuyMax(nearOpen, day, "Open")
                     transMadeToday = True
                 elif (nearOpen > highMaxP - threshold):
-                    #transaction = Transaction("GOLD", nearOpen, numShares, day, "Sell", "Open")
-                    #portfolio.sellStock(transaction)
                     portfolio.sellMax(nearOpen, day, "Open")
                     transMadeToday = True
 
                 #Close thresholds checks
                 #if we have not max day traded, then we do this
                 if daytradeCount < 3:
+
                     if (nearClose < lowAvgP + threshold):
-                        #transaction = Transaction("GOLD", nearClose, numShares, day, "Buy", "Close")
-                        #portfolio.buyStock(transaction)
                         if transMadeToday:
                             daytradeCount += 1
-                        #portfolio.buyMax(transaction)
                         portfolio.nonRecursionBuyMax(nearClose, day, "Close")
-
                     elif (nearClose > highMaxP - threshold):
-                        #transaction = Transaction("GOLD", nearClose, numShares, day, "Sell", "Close")
-                        #portfolio.sellStock(transaction)
                         portfolio.sellMax(nearClose, day, "Close")
                         if transMadeToday:
                             daytradeCount += 1
-
+                #if we havent trading earlier in the day and we cant day trade anymore, we run algotrader
                 elif (transMadeToday == False):
-                    if (nearClose < lowAvgP + threshold):
-                        #transaction = Transaction("GOLD", nearClose, numShares, day, "Buy", "Close")
-                        #portfolio.buyStock(transaction)
-                        #portfolio.buyMax(transaction)
-                        portfolio.nonRecursionBuyMax(nearClose, day, "Close")
 
+                    if (nearClose < lowAvgP + threshold):
+                        portfolio.nonRecursionBuyMax(nearClose, day, "Close")
                     elif (nearClose > highMaxP - threshold):
-                        #transaction = Transaction("GOLD", nearClose, numShares, day, "Sell", "Close")
-                        #portfolio.sellStock(transaction)
                         portfolio.sellMax(nearClose, day, "Close")
             #If we are in the last day of the trading week, sell all we have at open or close
             if (day == list(weekDF["Date"].values)[-1]):
@@ -581,23 +466,9 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
                     else:
                         portfolio.sellMax(nearClose, day, "Close")
 
-
-        #
         inputWeek = datetime.datetime.strptime(week, "%Y-%m-%d")
         if isTest == False:
             threshold = bestThreshold(testingDF, dataDF, weekDict, inputWeek, endWeekPrice, threshold)
-
-
-        '''
-            #Sell on last day always to liquidate assets
-            if day == lastDate:
-                dayRowIndex = dataDF.index[dataDF['Date'] == day][0]
-                price = dataDF.at[dayRowIndex, "Close"]
-                transaction = Transaction("GOLD", price, 700, day, "Sell", "Close")
-                #ticker, shareCost, numShares, date, transactionType, time
-                portfolio.sellStock(transaction)
-        '''
-
 
 #calculateMeanError will find the mean error between two lists: predictionList: the predicted data for a feature, actualList: the actual data for a feature
 def calculateMeanError(actualList, predictionList):
@@ -615,50 +486,6 @@ Possible algorithms: Should work with different featureNames in order to see whi
 3. Control algorithm: Buy beginning of the week, sell at the end
 '''
 
-'''
-def GetWeekDictionary(assetDF, include_volume):
-
-
-    #This piece of code breaks up the daily csv into weeks
-
-    startBinDatetime, endBinDatetime = datetime.datetime.strptime(_configKeys.STARTPULL, '%d/%m/%Y'), datetime.datetime.strptime(_configKeys.ENDPULL, '%d/%m/%Y')
-
-    countDatetime = startBinDatetime
-    #bins = [] might not need this anymore
-    datetimeBin = {}
-
-    while (countDatetime < endBinDatetime): # while the count time is not at the last week in the sequence
-        datetimeBin[countDatetime] = []
-        #bins.append(datetimeBin) we might not need this code anymore
-        countDatetime = countDatetime + timedelta(days=7)
-
-
-    #This first puts the y value into the bins list. This is to give us easy access when trying to move it to the yValues list
-
-    assetWeek = []
-    currentBinDate = startBinDatetime
-
-    for ind in assetDF.index:
-
-        # Current date for stock is past current bin.
-        if (datetime.datetime.strptime(assetDF['Date'][ind], '%Y-%m-%d') - currentBinDate).days > 7:
-            datetimeBin[currentBinDate] = assetWeek
-            currentBinDate = currentBinDate + timedelta(days=7)
-            if include_volume == True:
-                assetWeek = [[datetime.datetime.strptime(assetDF['Date'][ind], '%Y-%m-%d'), assetDF['Open'][ind], assetDF['High'][ind], assetDF['Low'][ind], assetDF['Close'][ind], assetDF['Volume'][ind]]]
-            else:
-                assetWeek = [[datetime.datetime.strptime(assetDF['Date'][ind], '%Y-%m-%d'), assetDF['Open'][ind], assetDF['High'][ind], assetDF['Low'][ind], assetDF['Close'][ind]]]
-        else:
-            if include_volume == True:
-                assetWeek.append([datetime.datetime.strptime(assetDF['Date'][ind], '%Y-%m-%d'), assetDF['Open'][ind], assetDF['High'][ind], assetDF['Low'][ind], assetDF['Close'][ind], assetDF['Volume'][ind]])
-            else:
-                assetWeek = [[datetime.datetime.strptime(assetDF['Date'][ind], '%Y-%m-%d'), assetDF['Open'][ind], assetDF['High'][ind], assetDF['Low'][ind], assetDF['Close'][ind]]]
-
-    # We have to do this one more time to get the values from the last week
-    datetimeBin[currentBinDate] = assetWeek
-
-    return datetimeBin
-'''
 #Inital: Both Control Reward and Lasso Reward start with a set amount of dollar
 
 #Goals: What happens if we bought the stock and just held on to it? (Control Reward)
@@ -671,13 +498,6 @@ def GetWeekDictionary(assetDF, include_volume):
 # if mean error > predicted increase, then don't buy
 
 # also maybe consider volatility
-
-
-
-
-
-
-
 #wireframe next week: outline of app with buttons but no functionality required
 
 main()

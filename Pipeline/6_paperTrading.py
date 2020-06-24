@@ -49,9 +49,10 @@ class Portfolio:
         while (transaction.getNumShares() > self.numSharesOwned):
             transaction.oneLessShare()
         if (transaction.getNumShares() > 0):
-            self.transactions.append((transaction, (self.numSharesOwned, self.balance)))
             self.numSharesOwned -= transaction.getNumShares()
             self.balance += transaction.getTotalPrice()
+            self.transactions.append((transaction, (self.numSharesOwned, self.balance)))
+
 
 
     def buyMax(self, transaction): #will take any transaction and make it buy max shares
@@ -60,11 +61,16 @@ class Portfolio:
         else:
             transaction.oneMoreShare()
             self.buyMax(transaction)
+            '''
+            self.numSharesOwned += transaction.getNumShares()
+            self.balance -= transaction.getTotalPrice()
+            self.transactions.append((transaction, (self.numSharesOwned, self.balance)))
+            '''
 
     def sellMax(self, price, date, time): #will take any transaction and make it sell shares
         self.balance += self.numSharesOwned * price
-        self.transactions.append(Transaction(self.ticker, price, self.numSharesOwned, date, "Sell", time), ((self.numSharesOwned, self.balance)))
         self.numSharesOwned = 0
+        self.transactions.append((Transaction(self.ticker, price, self.numSharesOwned, date, "Sell", time), ((self.numSharesOwned, self.balance))))
 
     #displayTransactions will print out all the transactions in the Portfolio within the timeframe specified
     def displayTransactions(self, startDate, endDate):
@@ -202,6 +208,8 @@ def runThresh(thresholdPortfolio, testingDF, dataDF, weeksDict, startBalance):
         print()
         profitList.append("Threshold: " + str(i/1000) + ": Best Num Shares: " + str(50 + shareList.index(max(shareList))*50) + ": Max Profit for threshold with best num shares: " + str(max(shareList)))
 
+    thresholdPortfolio.displayAllTransactions()
+    print()
     print("Threshold Algorithm Results:")
     print()
     for prof in profitList:
@@ -238,8 +246,8 @@ def daysInWeekDict(dataDF):
     for i in range(numWeeks):
         retDict[date.strftime("%Y-%m-%d")] = pd.DataFrame(columns = dataDF.columns)
         dates = [] # keeps track of valid dates (String) for a given week
-        for i in range(5):
-            currentDate = date + datetime.timedelta(days=i)
+        for j in range(5):
+            currentDate = date + datetime.timedelta(days=j)
             if currentDate.strftime("%Y-%m-%d") in list(dataDF["Date"].values):
                 dates.append(currentDate.strftime("%Y-%m-%d"))
                 #print(currentDate.strftime("%Y-%m-%d"))
@@ -365,6 +373,7 @@ def algorithm_Limits(portfolio, testingDF, dataDF, weekDict, numShares):
             if (nearOpen > highMaxP):
                 transaction = Transaction("GOLD", nearOpen, numShares, day, "Sell", "Open")
                 portfolio.sellStock(transaction)
+
             if (nearClose < lowAvgP):
                 transaction = Transaction("GOLD", nearClose, numShares, day, "Buy", "Close")
                 portfolio.buyStock(transaction)
@@ -442,14 +451,8 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
 
     firstDate = list(testingDF["Date"].values)[0] #Set this to be the first day of the testingDF
     lastDate = list(dataDF["Date"].values)[-1]
-
-    #Idea: ex- If the actual average High of first week of trading is greater than the predicted average high of second week, we do no buying at all no matter what
-
     #list of features we want to track
-    #featureList = [ticker+"_Open_max_Predicted",ticker+"_High_volatility_Predicted", ticker+"_High_max_Predicted"]
     featureList = ["Gold_Low_average_Predicted", "Gold_High_max_Predicted"]
-    lastDate = list(dataDF["Date"].values)[-1]
-
     #for each week in our testingDF, get desired predictedFEATURE(s) from the list
     for week in list(testingDF["Date"].values):
         #Get the index of the current week within the testing dataframe
@@ -478,19 +481,25 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
 
             #lowThreshold = calculateMeanError()
             #highThreshold = calculateMeanError
-
+            #convert this to elif logic -- can buy/sell at open/close but we want to avoid day trading 
+            '''
             if (nearOpen < lowAvgP + threshold):
                 transaction = Transaction("GOLD", nearOpen, numShares, day, "Buy", "Open")
                 portfolio.buyStock(transaction)
             if (nearOpen > highMaxP - threshold):
                 transaction = Transaction("GOLD", nearOpen, numShares, day, "Sell", "Open")
                 portfolio.sellStock(transaction)
+            '''
             if (nearClose < lowAvgP + threshold):
                 transaction = Transaction("GOLD", nearClose, numShares, day, "Buy", "Close")
-                portfolio.buyStock(transaction)
+                #portfolio.buyStock(transaction)
+                portfolio.buyMax(transaction)
             if (nearClose > highMaxP - threshold):
                 transaction = Transaction("GOLD", nearClose, numShares, day, "Sell", "Close")
-                portfolio.sellStock(transaction)
+                #portfolio.sellStock(transaction)
+                portfolio.sellMax(nearClose, day, "Close")
+
+
 
 
 
@@ -514,6 +523,8 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
                     transaction = Transaction("GOLD", tomorrowOpen, numShares, tomorrow, "Sell", "Open")
                     portfolio.sellStock(transaction)
             '''
+            #portfolio.sellMax()
+
             #Sell on last day always to liquidate assets
             if day == lastDate:
                 dayRowIndex = dataDF.index[dataDF['Date'] == day][0]

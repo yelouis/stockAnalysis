@@ -61,7 +61,7 @@ class Portfolio:
         maxSharesCanBuy = math.floor(self.balance / price)
         if (maxSharesCanBuy != 0):
             self.balance -= maxSharesCanBuy * price
-            self.numSharesOwned = maxSharesCanBuy
+            self.numSharesOwned += maxSharesCanBuy
             self.transactions.append(((price, date, "Buy", time), ((", Shares before transaction: " + str(startingShares) + " After transaction: " + str(self.numSharesOwned), "Balance before transaction: " + str(startingBalance) + " After transaction: " + str(self.balance)))))
 
 

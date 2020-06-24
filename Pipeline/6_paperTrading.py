@@ -217,12 +217,14 @@ def runThresh(thresholdPortfolio, testingDF, dataDF, weeksDict, startBalance):
             thresholdPortfolio = Portfolio(startBalance, _configKeys.YVALUETICKER)
             algorithm_ApproachThreshold(thresholdPortfolio, testingDF, dataDF, weeksDict, i / 1000, numShares)
             shareList.append(thresholdPortfolio.getTotalProfit())
-            print ("Threshold: " + str(i/1000) + "Shares: " + str(numShares) + ", Profit is: " + str(thresholdPortfolio.getTotalProfit()))
+            #print ("Threshold: " + str(i/1000) + "Shares: " + str(numShares) + ", Profit is: " + str(thresholdPortfolio.getTotalProfit()))
             numShares += 50
         print()
         profitList.append("Threshold: " + str(i/1000) + ": Best Num Shares: " + str(50 + shareList.index(max(shareList))*50) + ": Max Profit for threshold with best num shares: " + str(max(shareList)))
+        print("Transactions for threshold: " + str(i))
+        thresholdPortfolio.displayAllTransactions()
+        print()
 
-    thresholdPortfolio.displayAllTransactions()
     print()
     print("Threshold Algorithm Results:")
     print()

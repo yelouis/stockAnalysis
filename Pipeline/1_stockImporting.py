@@ -39,6 +39,12 @@ def import_stocks():
                                                 country='united states',
                                                 from_date=_configKeys.STARTPULL,
                                                 to_date=_configKeys.ENDPULL)
+            newIndex = []
+            for index in stockData.index:
+                newIndex.append(datetime.datetime.strptime(datetime.datetime.strftime((index + timedelta(days = 1)), '%Y-%m-%d'), '%Y-%m-%d'))
+            stockData['Date'] = newIndex
+            stockData.set_index('Date', inplace = True)
+
             # If there's something that's been loaded into stockData, then the length is no longer 0
             # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
             # this timedelta fixes the problem of trying to pull during a long weekend
@@ -60,22 +66,29 @@ def import_funds():
     lastIndex = datetime.datetime.strptime(_configKeys.ENDPULL, '%d/%m/%Y')
 
     for name in list_of_fund_names[:2500]:
+        try:
+            # Have an if statement in place in case if we don't want to pull every fund because there are a lot of funds
+            # Program takes a long time to run if we have to webscrape every fund each time we run
+            fundData = []
 
-        # Have an if statement in place in case if we don't want to pull every fund because there are a lot of funds
-        # Program takes a long time to run if we have to webscrape every fund each time we run
-        fundData = []
-
-        fundData = investpy.get_fund_historical_data(fund=name,
-                                            country='united states',
-                                            from_date=_configKeys.STARTPULL,
-                                            to_date=_configKeys.ENDPULL)
-        # If there's something that's been loaded into stockData, then the length is no longer 0
-        # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
-        # this timedelta fixes the problem of trying to pull during a long weekend
-        if fundData.empty == False and fundData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - fundData.index[-1] <= timedelta(days = 3):
-            sucessfulPulls["Symbol"].append(name.replace("/", ""))
-            sucessfulPulls["Type"].append("Fund")
-            fundData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name.replace("/", "")+'.csv'))
+            fundData = investpy.get_fund_historical_data(fund=name,
+                                                country='united states',
+                                                from_date=_configKeys.STARTPULL,
+                                                to_date=_configKeys.ENDPULL)
+            newIndex = []
+            for index in fundData.index:
+                newIndex.append(datetime.datetime.strptime(datetime.datetime.strftime((index + timedelta(days = 1)), '%Y-%m-%d'), '%Y-%m-%d'))
+            fundData['Date'] = newIndex
+            fundData.set_index('Date', inplace = True)
+            # If there's something that's been loaded into stockData, then the length is no longer 0
+            # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
+            # this timedelta fixes the problem of trying to pull during a long weekend
+            if fundData.empty == False and fundData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - fundData.index[-1] <= timedelta(days = 3):
+                sucessfulPulls["Symbol"].append(name.replace("/", ""))
+                sucessfulPulls["Type"].append("Fund")
+                fundData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name.replace("/", "")+'.csv'))
+        except:
+            print("Something went wrong when importing: " + name)
 
 
 def import_etfs():
@@ -97,6 +110,11 @@ def import_etfs():
                                                 country='united states',
                                                 from_date=_configKeys.STARTPULL,
                                                 to_date=_configKeys.ENDPULL)
+            newIndex = []
+            for index in etfData.index:
+                newIndex.append(datetime.datetime.strptime(datetime.datetime.strftime((index + timedelta(days = 1)), '%Y-%m-%d'), '%Y-%m-%d'))
+            etfData['Date'] = newIndex
+            etfData.set_index('Date', inplace = True)
             # If there's something that's been loaded into stockData, then the length is no longer 0
             # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
             # this timedelta fixes the problem of trying to pull during a long weekend
@@ -126,6 +144,11 @@ def import_bonds():
             bondData = investpy.get_bond_historical_data(bond=name,
                                                 from_date=_configKeys.STARTPULL,
                                                 to_date=_configKeys.ENDPULL)
+            newIndex = []
+            for index in bondData.index:
+                newIndex.append(datetime.datetime.strptime(datetime.datetime.strftime((index + timedelta(days = 1)), '%Y-%m-%d'), '%Y-%m-%d'))
+            bondData['Date'] = newIndex
+            bondData.set_index('Date', inplace = True)
             # If there's something that's been loaded into stockData, then the length is no longer 0
             # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
             # this timedelta fixes the problem of trying to pull during a long weekend
@@ -156,6 +179,11 @@ def import_commodities():
                                                 country='united states',
                                                 from_date=_configKeys.STARTPULL,
                                                 to_date=_configKeys.ENDPULL)
+            newIndex = []
+            for index in commodityData.index:
+                newIndex.append(datetime.datetime.strptime(datetime.datetime.strftime((index + timedelta(days = 1)), '%Y-%m-%d'), '%Y-%m-%d'))
+            commodityData['Date'] = newIndex
+            commodityData.set_index('Date', inplace = True)
             # If there's something that's been loaded into stockData, then the length is no longer 0
             # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
             # this timedelta fixes the problem of trying to pull during a long weekend

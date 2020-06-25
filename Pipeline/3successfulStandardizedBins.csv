@@ -131,6 +131,7 @@ CPST,Stock
 MRVL,Stock
 BLDP,Stock
 SIFY,Stock
+CDTI,Stock
 MDT,Stock
 DOV,Stock
 ASH,Stock
@@ -221,7 +222,6 @@ ATI,Stock
 XRX,Stock
 EFX,Stock
 GFI,Stock
-KNMCY,Stock
 MCK,Stock
 ETR,Stock
 CMS,Stock
@@ -462,6 +462,7 @@ RDY,Stock
 LNN,Stock
 PG,Stock
 WY,Stock
+ICAYY,Stock
 ADP,Stock
 DNR,Stock
 MDRX,Stock
@@ -501,6 +502,7 @@ FSLR,Stock
 MYL,Stock
 MKTAY,Stock
 MITSY,Stock
+WPFH,Stock
 FFIV,Stock
 EW,Stock
 NWSA,Stock
@@ -601,7 +603,6 @@ ACRX,Stock
 ACTG,Stock
 ACUR,Stock
 RAMP,Stock
-AGHC,Stock
 ADES,Stock
 ADUS,Stock
 AEGN,Stock
@@ -641,6 +642,7 @@ AMSWA,Stock
 AMTD,Stock
 AMWD,Stock
 ANAT,Stock
+GNOW,Stock
 ANDE,Stock
 ANGO,Stock
 ANIK,Stock
@@ -651,6 +653,7 @@ APEI,Stock
 APOG,Stock
 RIOT,Stock
 SEEL,Stock
+IRCP,Stock
 APWC,Stock
 ARAY,Stock
 JAN,Stock
@@ -669,7 +672,6 @@ ARWR,Stock
 ASB,Stock
 ASFI,Stock
 ASGN,Stock
-ASMLF,Stock
 ASNA,Stock
 ASRV,Stock
 ASTC,Stock
@@ -749,6 +751,7 @@ BRID,Stock
 BRKL,Stock
 BRKS,Stock
 BSET,Stock
+BSPM,Stock
 BSQR,Stock
 BSRR,Stock
 BSTC,Stock
@@ -798,7 +801,6 @@ CEVA,Stock
 CFBK,Stock
 CFFI,Stock
 CFFN,Stock
-CFNB,Stock
 PME,Stock
 CGEN,Stock
 CGNX,Stock
@@ -836,6 +838,7 @@ CNMD,Stock
 CNSL,Stock
 CNTFY,Stock
 CNTY,Stock
+VIEWF,Stock
 COHR,Stock
 COHU,Stock
 COKE,Stock
@@ -905,6 +908,7 @@ DAKT,Stock
 BBQ,Stock
 DCIX,Stock
 DCOM,Stock
+DCTH,Stock
 DENN,Stock
 ASRT,Stock
 DESTQ,Stock
@@ -1065,7 +1069,6 @@ GIGM,Stock
 GIII,Stock
 GILT,Stock
 GLBS,Stock
-GLBZ,Stock
 GLDD,Stock
 GLNG,Stock
 GLRE,Stock
@@ -1104,6 +1107,7 @@ HCSG,Stock
 HDSN,Stock
 HEES,Stock
 HELE,Stock
+HFBL,Stock
 HFWA,Stock
 HGSH,Stock
 HSON,Stock
@@ -1157,7 +1161,6 @@ III,Stock
 IIIN,Stock
 IIN,Stock
 IIVI,Stock
-IKNX,Stock
 IMGN,Stock
 IMKTA,Stock
 IMMR,Stock
@@ -1254,7 +1257,6 @@ LPSN,Stock
 LPTH,Stock
 LQDT,Stock
 GNSS,Stock
-LSBK,Stock
 LSCC,Stock
 LSTR,Stock
 LTBR,Stock
@@ -1287,6 +1289,7 @@ MGIC,Stock
 MGLN,Stock
 MGPI,Stock
 MGRC,Stock
+MGYR,Stock
 MHLD,Stock
 MIND,Stock
 MINI,Stock
@@ -1309,7 +1312,6 @@ MNTX,Stock
 MOFG,Stock
 MORN,Stock
 MOSY,Stock
-USWS,Stock
 MPB,Stock
 TELL,Stock
 MPWR,Stock
@@ -1320,6 +1322,7 @@ MSBF,Stock
 MSEX,Stock
 MSON,Stock
 MSTR,Stock
+MTEX,Stock
 MTRX,Stock
 MTSC,Stock
 MTSL,Stock
@@ -1350,7 +1353,6 @@ NKTR,Stock
 NLNK,Stock
 NNBR,Stock
 NRIM,Stock
-NSEC,Stock
 NSIT,Stock
 NSSC,Stock
 NSYS,Stock
@@ -1387,6 +1389,7 @@ OMER,Stock
 OMEX,Stock
 ONCY,Stock
 ON,Stock
+OPHC,Stock
 OPOF,Stock
 OPTT,Stock
 GEC,Stock
@@ -1630,6 +1633,7 @@ DSS,Stock
 DMF,Stock
 GRF,Stock
 CEV,Stock
+EVY,Stock
 EIM,Stock
 ENX,Stock
 EVM,Stock
@@ -1655,11 +1659,13 @@ AUMN,Stock
 GV,Stock
 AIM,Stock
 HUSA,Stock
+IEC,Stock
 IBIO,Stock
 IMH,Stock
 IOR,Stock
 INFU,Stock
 COHN,Stock
+IHT,Stock
 IDN,Stock
 VKI,Stock
 ISR,Stock
@@ -1692,6 +1698,7 @@ RCG,Stock
 RVP,Stock
 RIF,Stock
 SEB,Stock
+SVT,Stock
 SIF,Stock
 XPL,Stock
 SSY,Stock
@@ -1808,6 +1815,7 @@ CCU,Stock
 CNQ,Stock
 CYD,Stock
 EBR,Stock
+EDU,Stock
 EPR,Stock
 GPK,Stock
 MLP,Stock
@@ -2292,6 +2300,7 @@ CZZ,Stock
 EBF,Stock
 EDN,Stock
 GGG,Stock
+REDFY,Stock
 AVVIY,Stock
 SKHHY,Stock
 NJDCY,Stock
@@ -2348,9 +2357,9 @@ AXAHY,Stock
 BAESY,Stock
 BAFYY,Stock
 BDORY,Stock
+BKHYY,Stock
 BACHY,Stock
 BKRKY,Stock
-AGRPY,Stock
 BASFY,Stock
 BAYRY,Stock
 BMWYY,Stock
@@ -2386,7 +2395,6 @@ AdvisorShares Vice ETF,ETF
 AdvisorShares Pacific Asset Enhanced Fl Rate,ETF
 AdvisorShares Wilshire Buyback,ETF
 Madrona Global Bond,ETF
-AdvisorShares Cornerstone Small Cap,ETF
 Star Global Buy-Write,ETF
 Alpha Architect Value Momentum Trend,ETF
 MomentumShares U.S. Quantitative Momentum,ETF
@@ -2402,8 +2410,6 @@ ALPS Disruptive Technologies,ETF
 ALPS Alerian Energy Infrastructure,ETF
 ALPS Emerging Sector Dividend Dogs,ETF
 ALPS Equal Sector Weight,ETF
-American Century STOXX U.S. Quality Value,ETF
-American Century Diversified Corporate Bond,ETF
 Amplify Online Retail,ETF
 Amplify YieldShares CWP Dividend Option Income,ETF
 ARK Innovation,ETF
@@ -2429,7 +2435,6 @@ Barclays + S&P VEQTOR Exp 08 Sep 2020,ETF
 Barclays FI Enhanced Europe 50 B,ETF
 iPath Pure Beta Crude Oil Exp 18 Apr 2041,ETF
 iPath S&P 500 Dynamic VIX Exp 18 Aug 2021,ETF
-Barclays Women in Leadership,ETF
 iPath Pure Beta Broad Commodity Exp 18 Apr 2041,ETF
 iPath GSCI Total Return Exp 12 Jun 2036,ETF
 BioShares Biotechnology Products,ETF
@@ -2446,7 +2451,6 @@ Cambria Value and Momentum,ETF
 Cambria Foreign Shareholder Yield,ETF
 Cambria Sovereign Bond,ETF
 Citigroup C-Tracks MillerHoward MLP Fundamental,ETF
-Citigroup C-Tracks MillerHoward Strategic Dividen,ETF
 Columbia EM Consumer,ETF
 Columbia EM Core ex-China,ETF
 Columbia India Consumer,ETF
@@ -2462,6 +2466,7 @@ Victory CEMP US Large Cap High Div Volatility Weig,ETF
 Victory CEMP US EQ Income Enhanced Volatility Weig,ETF
 Victory CEMP US 500 Enhanced Volatility Weighted,ETF
 Victory CEMP International High Dividend Volatilit,ETF
+Victory CEMP US Small Cap Volatility Weighted,ETF
 Victory CEMP International Volatility Weighted,ETF
 Credit Suisse X-Links Monthly Pay 2xLeveraged Mort,ETF
 Credit Suisse X-Links Monthly Pay 2xLeveraged Aler,ETF
@@ -2481,7 +2486,6 @@ Deutsche X-trackers MSCI Japan Hedged Equity,ETF
 Deutsche X-trackers MSCI Europe Hedged Equity,ETF
 Deutsche X-trackers High Yield Corporate,ETF
 Deutsche X-trackers MSCI EAFE High Dividend Yield,ETF
-Xtrackers International Real Estate,ETF
 Deutsche X-trackers Municipal Infrastructure Reven,ETF
 Deutsche X-trackers MSCI Emerging Markets Hedged E,ETF
 Deutsche X trackers Russell 1000,ETF
@@ -2694,7 +2698,6 @@ First Trust Strategic Income,ETF
 First Trust Emerging Markets Small Cap AlphaDEX,ETF
 First Trust NASDAQ Clean Edge Green Energy,ETF
 First Trust RBA American Industrial Renaissance,ETF
-First Trust Municipal High Income,ETF
 First Trust NASDAQ Smartphone,ETF
 First Trust International IPO,ETF
 First Trust High Income,ETF
@@ -2703,6 +2706,7 @@ First Trust Japan AlphaDEX,ETF
 First Trust NASDAQ ABA Community Bank,ETF
 First Trust Dow 30 Equal Weight,ETF
 First Trust ISE Chindia,ETF
+First Trust China AlphaDEX,ETF
 First Trust Alternative Absolute Return Strategy,ETF
 First Trust NASDAQ-100 Ex-Technology Sector,ETF
 First Trust Dow Jones Select MicroCap,ETF
@@ -2720,12 +2724,13 @@ First Trust Multi Cap Value AlphaDEX,ETF
 First Trust FTSE EPRANAREIT Global Developed Mark,ETF
 First Trust RiverFront Dynamic Asia Pacific,ETF
 First Trust Intl Multi-Asset Diversified Inc,ETF
+First Trust Low Beta Income,ETF
 First Trust Global Natural Resources Income,ETF
 First Trust CEF Income Opportunity,ETF
 First Trust Nasdaq Food & Beverage,ETF
+First Trust Global Agriculture,ETF
 First Trust Mega Cap AlphaDEX,ETF
 First Trust NASDAQ Clean Edge Smart Grid Infrastru,ETF
-First Trust Taiwan AlphaDEX,ETF
 First Trust Nasdaq Oil & Gas,ETF
 First Trust Nasdaq Retail,ETF
 First Trust NASDAQ Global Auto,ETF
@@ -2736,6 +2741,7 @@ First Trust Nasdaq Transport,ETF
 First Trust Developed Markets ex-US Small Cap Alph,ETF
 First Trust Australia AlphaDEX,ETF
 First Trust Morningstar Managed Futures Strategy,ETF
+First Trust Nasdaq Pharm,ETF
 First Trust South Korea AlphaDEX,ETF
 EquityCompass Tactical Risk Manager,ETF
 EquityCompass Equity Risk Manager,ETF
@@ -2754,7 +2760,6 @@ FlexShares Ready Access Variable Income,ETF
 FlexShares Morningstar US Market Factor Tilt,ETF
 FlexShares Core Select,ETF
 FlexShares US Quality Large Cap,ETF
-FlexShares Credit-Scored US Corp Bond,ETF
 FlexShares Credit-Scored US Long Corporate Bond,ETF
 FlexShares Real Assets Allocation,ETF
 FlexShares Disciplined Duration MBS,ETF
@@ -2762,7 +2767,6 @@ FlexShares International Quality Dividend Defensiv,ETF
 FlexShares STOXX Global ESG Impact,ETF
 FlexShares Currency Hedged Morningstar EM,ETF
 FlexShares STOXX US ESG Impact,ETF
-FlexShares Quality Dividend Dynamic,ETF
 FlexShares Currency Hedged Morningstar DM ex-US,ETF
 Franklin LibertyQ US,ETF
 Franklin Liberty Investment Grade Corporate,ETF
@@ -2832,7 +2836,6 @@ Global X Scientific Beta Europe,ETF
 Global X Scientific Beta US,ETF
 Global X Next Emerging & Frontier,ETF
 Global X FTSE Nordic Region,ETF
-Global X Scientific Beta Asia ex Japan,ETF
 Global X MSCI China Communication Services,ETF
 Global X Scientific Beta Japan,ETF
 Global X FertilizersPotash,ETF
@@ -2898,8 +2901,6 @@ Guggenheim S&P MidCap 400 EW,ETF
 Guggenheim Invest S&P Global Dividend Opptys,ETF
 Guggenheim MSCI EM Equal Country Weight,ETF
 Guggenheim CurrencyShares Swedish Krona,ETF
-Hartford Total Return Bond,ETF
-Hartford Municipal Opportunities,ETF
 Hartford Multifactor Low Volatility US Equity,ETF
 Hartford Multifactor Low Volatility International,ETF
 Horizons SP 500 Covered Call,ETF
@@ -2927,7 +2928,6 @@ IQ Global Agribusiness Small Cap,ETF
 IQ Hedge Event-Driven Tracker,ETF
 IQ Enhanced Core Bond US,ETF
 IQ Real Return,ETF
-IQ Hedge Market Neutral Tracker,ETF
 iShares MSCI Emerging Markets,ETF
 iShares Silver,ETF
 iShares China Large-Cap,ETF
@@ -3234,9 +3234,8 @@ iShares MSCI Qatar Capped,ETF
 iShares Int High Yield Bond,ETF
 iShares MSCI UAE Capped,ETF
 iShares Adapt Cur Hdg MSCI EAFE,ETF
-iShares iBonds Mar 2023 Corp ex-Financials,ETF
 iShares Currency Hedged MSCI Spain,ETF
-iShares Currency Hedged MSCI Switzerland,ETF
+iShares Russell 1000 Pure US Revenue,ETF
 iShares Currency Hedged MSCI South Korea,ETF
 iShares Currency Hdg JPX Nikkei 400,ETF
 Janus Short Duration Income,ETF
@@ -3269,7 +3268,6 @@ JPMorgan Disciplined High Yield,ETF
 JPMorgan Diversified Return US Equity,ETF
 JPMorgan Global Bond Opportunities ETF,ETF
 JPMorgan Diversified Return Global Equity,ETF
-JPMorgan Managed Futures Strategy,ETF
 JPMorgan Diversified Return Europe Equity,ETF
 JPMorgan Event Driven,ETF
 KraneShares CSI China Internet,ETF
@@ -3291,13 +3289,11 @@ ClearBridge All Cap Growth,ETF
 Main Sector Rotation,ETF
 iPath  US Treasury 10-year Bear,ETF
 iPath US Treasury Long Bond Bear,ETF
-Barclays Inverse US Treasury Aggregate,ETF
 iPath US Treasury 2 year Bear,ETF
 iPath US Treasury 5-year Bear,ETF
 Morgan Stanley Cushing MLP High Income Exp 21 Mar,ETF
 Nationwide Risk-Based International Equity,ETF
 Natixis Seeyond International Minimum Volatility,ETF
-Natixis Loomis Sayles Short Duration Income,ETF
 Neuberger Berman MLP IF,ETF
 NexPoint Credit Strategies,ETF
 Anfield Capital Diversified Alternatives,ETF
@@ -3601,7 +3597,6 @@ ProShares Ultra 20+ Year Treasury,ETF
 ProShares UltraShort Semiconductors,ETF
 ProShares Ultra 7-10 Year Treasury,ETF
 ProShares Short Real Estate,ETF
-ProShares Inflation Expectations,ETF
 ProShares UltraShort FTSE Europe,ETF
 ProShares High Yield Interest Rate,ETF
 ProShares Ultra MSCI Emerging Markets,ETF
@@ -3622,7 +3617,6 @@ ProShares Ultra Consumer Services,ETF
 ProShares Global Listed Private Equity,ETF
 ProShares UltraShort SmallCap600,ETF
 ProShares UltraShort Health Care,ETF
-ProShares UltraShort MSCI EAFE,ETF
 ProShares Ultra MSCI Japan,ETF
 ProShares Ultra Consumer Goods,ETF
 ProShares UltraShort Consumer Services,ETF
@@ -3844,7 +3838,6 @@ UBS E-TRACS linked to DBloomberg Commodity Total R,ETF
 UBS E-TRACS Monthly Pay 2xLeveraged S&P Dividend,ETF
 UBS E-TRACS Monthly Pay 2xLeveraged Dow Jones Sele,ETF
 UBS E-TRACS Alerian Natural Gas MLP,ETF
-UBS ETRACS S&P GSCI Crude Oil TR,ETF
 UBS E-TRACS Bloomberg CMCI Food,ETF
 USAA Core Intermediate-Term Bond,ETF
 USAA MSCI USA Small Cap Value Momentum Blend,ETF
@@ -3905,7 +3898,6 @@ VanEck Vectors ChinaAMC A-Share,ETF
 VanEck Vectors Natural Resources,ETF
 VanEck Vectors Low Carbon Energy,ETF
 VanEck Vectors Green Bond,ETF
-VanEck Vectors Uranium+Nuclear Energy,ETF
 Morgan Stanley Market Vectors 2X Euro,ETF
 VanEck Vectors Russia Small-Cap,ETF
 VanEck Vectors ChinaAMC China Bond,ETF
@@ -3999,7 +3991,6 @@ VelocityShares 1x Long VSTOXX Futures,ETF
 VelocityShares Daily 4X Long USD vs. EUR,ETF
 VelocityShares Daily 4X Long EUR vs. USD,ETF
 VelocityShares 1x Daily Inverse VSTOXX Futures,ETF
-VelocityShares Daily 4X Long USD vs. CHF,ETF
 Vident International Equity,ETF
 Vident Core U.S. Equity,ETF
 Vident Core U.S. Bond Strategy,ETF
@@ -4063,6 +4054,7 @@ Wisdom Tree International Dividend Ex-Financials,ETF
 WisdomTree Europe Quality Dividend Growth,ETF
 WisdomTree Balanced Income,ETF
 WisdomTree Dynamic Bearish U.S. Equity Fund,ETF
+WisdomTree Germany Hedged Equity,ETF
 WisdomTree Emerging Markets Consumer Growth,ETF
 WisdomTree Bloomberg US Dollar Bullish,ETF
 WisdomTree Emerging Currency Strategy,ETF
@@ -4077,16 +4069,6 @@ WisdomTree Asia-Pacific ex-Japan,ETF
 WisdomTree Europe Multifactor,ETF
 Xtrackers Low Beta High Yield Bond,ETF
 Xtrackers Short Duration High Yield,ETF
-U.S. 30Y,Bond
-U.S. 10Y,Bond
-U.S. 7Y,Bond
-U.S. 5Y,Bond
-U.S. 3Y,Bond
-U.S. 3M,Bond
-U.S. 1Y,Bond
-U.S. 6M,Bond
-U.S. 1M,Bond
-U.S. 2Y,Bond
 Gold,Commodity
 Copper,Commodity
 Silver,Commodity

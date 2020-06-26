@@ -290,7 +290,6 @@ def bestThreshold(testingDF, dataDF,weekDict, date, price, threshold):
         for i in range(startThres, endThres):
             #portfolio = MainThresholdPortfolio
             #algorithm_ApproachThreshold(portfolio, testingDF(from current week - WINDOW_LENGTH), dataDF, weekDict, i / 1000, numShares, price)
-
             portfolio = Portfolio(1000, _configKeys.YVALUETICKER)
             algorithm_ApproachThreshold(portfolio, testingIntervalDF, dataDF, weekDict, i / 1000, True)
             portfolio_profit_list.append(portfolio.getTotalProfit())
@@ -311,7 +310,7 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
     lastDate = list(dataDF["Date"].values)[-1]
     #list of features we want to track
 
-    featureList = ["Gold" + "_Low_average_Predicted", "Gold" +"_High_average_Predicted"] # make it uniform -- we want gold ticker to be capitalized
+    featureList = [_configKeys.YVALUETICKER + "_Low_average_Predicted", _configKeys.YVALUETICKER +"_High_average_Predicted"] # make it uniform -- we want gold ticker to be capitalized
     #for each week in our testingDF, get desired predictedFEATURE(s) from the list
     for week in list(testingDF["Date"].values):
         #Get the index of the current week within the testing dataframe
@@ -320,7 +319,8 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
         #Find the low_average_predicted and high_max_predicted for that week
         lowMinP = testingDF.at[weekRowIndex, featureList[0]]
         highMaxP = testingDF.at[weekRowIndex, featureList[1]]
-
+        if (isTest == False):
+            print(str(week))
         #Get the dataframe holding the weekly values for this week
         weekDF = weekDict[week]
         #daytradeCount holds the number of day trades we've done in a week to make sure we don't day trade too many times

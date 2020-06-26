@@ -176,14 +176,16 @@ def main():
     threshTransList = thresholdPortfolio.getTransactions()
     threshDF = pd.DataFrame(columns = ["Date", "Time", "Ticker", "Price", "Transaction Type", "Shares before", "Shares After", "Balance Before", "Balance After"])
     for i in range(len(threshTransList)):
-        threshDF.append(threshTransList[i])
-    threshDF.to_csv(os.path.join(Path(_configKeys.PAPER_RESULTS_FOLDER, _configKeys.YVALUETICKER+"_threshold.csv")))
+        transaction = pd.Series(threshTransList[i], index = threshDF.columns)
+        threshDF = threshDF.append(transaction, ignore_index = True)
+    threshDF.to_csv(os.path.join(Path(_configKeys.PAPER_RESULTS_FOLDER), _configKeys.YVALUETICKER+"_threshold.csv"))
 
     controlTransList = controlPortfolio.getTransactions()
     controlDF = pd.DataFrame(columns = ["Date", "Time", "Ticker", "Price", "Transaction Type", "Shares before", "Shares After", "Balance Before", "Balance After"])
     for i in range(len(controlTransList)):
-        controlDF.append(threshTransList[i])
-    controlDF.to_csv(os.path.join(Path(_configKeys.PAPER_RESULTS_FOLDER, _configKeys.YVALUETICKER+"_control.csv")))
+        transaction = pd.Series(controlTransList[i], index = controlDF.columns)
+        controlDF = controlDF.append(transaction, ignore_index=True)
+    controlDF.to_csv(os.path.join(Path(_configKeys.PAPER_RESULTS_FOLDER), _configKeys.YVALUETICKER+"_control.csv"))
 
     #def __init__(self, ticker, price, date, time, transactionType, sharesBefore, sharesAfter, balanceBefore, balanceAfter):
 

@@ -138,7 +138,7 @@ def main():
             sucessfulBins["Symbol"].append(name)
             sucessfulBins["Type"].append(asset_class)
         except:
-            print(str(name) + "has missing data or doesn't bin correctly")
+            print(str(name) + " has missing data or doesn't bin correctly")
 
 
     df = pd.DataFrame(sucessfulBins, columns = ["Symbol", "Type"])

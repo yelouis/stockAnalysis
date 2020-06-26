@@ -40,14 +40,16 @@ class Portfolio:
 
     #buyStock will attempt to buy the amount of stock A specified and if the Portfolio doesn't have enough money, will buy as much of stock A as possible
     #wont use but if we do, this is wrong
+    #just do buy max
     def buyStock(self, transaction):
         while(self.validBuyTransaction(transaction) == False):
             transaction.oneLessShare()
         if (transaction.getNumShares() > 0):
-            self.transactions.append((transaction, (self.numSharesOwned, self.balance)))
+            self.transactions.append(transaction.listTransaction())
             self.numSharesOwned += transaction.getNumShares()
             self.balance -= transaction.getTotalPrice()
 
+    #so just sell max instead
     #sellStock will attempt to sell the amount of stock A specified and if the Portfolio doesn't at least have the # of stock specified, will sell as much of stock A as possible
     def sellStock(self, transaction):
         while (transaction.getNumShares() > self.numSharesOwned):
@@ -55,7 +57,7 @@ class Portfolio:
         if (transaction.getNumShares() > 0):
             self.numSharesOwned -= transaction.getNumShares()
             self.balance += transaction.getTotalPrice()
-            self.transactions.append((transaction, (self.numSharesOwned, self.balance)))
+            self.transactions.append(transaction.listTransaction())
 
     def buyMax(self, price, date, time):
         startingShares = self.numSharesOwned
@@ -125,15 +127,15 @@ class Transaction:
             self.transPrice = self.price * self.numShares
 
     def listTransaction(self):
-        return [str(self.ticker), str(self.price), str(self.date), str(self.time), str(self.transactionType), str(self.sharesBefore), str(self.sharesAfter), str(self.balanceBefore), str(self.balanceAfter)]
+        return [str(self.date), str(self.time), str(self.ticker), str(self.price), str(self.transactionType), str(self.sharesBefore), str(self.sharesAfter), str(self.balanceBefore), str(self.balanceAfter)]
 
     #getDate will return the date of the transaction
     def getDate(self):
         return self.date
 
-    #getTotalPrice will return the total price of the transaction
+    #getTransactionPrice will return the total price of the transaction
     def getTransactionPrice(self):
-        return -self.transPrice
+        return self.transPrice
 
     #getNumShares will return the number of shares specified in this transaction
     def getNumShares(self):
@@ -154,7 +156,12 @@ class Transaction:
         self.totalPrice = self.shareCost * self.numShares
 
 def main():
+<<<<<<< HEAD
     #Setting starting balance for portfolio and window_length
+=======
+    #for friday: have control algorithm run, and have algorithm #1 run, and output it somehow with a csv
+    #titleTicker = (lower(_configKeys.YVALUETICKER)).title() # ex: yvalueticker = "GOLD", titleTicker = "Gold"
+>>>>>>> 0313b7970a912b237144a417d16a320948ee0e18
     startBalance = 1000
     window_length = _configKeys.WINDOW_LENGTH
 
@@ -162,16 +169,45 @@ def main():
     thresholdPortfolio = Portfolio(startBalance, _configKeys.YVALUETICKER)
     controlPortfolio = Portfolio(startBalance, _configKeys.YVALUETICKER)
 
+<<<<<<< HEAD
     #Initializing data structures
     testingDF = pd.read_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), "GOLD0.3_alpha13_beta_test_results.csv"))
     dataDF = pd.read_csv(os.path.join(Path(_configKeys.DATA_FOLDER), "GOLD.csv"))
+=======
+    testingDF = pd.read_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), _configKeys.YVALUETICKER + "0.3_alpha13_beta_test_results.csv"))
+    dataDF = pd.read_csv(os.path.join(Path(_configKeys.DATA_FOLDER), _configKeys.YVALUETICKER+".csv"))
+>>>>>>> 0313b7970a912b237144a417d16a320948ee0e18
     weeksDict = daysInWeekDict(dataDF)
 
     #Algorithms being run on portfolios
     runControl(controlPortfolio, testingDF, dataDF, weeksDict)
     runThresh(thresholdPortfolio, testingDF, dataDF, weeksDict, startBalance)
 
+<<<<<<< HEAD
 #Runs the control algorithm and prints the profit achieved
+=======
+    threshTransList = thresholdPortfolio.getTransactions()
+    threshDF = pd.DataFrame(columns = ["Date", "Time", "Ticker", "Price", "Transaction Type", "Shares before", "Shares After", "Balance Before", "Balance After"])
+    for i in range(len(threshTransList)):
+        transaction = pd.Series(threshTransList[i], index = threshDF.columns)
+        threshDF = threshDF.append(transaction, ignore_index = True)
+    threshDF.to_csv(os.path.join(Path(_configKeys.PAPER_RESULTS_FOLDER), _configKeys.YVALUETICKER+"_threshold.csv"))
+
+    controlTransList = controlPortfolio.getTransactions()
+    controlDF = pd.DataFrame(columns = ["Date", "Time", "Ticker", "Price", "Transaction Type", "Shares before", "Shares After", "Balance Before", "Balance After"])
+    for i in range(len(controlTransList)):
+        transaction = pd.Series(controlTransList[i], index = controlDF.columns)
+        controlDF = controlDF.append(transaction, ignore_index=True)
+    controlDF.to_csv(os.path.join(Path(_configKeys.PAPER_RESULTS_FOLDER), _configKeys.YVALUETICKER+"_control.csv"))
+
+    #def __init__(self, ticker, price, date, time, transactionType, sharesBefore, sharesAfter, balanceBefore, balanceAfter):
+
+    #(a, b) for (a, b) in range(len(thresholdPortfolio.getTransactions())):
+
+
+
+
+>>>>>>> 0313b7970a912b237144a417d16a320948ee0e18
 def runControl(controlPortfolio, testingDF, dataDF, weeksDict):
     algorithm_Control(controlPortfolio, testingDF, dataDF, weeksDict)
     print ("Control Profit: " + str(controlPortfolio.getTotalProfit()))
@@ -181,7 +217,7 @@ def runThresh(thresholdPortfolio, testingDF, dataDF, weeksDict, startBalance):
     #Threshold Testing:
     threshold = 0.051 # we can start with this arbitrary threshold that is close to the most profitable threshold
     algorithm_ApproachThreshold(thresholdPortfolio, testingDF, dataDF, weeksDict, threshold, False)
-    thresholdPortfolio.displayAllTransactions()
+    #thresholdPortfolio.displayAllTransactions()
     print("Threshold Algorithm Profit: " + str(thresholdPortfolio.getTotalProfit()))
 
 #Takes in day dataDF, will return a dictionary with the weekly dates as keys and a DataFrame of daily values during that week
@@ -191,13 +227,15 @@ def daysInWeekDict(dataDF):
     lastIndex = datetime.datetime.strptime(_configKeys.LASTINDEX, '%Y-%m-%d')
     difference = lastIndex.date() - firstIndex.date()
     #we start at the first week and will update date to match what we want (first day of week)
-    date = firstIndex.date() #+ timedelta(days=1) put this back in when louis/cole change 1Data
+    date = firstIndex.date()
     numWeeks = math.ceil(difference.days/7)
 
     for i in range(numWeeks):
+        #print(date.strftime("%Y-%m-%d"))
+
         retDict[date.strftime("%Y-%m-%d")] = pd.DataFrame(columns = dataDF.columns)
         dates = [] # keeps track of valid dates (String) for a given week
-        for j in range(5):
+        for j in range(6):
             currentDate = date + datetime.timedelta(days=j)
             if currentDate.strftime("%Y-%m-%d") in list(dataDF["Date"].values):
                 dates.append(currentDate.strftime("%Y-%m-%d"))
@@ -217,23 +255,19 @@ def algorithm_Control(portfolio, testingDF, dataDF, weekDict):
     firstDate = list(testingDF["Date"].values)[0] #Set this to be the first day of the testingDF
     lastDate = list(dataDF["Date"].values)[-1]
     #date = firstDate
-
+    boughtAtStart = False
+    #simply grab value from first date and last date and buy/sell at those times respectively
     for week in list(testingDF["Date"].values):
         weekDF = weekDict[week]
         for day in list(weekDF["Date"].values):
-            if day == firstDate:
+            if week == firstDate and boughtAtStart == False:
                 dayRowIndex = dataDF.index[dataDF['Date'] == day][0]
                 price = dataDF.at[dayRowIndex, "Open"]
-                #transaction = Transaction("GOLD", price, 700, day, "Buy", "Open")
-                #ticker, shareCost, numShares, date, transactionType, time
-                #portfolio.buyStock(transaction)
                 portfolio.buyMax(price, day, "Open")
+                boughtAtStart = True
             if day == lastDate:
                 dayRowIndex = dataDF.index[dataDF['Date'] == day][0]
                 price = dataDF.at[dayRowIndex, "Close"]
-                #transaction = Transaction("GOLD", price, 700, day, "Sell", "Close")
-                #ticker, shareCost, numShares, date, transactionType, time
-                #portfolio.sellStock(transaction)
                 portfolio.sellMax(price, day, "Close")
 
 #Finds best threshold through simulating thresholdAlgorithm with range of thresholds (Randomly decided)
@@ -263,7 +297,6 @@ def bestThreshold(testingDF, dataDF,weekDict, date, price, threshold):
         for i in range(startThres, endThres):
             #portfolio = MainThresholdPortfolio
             #algorithm_ApproachThreshold(portfolio, testingDF(from current week - WINDOW_LENGTH), dataDF, weekDict, i / 1000, numShares, price)
-
             portfolio = Portfolio(1000, _configKeys.YVALUETICKER)
             algorithm_ApproachThreshold(portfolio, testingIntervalDF, dataDF, weekDict, i / 1000, True)
             portfolio_profit_list.append(portfolio.getTotalProfit())
@@ -279,13 +312,16 @@ def findThreshByChunks(testingDF, dataDF,weekDict, date, price, threshold):
 
 #Threshold Algo: Buys when stock price goes within certain boundaries of predictions
 def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshold, isTest):
+    #titleTicker = (lower(_configKeys.YVALUETICKER)).title() # ex: yvalueticker = "GOLD", titleTicker = "Gold"
+
     ticker = portfolio.getTickerName()
     endWeekPrice = 0 # initializing to keep track so we can feed this to best threshold algorithm to test thresholds appropriately
 
     firstDate = list(testingDF["Date"].values)[0] #Set this to be the first day of the testingDF
     lastDate = list(dataDF["Date"].values)[-1]
     #list of features we want to track
-    featureList = ["Gold_Low_average_Predicted", "Gold_High_average_Predicted"]
+
+    featureList = [_configKeys.YVALUETICKER + "_Low_average_Predicted", _configKeys.YVALUETICKER +"_High_average_Predicted"] # make it uniform -- we want gold ticker to be capitalized
     #for each week in our testingDF, get desired predictedFEATURE(s) from the list
     for week in list(testingDF["Date"].values):
         #Get the index of the current week within the testing dataframe
@@ -294,7 +330,8 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
         #Find the low_average_predicted and high_max_predicted for that week
         lowMinP = testingDF.at[weekRowIndex, featureList[0]]
         highMaxP = testingDF.at[weekRowIndex, featureList[1]]
-
+        if (isTest == False):
+            print(str(week))
         #Get the dataframe holding the weekly values for this week
         weekDF = weekDict[week]
         #daytradeCount holds the number of day trades we've done in a week to make sure we don't day trade too many times
@@ -333,7 +370,7 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
 
                 #Close thresholds checks
                 #if we have not max day traded, then we do this
-                if daytradeCount < 3:
+                if daytradeCount < 3: # this is redundant - what do we really want to check?
 
                     if (nearClose < lowMinP + threshold):
                         if transMadeToday:
@@ -351,7 +388,7 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
                     elif (nearClose > highMaxP - threshold):
                         portfolio.sellMax(nearClose, day, "Close")
             #If we are in the last day of the trading week, sell all we have at open or close
-            if (day == list(weekDF["Date"].values)[-1]):
+            if (isLastDay):
                     if (nearOpen > highMaxP - threshold):
                         portfolio.sellMax(nearOpen, day, "Open")
                     else:

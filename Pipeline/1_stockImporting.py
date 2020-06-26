@@ -48,6 +48,7 @@ def import_stocks():
             # If there's something that's been loaded into stockData, then the length is no longer 0
             # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
             # this timedelta fixes the problem of trying to pull during a long weekend
+            ticker = str(ticker) + "_stock"
             if stockData.empty == False and stockData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - stockData.index[-1] <= timedelta(days = 3):
                 sucessfulPulls["Symbol"].append(ticker)
                 sucessfulPulls["Type"].append("Stock")
@@ -83,6 +84,7 @@ def import_funds():
             # If there's something that's been loaded into stockData, then the length is no longer 0
             # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
             # this timedelta fixes the problem of trying to pull during a long weekend
+            name = str(name) + "_fund"
             if fundData.empty == False and fundData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - fundData.index[-1] <= timedelta(days = 3):
                 sucessfulPulls["Symbol"].append(name.replace("/", ""))
                 sucessfulPulls["Type"].append("Fund")
@@ -118,6 +120,7 @@ def import_etfs():
             # If there's something that's been loaded into stockData, then the length is no longer 0
             # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
             # this timedelta fixes the problem of trying to pull during a long weekend
+            name = str(name) + "_etf"
             if etfData.empty == False and etfData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - etfData.index[-1] <= timedelta(days = 3):
                 sucessfulPulls["Symbol"].append(name.replace("/", ""))
                 sucessfulPulls["Type"].append("ETF")
@@ -152,6 +155,7 @@ def import_bonds():
             # If there's something that's been loaded into stockData, then the length is no longer 0
             # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
             # this timedelta fixes the problem of trying to pull during a long weekend
+            name = str(name) + "_bond"
             if (bondData.empty == False) and (bondData.index[0] - firstIndex.date() <= timedelta(days = 2)) and (lastIndex.date() - bondData.index[-1] <= timedelta(days = 3)):
                 sucessfulPulls["Symbol"].append(name.replace("/", ""))
                 sucessfulPulls["Type"].append("Bond")
@@ -187,6 +191,7 @@ def import_commodities():
             # If there's something that's been loaded into stockData, then the length is no longer 0
             # if the differences is under 2~3 days, then it is ok to take this data since there is still enough data in the week to be usable
             # this timedelta fixes the problem of trying to pull during a long weekend
+            name = str(name) + "_commodity"
             if commodityData.empty == False and commodityData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - commodityData.index[-1] <= timedelta(days = 3):
                 sucessfulPulls["Symbol"].append(name)
                 sucessfulPulls["Type"].append("Commodity")

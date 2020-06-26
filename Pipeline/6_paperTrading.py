@@ -163,8 +163,8 @@ def main():
     controlPortfolio = Portfolio(startBalance, _configKeys.YVALUETICKER)
 
     #Initializing data structures
-    testingDF = pd.read_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), "GOLD0.3_alpha13_beta_test_results.csv"))
-    dataDF = pd.read_csv(os.path.join(Path(_configKeys.DATA_FOLDER), "GOLD.csv"))
+    testingDF = pd.read_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), _configKeys.YVALUETICKER + "0.3_alpha13_beta_test_results.csv"))
+    dataDF = pd.read_csv(os.path.join(Path(_configKeys.DATA_FOLDER), _configKeys.YVALUETICKER + ".csv"))
     weeksDict = daysInWeekDict(dataDF)
 
     #Algorithms being run on portfolios
@@ -210,7 +210,7 @@ def daysInWeekDict(dataDF):
     for i in range(numWeeks):
         retDict[date.strftime("%Y-%m-%d")] = pd.DataFrame(columns = dataDF.columns)
         dates = [] # keeps track of valid dates (String) for a given week
-        for j in range(5):
+        for j in range(6):
             currentDate = date + datetime.timedelta(days=j)
             if currentDate.strftime("%Y-%m-%d") in list(dataDF["Date"].values):
                 dates.append(currentDate.strftime("%Y-%m-%d"))
@@ -337,7 +337,6 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
                 #Close thresholds checks
                 #if we have not max day traded, then we do this
                 if daytradeCount < 3:
-
                     if (nearClose < lowMinP + threshold):
                         if transMadeToday:
                             daytradeCount += 1
@@ -354,7 +353,7 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
                     elif (nearClose > highMaxP - threshold):
                         portfolio.sellMax(nearClose, day, "Close")
             #If we are in the last day of the trading week, sell all we have at open or close
-            if (day == list(weekDF["Date"].values)[-1]):
+            if (isLastDay):
                     if (nearOpen > highMaxP - threshold):
                         portfolio.sellMax(nearOpen, day, "Open")
                     else:

@@ -171,6 +171,7 @@ def main():
     runControl(controlPortfolio, testingDF, dataDF, weeksDict)
     runThresh(thresholdPortfolio, testingDF, dataDF, weeksDict, startBalance)
 
+    #Making CSV's for each algorithm
     threshTransList = thresholdPortfolio.getTransactions()
     threshDF = pd.DataFrame(columns = ["Date", "Time", "Ticker", "Price", "Transaction Type", "Shares before", "Shares After", "Balance Before", "Balance After"])
     for i in range(len(threshTransList)):

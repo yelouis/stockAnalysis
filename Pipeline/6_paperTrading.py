@@ -135,9 +135,9 @@ class Transaction:
     def getDate(self):
         return self.date
 
-    #getTotalPrice will return the total price of the transaction
+    #getTransactionPrice will return the total price of the transaction
     def getTransactionPrice(self):
-        return -self.transPrice
+        return self.transPrice
 
 
     #getNumShares will return the number of shares specified in this transaction
@@ -176,13 +176,13 @@ def main():
     threshTransList = thresholdPortfolio.getTransactions()
     threshDF = pd.DataFrame(columns = ["Date", "Time", "Ticker", "Price", "Transaction Type", "Shares before", "Shares After", "Balance Before", "Balance After"])
     for i in range(len(threshTransList)):
-        threshDF = threshDF.append(threshTransList[i])
+        threshDF.append(threshTransList[i])
     threshDF.to_csv(os.path.join(Path(_configKeys.PAPER_RESULTS_FOLDER, _configKeys.YVALUETICKER+"_threshold.csv")))
 
     controlTransList = controlPortfolio.getTransactions()
     controlDF = pd.DataFrame(columns = ["Date", "Time", "Ticker", "Price", "Transaction Type", "Shares before", "Shares After", "Balance Before", "Balance After"])
     for i in range(len(controlTransList)):
-        controlDF = controlDF.append(threshTransList[i])
+        controlDF.append(threshTransList[i])
     controlDF.to_csv(os.path.join(Path(_configKeys.PAPER_RESULTS_FOLDER, _configKeys.YVALUETICKER+"_control.csv")))
 
     #def __init__(self, ticker, price, date, time, transactionType, sharesBefore, sharesAfter, balanceBefore, balanceAfter):
@@ -215,11 +215,11 @@ def daysInWeekDict(dataDF):
     numWeeks = math.ceil(difference.days/7)
 
     for i in range(numWeeks):
-        print(date.strftime("%Y-%m-%d"))
+        #print(date.strftime("%Y-%m-%d"))
 
         retDict[date.strftime("%Y-%m-%d")] = pd.DataFrame(columns = dataDF.columns)
         dates = [] # keeps track of valid dates (String) for a given week
-        for j in range(5):
+        for j in range(6):
             currentDate = date + datetime.timedelta(days=j)
             if currentDate.strftime("%Y-%m-%d") in list(dataDF["Date"].values):
                 dates.append(currentDate.strftime("%Y-%m-%d"))
@@ -238,15 +238,16 @@ def algorithm_Control(portfolio, testingDF, dataDF, weekDict):
     firstDate = list(testingDF["Date"].values)[0] #Set this to be the first day of the testingDF
     lastDate = list(dataDF["Date"].values)[-1]
     #date = firstDate
-
+    boughtAtStart = False
     #simply grab value from first date and last date and buy/sell at those times respectively
     for week in list(testingDF["Date"].values):
         weekDF = weekDict[week]
         for day in list(weekDF["Date"].values):
-            if day == firstDate:
+            if week == firstDate and boughtAtStart == False:
                 dayRowIndex = dataDF.index[dataDF['Date'] == day][0]
                 price = dataDF.at[dayRowIndex, "Open"]
                 portfolio.buyMax(price, day, "Open")
+                boughtAtStart = True
             if day == lastDate:
                 dayRowIndex = dataDF.index[dataDF['Date'] == day][0]
                 price = dataDF.at[dayRowIndex, "Close"]
@@ -307,7 +308,8 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
     firstDate = list(testingDF["Date"].values)[0] #Set this to be the first day of the testingDF
     lastDate = list(dataDF["Date"].values)[-1]
     #list of features we want to track
-    featureList = [_configKeys.YVALUETICKER + "_Low_average_Predicted", _configKeys.YVALUETICKER +"_High_average_Predicted"] # make it uniform -- we want gold ticker to be capitalized
+
+    featureList = ["Gold" + "_Low_average_Predicted", "Gold" +"_High_average_Predicted"] # make it uniform -- we want gold ticker to be capitalized
     #for each week in our testingDF, get desired predictedFEATURE(s) from the list
     for week in list(testingDF["Date"].values):
         #Get the index of the current week within the testing dataframe

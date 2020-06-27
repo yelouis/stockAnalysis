@@ -198,6 +198,7 @@ def makePredictionsDict(lassoDF, threshold):
                     #print (coefficient)
                     #xValueName: stock name/ticker
                     xValueName = lassoDF.iloc[i][1]
+                    print(str(_configKeys.STANDARDIZED_FOLDER) + xValueName.split("_")[0]+".csv")
                     featureStockDF = pd.read_csv(os.path.join(Path(_configKeys.STANDARDIZED_FOLDER), xValueName.split("_")[0]+".csv"))
 
                     #print (str(xValueName))

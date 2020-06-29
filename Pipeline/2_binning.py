@@ -15,8 +15,8 @@ import numpy as np
 import copy
 import math
 
-global sucessfulBins
-sucessfulBins = {"Symbol" : [],
+global successfulBins
+successfulBins = {"Symbol" : [],
                  "Type" : []}
 
 def GetWeekDictionary(assetDF, include_volume):
@@ -135,13 +135,13 @@ def main():
             week_bin_df.to_csv(os.path.join(Path(_configKeys.BINNED_FOLDER), name+".csv"), index=False)
 
             #Update the successful bins dataframe
-            sucessfulBins["Symbol"].append(name)
-            sucessfulBins["Type"].append(asset_class)
+            successfulBins["Symbol"].append(name)
+            successfulBins["Type"].append(asset_class)
         except:
             print(str(name) + " has missing data or doesn't bin correctly")
 
 
-    df = pd.DataFrame(sucessfulBins, columns = ["Symbol", "Type"])
+    df = pd.DataFrame(successfulBins, columns = ["Symbol", "Type"])
     #Creating a sucessful file that includes asset names/tickers
     df.to_csv('2successfulWeekBins.csv', index=False)
     #Now we throw this dataframe into a csv file and add it to a 2successfulWeekBins.csv

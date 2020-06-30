@@ -569,8 +569,6 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
     ticker = portfolio.getTickerName()
     endWeekPrice = 0 # initializing to keep track so we can feed this to best threshold algorithm to test thresholds appropriately
 
-    thForRandRange = .051
-
     firstDate = list(testingDF["Date"].values)[0] #Set this to be the first day of the testingDF
     lastDate = list(dataDF["Date"].values)[-1]
     #list of features we want to track
@@ -586,6 +584,7 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
             highMaxP = testingDF.at[weekRowIndex, featureList[1]]
             if (isTest == False):
                 print(str(week))
+                print ("Threshold for current week: " + str(threshold))
             #Get the dataframe holding the weekly values for this week
             weekDF = weekDict[week]
             #daytradeCount holds the number of day trades we've done in a week to make sure we don't day trade too many times
@@ -655,6 +654,7 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, threshol
             if isTest == False:
                 #threshold = findThreshByRandRange(testingDF, dataDF, weekDict, inputWeek, endWeekPrice, threshold, portfolio.getBalance())
                 threshold = findThreshByEstimate(testingDF, dataDF, weekDict, inputWeek, 0, nearClose, threshold, portfolio.getTotalProfit(), portfolio.getBalance())
+                #threshold = findThreshByEstimate(testingDF, dataDF, weekDict, inputWeek, 0, nearClose, 0, 0, portfolio.getBalance()) This makes us $1630 and i think makes more sense
 
                 #print ("Estimate threshold: " + str(threshold))
                 #print("Threshold after estimate is run: " + str(threshold))

@@ -416,24 +416,7 @@ def findThreshByEstimate(testingDF, dataDF, weekDict, date, lowBound, upBound, b
         #print()
         #print()
 
-        '''
-        profitList = []
 
-        #record all the profits in sorted order as tuples in the profitList (profit, assoc_Threshold)
-
-        #for every profit, do elifs that check to see if that profit is greater than all the other profits
-        #for the profit that is greatest, if profit is greater than the bestRecordedProfit so far, recurse with the threshold associated with the best profit and fill in correct low and upper
-        #                               , if profit is not greater than the bestRecordedProfit so far,
-        # we'll have the bestThreshold of all time, and the best threshold found so far. we run bestThresholdInRange(lowerBest, higherBest, .001)
-        if qProfit > threeQProfit and qProfit > midProfit:
-            if qProfit >= bestProfitSoFar
-                return findThreshByEstimate(testingDF, dataDF,weekDict, date, 0, midPoint, qPoint, qProfit, currentBalance) #do start and end
-            else: #bestProfitSoFar is still best
-                thr = bestThresholdInRange(0, qPoint, .001, currentBalance, testingIntervalDF, dataDF, weekDict) #don't we want 0.01 here??
-                print("Thresh from Estimate: " + str(thr))
-                return thr
-
-        '''
 
         ''' Stuart Original
         if upBound - lowBound <= .1:
@@ -509,24 +492,7 @@ def findThreshByEstimate(testingDF, dataDF, weekDict, date, lowBound, upBound, b
             return findThreshByEstimate(testingDF, dataDF,weekDict, date, lowBound, qPoint, newBestThreshold, newBestProfit, currentBalance) #do start and end
         elif upProfit > threeQProfit:
             return findThreshByEstimate(testingDF, dataDF, weekDict, date, threeQPoint, upBound, newBestThreshold, newBestProfit, currentBalance)
-
-        '''
-        else:
-            #print(str(portfolioProfits[0][0]))
-            #print(str(portfolioProfits[1][0]))
-            if (abs(portfolioProfits[0][0] - portfolioProfits[1][0]) <= .1):
-                #print("Max difference is less than or equal to .1")
-                return portfolioProfits[0][0]
-            else:
-                #print("It wasn't")
-                print()
-                if (portfolioProfits[1][0] > portfolioProfits[0][0]):
-                    return findThreshByEstimate(testingDF, dataDF, weekDict, date, portfolioProfits[0][0], portfolioProfits[1][0], portfolioProfits[0][0], portfolioProfits[0][1], currentBalance)
-                else:
-                    return findThreshByEstimate(testingDF, dataDF, weekDict, date, portfolioProfits[1][0], portfolioProfits[0][0], portfolioProfits[0][0], portfolioProfits[0][1], currentBalance)
-        '''
-        return threshold
-
+        return bestThresholdSoFar
 
         '''
         alt code?
@@ -555,7 +521,7 @@ def findThreshByEstimate(testingDF, dataDF, weekDict, date, lowBound, upBound, b
         '''
 
         '''
-        Implementation of last night
+        Implementation of Cole's logic
         if upBound - lowBound <= .1:
             return bestThresholdInRange(lowBound, upBound, .001, currentBalance, testingIntervalDF, dataDF, weekDict)
         else:

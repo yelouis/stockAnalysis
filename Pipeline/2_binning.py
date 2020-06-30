@@ -15,10 +15,6 @@ import numpy as np
 import copy
 import math
 
-global successfulBins
-successfulBins = {"Symbol" : [],
-                 "Type" : []}
-
 def GetWeekDictionary(assetDF, include_volume):
 
     '''
@@ -113,6 +109,7 @@ def main():
     Note: Thankfully, we likely won't need to use the Currency column (since it is always USD).
     This allows us to use the same CollapseDictionaryToWeeks() function for all asset classes
     '''
+    successfulBins = {"Symbol" : [], "Type" : []}
     # We will use the 1successfulPulls.csv to tell us what type of asset is associated with each name/ticker
     reference_df = pd.read_csv("1successfulPulls.csv", low_memory=False)
 

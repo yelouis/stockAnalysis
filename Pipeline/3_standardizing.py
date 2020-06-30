@@ -15,10 +15,6 @@ import numpy as np
 import copy
 import math
 
-global successfulBins
-successfulBins = {"Symbol" : [],
-                 "Type" : []}
-
 def find_asset_class(name, reference_df):
     for index in reference_df.index:
         if reference_df["Symbol"][index] == name:
@@ -80,6 +76,7 @@ def main():
     Note: Thankfully, we likely won't need to use the Currency column (since it is always USD).
     This allows us to use the same CollapseDictionaryToWeeks() function for all asset classes
     '''
+    successfulBins = {"Symbol" : [], "Type" : []}
 
     # We will use the 1successfulPulls.csv to tell us what type of asset is associated with each name/ticker
     reference_df = pd.read_csv("2successfulWeekBins.csv", low_memory=False)
@@ -106,7 +103,7 @@ def main():
 
     df = pd.DataFrame(successfulBins, columns = ["Symbol", "Type"])
     #Creating a sucessful file that includes asset names/tickers
-    df.to_csv(SUCCESSFULSTANDARDIZEDBINS, index=False)
+    df.to_csv(_configKeys.SUCCESSFULSTANDARDIZEDBINS, index=False)
     #Now we throw this dataframe into a csv file and add it to a 2successfulWeekBins.csv
 
 

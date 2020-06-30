@@ -106,8 +106,8 @@ def main():
 
     successfulDict = {"FileName" : listOfSuccessfulLasso}
     df = pd.DataFrame(successfulDict, columns = ["FileName"])
-    originaldf = pd.read_csv("4successfulLasso.csv", low_memory=False)
-    originaldf = originaldf.append(df, ignore_index=True)
-    originaldf.to_csv('4successfulLasso.csv', index=False)
+    # originaldf = pd.read_csv("4successfulLasso.csv", low_memory=False)
+    # originaldf = originaldf.append(df, ignore_index=True)
+    df.to_csv('4successfulLasso.csv', index=False)
 
 main()

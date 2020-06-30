@@ -15,12 +15,8 @@ from datetime import timedelta
 from pathlib import Path
 from get_all_tickers import get_tickers as gt
 
-global sucessfulPulls
-sucessfulPulls = {"Symbol" : [],
-                  "Type" : []}
 
-
-def import_stocks():
+def import_stocks(successfulPulls):
     #imports stocks in the US
 
     search_results = investpy.search_stocks(by='country', value='united states')
@@ -50,14 +46,14 @@ def import_stocks():
             # this timedelta fixes the problem of trying to pull during a long weekend
             ticker = str(ticker) + "Stock"
             if stockData.empty == False and stockData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - stockData.index[-1] <= timedelta(days = 3):
-                sucessfulPulls["Symbol"].append(ticker)
-                sucessfulPulls["Type"].append("Stock")
+                successfulPulls["Symbol"].append(ticker)
+                successfulPulls["Type"].append("Stock")
                 stockData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), ticker+'.csv'))
         except:
             print("Something went wrong when importing: " + ticker)
 
 
-def import_funds():
+def import_funds(successfulPulls):
     # imports funds in the US
 
     search_results = investpy.search_funds(by='country', value='united states')
@@ -86,14 +82,14 @@ def import_funds():
             # this timedelta fixes the problem of trying to pull during a long weekend
             name = str(name) + "Fund"
             if fundData.empty == False and fundData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - fundData.index[-1] <= timedelta(days = 3):
-                sucessfulPulls["Symbol"].append(name.replace("/", ""))
-                sucessfulPulls["Type"].append("Fund")
+                successfulPulls["Symbol"].append(name.replace("/", ""))
+                successfulPulls["Type"].append("Fund")
                 fundData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name.replace("/", "")+'.csv'))
         except:
             print("Something went wrong when importing: " + name)
 
 
-def import_etfs():
+def import_etfs(successfulPulls):
     # imports ETFs in the US
 
     search_results = investpy.search_etfs(by='country', value='united states')
@@ -122,14 +118,14 @@ def import_etfs():
             # this timedelta fixes the problem of trying to pull during a long weekend
             name = str(name) + "Etf"
             if etfData.empty == False and etfData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - etfData.index[-1] <= timedelta(days = 3):
-                sucessfulPulls["Symbol"].append(name.replace("/", ""))
-                sucessfulPulls["Type"].append("ETF")
+                successfulPulls["Symbol"].append(name.replace("/", ""))
+                successfulPulls["Type"].append("ETF")
                 etfData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name.replace("/", "")+'.csv'))
         except:
             print("Something went wrong when importing: " + name)
 
 
-def import_bonds():
+def import_bonds(successfulPulls):
     # imports bonds in the US
 
     search_results = investpy.search_bonds(by='country', value='united states')
@@ -157,14 +153,14 @@ def import_bonds():
             # this timedelta fixes the problem of trying to pull during a long weekend
             name = str(name) + "Bond"
             if (bondData.empty == False) and (bondData.index[0] - firstIndex.date() <= timedelta(days = 2)) and (lastIndex.date() - bondData.index[-1] <= timedelta(days = 3)):
-                sucessfulPulls["Symbol"].append(name.replace("/", ""))
-                sucessfulPulls["Type"].append("Bond")
+                successfulPulls["Symbol"].append(name.replace("/", ""))
+                successfulPulls["Type"].append("Bond")
                 bondData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name.replace("/", "")+'.csv'))
         except:
             print("Something went wrong when importing: " + name)
 
 
-def import_commodities():
+def import_commodities(successfulPulls):
     # imports commodities from around the world in USD
 
     search_results = investpy.search_commodities(by='currency', value='USD')
@@ -193,31 +189,29 @@ def import_commodities():
             # this timedelta fixes the problem of trying to pull during a long weekend
             name = str(name) + "Commodity"
             if commodityData.empty == False and commodityData.index[0] - firstIndex <= timedelta(days = 2) and lastIndex - commodityData.index[-1] <= timedelta(days = 3):
-                sucessfulPulls["Symbol"].append(name)
-                sucessfulPulls["Type"].append("Commodity")
+                successfulPulls["Symbol"].append(name)
+                successfulPulls["Type"].append("Commodity")
                 commodityData.to_csv(os.path.join(Path(_configKeys.DATA_FOLDER), name+'.csv'))
         except:
             print("Something went wrong when importing: " + name)
 
-
 def main():
+    successfulPulls = {"Symbol" : [], "Type" : []}
     # This currently only gets the first 100 items from each asset type. Remove indexing if you want more data
-
     print("Importing Stocks")
-    import_stocks()
+    import_stocks(successfulPulls)
     #print("Importing Funds")
     #import_funds()
     print("Importing ETFs")
-    import_etfs()
+    import_etfs(successfulPulls)
     print("Importing Bonds")
-    import_bonds()
+    import_bonds(successfulPulls)
     print("Importing Commodities")
-    import_commodities()
+    import_commodities(successfulPulls)
 
-    df = pd.DataFrame(sucessfulPulls, columns = ["Symbol", "Type"])
+    df = pd.DataFrame(successfulPulls, columns = ["Symbol", "Type"])
 
     #Creating a sucessful file that includes asset names/tickers
     df.to_csv('1successfulPulls.csv', index=False)
-
 
 main()

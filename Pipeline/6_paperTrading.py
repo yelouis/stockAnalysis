@@ -533,8 +533,8 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, botThres
         #    topThreshold = calculateMeanError(allTimeHighActualAverages, allTimeHighPredictedAverages) #errorInHighAvg for all time as threshold
 
             #WINDOW CODE
-        #    botThreshold = calculateMeanError(pastWindowLowActualAverages, pastWindowLowPredictedAverages) #errorInLowAvg for window as threshold
-        #    topThreshold = calculateMeanError(pastWindowHighActualAverages, pastWindowHighPredictedAverages) #errorInHighAvg for window as threshold
+            botThreshold = calculateMeanError(pastWindowLowActualAverages, pastWindowLowPredictedAverages) #errorInLowAvg for window as threshold
+            topThreshold = calculateMeanError(pastWindowHighActualAverages, pastWindowHighPredictedAverages) #errorInHighAvg for window as threshold
 
             #FINE TUNING CODE
         #    botThreshold = bestThresholdInRange(botThreshold, nearClose/100, inputWeek, testingDF, dataDF, weekDict)

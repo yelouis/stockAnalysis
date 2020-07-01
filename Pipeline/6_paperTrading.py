@@ -364,21 +364,36 @@ def findThreshByEstimate(testingDF, dataDF, weekDict, date, lowBound, upBound): 
         #print ("Threshold before window length: " + str(threshold))
         return 0
 
-def bestThresholdInRange(startRange, endRange, step, testingIntervalDF, dataDF, weekDict):
-    profitList = []
-    threshList = []
-#    print ("Start: " + str(startRange))
-#    print ("End: " + str(endRange))
+def bestThresholdInRange(midPoint, step, date, testingDF, dataDF, weekDict):
+    window_length = _configKeys.WINDOW_LENGTH
+    firstDateString = list(testingDF["Date"].values)[0] #Set this to be the first day of the testingDF
+    firstDate = datetime.datetime.strptime(firstDateString, '%Y-%m-%d')
+    difference = date.date() - firstDate.date() #difference
+    weeksElapsed = math.ceil(difference.days/7) # weeks elapsed is difference in days
 
-    for thresh in np.arange(startRange, endRange, step): #step
-        portfolio = Portfolio(1000, _configKeys.YVALUETICKER)
-        algorithm_ApproachThreshold(portfolio, testingIntervalDF, dataDF, weekDict, thresh, True)
-        threshList.append(thresh)
-        profitList.append(portfolio.getTotalProfit())
-    bestThresh = threshList[profitList.index(max(profitList))]
-    bestThresh = round(bestThresh, 3)
-    print("Threshold: " + str(bestThresh) + " Profit for best threshold: " + str(max(profitList)))
-    return bestThresh
+    testingIntervalDF = pd.DataFrame(columns = testingDF.columns)
+
+    if weeksElapsed >= window_length:
+        iterDate = date - timedelta(days=window_length*7) # using this to iter through currentDate - window_length to currentDate
+
+        for i in range(window_length):
+            weekRow = testingDF.loc[testingDF['Date'] == datetime.datetime.strftime(iterDate, '%Y-%m-%d')]
+            testingIntervalDF = testingIntervalDF.append(weekRow)
+            iterDate = iterDate + timedelta(days=7)
+        profitList = []
+        threshList = []
+    #    print ("Start: " + str(startRange))
+    #    print ("End: " + str(endRange))
+        for thresh in np.arange(midPoint/2, midPoint*2, step): #step
+            portfolio = Portfolio(1000, _configKeys.YVALUETICKER)
+            algorithm_ApproachThreshold(portfolio, testingIntervalDF, dataDF, weekDict, 0, 0, True)
+            threshList.append(thresh)
+            profitList.append(portfolio.getTotalProfit())
+        bestThresh = threshList[profitList.index(max(profitList))]
+        bestThresh = round(bestThresh, 3)
+        print("Threshold: " + str(bestThresh) + " Profit for best threshold: " + str(max(profitList)))
+        return bestThresh
+    return midPoint
 
 #Threshold Algo: Buys when stock price goes within certain boundaries of predictions
 def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, botThreshold, topThreshold, isTest):
@@ -482,8 +497,8 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, botThres
         inputWeek = datetime.datetime.strptime(week, "%Y-%m-%d")
 
         #Keeping track of our low actual and predicted
-    #    allTimeLowActualAverages.append(testingDF.at[weekRowIndex, actualFeatureList[0]])
-    #    allTimeLowPredictedAverages.append(lowAvgP)
+        allTimeLowActualAverages.append(testingDF.at[weekRowIndex, actualFeatureList[0]])
+        allTimeLowPredictedAverages.append(lowAvgP)
 
         if len(pastWindowLowActualAverages) == 13: #If we are at window length
             #Remove the oldest window averages
@@ -497,8 +512,8 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, botThres
             pastWindowLowPredictedAverages = [lowAvgP]
 
         #Keeping track of our high actual and predicted
-    #    allTimeHighActualAverages = [testingDF.at[weekRowIndex, actualFeatureList[1]]]
-    #    allTimeHighPredictedAverages.append(highAvgP)
+        allTimeHighActualAverages = [testingDF.at[weekRowIndex, actualFeatureList[1]]]
+        allTimeHighPredictedAverages.append(highAvgP)
 
         if len(pastWindowLowActualAverages) == 13: #If we are at window length
             #Remove the oldest window averages
@@ -513,15 +528,17 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, botThres
 
 
         if isTest == False:
-            #threshold = findThreshByEstimate(testingDF, dataDF, weekDict, inputWeek, 0, nearClose)
-
+            #ALLTIME CODE
         #    botThreshold = calculateMeanError(allTimeLowActualAverages, allTimeLowPredictedAverages) #errorInLowAvg for all time as threshold
         #    topThreshold = calculateMeanError(allTimeHighActualAverages, allTimeHighPredictedAverages) #errorInHighAvg for all time as threshold
 
-            #This is the best consistent profit for Gold:
-            botThreshold = calculateMeanError(pastWindowLowActualAverages, pastWindowLowPredictedAverages) #errorInLowAvg for window as threshold
-            topThreshold = calculateMeanError(pastWindowHighActualAverages, pastWindowHighPredictedAverages) #errorInHighAvg for window as threshold
+            #WINDOW CODE
+        #    botThreshold = calculateMeanError(pastWindowLowActualAverages, pastWindowLowPredictedAverages) #errorInLowAvg for window as threshold
+        #    topThreshold = calculateMeanError(pastWindowHighActualAverages, pastWindowHighPredictedAverages) #errorInHighAvg for window as threshold
 
+            #FINE TUNING CODE
+        #    botThreshold = bestThresholdInRange(botThreshold, nearClose/100, inputWeek, testingDF, dataDF, weekDict)
+        #    topThreshold = bestThresholdInRange(topThreshold, nearClose/100, inputWeek, testingDF, dataDF, weekDict)
         '''
         For tomorrow:
         Do this for [errorInLowAvg for threshold, errorInHighAvg for threshold, errorInLowAvg for selling threshold and errorInHighAvg for buying threshold]

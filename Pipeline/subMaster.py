@@ -57,7 +57,7 @@ def main():
     # df.to_csv(_configKeys.SUCCESSFULSTANDARDIZEDBINS, index=False)
 
     #listOfInterest = ["GMStock", "AAPLStock", "GOLDStock", "GoldCommodity", "CCLStock"]
-    listOfInterest = ["LumberCommodity"]
+    listOfInterest = ["United States CopperEtf"]
 
     counter = True
     for symbol in listOfInterest:

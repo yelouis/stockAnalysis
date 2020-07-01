@@ -163,12 +163,9 @@ def main():
     controlPortfolio = Portfolio(startBalance, _configKeys.YVALUETICKER)
 
     #Initializing data structures
-    testingDF = pd.read_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), _configKeys.YVALUETICKER + "0.3_alpha13_beta_test_results.csv"))
+    testingDF = pd.read_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), findBestCSV(_configKeys.YVALUETICKER)))
     dataDF = pd.read_csv(os.path.join(Path(_configKeys.DATA_FOLDER), _configKeys.YVALUETICKER + ".csv"))
     weeksDict = daysInWeekDict(dataDF)
-
-
-    #findThreshByEstimate(testingDF, dataDF, weeksDict, "date", 1, .2, 1)
 
     #Algorithms being run on portfolios
     runThresh(thresholdPortfolio, testingDF, dataDF, weeksDict, startBalance)
@@ -194,6 +191,24 @@ def main():
     #keep a list of tuples with filename, percent error in features we care about,
     #reorder the list with minimum to maximum ordering by percent Error
     #choose the filename at the 0th index
+
+#Finds the best csv for predictions
+def findBestCSV(ticker):
+    csvList = os.listdir(_configKeys.TESTING_RESULTS_FOLDER)
+    tickerCSVList = []
+    csvErrorList = []
+    for csv in csvList:
+        if ticker in csv:
+            tickerCSVList.append(csv)
+    for csv in tickerCSVList:
+        testingDF = pd.read_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), csv))
+        lowAvgError = calculateMeanError(list(testingDF[_configKeys.YVALUETICKER + "_Low_average_Predicted"].values), list(testingDF[_configKeys.YVALUETICKER + "_Low_average_Actual"].values))
+        highAvgError = calculateMeanError(list(testingDF[_configKeys.YVALUETICKER + "_High_average_Predicted"].values), list(testingDF[_configKeys.YVALUETICKER + "_High_average_Actual"].values))
+        featuresError = (highAvgError + lowAvgError) / 2
+        csvErrorList.append((csv, featuresError))
+    csvErrorList.sort(key=lambda tup: tup[1])
+    print (csvErrorList)
+    return csvErrorList[0][0]
 
 #Runs the control algorithm and prints the profit achieved
 def runControl(controlPortfolio, testingDF, dataDF, weeksDict):

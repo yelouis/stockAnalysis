@@ -25,4 +25,4 @@ PAPER_RESULTS_FOLDER = "6Paper_Results"
 WINDOW_LENGTH = 13
 THRESHOLD = .1
 
-YVALUETICKER = "US WheatCommodity"
+YVALUETICKER = "GoldCommodity"

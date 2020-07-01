@@ -395,6 +395,21 @@ def bestThresholdInRange(midPoint, step, date, testingDF, dataDF, weekDict):
         return bestThresh
     return midPoint
 
+def updateDayTrades(dayTradeList):
+    pop = False
+    for i in range(len(dayTradeList)):
+        if dayTradeList[i] == 0:
+            for j in range(len(dayTradeList) - 1):
+                dayTradeList[j] = dayTradeList[j+1]
+                pop = True
+        else:
+            dayTradeList[i] -= 1
+    if pop == True:
+        dayTradeList.pop()
+
+def addDayTrade(dayTradeList):
+    dayTradeList.append(5)
+
 #Threshold Algo: Buys when stock price goes within certain boundaries of predictions
 def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, botThreshold, topThreshold, isTest):
     ticker = portfolio.getTickerName()
@@ -419,6 +434,7 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, botThres
     pastWindowHighActualAverages = []
     pastWindowHighPredictedAverages = []
 
+    dayTradeList = []
     for week in list(testingDF["Date"].values):
             #if threshold != -1:
         #Get the index of the current week within the testing dataframe
@@ -434,12 +450,10 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, botThres
         weekDF = weekDict[week]
         #daytradeCount holds the number of day trades we've done in a week to make sure we don't day trade too many times
 
-        daytradeCount = 0
-
         #For each daily value in the weekDF
         for day in list(weekDF["Date"].values):
+            updateDayTrades(dayTradeList)
             #run a list on the last 5 valid dates? -- then
-            dayTradeDateLists = []
             #3 counters that keep track of day trades -- maybe an int that stores the number of days since the first day trade and subtract 1 every day
             #Get the index of the current day within the weekly dataframe
             dayRowIndex = dataDF.index[dataDF['Date'] == day][0]
@@ -457,7 +471,7 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, botThres
             if day == list(weekDF["Date"].values)[-1]:
                 isLastDay = True
             #Allows for 3 day trade days at the most and will run on every trading day except last (on last day, we only sell)
-            if (daytradeCount < 3 and isLastDay == False):
+            if (len(dayTradeList) < 3 and isLastDay == False):
                 #Open threshold checks
                 #print ("Open: " + str(nearOpen))
                 #print (str(lowAvgP))
@@ -465,34 +479,28 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, botThres
                 if (nearOpen < lowAvgP + botThreshold and not(nearOpen > highAvgP - topThreshold)):
                     portfolio.buyMax(nearOpen, day, "Open")
                     transMadeToday = True
-                elif (nearOpen > highAvgP - topThreshold and not(nearOpen < lowAvgP + botThreshold)):
+                if (nearOpen > highAvgP - topThreshold and not(nearOpen < lowAvgP + botThreshold)):
                     portfolio.sellMax(nearOpen, day, "Open")
                     transMadeToday = True
 
                 #Close thresholds checks
                 #if we have not max day traded, then we do this
-                if daytradeCount < 3:
-                    if (nearClose < lowAvgP + botThreshold):
-                        if transMadeToday:
-                            daytradeCount += 1
-                        portfolio.buyMax(nearClose, day, "Close")
-                    elif (nearClose > highAvgP - topThreshold):
-                        portfolio.sellMax(nearClose, day, "Close")
-                        if transMadeToday:
-                            daytradeCount += 1
                 #if we havent trading earlier in the day and we cant day trade anymore, we run algotrader
-                elif (transMadeToday == False):
 
-                    if (nearClose < lowAvgP + botThreshold and not(nearClose > highAvgP - topThreshold)):
-                        portfolio.buyMax(nearClose, day, "Close")
-                    elif (nearClose > highAvgP - topThreshold and not(nearClose < lowAvgP + botThreshold)):
-                        portfolio.sellMax(nearClose, day, "Close")
+                if (nearClose < lowAvgP + botThreshold and not(nearClose > highAvgP - topThreshold)):
+                    if transMadeToday:
+                        addDayTrade(dayTradeList)
+                    portfolio.buyMax(nearClose, day, "Close")
+                if (nearClose > highAvgP - topThreshold and not(nearClose < lowAvgP + botThreshold)):
+                    if transMadeToday:
+                        addDayTrade(dayTradeList)
+                    portfolio.sellMax(nearClose, day, "Close")
                 #If we are in the last day of the trading week, sell all we have at open or close
             if (isLastDay):
-                    if (nearOpen > highAvgP - topThreshold):
-                        portfolio.sellMax(nearOpen, day, "Open")
-                    else:
-                        portfolio.sellMax(nearClose, day, "Close")
+                if (nearOpen > highAvgP - topThreshold):
+                    portfolio.sellMax(nearOpen, day, "Open")
+                else:
+                    portfolio.sellMax(nearClose, day, "Close")
 
         inputWeek = datetime.datetime.strptime(week, "%Y-%m-%d")
 

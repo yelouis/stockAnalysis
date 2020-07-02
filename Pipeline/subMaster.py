@@ -90,14 +90,47 @@ def main():
         Runs the rest of the pipeline on specfic tickers in listOfInterest
         '''
 
+        # listOfInterest = ["MMMStock", "AXPStock", "AAPLStock", "BAStock", "CATStock", "CVXStock",
+        #                 "CSCOStock", "KOStock", "DISStock", "XOMStock", "GSStock", "HDStock", "IBMStock",
+        #                 "INTCStock", "JNJStock", "JPMStock", "MCDStock", "MRKStock", "MSFTStock", "NKEStock",
+        #                 "PFEStock", "PGStock", "TRVStock", "UTXStock", "UNHStock", "VZStock", "VStock", "WMTStock",
+        #                 "WBAStock"]
+
         listOfInterest = ["MMMStock", "AXPStock", "AAPLStock", "BAStock", "CATStock", "CVXStock",
-                        "CSCOStock", "KOStock", "DISStock", "XOMStock", "GSStock", "HDStock", "IBMStock",
-                        "INTCStock", "JNJStock", "JPMStock", "MCDStock", "MRKStock", "MSFTStock", "NKEStock",
-                        "PFEStock", "PGStock", "TRVStock", "UTXStock", "UNHStock", "VZStock", "VStock", "WMTStock",
-                        "WBAStock"]
+                        "CSCOStock", "KOStock", "DISStock", "XOMStock"]
 
         for symbol in listOfInterest:
             _configKeys.YVALUETICKER = symbol
+
+            '''
+            Creates lasso files using 2016 data
+            '''
+            _configKeys.STARTPULL = "03/01/2016"
+            _configKeys.ENDPULL = "07/01/2018"
+            _configKeys.FIRSTINDEX = "2016-01-03"
+            _configKeys.LASTINDEX = "2018-01-07"
+            _configKeys.DATA_FOLDER = "1Data_2016/"
+            _configKeys.BINNED_FOLDER = "2Binned_2016/"
+            _configKeys.STANDARDIZED_FOLDER = "3Standardized_Binned_2016/"
+            pipelineP4.main()
+
+            '''
+            Creates testing files using 2018 data
+            '''
+            _configKeys.STARTPULL = "14/01/2018"
+            _configKeys.ENDPULL = "05/01/2020"
+            _configKeys.FIRSTINDEX = "2018-01-14"
+            _configKeys.LASTINDEX = "2020-01-05"
+            _configKeys.DATA_FOLDER = "1Data/"
+            _configKeys.BINNED_FOLDER = "2Binned/"
+            _configKeys.STANDARDIZED_FOLDER = "3Standardized_Binned/"
+            pipelineP5.main()
+
+            '''
+            Run paperTrading.py
+            '''
+            pipelineP6.main()
+
 
             '''
             Creates lasso files using 2016 data

@@ -43,26 +43,38 @@ def main():
     #read in from 4successfulLasso.csv and just iterate through a list of those names to access successfully lassoed filenames
     #floatStepList = list(np.arange(0.3, 1.3, 0.1))
     threshold = _configKeys.THRESHOLD
-    successfulLassoDF = pd.read_csv("4successfulLasso.csv", low_memory=False)
 
-    for name in list(successfulLassoDF["FileName"].values):
-        #name = str(name)
-        lassoDF = pd.read_csv(os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), name+".csv"), low_memory=False)
-        #predictList will contain a list of values
-        predictionsDict = makePredictionsDict(lassoDF, threshold)
-        standardizedTestingDF = makeStandardizedTestingDF(predictionsDict)
-        unstandardizedTestingDF = makeUnstandardizedTestingDF(standardizedTestingDF, window_length)
-        unstandardizedTestingDF.to_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), name+"_test_results.csv"))
-
-    #lassoDF = pd.read_csv(os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), str(_configKeys.YVALUETICKER)+"0.3_alpha13_beta.csv"), low_memory=False)
-    '''
+    name = findBestLassoCSV()
+    lassoDF = pd.read_csv(os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), name + ".csv"), low_memory=False)
     #predictList will contain a list of values
     predictionsDict = makePredictionsDict(lassoDF, threshold)
     standardizedTestingDF = makeStandardizedTestingDF(predictionsDict)
     unstandardizedTestingDF = makeUnstandardizedTestingDF(standardizedTestingDF, window_length)
-    '''
+    unstandardizedTestingDF.to_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), name+"_test_results.csv"))
 
-    #unstandardizedTestingDF.to_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), str(_configKeys.YVALUETICKER)+"_test_results.csv"))
+    successfulDict = {"FileName" : [name]}
+    df = pd.DataFrame(successfulDict, columns = ["FileName"])
+    # originaldf = pd.read_csv("4successfulLasso.csv", low_memory=False)
+    # originaldf = originaldf.append(df, ignore_index=True)
+    df.to_csv('5successfulTesting.csv', index=False)
+#Finds the best csv for predictions
+def findBestLassoCSV():
+    successfulLassoDF = pd.read_csv("4successfulLasso.csv", low_memory=False)
+    csvList = list(successfulLassoDF["FileName"].values)
+    csvMADList = []
+    for csv in csvList:
+        lassoDF = pd.read_csv(os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), csv + ".csv"))
+        lowAvgMAD = list(lassoDF[_configKeys.YVALUETICKER+"_Low_average_toggles"].values)[2].strip("mad =")
+        #calculateMeanError(list(testingDF[_configKeys.YVALUETICKER + "_Low_average_Predicted"].values), list(testingDF[_configKeys.YVALUETICKER + "_Low_average_Actual"].values))
+        highAvgMAD = list(lassoDF[_configKeys.YVALUETICKER + "_High_average_toggles"].values)[2].strip("mad =")
+        #calculateMeanError(list(testingDF[_configKeys.YVALUETICKER + "_High_average_Predicted"].values), list(testingDF[_configKeys.YVALUETICKER + "_High_average_Actual"].values))
+        avgMAD = (float(highAvgMAD) + float(lowAvgMAD)) / 2
+        csvMADList.append((csv, avgMAD))
+
+    csvMADList.sort(key=lambda tup: tup[1])
+    return csvMADList[0][0]
+
+
 
 '''
 s is standardized predicted and a is unstandardized predicted

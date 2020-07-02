@@ -163,7 +163,8 @@ def main():
     controlPortfolio = Portfolio(startBalance, _configKeys.YVALUETICKER)
 
     #Initializing data structures
-    testingDF = pd.read_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), findBestCSV(_configKeys.YVALUETICKER)))
+    name = findCSV()
+    testingDF = pd.read_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), name + "_test_results.csv"))
     dataDF = pd.read_csv(os.path.join(Path(_configKeys.DATA_FOLDER), _configKeys.YVALUETICKER + ".csv"))
     weeksDict = daysInWeekDict(dataDF)
 
@@ -177,7 +178,7 @@ def main():
     for i in range(len(threshTransList)):
         transaction = pd.Series(threshTransList[i], index = threshDF.columns)
         threshDF = threshDF.append(transaction, ignore_index = True)
-    threshDF.to_csv(os.path.join(Path(_configKeys.PAPER_RESULTS_FOLDER), _configKeys.YVALUETICKER+"_thresholdByEstimate.csv"))
+    threshDF.to_csv(os.path.join(Path(_configKeys.PAPER_RESULTS_FOLDER), name+"_thresholdByEstimate.csv"))
 
     controlTransList = controlPortfolio.getTransactions()
     controlDF = pd.DataFrame(columns = ["Date", "Time", "Ticker", "Price", "Transaction Type", "Shares before", "Shares After", "Balance Before", "Balance After"])
@@ -193,22 +194,10 @@ def main():
     #choose the filename at the 0th index
 
 #Finds the best csv for predictions
-def findBestCSV(ticker):
-    csvList = os.listdir(_configKeys.TESTING_RESULTS_FOLDER)
-    tickerCSVList = []
-    csvErrorList = []
-    for csv in csvList:
-        if ticker in csv:
-            tickerCSVList.append(csv)
-    for csv in tickerCSVList:
-        testingDF = pd.read_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), csv))
-        lowAvgError = calculateMeanError(list(testingDF[_configKeys.YVALUETICKER + "_Low_average_Predicted"].values), list(testingDF[_configKeys.YVALUETICKER + "_Low_average_Actual"].values))
-        highAvgError = calculateMeanError(list(testingDF[_configKeys.YVALUETICKER + "_High_average_Predicted"].values), list(testingDF[_configKeys.YVALUETICKER + "_High_average_Actual"].values))
-        featuresError = (highAvgError + lowAvgError) / 2
-        csvErrorList.append((csv, featuresError))
-    csvErrorList.sort(key=lambda tup: tup[1])
-    print (csvErrorList)
-    return csvErrorList[0][0]
+def findCSV():
+    successfulTestingDF = pd.read_csv("5successfulTesting.csv", low_memory=False)
+    testingCSV = list(successfulTestingDF["FileName"].values)[0]
+    return testingCSV
 
 #Runs the control algorithm and prints the profit achieved
 def runControl(controlPortfolio, testingDF, dataDF, weeksDict):
@@ -268,148 +257,26 @@ def algorithm_Control(portfolio, testingDF, dataDF, weekDict):
                 price = dataDF.at[dayRowIndex, "Close"]
                 portfolio.sellMax(price, day, "Close")
 
-#Finds best threshold through simulating thresholdAlgorithm with an estimated threshold and moving towards the most succesful threshold in jumps
-def findThreshByEstimate(testingDF, dataDF, weekDict, date, lowBound, upBound): #do start and end
-    window_length = _configKeys.WINDOW_LENGTH
-    firstDateString = list(testingDF["Date"].values)[0] #Set this to be the first day of the testingDF
-    firstDate = datetime.datetime.strptime(firstDateString, '%Y-%m-%d')
-    difference = date.date() - firstDate.date() #difference
-    weeksElapsed = math.ceil(difference.days/7) # weeks elapsed is difference in days
-
-    testingIntervalDF = pd.DataFrame(columns = testingDF.columns)
-
-    if weeksElapsed >= window_length:
-        iterDate = date - timedelta(days=window_length*7) # using this to iter through currentDate - window_length to currentDate
-
-        for i in range(window_length):
-            weekRow = testingDF.loc[testingDF['Date'] == datetime.datetime.strftime(iterDate, '%Y-%m-%d')]
-            testingIntervalDF = testingIntervalDF.append(weekRow)
-            iterDate = iterDate + timedelta(days=7)
-
-        #if weeksElapsed == window_length:
-            #print ("UpBound: " + str(upBound))
-            #return bestThresholdInRange(0, upBound, 0.01, currentBalance, testingIntervalDF, dataDF, weekDict)
-
-        midPoint = round((upBound + lowBound)*.5, 5) #upBound will start as the close price of the past week
-        qPoint = round(midPoint - (upBound-lowBound)*.25, 5)
-        threeQPoint = round(midPoint + (upBound-lowBound)*.25, 5)
-
-
-        midPortfolio = Portfolio(1000, _configKeys.YVALUETICKER)
-        quarterPortfolio = Portfolio(1000, _configKeys.YVALUETICKER) #Maybe use the actual balance that our main portfolio has instead of 1000
-        threeQuarterPortfolio = Portfolio(1000, _configKeys.YVALUETICKER)
-        lowPortfolio = Portfolio(1000, _configKeys.YVALUETICKER)
-        upPortfolio = Portfolio(1000, _configKeys.YVALUETICKER)
-
-        #print()
-        #print ("midPoint: " + str(midPoint))
-        #print ("qPoint: " + str(qPoint))
-        #print ("threeQPoint: " + str(threeQPoint))
-        #print ("lowBound: " + str(lowBound))
-        #print ("upBound: " + str(upBound))
-        #print()
-
-        algorithm_ApproachThreshold(midPortfolio, testingIntervalDF, dataDF, weekDict, midPoint, True)
-        algorithm_ApproachThreshold(quarterPortfolio, testingIntervalDF, dataDF, weekDict, qPoint, True)
-        algorithm_ApproachThreshold(threeQuarterPortfolio, testingIntervalDF, dataDF, weekDict, threeQPoint, True)
-        algorithm_ApproachThreshold(lowPortfolio, testingIntervalDF, dataDF, weekDict, lowBound, True)
-        algorithm_ApproachThreshold(upPortfolio, testingIntervalDF, dataDF, weekDict, upBound, True)
-
-        midProfit = midPortfolio.getTotalProfit()
-        qProfit = quarterPortfolio.getTotalProfit()
-        threeQProfit = threeQuarterPortfolio.getTotalProfit()
-        lowProfit = lowPortfolio.getTotalProfit()
-        upProfit = upPortfolio.getTotalProfit()
-
-
-
-        #print()
-        #print("MidProfit: " + str(midProfit))
-        #print("QuarterProfit: " + str(qProfit))
-        #print("ThreeQuarterProfit: " + str(threeQProfit))
-        #print("LowProfit: " + str(lowProfit))
-        #print("UpProfit: " + str(upProfit))
-        #print()
-        #print()
-
-        portfolioProfits = [(midPoint, midProfit), (qPoint, qProfit), (threeQPoint, threeQProfit), (upBound, upProfit), (lowBound, lowProfit)]
-        portfolioProfits.sort(key=lambda tup: tup[1], reverse=True)
-        #print("Portfolio List: " + str(portfolioProfits))
-        #print()
-        newBestThreshold = portfolioProfits[0][0]
-        newBestProfit = portfolioProfits[0][1]
-
-        #if newBestProfit < bestProfitSoFar:
-        #    print("Threshold: " + str(bestThresholdSoFar) + " Profit for best est threshold: " + str(bestProfitSoFar))
-        #    return bestThresholdSoFar
-
-        if upBound - lowBound <= .01:
-            thr = bestThresholdInRange(lowBound, upBound, .001, testingIntervalDF, dataDF, weekDict) #don't we want 0.01 here??
-            #thr = portfolioProfits[0][0]
-            print("Thresh from Estimate: " + str(thr))
-            return thr
-
-        if newBestThreshold == lowBound:
-            return findThreshByEstimate(testingDF, dataDF, weekDict, date, lowBound, qPoint)
-        elif newBestThreshold == qPoint:
-            return findThreshByEstimate(testingDF, dataDF, weekDict, date, lowBound, midPoint)
-        elif newBestThreshold == midPoint:
-            return findThreshByEstimate(testingDF, dataDF, weekDict, date, qPoint, threeQPoint)
-        elif newBestThreshold == threeQPoint:
-            return findThreshByEstimate(testingDF, dataDF, weekDict, date, midPoint, upBound)
-        elif newBestThreshold == upBound:
-            return findThreshByEstimate(testingDF, dataDF, weekDict, date, threeQPoint, upBound)
-
+def availableToTrade(dayTradeList):
+    if 0 in dayTradeList:
+        return True
     else:
-        #print ("Threshold before window length: " + str(threshold))
-        return 0
-
-def bestThresholdInRange(midPoint, step, date, testingDF, dataDF, weekDict):
-    window_length = _configKeys.WINDOW_LENGTH
-    firstDateString = list(testingDF["Date"].values)[0] #Set this to be the first day of the testingDF
-    firstDate = datetime.datetime.strptime(firstDateString, '%Y-%m-%d')
-    difference = date.date() - firstDate.date() #difference
-    weeksElapsed = math.ceil(difference.days/7) # weeks elapsed is difference in days
-
-    testingIntervalDF = pd.DataFrame(columns = testingDF.columns)
-
-    if weeksElapsed >= window_length:
-        iterDate = date - timedelta(days=window_length*7) # using this to iter through currentDate - window_length to currentDate
-
-        for i in range(window_length):
-            weekRow = testingDF.loc[testingDF['Date'] == datetime.datetime.strftime(iterDate, '%Y-%m-%d')]
-            testingIntervalDF = testingIntervalDF.append(weekRow)
-            iterDate = iterDate + timedelta(days=7)
-        profitList = []
-        threshList = []
-    #    print ("Start: " + str(startRange))
-    #    print ("End: " + str(endRange))
-        for thresh in np.arange(midPoint/2, midPoint*2, step): #step
-            portfolio = Portfolio(1000, _configKeys.YVALUETICKER)
-            algorithm_ApproachThreshold(portfolio, testingIntervalDF, dataDF, weekDict, 0, 0, True)
-            threshList.append(thresh)
-            profitList.append(portfolio.getTotalProfit())
-        bestThresh = threshList[profitList.index(max(profitList))]
-        bestThresh = round(bestThresh, 3)
-        print("Threshold: " + str(bestThresh) + " Profit for best threshold: " + str(max(profitList)))
-        return bestThresh
-    return midPoint
+        return False
 
 def updateDayTrades(dayTradeList):
-    pop = False
     for i in range(len(dayTradeList)):
         if dayTradeList[i] == 0:
-            for j in range(len(dayTradeList) - 1):
-                dayTradeList[j] = dayTradeList[j+1]
-                pop = True
+            continue
         else:
             dayTradeList[i] -= 1
-    if pop == True:
-        dayTradeList.pop()
 
 def addDayTrade(dayTradeList):
-    dayTradeList.append(5)
-
+    for i in range(len(dayTradeList)):
+        if dayTradeList[i] == 0:
+            dayTradeList[i] = 5
+            return
+    print("Did not find an available slot to trade, something went wrong")
+    quit()
 #Threshold Algo: Buys when stock price goes within certain boundaries of predictions
 def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, botThreshold, topThreshold, isTest):
     ticker = portfolio.getTickerName()
@@ -434,7 +301,7 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, botThres
     pastWindowHighActualAverages = []
     pastWindowHighPredictedAverages = []
 
-    dayTradeList = []
+    dayTradeList = [0,0,0]
     for week in list(testingDF["Date"].values):
             #if threshold != -1:
         #Get the index of the current week within the testing dataframe
@@ -453,6 +320,7 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, botThres
         #For each daily value in the weekDF
         for day in list(weekDF["Date"].values):
             updateDayTrades(dayTradeList)
+            print ("Day: " + str(day) + " DayTrades: " + str(dayTradeList))
             #run a list on the last 5 valid dates? -- then
             #3 counters that keep track of day trades -- maybe an int that stores the number of days since the first day trade and subtract 1 every day
             #Get the index of the current day within the weekly dataframe
@@ -471,7 +339,7 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, botThres
             if day == list(weekDF["Date"].values)[-1]:
                 isLastDay = True
             #Allows for 3 day trade days at the most and will run on every trading day except last (on last day, we only sell)
-            if (len(dayTradeList) < 3 and isLastDay == False):
+            if (availableToTrade(dayTradeList) and isLastDay == False):
                 #Open threshold checks
                 #print ("Open: " + str(nearOpen))
                 #print (str(lowAvgP))
@@ -534,7 +402,6 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, botThres
             pastWindowHighActualAverages = [testingDF.at[weekRowIndex, actualFeatureList[1]]]
             pastWindowHighPredictedAverages = [highAvgP]
 
-
         if isTest == False:
             #ALLTIME CODE
         #    botThreshold = calculateMeanError(allTimeLowActualAverages, allTimeLowPredictedAverages) #errorInLowAvg for all time as threshold
@@ -543,18 +410,6 @@ def algorithm_ApproachThreshold(portfolio, testingDF, dataDF, weekDict, botThres
             #WINDOW CODE
             botThreshold = calculateMeanError(pastWindowLowActualAverages, pastWindowLowPredictedAverages) #errorInLowAvg for window as threshold
             topThreshold = calculateMeanError(pastWindowHighActualAverages, pastWindowHighPredictedAverages) #errorInHighAvg for window as threshold
-
-            #FINE TUNING CODE
-        #    botThreshold = bestThresholdInRange(botThreshold, nearClose/100, inputWeek, testingDF, dataDF, weekDict)
-        #    topThreshold = bestThresholdInRange(topThreshold, nearClose/100, inputWeek, testingDF, dataDF, weekDict)
-        '''
-        For tomorrow:
-        Do this for [errorInLowAvg for threshold, errorInHighAvg for threshold, errorInLowAvg for selling threshold and errorInHighAvg for buying threshold]
-        use calculateMeanError on all time data
-        use calulateMeanError on past 13 weeks
-        maybe make functions
-        '''
-            #threshold = .011
 
 #calculateMeanError will find the mean error between two lists: predictionList: the predicted data for a feature, actualList: the actual data for a feature
 def calculateMeanError(actualList, predictionList):

@@ -45,23 +45,17 @@ def main():
     threshold = _configKeys.THRESHOLD
     successfulLassoDF = pd.read_csv("4successfulLasso.csv", low_memory=False)
 
-    lassoDF = pd.read_csv(os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), findBestLassoCSV(_configKeys.YVALUETICKER)), low_memory=False)
-    #predictList will contain a list of values
-    predictionsDict = makePredictionsDict(lassoDF, threshold)
-    standardizedTestingDF = makeStandardizedTestingDF(predictionsDict)
-    unstandardizedTestingDF = makeUnstandardizedTestingDF(standardizedTestingDF, window_length)
-    unstandardizedTestingDF.to_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), name+"_test_results.csv"))
-
-    '''
     for name in list(successfulLassoDF["FileName"].values):
         #name = str(name)
-        lassoDF = pd.read_csv(os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), name+".csv"), low_memory=False)
+        if findBestLassoCSV(_configKeys.YVALUETICKER) == name:
+            lassoDF = pd.read_csv(os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), name, low_memory=False)
+
         #predictList will contain a list of values
         predictionsDict = makePredictionsDict(lassoDF, threshold)
         standardizedTestingDF = makeStandardizedTestingDF(predictionsDict)
         unstandardizedTestingDF = makeUnstandardizedTestingDF(standardizedTestingDF, window_length)
         unstandardizedTestingDF.to_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), name+"_test_results.csv"))
-    '''
+
     #lassoDF = pd.read_csv(os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), str(_configKeys.YVALUETICKER)+"0.3_alpha13_beta.csv"), low_memory=False)
     '''
     #predictList will contain a list of values

@@ -140,7 +140,7 @@ def main():
 
     df = pd.DataFrame(successfulBins, columns = ["Symbol", "Type"])
     #Creating a sucessful file that includes asset names/tickers
-    df.to_csv('2successfulWeekBins.csv', index=False)
+    df.to_csv(_configKeys.SUCCESSFULWEEKBINS, index=False)
     #Now we throw this dataframe into a csv file and add it to a 2successfulWeekBins.csv
 
 

@@ -18,6 +18,7 @@ DATA_FOLDER = "1Data/"
 BINNED_FOLDER = "2Binned/"
 STANDARDIZED_FOLDER = "3Standardized_Binned/"
 SUCCESSFULSTANDARDIZEDBINS = "3successfulStandardizedBins_2018.csv"
+SUCCESSFULWEEKBINS = "2successfulWeekBins.csv"
 
 LASSO_RESULTS_FOLDER = "4Lasso_Results"
 TESTING_RESULTS_FOLDER = "5Testing_Results"

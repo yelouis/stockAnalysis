@@ -79,7 +79,7 @@ def main():
     successfulBins = {"Symbol" : [], "Type" : []}
 
     # We will use the 1successfulPulls.csv to tell us what type of asset is associated with each name/ticker
-    reference_df = pd.read_csv("2successfulWeekBins.csv", low_memory=False)
+    reference_df = pd.read_csv(_configKeys.SUCCESSFULWEEKBINS, low_memory=False)
     window_length = _configKeys.WINDOW_LENGTH
     #index is an asset row
     for index in reference_df.index:

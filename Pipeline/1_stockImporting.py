@@ -214,4 +214,4 @@ def main():
     #Creating a sucessful file that includes asset names/tickers
     df.to_csv('1successfulPulls.csv', index=False)
 
-main()
+#main()

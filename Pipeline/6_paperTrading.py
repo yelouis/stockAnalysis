@@ -426,4 +426,4 @@ Possible algorithms: Should work with different featureNames in order to see whi
 2. Swing Trading: Using bullish and bearish logic to maximize earnings during deviations from the "main trend line": https://www.ally.com/do-it-right/investing/swing-trading-strategy-guide/
 '''
 
-main()
+#main()

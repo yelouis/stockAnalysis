@@ -28,5 +28,9 @@ def main():
     # Algorithm for creating orders
     # Order documentation: https://alpaca.markets/docs/api-documentation/how-to/orders/
 
+    # Psuedo code, want to place a limit order for the day.
+        # If we have money and the limit condition is met, BUY
+        # If we only have stocks and the limit condition is met, SELL
+
 
 main()

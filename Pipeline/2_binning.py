@@ -69,7 +69,8 @@ def CollapseDictionaryToWeeks(dictionary, name, has_volume):
         list_of_elements = ['Open', 'High', 'Low', 'Close']
 
     for element in list_of_elements:
-        for statistic in ["average", "max", "min", "volatility", "change"]:
+        #for statistic in ["average", "max", "min", "volatility", "change"]:
+        for statistic in ["average", "max", "min", "volatility"]:
             elementIndex = elementDict[element]
             week_bin_list = []
             for week in dictionary.keys(): # This assumes the keys are already in chronological order

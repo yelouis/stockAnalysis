@@ -1,0 +1,3 @@
+,Date,Time,Ticker,Price,Transaction Type,Shares before,Shares After,Balance Before,Balance After
+0,AXPStock,93.78,2018-04-16,Open,Buy,0,10,1000,62.200000000000045
+1,AXPStock,124.6,2020-01-03,Close,Sell,10,0,62.200000000000045,1308.2

@@ -1,0 +1,3304 @@
+Symbol,Type
+BAStock,Stock
+GMStock,Stock
+CVXStock,Stock
+CStock,Stock
+BACStock,Stock
+TStock,Stock
+CATStock,Stock
+INTCStock,Stock
+MSFTStock,Stock
+AAStock,Stock
+FStock,Stock
+EBAYStock,Stock
+DISStock,Stock
+CSCOStock,Stock
+DEStock,Stock
+FDXStock,Stock
+GISStock,Stock
+GLWStock,Stock
+GTStock,Stock
+GSStock,Stock
+JPMStock,Stock
+KMBStock,Stock
+KHCStock,Stock
+KOStock,Stock
+MCDStock,Stock
+LLYStock,Stock
+ORCLStock,Stock
+MRKStock,Stock
+MSIStock,Stock
+MMMStock,Stock
+ODPStock,Stock
+VRTXStock,Stock
+MNSTStock,Stock
+TEVAStock,Stock
+FITBStock,Stock
+SHLDQStock,Stock
+CTASStock,Stock
+ADSKStock,Stock
+DISHStock,Stock
+GILDStock,Stock
+LIFEStock,Stock
+GOOGLStock,Stock
+FISVStock,Stock
+LBTYAStock,Stock
+PDLIStock,Stock
+ADBEStock,Stock
+BBStock,Stock
+QCOMStock,Stock
+SINAStock,Stock
+BIDUStock,Stock
+SOHUStock,Stock
+DISCAStock,Stock
+RBBNStock,Stock
+AMATStock,Stock
+STLDStock,Stock
+CDNSStock,Stock
+BBBYStock,Stock
+MCHPStock,Stock
+WYNNStock,Stock
+ISRGStock,Stock
+NDAQStock,Stock
+RYAAYStock,Stock
+INFYStock,Stock
+JBLUStock,Stock
+SPARStock,Stock
+HSICStock,Stock
+PAYXStock,Stock
+VRSNStock,Stock
+AAPLStock,Stock
+FASTStock,Stock
+XRAYStock,Stock
+CROXStock,Stock
+ZIONStock,Stock
+NTRSStock,Stock
+CTXSStock,Stock
+LAMRStock,Stock
+PTENStock,Stock
+ATLCStock,Stock
+CHRWStock,Stock
+SIRIStock,Stock
+ALPNStock,Stock
+PCARStock,Stock
+PAASStock,Stock
+AMZNStock,Stock
+ROSTStock,Stock
+VIAVStock,Stock
+NTESStock,Stock
+NTAPStock,Stock
+ETFCStock,Stock
+GRMNStock,Stock
+COSTStock,Stock
+CHKPStock,Stock
+LRCXStock,Stock
+CIENStock,Stock
+IACStock,Stock
+INTUStock,Stock
+EXPEStock,Stock
+TCOMStock,Stock
+UTSIStock,Stock
+CTSHStock,Stock
+RMBSStock,Stock
+NIHDStock,Stock
+YRCWStock,Stock
+AKAMStock,Stock
+KLACStock,Stock
+JNPRStock,Stock
+ATVIStock,Stock
+FLEXStock,Stock
+AMGNStock,Stock
+XLNXStock,Stock
+EXPDStock,Stock
+EAStock,Stock
+PDCOStock,Stock
+TROWStock,Stock
+BIIBStock,Stock
+QRTEAStock,Stock
+SCHWStock,Stock
+HBANStock,Stock
+NLOKStock,Stock
+NVDAStock,Stock
+SRCLStock,Stock
+SBUXStock,Stock
+CELGStock,Stock
+CINFStock,Stock
+EXTRStock,Stock
+AAXNStock,Stock
+HOLXStock,Stock
+CMCSAStock,Stock
+CPSTStock,Stock
+MRVLStock,Stock
+BLDPStock,Stock
+SIFYStock,Stock
+CDTIStock,Stock
+EUHMFStock,Stock
+MDTStock,Stock
+DOVStock,Stock
+ASHStock,Stock
+NOCStock,Stock
+MGMStock,Stock
+VNOStock,Stock
+MAStock,Stock
+ANStock,Stock
+FLRStock,Stock
+GDStock,Stock
+DTEStock,Stock
+ADIStock,Stock
+VFCStock,Stock
+AGNStock,Stock
+CAHStock,Stock
+XELStock,Stock
+DHIStock,Stock
+IPGStock,Stock
+STIStock,Stock
+BMSStock,Stock
+LMTStock,Stock
+WATStock,Stock
+ACNStock,Stock
+DStock,Stock
+XOMStock,Stock
+CIStock,Stock
+PJCStock,Stock
+KGCStock,Stock
+PEGStock,Stock
+NIStock,Stock
+YGEHYStock,Stock
+ZBHStock,Stock
+CSXStock,Stock
+ICEStock,Stock
+LUVStock,Stock
+ITWStock,Stock
+DRIStock,Stock
+MATStock,Stock
+BBTStock,Stock
+CCJStock,Stock
+HALStock,Stock
+PLDStock,Stock
+MKCStock,Stock
+GPSStock,Stock
+TEXStock,Stock
+HSTStock,Stock
+ELStock,Stock
+IPStock,Stock
+EMRStock,Stock
+CLXStock,Stock
+COPStock,Stock
+CLStock,Stock
+RTNStock,Stock
+NEStock,Stock
+PNWStock,Stock
+RFStock,Stock
+CNPStock,Stock
+METStock,Stock
+EXCStock,Stock
+BAXStock,Stock
+OXYStock,Stock
+SStock,Stock
+SOStock,Stock
+TPRStock,Stock
+LENStock,Stock
+CPBStock,Stock
+CTLStock,Stock
+STTStock,Stock
+PGRStock,Stock
+HMYStock,Stock
+CLFStock,Stock
+VMCStock,Stock
+CNXStock,Stock
+PHStock,Stock
+TECKStock,Stock
+GPCStock,Stock
+CBREStock,Stock
+DDStock,Stock
+IXStock,Stock
+SHWStock,Stock
+PFEStock,Stock
+DCMYYStock,Stock
+WFCStock,Stock
+MTWStock,Stock
+WMTStock,Stock
+EIXStock,Stock
+KBHStock,Stock
+SNAStock,Stock
+ATIStock,Stock
+XRXStock,Stock
+EFXStock,Stock
+GFIStock,Stock
+KNMCYStock,Stock
+MCKStock,Stock
+ETRStock,Stock
+CMSStock,Stock
+HMCStock,Stock
+AMPStock,Stock
+AIGStock,Stock
+RLStock,Stock
+LEGStock,Stock
+LBStock,Stock
+IFFStock,Stock
+PBRStock,Stock
+MHOStock,Stock
+GWWStock,Stock
+JCPStock,Stock
+DOStock,Stock
+STZStock,Stock
+STVVYStock,Stock
+AMTStock,Stock
+TVStock,Stock
+PMStock,Stock
+FISStock,Stock
+MOStock,Stock
+EP_pcStock,Stock
+STCStock,Stock
+CBSStock,Stock
+BLLStock,Stock
+HIGStock,Stock
+AKSStock,Stock
+HSYStock,Stock
+SITCStock,Stock
+DXCStock,Stock
+MSStock,Stock
+PNCStock,Stock
+WMStock,Stock
+ABCStock,Stock
+AIZStock,Stock
+KRStock,Stock
+TAPStock,Stock
+HDStock,Stock
+BDXStock,Stock
+ARCHStock,Stock
+SJMStock,Stock
+VMWStock,Stock
+SEEStock,Stock
+BBYStock,Stock
+ADMStock,Stock
+BFbStock,Stock
+IBMStock,Stock
+UNPStock,Stock
+CHNStock,Stock
+SNEStock,Stock
+RStock,Stock
+SLMStock,Stock
+MUStock,Stock
+AVYStock,Stock
+WFTIQStock,Stock
+MROStock,Stock
+CFStock,Stock
+APAStock,Stock
+DUKStock,Stock
+KEYStock,Stock
+TDCStock,Stock
+SNVStock,Stock
+WPMStock,Stock
+LHStock,Stock
+BXPStock,Stock
+WDCStock,Stock
+PPGStock,Stock
+SPGIStock,Stock
+ANFStock,Stock
+WMBStock,Stock
+ANTMStock,Stock
+BCStock,Stock
+JECStock,Stock
+EMNStock,Stock
+VZStock,Stock
+NUEStock,Stock
+OMCStock,Stock
+NYTStock,Stock
+LNCStock,Stock
+UBSStock,Stock
+NOVStock,Stock
+AVBStock,Stock
+MARStock,Stock
+IRStock,Stock
+BMYStock,Stock
+GNWStock,Stock
+AEPStock,Stock
+TMOStock,Stock
+KSSStock,Stock
+NEMStock,Stock
+VARStock,Stock
+GHCStock,Stock
+TTMStock,Stock
+PSAStock,Stock
+TRVStock,Stock
+SWKStock,Stock
+MBIStock,Stock
+HDBStock,Stock
+NTTYYStock,Stock
+BENStock,Stock
+HUMStock,Stock
+HRBStock,Stock
+VIABStock,Stock
+UNMStock,Stock
+CBStock,Stock
+JEFStock,Stock
+JNJStock,Stock
+TSNStock,Stock
+TGTStock,Stock
+JBLStock,Stock
+AXPStock,Stock
+AMXStock,Stock
+MASStock,Stock
+XStock,Stock
+SYKStock,Stock
+MUFGStock,Stock
+DFSStock,Stock
+PRUStock,Stock
+ABTStock,Stock
+GEStock,Stock
+OIBRQStock,Stock
+MDPStock,Stock
+DGXStock,Stock
+UPSStock,Stock
+AUYStock,Stock
+CVSStock,Stock
+ITTStock,Stock
+PPLStock,Stock
+DFStock,Stock
+RHIStock,Stock
+SPGStock,Stock
+IBNStock,Stock
+BIGStock,Stock
+AVPStock,Stock
+JCIStock,Stock
+CMIStock,Stock
+ALLStock,Stock
+SREStock,Stock
+DVNStock,Stock
+CAGStock,Stock
+TJXStock,Stock
+WHRStock,Stock
+RRCStock,Stock
+FEStock,Stock
+HOVStock,Stock
+GLStock,Stock
+UTXStock,Stock
+PHMStock,Stock
+WYNDStock,Stock
+VLOStock,Stock
+IGTStock,Stock
+NBLStock,Stock
+BSXStock,Stock
+FTRStock,Stock
+COFStock,Stock
+PCGStock,Stock
+NSCStock,Stock
+AFLStock,Stock
+CHKStock,Stock
+HOGStock,Stock
+EQRStock,Stock
+PBIStock,Stock
+APDStock,Stock
+FHNStock,Stock
+PFGStock,Stock
+TXNStock,Stock
+ASRStock,Stock
+HPQStock,Stock
+CCEPStock,Stock
+HONStock,Stock
+NMRStock,Stock
+AMDStock,Stock
+MTBStock,Stock
+NCRStock,Stock
+MOSStock,Stock
+PKIStock,Stock
+LVSStock,Stock
+FCXStock,Stock
+AZOStock,Stock
+NBRStock,Stock
+SYYStock,Stock
+THCStock,Stock
+AEEStock,Stock
+IBAStock,Stock
+ETNStock,Stock
+SRLStock,Stock
+KOFStock,Stock
+CRMStock,Stock
+EPACStock,Stock
+EDStock,Stock
+AESStock,Stock
+RIGStock,Stock
+AIVStock,Stock
+TXTStock,Stock
+UISStock,Stock
+FIIStock,Stock
+VIAStock,Stock
+USBStock,Stock
+CMAStock,Stock
+VALStock,Stock
+TIFStock,Stock
+VStock,Stock
+MTGStock,Stock
+BKRStock,Stock
+TMStock,Stock
+WUStock,Stock
+CAJStock,Stock
+HESStock,Stock
+YUMStock,Stock
+MMCStock,Stock
+KYOCYStock,Stock
+KStock,Stock
+KIMStock,Stock
+ECLStock,Stock
+JWNStock,Stock
+EOGStock,Stock
+NWLStock,Stock
+AONStock,Stock
+HASStock,Stock
+BKStock,Stock
+WITStock,Stock
+SLBStock,Stock
+WBAStock,Stock
+ROKStock,Stock
+PEPStock,Stock
+UNHStock,Stock
+TERStock,Stock
+MURStock,Stock
+MFGStock,Stock
+DDSStock,Stock
+DHRStock,Stock
+FLIRStock,Stock
+SPWRStock,Stock
+STXStock,Stock
+AStock,Stock
+CXStock,Stock
+DALStock,Stock
+MStock,Stock
+MCOStock,Stock
+NKEStock,Stock
+RDYStock,Stock
+LNNStock,Stock
+PGStock,Stock
+WYStock,Stock
+ICAYYStock,Stock
+ADPStock,Stock
+DNRStock,Stock
+MDRXStock,Stock
+RSStock,Stock
+SSRMStock,Stock
+SWNStock,Stock
+CRIStock,Stock
+KDPStock,Stock
+LOWStock,Stock
+MIDDStock,Stock
+VALEStock,Stock
+CPLStock,Stock
+UALStock,Stock
+NFLXStock,Stock
+NWSStock,Stock
+TUPStock,Stock
+EQIXStock,Stock
+CERNStock,Stock
+CGAStock,Stock
+BKNGStock,Stock
+ORLYStock,Stock
+SGENStock,Stock
+BLKStock,Stock
+CCMPStock,Stock
+CMEStock,Stock
+ILMNStock,Stock
+JBHTStock,Stock
+LStock,Stock
+MXIMStock,Stock
+RCIStock,Stock
+URBNStock,Stock
+SSPStock,Stock
+OSKStock,Stock
+NEEStock,Stock
+CEFStock,Stock
+FSLRStock,Stock
+MYLStock,Stock
+MKTAYStock,Stock
+MITSYStock,Stock
+FFIVStock,Stock
+EWStock,Stock
+NWSAStock,Stock
+ALXNStock,Stock
+APHStock,Stock
+BRKbStock,Stock
+COGStock,Stock
+KMXStock,Stock
+CMGStock,Stock
+DVAStock,Stock
+ATGEStock,Stock
+EQTStock,Stock
+FMCStock,Stock
+FTIStock,Stock
+FLSStock,Stock
+GMEStock,Stock
+LHXStock,Stock
+PEAKStock,Stock
+WELLStock,Stock
+HPStock,Stock
+HRLStock,Stock
+IVZStock,Stock
+IRMStock,Stock
+ESStock,Stock
+NRGStock,Stock
+OKEStock,Stock
+OIStock,Stock
+PXDStock,Stock
+QEPStock,Stock
+RSGStock,Stock
+ROPStock,Stock
+VTRStock,Stock
+WECStock,Stock
+RRDStock,Stock
+GOLDStock,Stock
+AEMStock,Stock
+ALVStock,Stock
+BXStock,Stock
+CIMStock,Stock
+CNSStock,Stock
+CRRStock,Stock
+DDDStock,Stock
+LAZStock,Stock
+MGAStock,Stock
+MPCStock,Stock
+NSStock,Stock
+OSGStock,Stock
+RESStock,Stock
+SCCOStock,Stock
+SDStock,Stock
+TWIStock,Stock
+UAAStock,Stock
+BHCStock,Stock
+WTRStock,Stock
+ADTNStock,Stock
+AEISStock,Stock
+ANTEStock,Stock
+ARNAStock,Stock
+AVGOStock,Stock
+CLSNStock,Stock
+CREEStock,Stock
+CRUSStock,Stock
+DNKNStock,Stock
+ENTGStock,Stock
+HAINStock,Stock
+IIJIYStock,Stock
+IPGPStock,Stock
+IONSStock,Stock
+ITRIStock,Stock
+MANTStock,Stock
+MPAAStock,Stock
+NUANStock,Stock
+NXPIStock,Stock
+QUIKStock,Stock
+RDWRStock,Stock
+RGLDStock,Stock
+TSLAStock,Stock
+TTWOStock,Stock
+YNDXStock,Stock
+DLTRStock,Stock
+ENGQFStock,Stock
+AAMEStock,Stock
+AAONStock,Stock
+AAWWStock,Stock
+ABCBStock,Stock
+ARCBStock,Stock
+ABIOStock,Stock
+ABMDStock,Stock
+AUTOStock,Stock
+ACADStock,Stock
+ACETQStock,Stock
+ACFNStock,Stock
+ACHCStock,Stock
+ACHNStock,Stock
+ACIWStock,Stock
+ACLSStock,Stock
+ACNBStock,Stock
+ACORStock,Stock
+ACRXStock,Stock
+ACTGStock,Stock
+ACURStock,Stock
+RAMPStock,Stock
+AGHCStock,Stock
+ADESStock,Stock
+ADUSStock,Stock
+AEGNStock,Stock
+AEHRStock,Stock
+LINUFStock,Stock
+SLNGStock,Stock
+AEYStock,Stock
+AEZSStock,Stock
+AFSIMStock,Stock
+AGENStock,Stock
+ARGOStock,Stock
+AGNCStock,Stock
+AGYSStock,Stock
+AHPIStock,Stock
+AIMCStock,Stock
+AIRTStock,Stock
+AKRXStock,Stock
+ALCOStock,Stock
+ALGNStock,Stock
+ALGTStock,Stock
+ALIMStock,Stock
+ALKSStock,Stock
+ALLTStock,Stock
+ALNYStock,Stock
+ALOTStock,Stock
+ALSKStock,Stock
+AMAGStock,Stock
+AMEDStock,Stock
+AMKRStock,Stock
+AMNBStock,Stock
+AMOTStock,Stock
+AMOVStock,Stock
+AMRBStock,Stock
+AMRSStock,Stock
+AMSCStock,Stock
+AMSFStock,Stock
+AMSWAStock,Stock
+AMTDStock,Stock
+AMWDStock,Stock
+ANATStock,Stock
+GNOWStock,Stock
+ANDEStock,Stock
+ANGOStock,Stock
+ANIKStock,Stock
+ANSSStock,Stock
+ANTHStock,Stock
+AOSLStock,Stock
+APEIStock,Stock
+APOGStock,Stock
+RIOTStock,Stock
+SEELStock,Stock
+IRCPStock,Stock
+APWCStock,Stock
+ARAYStock,Stock
+JANStock,Stock
+VERStock,Stock
+ARCWStock,Stock
+AREXStock,Stock
+THRMStock,Stock
+ARKRStock,Stock
+ARLPStock,Stock
+AROWStock,Stock
+ARQLStock,Stock
+ARRYStock,Stock
+TRECStock,Stock
+ARTNAStock,Stock
+ARTWStock,Stock
+ARTXStock,Stock
+ARWRStock,Stock
+ASBStock,Stock
+ASCMAStock,Stock
+ASFIStock,Stock
+ASGNStock,Stock
+ASMIYStock,Stock
+ASMLFStock,Stock
+ASNAStock,Stock
+ASRVStock,Stock
+ASTCStock,Stock
+ASTEStock,Stock
+ASTIStock,Stock
+VCELStock,Stock
+ASURStock,Stock
+ASYSStock,Stock
+AACGStock,Stock
+ATAXStock,Stock
+ATEAStock,Stock
+ATECStock,Stock
+ATHXStock,Stock
+ATLOStock,Stock
+ATNIStock,Stock
+ATRCStock,Stock
+ATRIStock,Stock
+ATRMStock,Stock
+ATROStock,Stock
+AUBNStock,Stock
+AUDCStock,Stock
+AVAVStock,Stock
+DVCRStock,Stock
+AVEOStock,Stock
+AVIDStock,Stock
+SRPTStock,Stock
+AVNWStock,Stock
+AWREStock,Stock
+AXASStock,Stock
+AXTIStock,Stock
+NTUSStock,Stock
+BANCStock,Stock
+BANFStock,Stock
+BANRStock,Stock
+BASIStock,Stock
+HOPEStock,Stock
+BBGIStock,Stock
+BBSIStock,Stock
+BCBPStock,Stock
+BCOMStock,Stock
+BCPCStock,Stock
+BCRXStock,Stock
+CLARStock,Stock
+BDGEStock,Stock
+BDSIStock,Stock
+BEATStock,Stock
+BEBEStock,Stock
+BECNStock,Stock
+BELFAStock,Stock
+BELFBStock,Stock
+BERKStock,Stock
+BFINStock,Stock
+BGCPStock,Stock
+BGFVStock,Stock
+BGMDStock,Stock
+BHLBStock,Stock
+BIOCStock,Stock
+ALBOStock,Stock
+GRBKStock,Stock
+BIOSStock,Stock
+BJRIStock,Stock
+BKEPStock,Stock
+BKSCStock,Stock
+BLDRStock,Stock
+BLINStock,Stock
+BLKBStock,Stock
+BLRXStock,Stock
+BIOLStock,Stock
+BMRCStock,Stock
+BMRNStock,Stock
+BMTCStock,Stock
+BNSOStock,Stock
+BOCHStock,Stock
+AXStock,Stock
+BOKFStock,Stock
+BONTQStock,Stock
+BOOMStock,Stock
+BOSCStock,Stock
+BPFHStock,Stock
+MDSYFStock,Stock
+BRIDStock,Stock
+BRKLStock,Stock
+BRKSStock,Stock
+BSETStock,Stock
+BSPMStock,Stock
+BSQRStock,Stock
+BSRRStock,Stock
+BSTCStock,Stock
+BUROFStock,Stock
+BUSEStock,Stock
+BVSNStock,Stock
+BWENStock,Stock
+PTVCAStock,Stock
+PTVCBStock,Stock
+BYFCStock,Stock
+CAASStock,Stock
+CACStock,Stock
+CACCStock,Stock
+HHTStock,Stock
+CAKEStock,Stock
+CALIStock,Stock
+CALMStock,Stock
+CAMPStock,Stock
+CAMTStock,Stock
+CARBStock,Stock
+CARTStock,Stock
+CARVStock,Stock
+CASHStock,Stock
+CASSStock,Stock
+CASYStock,Stock
+CATMStock,Stock
+CATYStock,Stock
+NETEStock,Stock
+CBATStock,Stock
+CBANStock,Stock
+CBLIStock,Stock
+CBPOStock,Stock
+CBRLStock,Stock
+CBSHStock,Stock
+CCBGStock,Stock
+CCCLStock,Stock
+CCIHYStock,Stock
+CCNEStock,Stock
+CCOIStock,Stock
+CCRNStock,Stock
+CCURStock,Stock
+CDXSStock,Stock
+CDZIStock,Stock
+CECEStock,Stock
+CECOStock,Stock
+CENTStock,Stock
+CENTAStock,Stock
+CERPQStock,Stock
+CERSStock,Stock
+CETVStock,Stock
+CEVAStock,Stock
+CFBKStock,Stock
+CFFIStock,Stock
+CFFNStock,Stock
+CFNBStock,Stock
+PMEStock,Stock
+CGENStock,Stock
+CGNXStock,Stock
+CHCIStock,Stock
+CHCOStock,Stock
+CHDNStock,Stock
+CHEFStock,Stock
+APEXStock,Stock
+CHNRStock,Stock
+CHOPFStock,Stock
+CHRSStock,Stock
+CHTRStock,Stock
+CIDMStock,Stock
+FANHStock,Stock
+CIZNStock,Stock
+CJJDStock,Stock
+CLCTStock,Stock
+CLDXStock,Stock
+CLFDStock,Stock
+CLMTStock,Stock
+CLNEStock,Stock
+SEIIStock,Stock
+CLROStock,Stock
+CLUBStock,Stock
+CLVSStock,Stock
+CLWTStock,Stock
+CMCOStock,Stock
+DXLGStock,Stock
+CMTLStock,Stock
+CNAFStock,Stock
+CNBKAStock,Stock
+FBIOStock,Stock
+CNETStock,Stock
+TAOPStock,Stock
+CNMDStock,Stock
+CNSLStock,Stock
+CNTFYStock,Stock
+CNTYStock,Stock
+VIEWFStock,Stock
+COHRStock,Stock
+COHUStock,Stock
+COKEStock,Stock
+COLBStock,Stock
+COLMStock,Stock
+CONNStock,Stock
+PTEStock,Stock
+COREStock,Stock
+CORTStock,Stock
+COWNStock,Stock
+TRCBStock,Stock
+CPHCStock,Stock
+CPIXStock,Stock
+CPLPStock,Stock
+CPRXStock,Stock
+CPSIStock,Stock
+CPSSStock,Stock
+CRAIStock,Stock
+CRAYStock,Stock
+CREGStock,Stock
+CRESYStock,Stock
+CRISStock,Stock
+CRMBQStock,Stock
+CORVStock,Stock
+CRMTStock,Stock
+CRNTStock,Stock
+CRVLStock,Stock
+CRWSStock,Stock
+CRZOStock,Stock
+CSFLStock,Stock
+CSGPStock,Stock
+CSGSStock,Stock
+CSIIStock,Stock
+CSIQStock,Stock
+CSODStock,Stock
+CSPIStock,Stock
+CSUNYStock,Stock
+CSWCStock,Stock
+CTBIStock,Stock
+CYRNStock,Stock
+HKTVYStock,Stock
+CTGStock,Stock
+CTHRStock,Stock
+CTIBStock,Stock
+CTICStock,Stock
+CTRNStock,Stock
+CTWSStock,Stock
+CUTRStock,Stock
+CVBFStock,Stock
+CVCOStock,Stock
+CVCYStock,Stock
+CVGIStock,Stock
+CVGWStock,Stock
+CVLYStock,Stock
+CVTIStock,Stock
+CVVStock,Stock
+CWBCStock,Stock
+CWCOStock,Stock
+CWSTStock,Stock
+CXDCStock,Stock
+CYStock,Stock
+CYANStock,Stock
+CYBEStock,Stock
+CYCCStock,Stock
+CYOUStock,Stock
+CYTKStock,Stock
+CYTRStock,Stock
+PSTVStock,Stock
+CZFCStock,Stock
+CZNCStock,Stock
+CZWIStock,Stock
+DAIOStock,Stock
+DAKTStock,Stock
+BBQStock,Stock
+DCIXStock,Stock
+DCOMStock,Stock
+DCTHStock,Stock
+DENNStock,Stock
+ASRTStock,Stock
+DESTQStock,Stock
+DGICAStock,Stock
+DGIIStock,Stock
+DGLYStock,Stock
+DHILStock,Stock
+LLITStock,Stock
+DIODStock,Stock
+DISCBStock,Stock
+DISCKStock,Stock
+DJCOStock,Stock
+DMLPStock,Stock
+DMRCStock,Stock
+DNBFStock,Stock
+DORMStock,Stock
+DRADStock,Stock
+USAUStock,Stock
+DRDStock,Stock
+DRRXStock,Stock
+DSGXStock,Stock
+DSPGStock,Stock
+DSWLStock,Stock
+DVAXStock,Stock
+DWSNStock,Stock
+DXCMStock,Stock
+DXPEStock,Stock
+DXYNStock,Stock
+IDXXStock,Stock
+INCYStock,Stock
+LBTYKStock,Stock
+MELIStock,Stock
+TMUSStock,Stock
+FBStock,Stock
+WLTWStock,Stock
+WDAYStock,Stock
+MDLZStock,Stock
+SWKSStock,Stock
+LULUStock,Stock
+REGNStock,Stock
+ASMLStock,Stock
+SNPSStock,Stock
+ULTAStock,Stock
+VRSKStock,Stock
+AALStock,Stock
+GOOGStock,Stock
+JDStock,Stock
+PYPLStock,Stock
+DYNTStock,Stock
+ENTStock,Stock
+EBIXStock,Stock
+EBMTStock,Stock
+EBSBStock,Stock
+EBTCStock,Stock
+ECHOStock,Stock
+ECOLStock,Stock
+ECPGStock,Stock
+EDAPStock,Stock
+ALYAStock,Stock
+EDUCStock,Stock
+EEFTStock,Stock
+EEIStock,Stock
+EFSCStock,Stock
+EGANStock,Stock
+EGBNStock,Stock
+EGLEStock,Stock
+EGOVStock,Stock
+EHTHStock,Stock
+ELGXStock,Stock
+ELSEStock,Stock
+ELTKStock,Stock
+EMCFStock,Stock
+EMKRStock,Stock
+EMLStock,Stock
+EMMSStock,Stock
+ENDPStock,Stock
+ENGStock,Stock
+ENSGStock,Stock
+EPAYStock,Stock
+ERIEStock,Stock
+ERIIStock,Stock
+ESBKStock,Stock
+ESCAStock,Stock
+ESEAStock,Stock
+ESGRStock,Stock
+ESSAStock,Stock
+EVOLStock,Stock
+EWBCStock,Stock
+EXASStock,Stock
+EXFOStock,Stock
+EXLSStock,Stock
+EXPOStock,Stock
+EZPWStock,Stock
+FARMStock,Stock
+FAROStock,Stock
+FBIZStock,Stock
+FBMSStock,Stock
+FBNCStock,Stock
+FBSSStock,Stock
+FCAPStock,Stock
+FCBCStock,Stock
+FCCOStock,Stock
+FCCYStock,Stock
+FCELStock,Stock
+FCFSStock,Stock
+FCNCAStock,Stock
+CIVBStock,Stock
+FDEFStock,Stock
+FEIMStock,Stock
+FELEStock,Stock
+FFBCStock,Stock
+FFHLStock,Stock
+FFICStock,Stock
+FFINStock,Stock
+FFNWStock,Stock
+VERUStock,Stock
+FIBKStock,Stock
+FISIStock,Stock
+FIZZStock,Stock
+FLDMStock,Stock
+FLICStock,Stock
+AVDLStock,Stock
+FLWSStock,Stock
+FLXSStock,Stock
+FMBIStock,Stock
+FMNBStock,Stock
+FNLCStock,Stock
+FOLDStock,Stock
+FONRStock,Stock
+FORDStock,Stock
+FORMStock,Stock
+FORRStock,Stock
+FRANStock,Stock
+FRBKStock,Stock
+FRMEStock,Stock
+FRAFStock,Stock
+FSFGStock,Stock
+CIGIStock,Stock
+FSTRStock,Stock
+FTEKStock,Stock
+FTNTStock,Stock
+FULTStock,Stock
+FUNCStock,Stock
+FWRDStock,Stock
+GABCStock,Stock
+GAIAStock,Stock
+SLSStock,Stock
+GASSStock,Stock
+GBCIStock,Stock
+GBLIStock,Stock
+GCBCStock,Stock
+GENCStock,Stock
+GENEStock,Stock
+GERNStock,Stock
+GEVOStock,Stock
+GFEDStock,Stock
+GFNStock,Stock
+GIFIStock,Stock
+GIGMStock,Stock
+GIIIStock,Stock
+GILTStock,Stock
+GLBSStock,Stock
+GLBZStock,Stock
+GLDDStock,Stock
+GLNGStock,Stock
+GLREStock,Stock
+GLUUStock,Stock
+GMLPStock,Stock
+GNMKStock,Stock
+GNTXStock,Stock
+GOODStock,Stock
+GPREStock,Stock
+GRFSStock,Stock
+GROWStock,Stock
+GRVYStock,Stock
+GSBCStock,Stock
+NOVTStock,Stock
+GSITStock,Stock
+CCLPStock,Stock
+GSMStock,Stock
+GTIMStock,Stock
+GTLSStock,Stock
+ONCTStock,Stock
+GUREStock,Stock
+GYROStock,Stock
+HAStock,Stock
+HAFCStock,Stock
+HALLStock,Stock
+HALOStock,Stock
+HAYNStock,Stock
+HBCPStock,Stock
+HWCStock,Stock
+HBIOStock,Stock
+HBNCStock,Stock
+HCCIStock,Stock
+HCKTStock,Stock
+HCSGStock,Stock
+HDSNStock,Stock
+HEESStock,Stock
+HELEStock,Stock
+HFWAStock,Stock
+HGSHStock,Stock
+HSONStock,Stock
+HIBBStock,Stock
+HIFSStock,Stock
+HIHOStock,Stock
+HIMXStock,Stock
+HLITStock,Stock
+HMNFStock,Stock
+HMSYStock,Stock
+HNRGStock,Stock
+HOFTStock,Stock
+HOLIStock,Stock
+HOMBStock,Stock
+BREWStock,Stock
+HRZNStock,Stock
+HSIIStock,Stock
+HSKAStock,Stock
+HSTMStock,Stock
+MARKStock,Stock
+HTBKStock,Stock
+HTHTStock,Stock
+HTLDStock,Stock
+HTLFStock,Stock
+HUBGStock,Stock
+HURCStock,Stock
+HURNStock,Stock
+TVTYStock,Stock
+HWBKStock,Stock
+HWCCStock,Stock
+HWKNStock,Stock
+HZNPStock,Stock
+IARTStock,Stock
+IBCPStock,Stock
+IBKCStock,Stock
+IBKRStock,Stock
+IBOCStock,Stock
+ICADStock,Stock
+ICCCStock,Stock
+ICFIStock,Stock
+ICLRStock,Stock
+ICUIStock,Stock
+IDCCStock,Stock
+IDRAStock,Stock
+IDSAStock,Stock
+PWFLStock,Stock
+IEPStock,Stock
+IESCStock,Stock
+TILEStock,Stock
+IGLDStock,Stock
+IIIStock,Stock
+IIINStock,Stock
+IINStock,Stock
+IIVIStock,Stock
+IKNXStock,Stock
+IMGNStock,Stock
+IMKTAStock,Stock
+IMMRStock,Stock
+IMMUStock,Stock
+IMOSStock,Stock
+INAPStock,Stock
+INDBStock,Stock
+INFIStock,Stock
+INFNStock,Stock
+INODStock,Stock
+INSMStock,Stock
+INTLStock,Stock
+INVEStock,Stock
+INWKStock,Stock
+IOSPStock,Stock
+IPARStock,Stock
+IPHSStock,Stock
+IRBTStock,Stock
+IRDMStock,Stock
+IRIXStock,Stock
+IROQStock,Stock
+IRWDStock,Stock
+ISBCStock,Stock
+ISIGStock,Stock
+ISNSStock,Stock
+ISSCStock,Stock
+ITICStock,Stock
+ITRNStock,Stock
+IVACStock,Stock
+JACKStock,Stock
+JAKKStock,Stock
+JAZZStock,Stock
+JBSSStock,Stock
+JCOMStock,Stock
+JCSStock,Stock
+JCTCFStock,Stock
+JJSFStock,Stock
+JKHYStock,Stock
+JOBSStock,Stock
+CTRCStock,Stock
+JOUTStock,Stock
+JRJCStock,Stock
+JVAStock,Stock
+KALUStock,Stock
+KBALStock,Stock
+KELYAStock,Stock
+KEQUStock,Stock
+KFFBStock,Stock
+KFRCStock,Stock
+KGJIStock,Stock
+KINSStock,Stock
+KIRKStock,Stock
+KLICStock,Stock
+KNDIStock,Stock
+LKCOStock,Stock
+THMOStock,Stock
+KOPNStock,Stock
+KOSSStock,Stock
+KRNYStock,Stock
+KTCCStock,Stock
+KTOSStock,Stock
+KVHIStock,Stock
+GDENStock,Stock
+LAKEStock,Stock
+LANCStock,Stock
+LARKStock,Stock
+LAWSStock,Stock
+LBAIStock,Stock
+YVRStock,Stock
+LCNBStock,Stock
+LCUTStock,Stock
+LEDSStock,Stock
+LFUSStock,Stock
+LGNDStock,Stock
+LHCGStock,Stock
+LINCStock,Stock
+QRTEBStock,Stock
+LIVEStock,Stock
+LKFNStock,Stock
+LLNWStock,Stock
+FWONAStock,Stock
+LMNRStock,Stock
+LMNXStock,Stock
+LNDCStock,Stock
+LOANStock,Stock
+LOGMStock,Stock
+LOOPStock,Stock
+LOPEStock,Stock
+LORLStock,Stock
+LPLAStock,Stock
+LPSNStock,Stock
+LPTHStock,Stock
+LQDTStock,Stock
+GNSSStock,Stock
+LSBKStock,Stock
+LSCCStock,Stock
+LSTRStock,Stock
+LTBRStock,Stock
+LTRXStock,Stock
+LUNAStock,Stock
+LWAYStock,Stock
+LXRXStock,Stock
+LYTSStock,Stock
+MAGSStock,Stock
+MANHStock,Stock
+MARPSStock,Stock
+MASIStock,Stock
+MATWStock,Stock
+MBWMStock,Stock
+MCBCStock,Stock
+MCEPStock,Stock
+MCHXStock,Stock
+MCRIStock,Stock
+MDCAStock,Stock
+MDCOStock,Stock
+SOHOStock,Stock
+SSKNStock,Stock
+MEOHStock,Stock
+MERCStock,Stock
+MFNCStock,Stock
+PPIHStock,Stock
+MFSFStock,Stock
+MGEEStock,Stock
+MGICStock,Stock
+MGLNStock,Stock
+MGPIStock,Stock
+MGRCStock,Stock
+MHLDStock,Stock
+MINDStock,Stock
+MINIStock,Stock
+MITKStock,Stock
+MKSIStock,Stock
+MKTXStock,Stock
+MLABStock,Stock
+MLHRStock,Stock
+STCNStock,Stock
+MLVFStock,Stock
+MMLPStock,Stock
+MMSIStock,Stock
+MMYTStock,Stock
+MNDOStock,Stock
+MNKDStock,Stock
+MNOVStock,Stock
+MNROStock,Stock
+MNTAStock,Stock
+MNTXStock,Stock
+MOFGStock,Stock
+MORNStock,Stock
+MOSYStock,Stock
+MPBStock,Stock
+TELLStock,Stock
+MPWRStock,Stock
+MRCYStock,Stock
+MRLNStock,Stock
+MRTNStock,Stock
+MSBFStock,Stock
+MSEXStock,Stock
+MSONStock,Stock
+MSTRStock,Stock
+MTEXStock,Stock
+MTRXStock,Stock
+MTSCStock,Stock
+MTSLStock,Stock
+MVISStock,Stock
+MYGNStock,Stock
+MYRGStock,Stock
+VXRTStock,Stock
+NAIIStock,Stock
+NATHStock,Stock
+NATIStock,Stock
+NATRStock,Stock
+NBIXStock,Stock
+NBNStock,Stock
+NBTBStock,Stock
+SLCTStock,Stock
+NCMIStock,Stock
+NCTYStock,Stock
+NDSNStock,Stock
+NEOGStock,Stock
+NEPTStock,Stock
+NEWTStock,Stock
+NFBKStock,Stock
+BIMIStock,Stock
+NICEStock,Stock
+NICKStock,Stock
+NKSHStock,Stock
+NKTRStock,Stock
+NLNKStock,Stock
+NNBRStock,Stock
+NRIMStock,Stock
+NSECStock,Stock
+NSITStock,Stock
+NSSCStock,Stock
+NSYSStock,Stock
+NTCTStock,Stock
+NTGRStock,Stock
+NTICStock,Stock
+NTWKStock,Stock
+NUROStock,Stock
+NUVAStock,Stock
+NVAXStock,Stock
+NVECStock,Stock
+KZIAStock,Stock
+NVMIStock,Stock
+INSGStock,Stock
+NWBIStock,Stock
+NWFLStock,Stock
+NWLIStock,Stock
+NWPXStock,Stock
+NXSTStock,Stock
+NYMTStock,Stock
+NYMXStock,Stock
+NYNYStock,Stock
+OBASStock,Stock
+OBCIStock,Stock
+OCCStock,Stock
+OCFCStock,Stock
+SNOAStock,Stock
+OFIXStock,Stock
+OFLXStock,Stock
+ACHVStock,Stock
+OIIMStock,Stock
+OLBKStock,Stock
+OMABStock,Stock
+OMCLStock,Stock
+OMERStock,Stock
+OMEXStock,Stock
+ONCYStock,Stock
+ONStock,Stock
+OPHCStock,Stock
+OPOFStock,Stock
+OPTTStock,Stock
+GECStock,Stock
+ACERStock,Stock
+ORBCStock,Stock
+ORITStock,Stock
+ORRFStock,Stock
+OSBCStock,Stock
+OSISStock,Stock
+OSNStock,Stock
+OSTKStock,Stock
+OSURStock,Stock
+OTEXStock,Stock
+OTTRStock,Stock
+OVBCStock,Stock
+OVLYStock,Stock
+TENXStock,Stock
+GEOSStock,Stock
+OZKStock,Stock
+PACBStock,Stock
+PACWStock,Stock
+OLEDStock,Stock
+PATKStock,Stock
+FRPHStock,Stock
+LMSTStock,Stock
+PBIPStock,Stock
+CNXNStock,Stock
+PCHStock,Stock
+PCOMStock,Stock
+PCRXStock,Stock
+PCTIStock,Stock
+PCYOStock,Stock
+PDEXStock,Stock
+PDFSStock,Stock
+IDXGStock,Stock
+PEBKStock,Stock
+PEGAStock,Stock
+PEIXStock,Stock
+PERIStock,Stock
+PESIStock,Stock
+PETSStock,Stock
+PFBCStock,Stock
+PFBIStock,Stock
+PFINStock,Stock
+PFSWStock,Stock
+PGCStock,Stock
+PGNXStock,Stock
+SIVBStock,Stock
+BWAStock,Stock
+PWRStock,Stock
+TELStock,Stock
+MAAStock,Stock
+HIIStock,Stock
+MTDStock,Stock
+FRTStock,Stock
+AMGStock,Stock
+MLMStock,Stock
+RJFStock,Stock
+DLRStock,Stock
+ESSStock,Stock
+COOStock,Stock
+CXOStock,Stock
+REStock,Stock
+REGStock,Stock
+DGStock,Stock
+FRCStock,Stock
+NLSNStock,Stock
+TDGStock,Stock
+ATOStock,Stock
+DREStock,Stock
+HCAStock,Stock
+ROLStock,Stock
+RMDStock,Stock
+MSCIStock,Stock
+CCLStock,Stock
+WCGStock,Stock
+AREStock,Stock
+TFXStock,Stock
+WABStock,Stock
+EVRGStock,Stock
+CPRIStock,Stock
+APTVStock,Stock
+CCIStock,Stock
+FLStock,Stock
+MACStock,Stock
+PNRStock,Stock
+PBCTStock,Stock
+TSCOStock,Stock
+PRGOStock,Stock
+ADSStock,Stock
+AAPStock,Stock
+KSUStock,Stock
+SLGStock,Stock
+URIStock,Stock
+KMIStock,Stock
+XECStock,Stock
+ALBStock,Stock
+CNCStock,Stock
+PSXStock,Stock
+XYLStock,Stock
+PVHStock,Stock
+UDRStock,Stock
+TRIPStock,Stock
+SBACStock,Stock
+UHSStock,Stock
+LKQStock,Stock
+BRStock,Stock
+EXRStock,Stock
+MHKStock,Stock
+AWKStock,Stock
+LNTStock,Stock
+HBIStock,Stock
+CEStock,Stock
+ALKStock,Stock
+AMEStock,Stock
+LYBStock,Stock
+RCLStock,Stock
+FLTStock,Stock
+PKGStock,Stock
+AJGStock,Stock
+CHDStock,Stock
+GPNStock,Stock
+HFCStock,Stock
+OStock,Stock
+AOSStock,Stock
+FBHSStock,Stock
+CBOEStock,Stock
+CPRTStock,Stock
+ABBVStock,Stock
+FANGStock,Stock
+NCLHStock,Stock
+ZTSStock,Stock
+IQVStock,Stock
+COTYStock,Stock
+TWTRStock,Stock
+HLTStock,Stock
+ALLEStock,Stock
+INFOStock,Stock
+ANETStock,Stock
+SYFStock,Stock
+CFGStock,Stock
+KEYSStock,Stock
+QRVOStock,Stock
+WRKStock,Stock
+HPEStock,Stock
+UAStock,Stock
+ARNCStock,Stock
+KEXStock,Stock
+MATXStock,Stock
+CARStock,Stock
+SNMPStock,Stock
+LEUStock,Stock
+GSSStock,Stock
+LNGStock,Stock
+PLXStock,Stock
+PZGStock,Stock
+DNNStock,Stock
+IMOStock,Stock
+NAKStock,Stock
+NGStock,Stock
+NGDStock,Stock
+TGBStock,Stock
+AAUStock,Stock
+ASMStock,Stock
+AXUStock,Stock
+EMXStock,Stock
+GPLStock,Stock
+THMStock,Stock
+AKGStock,Stock
+MAGStock,Stock
+PLGStock,Stock
+WRNStock,Stock
+SIMStock,Stock
+AMSStock,Stock
+BDLStock,Stock
+BGIStock,Stock
+BWLaStock,Stock
+ELMDStock,Stock
+EVBNStock,Stock
+GSVStock,Stock
+GTEStock,Stock
+HMGStock,Stock
+TLGTStock,Stock
+INSStock,Stock
+JOBStock,Stock
+TMQStock,Stock
+NPNStock,Stock
+YUMAStock,Stock
+PLMStock,Stock
+SGBStock,Stock
+TATStock,Stock
+ALOStock,Stock
+TRXStock,Stock
+NOGStock,Stock
+VHCStock,Stock
+FAXStock,Stock
+IAFStock,Stock
+FCOStock,Stock
+ACUStock,Stock
+AEStock,Stock
+ACYStock,Stock
+APTStock,Stock
+DITStock,Stock
+PLAGStock,Stock
+AMPEStock,Stock
+MICRStock,Stock
+BTNStock,Stock
+BCVStock,Stock
+BKJStock,Stock
+BHBStock,Stock
+LCTXStock,Stock
+BDRStock,Stock
+CVUStock,Stock
+CVMStock,Stock
+CETStock,Stock
+CCFStock,Stock
+CVRStock,Stock
+CPHIStock,Stock
+GLVStock,Stock
+GLQStock,Stock
+GLOStock,Stock
+LODEStock,Stock
+CTOStock,Stock
+MCFStock,Stock
+CMTStock,Stock
+CRMDStock,Stock
+CLMStock,Stock
+CRFStock,Stock
+CIKStock,Stock
+DHYStock,Stock
+DXRStock,Stock
+VCFStock,Stock
+VFLStock,Stock
+VMMStock,Stock
+DLAStock,Stock
+DPWStock,Stock
+DSSStock,Stock
+DMFStock,Stock
+CEVStock,Stock
+EVYStock,Stock
+EIMStock,Stock
+ENXStock,Stock
+EVMStock,Stock
+EVVStock,Stock
+ECFStock,Stock
+EMANStock,Stock
+MSNStock,Stock
+ESPStock,Stock
+EPMStock,Stock
+FENStock,Stock
+FSIStock,Stock
+FSPStock,Stock
+FTFStock,Stock
+FRDStock,Stock
+GLUStock,Stock
+GGNStock,Stock
+GMOStock,Stock
+GSBStock,Stock
+GLOWStock,Stock
+GOROStock,Stock
+AUMNStock,Stock
+GVStock,Stock
+AIMStock,Stock
+HUSAStock,Stock
+IECStock,Stock
+IBIOStock,Stock
+IMHStock,Stock
+IORStock,Stock
+INFUStock,Stock
+COHNStock,Stock
+IHTStock,Stock
+IDNStock,Stock
+VKIStock,Stock
+ISRStock,Stock
+LGLStock,Stock
+LTSStock,Stock
+LBYStock,Stock
+CEIStock,Stock
+MHHStock,Stock
+MXCStock,Stock
+NTNStock,Stock
+NHCStock,Stock
+NAVBStock,Stock
+NBWStock,Stock
+NBOStock,Stock
+NBHStock,Stock
+NHSStock,Stock
+NROStock,Stock
+GBRStock,Stock
+NENStock,Stock
+NBYStock,Stock
+ITPStock,Stock
+PTNStock,Stock
+PRKStock,Stock
+HNWStock,Stock
+PWStock,Stock
+RLGTStock,Stock
+UTGStock,Stock
+BKTIStock,Stock
+RCGStock,Stock
+RVPStock,Stock
+RIFStock,Stock
+SEBStock,Stock
+SVTStock,Stock
+SIFStock,Stock
+XPLStock,Stock
+SSYStock,Stock
+SRCIStock,Stock
+SYNStock,Stock
+TGCStock,Stock
+TMPStock,Stock
+TRTStock,Stock
+UAMYStock,Stock
+UUUStock,Stock
+URGStock,Stock
+VGZStock,Stock
+EADStock,Stock
+ERCStock,Stock
+ERHStock,Stock
+WTTStock,Stock
+UECStock,Stock
+SANDStock,Stock
+INTTStock,Stock
+NNVCStock,Stock
+OGENStock,Stock
+UUUUStock,Stock
+BTGStock,Stock
+PEDStock,Stock
+REIStock,Stock
+AAMCStock,Stock
+AIRIStock,Stock
+CANFStock,Stock
+DGSEStock,Stock
+LIQTStock,Stock
+NSPRStock,Stock
+ENSVStock,Stock
+XXIIStock,Stock
+GSATStock,Stock
+KIQStock,Stock
+ATNMStock,Stock
+BRGStock,Stock
+ISDRStock,Stock
+TRXCStock,Stock
+SDPIStock,Stock
+AINCStock,Stock
+VNRXStock,Stock
+CRHMStock,Stock
+EGHTStock,Stock
+HCIStock,Stock
+AMRXStock,Stock
+IRETStock,Stock
+KAMNStock,Stock
+MSGStock,Stock
+ONTOStock,Stock
+PGTIStock,Stock
+SAVEStock,Stock
+TISIStock,Stock
+UIStock,Stock
+UNFIStock,Stock
+USPHStock,Stock
+WPPStock,Stock
+LDOSStock,Stock
+AELStock,Stock
+PACStock,Stock
+ASXStock,Stock
+CWTStock,Stock
+IRSStock,Stock
+MFAStock,Stock
+ARIStock,Stock
+CCMStock,Stock
+DLStock,Stock
+PHIStock,Stock
+RRTSStock,Stock
+SUPStock,Stock
+TCIStock,Stock
+MNRStock,Stock
+SWMStock,Stock
+AITStock,Stock
+CRLStock,Stock
+PEIStock,Stock
+SMFGStock,Stock
+AGMStock,Stock
+BBVAStock,Stock
+CCOStock,Stock
+CMStock,Stock
+NOAStock,Stock
+PMTStock,Stock
+OIBRcStock,Stock
+FCFStock,Stock
+FRStock,Stock
+RPTStock,Stock
+BAHStock,Stock
+HEStock,Stock
+HLXStock,Stock
+MITTStock,Stock
+PFSStock,Stock
+RGAStock,Stock
+AIStock,Stock
+BAMStock,Stock
+CEAStock,Stock
+CHHStock,Stock
+ELSStock,Stock
+EVCStock,Stock
+EVRIStock,Stock
+HVTStock,Stock
+KFSStock,Stock
+KRAStock,Stock
+LLStock,Stock
+PNMStock,Stock
+PZNStock,Stock
+SPRStock,Stock
+PYXStock,Stock
+AWIStock,Stock
+AXLStock,Stock
+CCUStock,Stock
+CNQStock,Stock
+CYDStock,Stock
+EBRStock,Stock
+EDUStock,Stock
+EPRStock,Stock
+GPKStock,Stock
+MLPStock,Stock
+MSMStock,Stock
+NGSStock,Stock
+NPKStock,Stock
+SFLStock,Stock
+SHGStock,Stock
+SSDStock,Stock
+TDSStock,Stock
+AHTStock,Stock
+ARLStock,Stock
+BOXStock,Stock
+DVDStock,Stock
+HPPStock,Stock
+IHGStock,Stock
+LFCStock,Stock
+LGFaStock,Stock
+LPIStock,Stock
+LYVStock,Stock
+NHIStock,Stock
+NLYStock,Stock
+NXStock,Stock
+RBSStock,Stock
+CHUStock,Stock
+CLDTStock,Stock
+DRHStock,Stock
+ETMStock,Stock
+FDSStock,Stock
+GNKStock,Stock
+MPWStock,Stock
+MXStock,Stock
+NMStock,Stock
+OFGStock,Stock
+OISStock,Stock
+SEMStock,Stock
+SHOStock,Stock
+GENStock,Stock
+SPBStock,Stock
+ABGStock,Stock
+AMNStock,Stock
+ANHStock,Stock
+ARCStock,Stock
+FDPStock,Stock
+FMSStock,Stock
+HNGRStock,Stock
+INNStock,Stock
+JBTStock,Stock
+JKSStock,Stock
+KWStock,Stock
+MDRStock,Stock
+MSAStock,Stock
+NATStock,Stock
+NAVStock,Stock
+PAGStock,Stock
+PBHStock,Stock
+REXStock,Stock
+SJIStock,Stock
+SMPStock,Stock
+STWDStock,Stock
+TRTNStock,Stock
+ARCOStock,Stock
+AWRStock,Stock
+CSUStock,Stock
+RHPStock,Stock
+GSHStock,Stock
+HMNStock,Stock
+HOSStock,Stock
+NWNStock,Stock
+OLPStock,Stock
+PUKStock,Stock
+RNRStock,Stock
+SXIStock,Stock
+SXTStock,Stock
+AATStock,Stock
+AINStock,Stock
+AXEStock,Stock
+BASStock,Stock
+BBWStock,Stock
+BHEStock,Stock
+BLXStock,Stock
+CBUStock,Stock
+CIGcStock,Stock
+CLRStock,Stock
+CMPStock,Stock
+CPKStock,Stock
+CRSStock,Stock
+CTBStock,Stock
+EATStock,Stock
+EBSStock,Stock
+ETHStock,Stock
+GBXStock,Stock
+GCAPStock,Stock
+IHCStock,Stock
+KEPStock,Stock
+KNXStock,Stock
+MODStock,Stock
+MTXStock,Stock
+NGGStock,Stock
+PBStock,Stock
+PKEStock,Stock
+SBHStock,Stock
+SFEStock,Stock
+SQNSStock,Stock
+BCEIStock,Stock
+BIOStock,Stock
+CFRStock,Stock
+CIRStock,Stock
+EGPStock,Stock
+FSMStock,Stock
+GTSStock,Stock
+GVAStock,Stock
+HTStock,Stock
+KARStock,Stock
+KFYStock,Stock
+LYGStock,Stock
+MUSAStock,Stock
+CNRStock,Stock
+NJRStock,Stock
+OPYStock,Stock
+SMGStock,Stock
+SNNStock,Stock
+ALEXStock,Stock
+AMStock,Stock
+ATVStock,Stock
+BDNStock,Stock
+BGSStock,Stock
+CDEStock,Stock
+CHTStock,Stock
+CNOStock,Stock
+FFGStock,Stock
+FICOStock,Stock
+FIXStock,Stock
+KEGStock,Stock
+KRGStock,Stock
+MEIStock,Stock
+NTPStock,Stock
+NUSStock,Stock
+ODCStock,Stock
+PDSStock,Stock
+PEBStock,Stock
+OBEStock,Stock
+SJRStock,Stock
+LSIStock,Stock
+AKOaStock,Stock
+AVDStock,Stock
+BGGStock,Stock
+BRKaStock,Stock
+CACIStock,Stock
+CHAStock,Stock
+CMCStock,Stock
+CMOStock,Stock
+CRKStock,Stock
+CSLStock,Stock
+CUZStock,Stock
+EIGStock,Stock
+GPIStock,Stock
+HILStock,Stock
+JLLStock,Stock
+KBStock,Stock
+LPTStock,Stock
+LXPStock,Stock
+MLIStock,Stock
+MTLStock,Stock
+MWAStock,Stock
+NFGStock,Stock
+ORAStock,Stock
+ORNStock,Stock
+PHXStock,Stock
+RGRStock,Stock
+SLFStock,Stock
+STZbStock,Stock
+TDStock,Stock
+APStock,Stock
+AUStock,Stock
+BXCStock,Stock
+CAIStock,Stock
+CLIStock,Stock
+CLWStock,Stock
+COStock,Stock
+CPEStock,Stock
+CSVStock,Stock
+DKStock,Stock
+EEStock,Stock
+ESEStock,Stock
+EVRStock,Stock
+AROCStock,Stock
+EXKStock,Stock
+FENGStock,Stock
+FTKStock,Stock
+GILStock,Stock
+GSLStock,Stock
+HRCStock,Stock
+MLRStock,Stock
+MOHStock,Stock
+NRStock,Stock
+OXMStock,Stock
+PSBStock,Stock
+PVGStock,Stock
+XANStock,Stock
+SAMStock,Stock
+SFStock,Stock
+STMStock,Stock
+ARRStock,Stock
+BHStock,Stock
+BITAStock,Stock
+BNSStock,Stock
+BZHStock,Stock
+CLBStock,Stock
+CORStock,Stock
+DQStock,Stock
+DYStock,Stock
+FBCStock,Stock
+HTHStock,Stock
+INXNStock,Stock
+IOStock,Stock
+KOPStock,Stock
+KROStock,Stock
+KWRStock,Stock
+MCYStock,Stock
+MKCvStock,Stock
+MNStock,Stock
+MPXStock,Stock
+MYEStock,Stock
+NCStock,Stock
+OCNStock,Stock
+OMNStock,Stock
+PLOWStock,Stock
+SAHStock,Stock
+SONStock,Stock
+AKRStock,Stock
+ATStock,Stock
+BFaStock,Stock
+BOHStock,Stock
+BRFSStock,Stock
+CALStock,Stock
+CBBStock,Stock
+CITStock,Stock
+CKHStock,Stock
+CMDStock,Stock
+CSStock,Stock
+CWStock,Stock
+LCIIStock,Stock
+EXPStock,Stock
+FSSStock,Stock
+GBLStock,Stock
+GTNStock,Stock
+HBMStock,Stock
+HHCStock,Stock
+IPIStock,Stock
+JWaStock,Stock
+TLRDStock,Stock
+NLSStock,Stock
+RTWStock,Stock
+PACDStock,Stock
+PARStock,Stock
+RDSaStock,Stock
+RDSbStock,Stock
+STARStock,Stock
+SFUNStock,Stock
+SIDStock,Stock
+STAGStock,Stock
+STNGStock,Stock
+SUIStock,Stock
+TCOStock,Stock
+RFPStock,Stock
+ABMStock,Stock
+ABRStock,Stock
+AERStock,Stock
+CCCStock,Stock
+CELStock,Stock
+CNAStock,Stock
+CSSStock,Stock
+CVEStock,Stock
+DCIStock,Stock
+DLBStock,Stock
+DSXStock,Stock
+EGOStock,Stock
+ELYStock,Stock
+FCNStock,Stock
+FORStock,Stock
+GEFbStock,Stock
+GPXStock,Stock
+HNIStock,Stock
+HNPStock,Stock
+LTCStock,Stock
+LXUStock,Stock
+SWXStock,Stock
+SXCStock,Stock
+ADCStock,Stock
+AYIStock,Stock
+HPRStock,Stock
+BROStock,Stock
+CLHStock,Stock
+CRDaStock,Stock
+CRDbStock,Stock
+BXMTStock,Stock
+EQCStock,Stock
+DHXStock,Stock
+DPZStock,Stock
+DXStock,Stock
+EGYStock,Stock
+ORANStock,Stock
+GTNaStock,Stock
+GTYStock,Stock
+HStock,Stock
+HSBCStock,Stock
+HLStock,Stock
+TRQStock,Stock
+KOSStock,Stock
+LADStock,Stock
+SRStock,Stock
+MDUStock,Stock
+MGStock,Stock
+NLStock,Stock
+NOAHStock,Stock
+NPTNStock,Stock
+NWEStock,Stock
+OMIStock,Stock
+PRAStock,Stock
+PROStock,Stock
+QUADStock,Stock
+RBCStock,Stock
+RLJStock,Stock
+RELXStock,Stock
+RWTStock,Stock
+SCXStock,Stock
+ACCOStock,Stock
+BStock,Stock
+BBLStock,Stock
+BFSStock,Stock
+BKHStock,Stock
+BMIStock,Stock
+BMOStock,Stock
+BRTStock,Stock
+BXSStock,Stock
+BYDStock,Stock
+CPAStock,Stock
+CUKStock,Stock
+DHTStock,Stock
+LEAFStock,Stock
+ENZStock,Stock
+GNCStock,Stock
+HAEStock,Stock
+EHCStock,Stock
+MDCStock,Stock
+MOVStock,Stock
+MTNStock,Stock
+NPStock,Stock
+NPOStock,Stock
+PAMStock,Stock
+RDNStock,Stock
+SBStock,Stock
+SKXStock,Stock
+SSIStock,Stock
+STLStock,Stock
+ALGStock,Stock
+EMEStock,Stock
+FFStock,Stock
+FLYStock,Stock
+FNVStock,Stock
+GEFStock,Stock
+HHSStock,Stock
+HIStock,Stock
+PLTStock,Stock
+ALStock,Stock
+ALXStock,Stock
+ATRStock,Stock
+BKUStock,Stock
+BMAStock,Stock
+CHSStock,Stock
+CVIStock,Stock
+DINStock,Stock
+FULStock,Stock
+ITGRStock,Stock
+GDOTStock,Stock
+GEOStock,Stock
+NEUStock,Stock
+SRIStock,Stock
+TACStock,Stock
+AYRStock,Stock
+BAPStock,Stock
+CLSStock,Stock
+CMREStock,Stock
+DRQStock,Stock
+ENVStock,Stock
+FBPStock,Stock
+FROStock,Stock
+GIBStock,Stock
+HUBBStock,Stock
+HZOStock,Stock
+IVCStock,Stock
+JMPStock,Stock
+LENbStock,Stock
+MTRNStock,Stock
+MXLStock,Stock
+NSPStock,Stock
+PRIStock,Stock
+RADStock,Stock
+RSTStock,Stock
+SCSStock,Stock
+SEMGStock,Stock
+AGROStock,Stock
+AHCStock,Stock
+AMRCStock,Stock
+BCOStock,Stock
+BCSStock,Stock
+CBMStock,Stock
+CIAStock,Stock
+CRYStock,Stock
+DCOStock,Stock
+GFFStock,Stock
+GNEStock,Stock
+HEIaStock,Stock
+IAGStock,Stock
+INGStock,Stock
+JOEStock,Stock
+LZBStock,Stock
+MCSStock,Stock
+MEDStock,Stock
+POLStock,Stock
+SDRLStock,Stock
+SKYStock,Stock
+SOLStock,Stock
+SSWStock,Stock
+SYXStock,Stock
+TBIStock,Stock
+AVAStock,Stock
+CHEStock,Stock
+DACStock,Stock
+DBDStock,Stock
+DLXStock,Stock
+ERJStock,Stock
+EXPRStock,Stock
+GStock,Stock
+GCOStock,Stock
+AJRDStock,Stock
+HSCStock,Stock
+HXLStock,Stock
+IDAStock,Stock
+KMPRStock,Stock
+MKLStock,Stock
+MMSStock,Stock
+MTORStock,Stock
+NTZStock,Stock
+NVSStock,Stock
+PSOStock,Stock
+ROGStock,Stock
+SCLStock,Stock
+SNXStock,Stock
+SRTStock,Stock
+STEStock,Stock
+STNStock,Stock
+EQNRStock,Stock
+ALEStock,Stock
+AXRStock,Stock
+BDCStock,Stock
+BRCStock,Stock
+CATOStock,Stock
+CBTStock,Stock
+CRStock,Stock
+CUBStock,Stock
+DEOStock,Stock
+GLTStock,Stock
+HEIStock,Stock
+IPHIStock,Stock
+KAIStock,Stock
+KEMStock,Stock
+LDLStock,Stock
+MDStock,Stock
+MOGaStock,Stock
+MOGbStock,Stock
+MTZStock,Stock
+NNIStock,Stock
+REVStock,Stock
+RGSStock,Stock
+CALXStock,Stock
+CEOStock,Stock
+COTStock,Stock
+CUBEStock,Stock
+CZZStock,Stock
+EBFStock,Stock
+EDNStock,Stock
+GGGStock,Stock
+REDFYStock,Stock
+PRISYStock,Stock
+AVVIYStock,Stock
+SKHHYStock,Stock
+SKBSYStock,Stock
+FOJCYStock,Stock
+VEOEYStock,Stock
+YZCAYStock,Stock
+CCHGYStock,Stock
+SIEGYStock,Stock
+ZTCOYStock,Stock
+LVMUYStock,Stock
+MHGVYStock,Stock
+TCEHYStock,Stock
+OGZPYStock,Stock
+PDRDYStock,Stock
+AFLYYStock,Stock
+AACAYStock,Stock
+ELUXYStock,Stock
+SKFRYStock,Stock
+ABCZYStock,Stock
+ACCYYStock,Stock
+AHEXYStock,Stock
+ADDYYStock,Stock
+AMIGYStock,Stock
+AVIFYStock,Stock
+AGESYStock,Stock
+AGLXYStock,Stock
+ACGBYStock,Stock
+AAGIYStock,Stock
+EADSYStock,Stock
+AJINYStock,Stock
+AKBTYStock,Stock
+AKZOYStock,Stock
+ALGGYStock,Stock
+AZSEYStock,Stock
+ALBKYStock,Stock
+ALSMYStock,Stock
+AWCMYStock,Stock
+AMADYStock,Stock
+ALNPYStock,Stock
+ANGPYStock,Stock
+NGLOYStock,Stock
+AHCHYStock,Stock
+AMKBYStock,Stock
+APEMYStock,Stock
+ARKAYStock,Stock
+ARZTYStock,Stock
+ASGLYStock,Stock
+AHKSYStock,Stock
+ASOMYStock,Stock
+ASAZYStock,Stock
+ASBFYStock,Stock
+ALPMYStock,Stock
+ATASYStock,Stock
+ATLKYStock,Stock
+ANZBYStock,Stock
+RCELStock,Stock
+AXAHYStock,Stock
+BAESYStock,Stock
+BAFYYStock,Stock
+BDORYStock,Stock
+BKHYYStock,Stock
+BACHYStock,Stock
+BKEAYStock,Stock
+BKRKYStock,Stock
+AGRPYStock,Stock
+BASFYStock,Stock
+BAYRYStock,Stock
+BMWYYStock,Stock
+BBSEYStock,Stock
+BZQIYStock,Stock
+BDVSYStock,Stock
+BNPQYStock,Stock
+BHKLYStock,Stock
+BPOSYStock,Stock
+BXBLYStock,Stock
+BRDCYStock,Stock
+BTLCYStock,Stock
+BZLFYStock,Stock
+BURBYStock,Stock
+BYDDYStock,Stock
+CCGGYStock,Stock
+CGEMYStock,Stock
+CLLDYStock,Stock
+CABGYStock,Stock
+CRRFYStock,Stock
+CGUSYStock,Stock
+CSIOYStock,Stock
+CPCAYStock,Stock
+CJPRYStock,Stock
+CPYYYStock,Stock
+CICHYStock,Stock
+CIHKYStock,Stock
+WCMBNY Mellon Focused Growth ADREtf,ETF
+Peritus High YieldEtf,ETF
+Madrona Global BondEtf,ETF
+Star Global Buy-WriteEtf,ETF
+Arrow Dow Jones Global YieldEtf,ETF
+iPath Bloomberg Commodity Total Return Exp 12 JuneEtf,ETF
+iPath S&P GSCI Crude Oil Total ReturnEtf,ETF
+iPath Bloomberg Cocoa Subindex Total Return Exp 24Etf,ETF
+iPath Bloomberg Natural Gas Subindex Total ReturnEtf,ETF
+iPath Pure Beta Crude Oil Exp 18 Apr 2041Etf,ETF
+iPath Pure Beta Broad Commodity Exp 18 Apr 2041Etf,ETF
+iPath GSCI Total Return Exp 12 Jun 2036Etf,ETF
+BioShares Biotechnology ProductsEtf,ETF
+BioShares Biotechnology Clinical TrialsEtf,ETF
+Columbia EM ConsumerEtf,ETF
+Columbia India ConsumerEtf,ETF
+Victory CEMP Developed Enhanced Volatility WeighteEtf,ETF
+Victory CEMP US Discovery Enhanced Volatility WeigEtf,ETF
+Victory CEMP US 500 Volatility WeightedEtf,ETF
+Victory CEMP US Small Cap High Dividend VolatilityEtf,ETF
+Victory CEMP US Large Cap High Div Volatility WeigEtf,ETF
+Victory CEMP US EQ Income Enhanced Volatility WeigEtf,ETF
+Victory CEMP US 500 Enhanced Volatility WeightedEtf,ETF
+Victory CEMP International High Dividend VolatilitEtf,ETF
+Victory CEMP US Small Cap Volatility WeightedEtf,ETF
+Victory CEMP International Volatility WeightedEtf,ETF
+Credit Suisse X Links Gold Shares Covered CallEtf,ETF
+Credit Suisse X Links Silver Shares Covered CallEtf,ETF
+DB Gold Double ShortEtf,ETF
+Deutsche X-trackers MSCI EAFE Hedged EquityEtf,ETF
+Deutsche X-trackers MSCI Japan Hedged EquityEtf,ETF
+Deutsche X-trackers MSCI Emerging Markets Hedged EEtf,ETF
+Deutsche X-trackers MSCI All World ex US Hedged EqEtf,ETF
+Deutsche X-trackers MSCI All World ex US High DiviEtf,ETF
+Deutsche X-trackers MSCI South Korea Hedged EquityEtf,ETF
+Deutsche X-trackers JPX-Nikkei 400 EquityEtf,ETF
+Direxion Daily S P Oil Gas Exp BullEtf,ETF
+Direxion Daily Gold Miners Bull 3X SharesEtf,ETF
+Direxion Daily Gold Miners Bear 3X SharesEtf,ETF
+Direxion Daily Junior Gold Miners Bear 3X SharesEtf,ETF
+Direxion Daily S&P 500 Bear 3X SharesEtf,ETF
+Direxion Daily Junior Gold Miners Bull 3X SharesEtf,ETF
+Direxion Daily Small Cap Bear 3X SharesEtf,ETF
+Direxion Daily S&P 500 Bull 3X SharesEtf,ETF
+Direxion Daily Energy Bull 3X SharesEtf,ETF
+Direxion Daily Small Cap Bull 3X SharesEtf,ETF
+Direxion Daily SP Biotech Bear 3XEtf,ETF
+Direxion Daily FTSE China Bull 3x SharesEtf,ETF
+Direxion Daily 20+ Year Treasury Bear 3X SharesEtf,ETF
+Direxion Daily Financial Bull 3X SharesEtf,ETF
+Direxion Daily Financial Bear 3X SharesEtf,ETF
+Direxion Daily Energy Bear 3X SharesEtf,ETF
+Direxion Daily FTSE CHINA Bear 3x SharesEtf,ETF
+Direxion Daily Russia Bear 3X SharesEtf,ETF
+Direxion Daily Emerging Markets Bull 3X SharesEtf,ETF
+Direxion Daily Emerging Markets Bear 3X SharesEtf,ETF
+Direxion Daily Real Estate Bull 3X SharesEtf,ETF
+Direxion Daily Real Estate Bear 3X SharesEtf,ETF
+Direxion Daily MSCI India Bull 3X SharesEtf,ETF
+Direxion Daily Russia Bull 3X SharesEtf,ETF
+Direxion Daily Developed Markets Bull 3XEtf,ETF
+Direxion Daily Latin America Bull 3X SharesEtf,ETF
+Direxion Daily Developed Markets Bear 3XEtf,ETF
+Rogers International Commodity Total ReturnEtf,ETF
+Rogers International Commodity Agriculture Total REtf,ETF
+Rogers International Commodity Energy Total ReturnEtf,ETF
+Rogers International Commodity Metals Total ReturnEtf,ETF
+BlueStar TA-BIGITech Israel TechEtf,ETF
+ETFS Physical Swiss Gold SharesEtf,ETF
+ETFS Physical Silver SharesEtf,ETF
+ETFS Physical Platinum SharesEtf,ETF
+ETFS Physical Precious Metal Basket SharesEtf,ETF
+ETFS Physical Palladium SharesEtf,ETF
+AlphaClone Alternative AlphaEtf,ETF
+Loncar Cancer ImmunotherapyEtf,ETF
+AlphaMark Actively Managed SmallEtf,ETF
+Fidelity NASDAQ CompositeEtf,ETF
+First Trust NASDAQ-100 Equal WeightedEtf,ETF
+First Trust Enhanced Short MaturityEtf,ETF
+First Trust North American Energy InfrastructureEtf,ETF
+First Trust ISE-Revere Natural GasEtf,ETF
+First Trust Consumer Staples AlphaDEXEtf,ETF
+First Trust Low Duration OpportunitiesEtf,ETF
+First Trust Senior LoanEtf,ETF
+First Trust Large Cap Core AlphaDEXEtf,ETF
+First Trust Dorsey Wright International Focus 5Etf,ETF
+First Trust NASDAQ Rising Dividend AchieversEtf,ETF
+First Trust STOXX European Select DividendEtf,ETF
+First Trust RBA Quality IncomeEtf,ETF
+First Trust Utilities AlphaDEXEtf,ETF
+First Trust Capital StrengthEtf,ETF
+First Trust Dorsey Wright Focus 5Etf,ETF
+First Trust Morningstar Dividend LeadersEtf,ETF
+First Trust Managed MunicipalEtf,ETF
+First Trust BICKEtf,ETF
+First Trust Tactical High YieldEtf,ETF
+First Trust Dow Jones Global Select DividendEtf,ETF
+First Trust NASDAQ-100 Tech SectorEtf,ETF
+First Trust SSI Strategic Convertible SecuritiesEtf,ETF
+First Trust Mid Cap Growth AlphaDEXEtf,ETF
+First Trust Emerging Markets AlphaDEXEtf,ETF
+First Trust NASDAQ CEA CybersecurityEtf,ETF
+First Trust Developed Markets Ex-US AlphaDEXEtf,ETF
+First Trust ISE Cloud ComputingEtf,ETF
+First Trust Technology AlphaDEXEtf,ETF
+First Trust Germany AlphaDEXEtf,ETF
+First Trust Large Cap Value AlphaDEXEtf,ETF
+First Trust Mid Cap Value AlphaDEXEtf,ETF
+First Trust IndustrialsProducer Durables AlphaDEXEtf,ETF
+First Trust Multi-Asset Diversified IncomeEtf,ETF
+First Trust NASDAQ Technology DividendEtf,ETF
+First Trust Mid Cap Core AlphaDEXEtf,ETF
+First Trust Large Cap Growth AlphaDEXEtf,ETF
+First Trust Switzerland AlphaDEXEtf,ETF
+First Trust Europe AlphaDEXEtf,ETF
+First Trust Consumer Discretionary AlphaDEXEtf,ETF
+First Trust S&P REITEtf,ETF
+First Trust Materials AlphaDEXEtf,ETF
+First Trust Small Cap Growth AlphaDEXEtf,ETF
+First Trust Global Tactical Commodity StrategyEtf,ETF
+First Trust Small Cap Value AlphaDEXEtf,ETF
+First Trust Emerging Markets Local Currency BondEtf,ETF
+First Trust ISE Global Wind EnergyEtf,ETF
+First Trust ISE WaterEtf,ETF
+First Trust Small Cap Core AlphaDEXEtf,ETF
+First Trust Brazil AlphaDEXEtf,ETF
+First Trust Strategic IncomeEtf,ETF
+First Trust Emerging Markets Small Cap AlphaDEXEtf,ETF
+First Trust NASDAQ Clean Edge Green EnergyEtf,ETF
+First Trust RBA American Industrial RenaissanceEtf,ETF
+First Trust NASDAQ SmartphoneEtf,ETF
+First Trust International IPOEtf,ETF
+First Trust High IncomeEtf,ETF
+First Trust Japan AlphaDEXEtf,ETF
+First Trust NASDAQ ABA Community BankEtf,ETF
+First Trust ISE ChindiaEtf,ETF
+First Trust China AlphaDEXEtf,ETF
+First Trust NASDAQ-100 Ex-Technology SectorEtf,ETF
+First Trust Total US Market AlphaDEXEtf,ETF
+First Trust United Kingdom AlphaDEXEtf,ETF
+First Trust Eurozone AlphaDEXEtf,ETF
+First Trust Asia Pacific Ex-Japan AlphaDEXEtf,ETF
+First Trust ISE Global Engineering & ConstructionEtf,ETF
+First Trust Multi Cap Growth AlphaDEXEtf,ETF
+First Trust Multi Cap Value AlphaDEXEtf,ETF
+First Trust FTSE EPRANAREIT Global Developed MarkEtf,ETF
+First Trust Intl Multi-Asset Diversified IncEtf,ETF
+First Trust Low Beta IncomeEtf,ETF
+First Trust Global Natural Resources IncomeEtf,ETF
+First Trust Hong Kong AlphaDEXEtf,ETF
+First Trust Global AgricultureEtf,ETF
+First Trust Mega Cap AlphaDEXEtf,ETF
+First Trust NASDAQ Clean Edge Smart Grid InfrastruEtf,ETF
+First Trust Taiwan AlphaDEXEtf,ETF
+First Trust NASDAQ Global AutoEtf,ETF
+First Trust Canada AlphaDEXEtf,ETF
+First Trust Developed Markets ex-US Small Cap AlphEtf,ETF
+FlexShares Morningstar Global Upstream Natural ResEtf,ETF
+FlexShares Morningstar Dev Mkts exUS Factors TiltEtf,ETF
+FlexShares Morningstar Emerging Markets Factors TiEtf,ETF
+FlexShares Ready Access Variable IncomeEtf,ETF
+FlexShares US Quality Large CapEtf,ETF
+FlexShares Credit-Scored US Corp BondEtf,ETF
+FlexShares Credit-Scored US Long Corporate BondEtf,ETF
+FlexShares Real Assets AllocationEtf,ETF
+FlexShares Disciplined Duration MBSEtf,ETF
+Global X MLPEtf,ETF
+Global X SuperDividend REITEtf,ETF
+Global X SuperDividendEtf,ETF
+Global X LithiumEtf,ETF
+Global X Silver MinersEtf,ETF
+Global X FTSE Greece 20Etf,ETF
+Global X Copper MinersEtf,ETF
+Global X UraniumEtf,ETF
+Global X China ConsumerEtf,ETF
+Global X MSCI NorwayEtf,ETF
+Global X MSCI ArgentinaEtf,ETF
+Global X MSCI ColombiaEtf,ETF
+Global X China FinancialsEtf,ETF
+Global X YieldcoEtf,ETF
+Global X Gold ExplorersEtf,ETF
+Global X Social MediaEtf,ETF
+Global X SuperDividend AlternativesEtf,ETF
+Global X GuruEtf,ETF
+Global X Southeast AsiaEtf,ETF
+Global X China IndustrialsEtf,ETF
+Global X FTSE Nordic RegionEtf,ETF
+Global X FertilizersPotashEtf,ETF
+Global X JPMorgan US Sector RotatorEtf,ETF
+Global X JPMorgan EfficienteEtf,ETF
+GS Connect S&P GSCI Enhanced Commodity Total ReturEtf,ETF
+Guggenheim Invest S&P 500 Equal WeightEtf,ETF
+Guggenheim CurrencyShares EuroEtf,ETF
+Guggenheim SolarEtf,ETF
+Guggenheim CurrencyShares Japanese YenEtf,ETF
+Guggenheim Invest China TechnologyEtf,ETF
+Guggenheim Invest S&P Global WaterEtf,ETF
+Invesco Shipping ETFEtf,ETF
+Guggenheim CurrencyShares Australian DollarEtf,ETF
+Guggenheim CurrencyShares British Pound SterlingEtf,ETF
+Guggenheim CurrencyShares Swiss FrancEtf,ETF
+Guggenheim CurrencyShares Canadian DollarEtf,ETF
+Guggenheim MSCI Global TimberEtf,ETF
+Guggenheim Invest China Small CapEtf,ETF
+Guggenheim Invest China Real EstateEtf,ETF
+Guggenheim Invest BRICEtf,ETF
+Guggenheim Invest S&P Global Dividend OpptysEtf,ETF
+Guggenheim MSCI EM Equal Country WeightEtf,ETF
+Guggenheim CurrencyShares Swedish KronaEtf,ETF
+Horizons DAX GermanyEtf,ETF
+IQ Merger ArbitrageEtf,ETF
+IQ Hedge Multi-Strategy TrackerEtf,ETF
+IQ US Real Estate Small CapEtf,ETF
+IQ Global ResourcesEtf,ETF
+IQ Hedge Macro TrackerEtf,ETF
+IQ Global Agribusiness Small CapEtf,ETF
+IQ Real ReturnEtf,ETF
+IQ Hedge Market Neutral TrackerEtf,ETF
+iShares MSCI Emerging MarketsEtf,ETF
+iShares SilverEtf,ETF
+iShares China Large-CapEtf,ETF
+iShares iBoxx $ High Yield Corporate BondEtf,ETF
+iShares GoldEtf,ETF
+iShares MSCI Brazil CappedEtf,ETF
+iShares MSCI EAFEEtf,ETF
+iShares US Real EstateEtf,ETF
+iShares Russell 2000Etf,ETF
+iShares 20+ Year Treasury BondEtf,ETF
+iShares Core MSCI Emerging MarketsEtf,ETF
+iShares Core MSCI EAFEEtf,ETF
+iShares iBoxx $ Investment Grade Corporate BondEtf,ETF
+iShares MSCI JapanEtf,ETF
+iShares 7-10 Year Treasury BondEtf,ETF
+iShares Edge MSCI Min VolEtf,ETF
+iShares JPMorgan USD EM BondEtf,ETF
+ishares S&P 500Etf,ETF
+iShares US Preferred StockEtf,ETF
+iShares MSCI South Korea CappedEtf,ETF
+iShares MSCI ACWIEtf,ETF
+iShares MSCI EurozoneEtf,ETF
+iShares Core S&P Small-CapEtf,ETF
+iShares Core US Aggregate BondEtf,ETF
+iShares MSCI Taiwan CappedEtf,ETF
+iShares Short Treasury BondEtf,ETF
+iShares MSCI Hong KongEtf,ETF
+iShares MSCI IndiaEtf,ETF
+iShares Latin America 40Etf,ETF
+iShares MSCI AustraliaEtf,ETF
+iShares MSCI CanadaEtf,ETF
+iShares Russell 1000 ValueEtf,ETF
+iShares 1-3 Year Treasury BondEtf,ETF
+iShares MSCI ChinaEtf,ETF
+iShares MSCI Mexico CappedEtf,ETF
+iShares MSCI EAFE ValueEtf,ETF
+iShares MSCI GermanyEtf,ETF
+iShares MSCI All Country Asia ex JapanEtf,ETF
+iShares MSCI United KingdomEtf,ETF
+iShares Floating Rate BondEtf,ETF
+iShares Core MSCI EuropeEtf,ETF
+iShares Nasdaq BiotechnologyEtf,ETF
+iShares Core S&P Total US Stock MarketEtf,ETF
+iShares Core MSCI Total International StockEtf,ETF
+iShares Russell 2000 ValueEtf,ETF
+iShares S&P 500 ValueEtf,ETF
+iShares MBSEtf,ETF
+iShares Core 1-5 Year USDEtf,ETF
+iShares TIPS BondEtf,ETF
+iShares 3-7 Year Treasury BondEtf,ETF
+iShares MSCI EAFE GrowthEtf,ETF
+iShares Intermediate Credit BondEtf,ETF
+iShares MSCI FranceEtf,ETF
+iShares Short-Term Corporate BondEtf,ETF
+iShares MSCI EAFE Small-CapEtf,ETF
+iShares Russell 1000 GrowthEtf,ETF
+iShares MSCI Switzerland CappedEtf,ETF
+iShares Russell Mid-CapEtf,ETF
+iShares Russell 1000Etf,ETF
+iShares S&P Midcap 400Etf,ETF
+iShares MSCI ACWI ex USEtf,ETF
+iShares MSCI Spain CappedEtf,ETF
+iShares MSCI Chile CappedEtf,ETF
+iShares Core US ValueEtf,ETF
+iShares Edge MSCI Min Vol EAFEEtf,ETF
+iShares Edge MSCI Min Vol EMEtf,ETF
+iShares MSCI Singapore CappedEtf,ETF
+iShares MSCI Europe FinancialsEtf,ETF
+iShares Select DividendEtf,ETF
+iShares Global EnergyEtf,ETF
+iShares MSCI Global Metals & Mining ProducersEtf,ETF
+iShares International Select DividendEtf,ETF
+iShares Core Total USD Bond MarketEtf,ETF
+iShares Russell 2000 GrowthEtf,ETF
+iShares 0-5 Year Invest Grade Corporate BondEtf,ETF
+iShares Core US GrowthEtf,ETF
+iShares US EnergyEtf,ETF
+iShares MSCI Italy CappedEtf,ETF
+iShares MSCI IndonesiaEtf,ETF
+iShares MSCI TurkeyEtf,ETF
+iShares MSCI MalaysiaEtf,ETF
+iShares Mortgage Real Estate CappedEtf,ETF
+iShares EuropeEtf,ETF
+iShares PHLX SemiconductorEtf,ETF
+iShares MSCI Pacific ex JapanEtf,ETF
+iShares US Aerospace & DefenseEtf,ETF
+iShares Broad USD Investment Grade Corporate BondEtf,ETF
+iShares MSCI Global Gold MinersEtf,ETF
+iShares Transportation AverageEtf,ETF
+iShares Real Estate 50Etf,ETF
+iShares S&P 100Etf,ETF
+iShares Global Clean EnergyEtf,ETF
+iShares MSCI South AfricaEtf,ETF
+iShares Edge MSCI Min Vol GlobalEtf,ETF
+iShares Edge MSCI Intl Quality FactorEtf,ETF
+iShares Residential Real Estate CappedEtf,ETF
+iShares US TelecommunicationsEtf,ETF
+iShares MSCI Sweden CappedEtf,ETF
+iShares Currency Hedged MSCI EAFEEtf,ETF
+iShares Currency Hedged MSCI JapanEtf,ETF
+iShares MSCI PhilippinesEtf,ETF
+iShares Global HealthcareEtf,ETF
+iShares iBonds Dec 2020 CorporateEtf,ETF
+iShares MSCI Russia CappedEtf,ETF
+iShares Global REITEtf,ETF
+iShares MSCI NetherlandsEtf,ETF
+iShares MSCI Saudi Arabia CappedEtf,ETF
+iShares US Oil & Gas Exploration & ProductionEtf,ETF
+iShares S&P GSCI Commodity-IndexedEtf,ETF
+iShares MSCI Poland CappedEtf,ETF
+iShares S&P Small-Cap 600 ValueEtf,ETF
+iShares Emerging Markets Local Currency BondEtf,ETF
+iShares International Treasury BondEtf,ETF
+iShares Cohen & Steers REITEtf,ETF
+iShares MSCI Thailand CappedEtf,ETF
+iShares US Regional BanksEtf,ETF
+iShares Global InfrastructureEtf,ETF
+iShares Exponential TechnologiesEtf,ETF
+iShares S&P Small-Cap 600 GrowthEtf,ETF
+iShares Core Moderate AllocationEtf,ETF
+iShares MSCI Belgium CappedEtf,ETF
+iShares Core Conservative AllocationEtf,ETF
+iShares MSCI Austria CappedEtf,ETF
+iShares Core MSCI PacificEtf,ETF
+iShares MSCI Global Silver MinersEtf,ETF
+iShares Core Growth AllocationEtf,ETF
+iShares Emerging Markets High Yield BondEtf,ETF
+iShares iBonds Dec 2021 AMT Free MunicipalEtf,ETF
+MSCI Frontier 100Etf,ETF
+iShares India 50Etf,ETF
+iShares iBonds Dec 2025 CorporateEtf,ETF
+iShares Emerging Markets DividendEtf,ETF
+iShares US TechnologyEtf,ETF
+iShares MSCI WorldEtf,ETF
+iShares Yield Optimized BondEtf,ETF
+iShares Edge MSCI Intl Value FactorEtf,ETF
+iShares Global TechEtf,ETF
+iShares S&P Mid-Cap 400 ValueEtf,ETF
+iShares International Preferred StockEtf,ETF
+iShares US Basic MaterialsEtf,ETF
+iShares US UtilitiesEtf,ETF
+iShares Global Consumer StaplesEtf,ETF
+iShares Treasury Floating Rate BondEtf,ETF
+iShares Global Timber & ForestryEtf,ETF
+iShares Core Aggressive AllocationEtf,ETF
+iShares MSCI All Peru CappedEtf,ETF
+iShares MSCI India Small-CapEtf,ETF
+iShares Morningstar Multi-Asset IncomeEtf,ETF
+iShares iBonds Dec 2022 AMT Free MunicipalEtf,ETF
+iShares MSCI Emerging Markets Small-CapEtf,ETF
+iShares International Developed PropertyEtf,ETF
+iShares Global 100Etf,ETF
+iShares US Consumer GoodsEtf,ETF
+iShares Currency Hedged MSCI ACWI ex USEtf,ETF
+iShares Currency Hedged MSCI EAFE Small CapEtf,ETF
+iShares Commodities StrategyEtf,ETF
+iShares MSCI Brazil Small-CapEtf,ETF
+iShares Edge MSCI Min Vol EuropeEtf,ETF
+iShares Global FinancialsEtf,ETF
+iShares iBonds Sep 2020 AMT Free MunicipalEtf,ETF
+iShares MSCI New Zealand CappedEtf,ETF
+iShares Currency Hedged MSCI GermanyEtf,ETF
+iShares US Consumer ServicesEtf,ETF
+iShares Global High Yield Corporate BondEtf,ETF
+iShares Dow Jones USEtf,ETF
+iShares Global TelecomEtf,ETF
+iShares International Developed Real EstateEtf,ETF
+iShares Asia 50Etf,ETF
+iShares US Broker DealersEtf,ETF
+iShares MSCI KokusaiEtf,ETF
+iShares Currency Hedged MSCI United KingdomEtf,ETF
+iShares Currency Hedged MSCI Emerging MarketsEtf,ETF
+iShares MSCI Emerging Markets AsiaEtf,ETF
+iShares Global UtilitiesEtf,ETF
+iShares Emerging Markets Corporate BondEtf,ETF
+iShares MSCI Finland CappedEtf,ETF
+iShares GNMA BondEtf,ETF
+iShares Morningstar Mid-Cap ValueEtf,ETF
+iShares MSCI ACWI Low Carbon TargetEtf,ETF
+iShares Edge MSCI Intl Size FactorEtf,ETF
+iShares MSCI Israel CappedEtf,ETF
+iShares MSCI Europe Small-CapEtf,ETF
+iShares MSCI IrelandEtf,ETF
+iShares Interest Rate Hedged High Yield BondEtf,ETF
+iShares MSCI Global Energy ProducersEtf,ETF
+iShares MSCI BRICEtf,ETF
+iShares Global IndustrialsEtf,ETF
+iShares MSCI Norway CappedEtf,ETF
+iShares Global MaterialsEtf,ETF
+iShares AsiaPacific DividendEtf,ETF
+iShares MSCI Germany Small-CapEtf,ETF
+iShares MSCI Japan Small-CapEtf,ETF
+iShares Emerg Markets InfrastructureEtf,ETF
+iShares Interest Rate Hedged Corproate BondEtf,ETF
+iShares Europe Developed Real EstateEtf,ETF
+iShares Global Consumer DiscretionaryEtf,ETF
+iShares MSCI Denmark CappedEtf,ETF
+Shares JPX-Nikkei 400Etf,ETF
+iShares MSCI Global Agriculture ProducersEtf,ETF
+iShares MSCI China Small-CapEtf,ETF
+iShares Edge MSCI Min Vol JapanEtf,ETF
+iShares 1-3 Year International Treasury BondEtf,ETF
+iShares Currency Hedged MSCI ItalyEtf,ETF
+iShares MSCI Qatar CappedEtf,ETF
+iShares Int High Yield BondEtf,ETF
+iShares MSCI UAE CappedEtf,ETF
+iShares Currency Hedged MSCI SpainEtf,ETF
+iShares Currency Hedged MSCI SwitzerlandEtf,ETF
+iShares iBonds Sep 2019 AMT-Free Muni BondEtf,ETF
+John Hancock Multifactor Mid CapEtf,ETF
+John Hancock Multifactor Large CapEtf,ETF
+John Hancock Multifactor FinancialsEtf,ETF
+John Hancock Multifactor TechnologyEtf,ETF
+John Hancock Multifactor Health CareEtf,ETF
+JPMorgan Diversified Return US EquityEtf,ETF
+JPMorgan Diversified Return Global EquityEtf,ETF
+KraneShares Bosera MSCI China A ShareEtf,ETF
+KraneShares E China Commercial PaperEtf,ETF
+Hartford US EquityEtf,ETF
+Hartford Global Small CapEtf,ETF
+Legg Mason Low Volatility High DividendEtf,ETF
+Morgan Stanley Cushing MLP High Income Exp 21 MarEtf,ETF
+NexPoint Credit StrategiesEtf,ETF
+Tortoise North American PipelineEtf,ETF
+Allied Capital 6.875% Notes Exp 15 Apr 2047Etf,ETF
+Reality Shares DIVSEtf,ETF
+Virtus Newfleet Multi-Sector Unconstrained BondEtf,ETF
+Validea Market LegendsEtf,ETF
+PIMCO Enhanced Short Maturity Active Exchange-TradEtf,ETF
+PIMCO Low Duration ActiveEtf,ETF
+PIMCO 15+ Year US TIPS Exchange-TradedEtf,ETF
+PIMCO 1-3 Year US TreasuryEtf,ETF
+PIMCO Broad US TIPS Exchange-TradedEtf,ETF
+Invesco QQQ Trust Series 1Etf,ETF
+PowerShares Preferred PortfolioEtf,ETF
+PowerShares Emerging Markets Sovereign DebtEtf,ETF
+PowerShares DB Optimum Yield Diversified CommodityEtf,ETF
+PowerShares DB US Dollar BullishEtf,ETF
+PowerShares Dynamic Large Cap ValueEtf,ETF
+PowerShares DB Commodity TrackingEtf,ETF
+PowerShares DB OilEtf,ETF
+PowerShares KBW Bank PortfolioEtf,ETF
+PowerShares FTSE RAFI Emerging MarketsEtf,ETF
+PowerShares DWA Utilities Momentum PortfolioEtf,ETF
+PowerShares DWA Momentum PortfolioEtf,ETF
+PowerShares Variable Rate Preferred PortfolioEtf,ETF
+PowerShares National AMT-Free Municipal Bond PortfEtf,ETF
+PowerShares High Yield Equity Dividend Achievers PEtf,ETF
+PowerShares DB AgricultureEtf,ETF
+PowerShares S&P Intl Developed Low Volatility PortEtf,ETF
+PowerShares DWA EM MomentumEtf,ETF
+PowerShares WilderHill Clean EnergyEtf,ETF
+PowerShares DB Base MetalsEtf,ETF
+PowerShares S&P Emerging Markets Low VolatilityEtf,ETF
+PowerShares DWA Financial Momentum PortfolioEtf,ETF
+PowerShares International Dividend Achievers PortfEtf,ETF
+PowerShares DB Precious MetalsEtf,ETF
+PowerShares KBW Premium Yield Equity REIT PortfoliEtf,ETF
+PowerShares Water ResourcesEtf,ETF
+BLDRS Developed Markets 100 ADREtf,ETF
+PowerShares Global Listed Private EquityEtf,ETF
+PowerShares KBW High Dividend Yield FinancialEtf,ETF
+PowerShares DB US Dollar BearishEtf,ETF
+PowerShares DB EnergyEtf,ETF
+PowerShares DWA Consumer Staples Momentum PortfoliEtf,ETF
+PowerShares FTSE RAFI US 1500 Small MidEtf,ETF
+PowerShares KBW Property & Casualty Insurance PortEtf,ETF
+PowerShares S&P SmallCap EnergyEtf,ETF
+PowerShares DWA SmallCap Momentum PortfolioEtf,ETF
+PowerShares DB GoldEtf,ETF
+PowerShares Russell 1000 Equal Weight PortfolioEtf,ETF
+PowerShares FTSE RAFI Developed Markets ex-USEtf,ETF
+PowerShares DWA Technology Momentum PortfolioEtf,ETF
+PowerShares Active US Real EstateEtf,ETF
+PowerShares CleantechEtf,ETF
+PowerShares Golden Dragon China PortEtf,ETF
+PowerShares Nasdaq InternetEtf,ETF
+DB Gold Double Long Exp 15 Feb 2038Etf,ETF
+PowerShares Global Clean EnergyEtf,ETF
+PowerShares DWA Healthcare Momentum PortfolioEtf,ETF
+PowerShares S&P Int Dev Qual PortEtf,ETF
+PowerShares Global Water PortfolioEtf,ETF
+PowerShares S&P SmallCap Information TechnologyEtf,ETF
+PowerShares FTSE RAFI Developed Markets ex-US SmalEtf,ETF
+PowerShares S&P SmallCap Health CareEtf,ETF
+PowerShares S&P SmallCap FinancialsEtf,ETF
+PowerShares Dynamic Oil & Gas ServicesEtf,ETF
+PowerShares International BuyBack AchieversEtf,ETF
+PowerShares Russell 1000 Low Beta Equal WeightEtf,ETF
+PowerShares India PortfolioEtf,ETF
+PowerShares DWA Consumer Cyclicals Momentum PortfoEtf,ETF
+PowerShares DWA Tactical Sector Rotation PortfolioEtf,ETF
+PowerShares International Corporate BondEtf,ETF
+PowerShares KBW Regional Banking PortfolioEtf,ETF
+PowerShares FTSE International Low Beta Equal WeigEtf,ETF
+PowerShares S&P SmallCap UtilitiesEtf,ETF
+PowerShares DWA Energy Momentum PortfolioEtf,ETF
+PowerShares DWA Industrials Momentum PortfolioEtf,ETF
+BLDRS Emerging Markets 50 ADREtf,ETF
+PowerShares S&P SmallCap IndustrialsEtf,ETF
+PowerShares LadderRite 0-5 Year Corporate BondEtf,ETF
+PowerShares S&P SmallCap MaterialsEtf,ETF
+PowerShares DB SilverEtf,ETF
+PowerShares DWA Basic Materials Momentum PortfolioEtf,ETF
+PowerShares DWA NASDAQ Momentum PortfolioEtf,ETF
+PowerShares S&P SmallCap Consumer DiscretionaryEtf,ETF
+BLDRS Asia 50 ADREtf,ETF
+DB Crude Oil Double Short Exp 01 Jun 2038Etf,ETF
+BLDRS Europe Select ADREtf,ETF
+PowerShares DB G10 Currency HarvestEtf,ETF
+DB Gold Short Exp 15 Feb 2038Etf,ETF
+PowerShares S&P SmallCap Consumer StaplesEtf,ETF
+Principal EDGE Active IncomeEtf,ETF
+ProShares UltraPro QQQEtf,ETF
+ProShares UltraPro Short QQQEtf,ETF
+ProShares Ultra VIX Short-Term FuturesEtf,ETF
+ProShares UltraShort S&P500Etf,ETF
+ProShares UltraPro Short S&P500Etf,ETF
+ProShares UltraShort 20+ Year TreasuryEtf,ETF
+ProShares UltraShort Bloomberg Crude OilEtf,ETF
+ProShares UltraPro S&P500Etf,ETF
+ProShares VIX Short-Term FuturesEtf,ETF
+ProShares UltraShort QQQEtf,ETF
+ProShares Ultra Bloomberg Crude OilEtf,ETF
+ProShares Short QQQEtf,ETF
+ProShares Short VIX Short-Term FuturesEtf,ETF
+ProShares UltraPro Short Dow 30Etf,ETF
+ProShares Ultra S&P500Etf,ETF
+ProShares UltraShort Russell2000Etf,ETF
+ProShares Ultra Bloomberg Natural GasEtf,ETF
+ProShares UltraShort Dow30Etf,ETF
+ProShares Ultra QQQEtf,ETF
+ProShares UltraPro Dow30Etf,ETF
+ProShares Ultra Dow30Etf,ETF
+ProShares Ultra SilverEtf,ETF
+ProShares Ultra Oil & GasEtf,ETF
+ProShares Ultra Russell2000Etf,ETF
+ProShares UltraShort MSCI Brazil CappedEtf,ETF
+ProShares Ultra Nasdaq BiotechnologyEtf,ETF
+ProShares Short MSCI Emerging MarketsEtf,ETF
+ProShares Ultra GoldEtf,ETF
+ProShares UltraShort Bloomberg Natural GasEtf,ETF
+ProShares UltraShort SilverEtf,ETF
+ProShares UltraShort GoldEtf,ETF
+ProShares Ultra Real EstateEtf,ETF
+ProShares UltraShort Nasdaq BiotechnologyEtf,ETF
+ProShares UltraShort FTSE China 50Etf,ETF
+ProShares UltraShort EuroEtf,ETF
+ProShares Ultra Basic MaterialsEtf,ETF
+ProShares UltraShort Real EstateEtf,ETF
+Proshares UltraPro NASDAQ BiotechnologyEtf,ETF
+ProShares Ultra FTSE EuropeEtf,ETF
+ProShares MSCI EAFE Dividend GrowersEtf,ETF
+ProShares UltraShort IndustrialsEtf,ETF
+ProShares UltraShort FinancialsEtf,ETF
+ProShares UltraShort MSCI Emerging MarketsEtf,ETF
+ProShares UltraShort TechnologyEtf,ETF
+ProShares Ultra FTSE China 50Etf,ETF
+ProShares UltraShort Basic MaterialsEtf,ETF
+ProShares Ultra EuroEtf,ETF
+ProShares Short MSCI EAFEEtf,ETF
+ProShares UltraShort YenEtf,ETF
+ProShares Hedge ReplicationEtf,ETF
+ProShares Short FTSE China 50Etf,ETF
+ProShares Ultra 20+ Year TreasuryEtf,ETF
+ProShares Short Real EstateEtf,ETF
+ProShares Inflation ExpectationsEtf,ETF
+ProShares UltraShort FTSE EuropeEtf,ETF
+ProShares Ultra MSCI Emerging MarketsEtf,ETF
+ProShares UltraShort MSCI JapanEtf,ETF
+ProShares Ultra YenEtf,ETF
+ProShares Ultra MSCI Brazil CappedEtf,ETF
+ProShares UltraPro Short NASDAQ BiotechnologyEtf,ETF
+ProShares Ultra MSCI EAFEEtf,ETF
+ProShares UltraShort MSCI EAFEEtf,ETF
+ProShares Ultra MSCI JapanEtf,ETF
+ProShares UltraShort Consumer ServicesEtf,ETF
+ProShares Morningstar Alternatives SolutionEtf,ETF
+ProShares S&P 500 ex EnergyEtf,ETF
+ProShares Short EuroEtf,ETF
+ProShares UltraShort Australian DollarEtf,ETF
+PureFunds ISE Mobile PaymentsEtf,ETF
+QuantShares Hedged Dividend IncomeEtf,ETF
+Horizons NASDAQ 100 Covered CallEtf,ETF
+Schwab International EquityEtf,ETF
+Schwab Emerging Markets EquityEtf,ETF
+Charles Schwab US REITEtf,ETF
+Schwab International Small-Cap EquityEtf,ETF
+SPDR S&P 500Etf,ETF
+SPDR S&P Oil & Gas Exploration & ProductionEtf,ETF
+Financial Select Sector SPDREtf,ETF
+Energy Select Sector SPDREtf,ETF
+Consumer Staples Select Sector SPDREtf,ETF
+Industrial Select Sector SPDREtf,ETF
+Health Care Select Sector SPDREtf,ETF
+SPDR Gold SharesEtf,ETF
+Technology Select Sector SPDREtf,ETF
+SPDR Barclays High Yield BondEtf,ETF
+SPDR S&P Regional BankingEtf,ETF
+Real Estate Select Sector SPDREtf,ETF
+SPDR S&P 500 ValueEtf,ETF
+SPDR S&P RetailEtf,ETF
+Materials Select Sector SPDREtf,ETF
+SPDR S&P BiotechEtf,ETF
+SPDR S&P Metals & MiningEtf,ETF
+Consumer Discretionary Select Sector SPDREtf,ETF
+SPDR S&P BankEtf,ETF
+SPDR S&P HomebuildersEtf,ETF
+SPDR DJIAEtf,ETF
+SPDR Euro Stoxx 50Etf,ETF
+SPDR S&P World ex USEtf,ETF
+SPDR S&P MidCap 400Etf,ETF
+SPDR S&P Oil & Gas Equipment & ServicesEtf,ETF
+SPDR MSCI ACWI ex-USEtf,ETF
+SPDR S&P DividendEtf,ETF
+SPDR S&P 500 High DividendEtf,ETF
+SPDR S&P Emerging MarketsEtf,ETF
+SPDR Barclays Emerging Markets Local BondEtf,ETF
+SPDR Russell 3000Etf,ETF
+SPDR S&P 600 Small CapEtf,ETF
+SPDR Portfolio MSCI GlobalEtf,ETF
+SPDR Dow Jones International Real EstateEtf,ETF
+SPDR Barclays International Treasury BondEtf,ETF
+SPDR S&P ChinaEtf,ETF
+SPDR S&P Global Natural ResourcesEtf,ETF
+SPDR S&P InsuranceEtf,ETF
+SPDR Portfolio TIPSEtf,ETF
+SPDR Dow Jones REITEtf,ETF
+SPDR S&P Emerging Asia PacificEtf,ETF
+SPDR Dow Jones Global Real EstateEtf,ETF
+SPDR S&P Emerging Markets Small CapEtf,ETF
+SPDR S&P SemiconductorEtf,ETF
+SPDR S&P International DividendEtf,ETF
+SPDR S&P PharmaceuticalsEtf,ETF
+SPDR S&P International Small CapEtf,ETF
+SPDR S&P Emerging Markets DividendEtf,ETF
+SPDR Barclays Short Term Intl Treasury BondEtf,ETF
+SPDR SSgA Income AllocationEtf,ETF
+SPDR Barclays International Corporate BondEtf,ETF
+SPDR MFS Systematic Core EquityEtf,ETF
+SPDR MSCI EAFE StrategicFactorsEtf,ETF
+SPDR S&P Global InfrastructureEtf,ETF
+SPDR SSgA Multi-Asset Real ReturnEtf,ETF
+SPDR SSgA Global AllocationEtf,ETF
+SPDR Citi International Government Inflation-ProteEtf,ETF
+SPDR MSCI Emer Mkts StrategicFactorsEtf,ETF
+SPDR Portfolio EuropeEtf,ETF
+SPDR MSCI World StrategicFactorsEtf,ETF
+SPDR MFS Systematic Growth EquityEtf,ETF
+SPDR S&P Capital MarketsEtf,ETF
+SPDR Solactive CanadaEtf,ETF
+SPDR Solactive JapanEtf,ETF
+SPDR MSCI ACWI Low Carbon TargetEtf,ETF
+SPDR Global DowEtf,ETF
+SPDR MFS Systematic Value EquityEtf,ETF
+SPDR Solactive GermanyEtf,ETF
+Sprott Physical SilverEtf,ETF
+Sprott Physical GoldEtf,ETF
+Teucrium SugarEtf,ETF
+Teucrium CornEtf,ETF
+UBS E-TRACS Monthly Pay 2xLeveraged Mortgage REITEtf,ETF
+UBS ETRACS Monthly Pay 2XEtf,ETF
+UBS AG ETRACS Monthly Pay 2X US Small Cap High DivEtf,ETF
+UBS E-TRACS Bloomberg CMCIEtf,ETF
+UBS ETRACS Monthly Pay 2X US High Dividend Low VolEtf,ETF
+UBS ETRACS Monthly Pay 2X Diversified High IncomeEtf,ETF
+UBS AG FI Enhanced Large Cap GrowthEtf,ETF
+UBS AG ETRACS Monthly Reset 2X ISE Exclusively HomEtf,ETF
+UBS ETRACS Bloomberg CMCI AgricultureEtf,ETF
+UBS ETRACS Monthly Pay 2X Wells Fargo MLP ex EnergEtf,ETF
+UBS E-TRACS linked to DBloomberg Commodity Total REtf,ETF
+UBS E-TRACS Bloomberg CMCI GoldEtf,ETF
+UBS E-TRACS Bloomberg CMCI FoodEtf,ETF
+United States OilEtf,ETF
+United States Natural GasEtf,ETF
+United States Brent OilEtf,ETF
+United States CommodityEtf,ETF
+United States CopperEtf,ETF
+United States GasolineEtf,ETF
+United States 12 Month Natural GasEtf,ETF
+United States 12 Month OilEtf,ETF
+VanEck Vectors Gold MinersEtf,ETF
+VanEck Vectors Junior Gold MinersEtf,ETF
+VanEck Vectors Oil ServicesEtf,ETF
+VanEck Vectors RussiaEtf,ETF
+VanEck Vectors JP Morgan EM Local Currency BdEtf,ETF
+VanEck Vectors VietnamEtf,ETF
+VanEck Vectors High-Yield MunicipalEtf,ETF
+VanEck Short High-Yield MuniEtf,ETF
+VanEck Emg Mkts High Yield BdEtf,ETF
+VanEck Vectors Rare EarthStrategic MetalsEtf,ETF
+VanEck Vectors EgyptEtf,ETF
+VanEck Vectors Mortgage REIT IncomeEtf,ETF
+VanEck Vectors PharmaceuticalEtf,ETF
+VanEck Vectors International High Yield BondEtf,ETF
+VanEck Vectors ChinaAMC SME-ChiNextEtf,ETF
+VanEck Merk Gold TrustEtf,ETF
+VanEck Vectors AfricaEtf,ETF
+VanEck Vectors AgribusinessEtf,ETF
+VanEck Vectors BiotechEtf,ETF
+VanEck Vectors IndonesiaEtf,ETF
+VanEck Vectors India Small-CapEtf,ETF
+VanEck Vectors CoalEtf,ETF
+VanEck Vectors SteelEtf,ETF
+VanEck Vectors Unconventional Oil & GasEtf,ETF
+VanEck Vectors Brazil Small-CapEtf,ETF
+VanEck Vectors Oil RefinersEtf,ETF
+VanEck Vectors ChinaAMC A-ShareEtf,ETF
+VanEck Vectors Natural ResourcesEtf,ETF
+VanEck Vectors Low Carbon EnergyEtf,ETF
+VanEck Vectors Uranium+Nuclear EnergyEtf,ETF
+Morgan Stanley Market Vectors 2X EuroEtf,ETF
+VanEck Vectors Russia Small-CapEtf,ETF
+VanEck Vectors ChinaAMC China BondEtf,ETF
+Morgan Stanley Market Vectors Double Short EuroEtf,ETF
+VanEck Vectors High Income Infrastructure MLPEtf,ETF
+Morgan Stanley Market Vectors Rupee USDEtf,ETF
+Vanguard FTSE Emerging MarketsEtf,ETF
+Vanguard REITEtf,ETF
+Vanguard FTSE Developed MarketsEtf,ETF
+Vanguard FTSE EuropeEtf,ETF
+Vanguard FTSE All World ex USEtf,ETF
+Vanguard S&P 500Etf,ETF
+Vanguard Short-Term Corporate BondEtf,ETF
+Vanguard Total Bond MarketEtf,ETF
+Vanguard Intermediate-Term Corporate BondEtf,ETF
+Vanguard Total Stock MarketEtf,ETF
+Vanguard Total International StockEtf,ETF
+Vanguard ValueEtf,ETF
+Vanguard Total World StockEtf,ETF
+Vanguard Total International BondEtf,ETF
+Vanguard Mortgage-Backed SecuritiesEtf,ETF
+Vanguard Tax-Exempt BondEtf,ETF
+Vanguard Dividend AppreciationEtf,ETF
+Vanguard Short-Term BondEtf,ETF
+Vanguard Intermediate-Term BondEtf,ETF
+Vanguard GrowthEtf,ETF
+Vanguard Short-Term Government BondEtf,ETF
+Vanguard Long-Term BondEtf,ETF
+Vanguard Sht-Term Inflation-Protected SecuritiesEtf,ETF
+Vanguard Long-Term Corporate BondEtf,ETF
+Vanguard Small-Cap ValueEtf,ETF
+Vanguard FTSE PacificEtf,ETF
+Vanguard Small-CapEtf,ETF
+Vanguard Consumer StaplesEtf,ETF
+Vanguard Global ex-US Real EstateEtf,ETF
+Vanguard Intermediate-Term Government BondEtf,ETF
+Vanguard Mid-Cap ValueEtf,ETF
+Vanguard Russell 1000 GrowthEtf,ETF
+Vanguard Long-Term Government BondEtf,ETF
+Vanguard Russell 2000Etf,ETF
+Vanguard Small-Cap GrowthEtf,ETF
+Vanguard UtilitiesEtf,ETF
+Vanguard Emerging Markets Government BondEtf,ETF
+Vanguard FTSE All-World ex-US Small-CapEtf,ETF
+Vanguard Mid-Cap GrowthEtf,ETF
+Vanguard Mega Cap GrowthEtf,ETF
+Vanguard Mega Cap ValueEtf,ETF
+Vanguard Telecommunication ServicesEtf,ETF
+Vanguard Russell 1000 ValueEtf,ETF
+Vanguard Mega CapEtf,ETF
+Vanguard MaterialsEtf,ETF
+Vanguard Consumer DiscretionaryEtf,ETF
+Vanguard Russell 1000Etf,ETF
+Vanguard Russell 2000 ValueEtf,ETF
+Vanguard Russell 2000 GrowthEtf,ETF
+Vanguard Russell 3000Etf,ETF
+VelocityShares 3x Long Natural Gas linked to S&P GEtf,ETF
+VelocityShares Daily 2x VIX Short Term linked to SEtf,ETF
+VelocityShares 3x Inverse Natural Gas linked to S&Etf,ETF
+VelocityShares 3x Long Silver linked to S&P GSCI SEtf,ETF
+VelocityShares 3x Inverse Silver linked to S&P GSCEtf,ETF
+VelocityShares 3x Long Gold linked to SP GSCI GoldEtf,ETF
+VelocityShares 3x Inverse Gold linked to S&P GSCIEtf,ETF
+VelocityShares VIX Short Term linked to SP 500 VIXEtf,ETF
+VelocityShares Daily Inverse VIX Medium TermEtf,ETF
+WBI Tactical Income SharesEtf,ETF
+WBI Tactical LCYEtf,ETF
+WBI Tactical LCVEtf,ETF
+WBI Tactical LCSEtf,ETF
+WBI Tactical LCGEtf,ETF
+WBI SMID Tactical Growth SharesEtf,ETF
+WBI Tactical SMSEtf,ETF
+WBI Tactical SMVEtf,ETF
+WBI Tactical SMYEtf,ETF
+WisdomTree Japan Hedged EquityEtf,ETF
+WisdomTree India EarningsEtf,ETF
+WisdomTree Europe Hedged EquityEtf,ETF
+WisdomTree Emerging Markets High DividendEtf,ETF
+WisdomTree Emerging Markets SmallCap DividendEtf,ETF
+WisdomTree US Quality Dividend GrowthEtf,ETF
+WisdomTree International SmallCap DividendEtf,ETF
+WisdomTree International EquityEtf,ETF
+WisdomTree International High DividendEtf,ETF
+WisdomTree International Hedged Quality Dividend GEtf,ETF
+WisdomTree Continuous CommodityEtf,ETF
+WisdomTree Intenational LargeCap DividendEtf,ETF
+WisdomTree Interest Rate Hedged High Yield Bond FdEtf,ETF
+WisdomTree Barclays Interest Rate Hedge US AggregaEtf,ETF
+WisdomTree Emerging Markets Local DebtEtf,ETF
+WisdomTree Europe SmallCap DividendEtf,ETF
+WisdomTree Middle East DividendEtf,ETF
+WisdomTree US SmallCap Quality Dividend GrowthEtf,ETF
+WisdomTree Managed Futures StrategyEtf,ETF
+WisdomTree International MidCap DividendEtf,ETF
+WisdomTree Global High DividendEtf,ETF
+WisdomTree Global ex US Quality Dividend GrowthEtf,ETF
+WisdomTree Japan SmallCap DividendEtf,ETF
+WisdomTree China ex-State-Owned EnterprisesEtf,ETF
+WisdomTree Global ex-US Real EstateEtf,ETF
+WisdomTree Emerging Markets Quality Dividend GrowtEtf,ETF
+WisdomTree Japan Hedged SmallCap EquityEtf,ETF
+WisdomTree Barclays Negative Duration US AggregateEtf,ETF
+Wisdom Tree International Dividend Ex-FinancialsEtf,ETF
+WisdomTree Europe Quality Dividend GrowthEtf,ETF
+WisdomTree Germany Hedged EquityEtf,ETF
+WisdomTree Emerging Markets Consumer GrowthEtf,ETF
+WisdomTree Bloomberg US Dollar BullishEtf,ETF
+WisdomTree Emerging Currency StrategyEtf,ETF
+WisdomTree Chinese Yuan StrategyEtf,ETF
+WisdomTree Emerging Markets Corporate BondEtf,ETF
+WisdomTree Asia-Pacific ex-JapanEtf,ETF
+GoldCommodity,Commodity
+CopperCommodity,Commodity
+SilverCommodity,Commodity
+PalladiumCommodity,Commodity
+PlatinumCommodity,Commodity
+AluminumCommodity,Commodity
+ZincCommodity,Commodity
+LeadCommodity,Commodity
+NickelCommodity,Commodity
+TinCommodity,Commodity
+CopperCommodity,Commodity
+US Coffee CCommodity,Commodity
+US Cotton #2Commodity,Commodity
+US Sugar #11Commodity,Commodity
+Orange JuiceCommodity,Commodity
+US CocoaCommodity,Commodity
+London CoffeeCommodity,Commodity
+London SugarCommodity,Commodity
+LumberCommodity,Commodity
+Live CattleCommodity,Commodity
+Lean HogsCommodity,Commodity
+Feeder CattleCommodity,Commodity
+Brent OilCommodity,Commodity
+Crude Oil WTICommodity,Commodity
+London Gas OilCommodity,Commodity
+Natural GasCommodity,Commodity
+Heating OilCommodity,Commodity
+Gasoline RBOBCommodity,Commodity
+Rough RiceCommodity,Commodity
+US Soybean OilCommodity,Commodity
+US Soybean MealCommodity,Commodity
+US SoybeansCommodity,Commodity
+US WheatCommodity,Commodity
+US CornCommodity,Commodity
+OatsCommodity,Commodity

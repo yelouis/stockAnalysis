@@ -1,0 +1,3 @@
+,Date,Time,Ticker,Price,Transaction Type,Shares before,Shares After,Balance Before,Balance After
+0,XOMStock,74.87,2018-03-12,Open,Buy,0,13,1000,26.68999999999994
+1,XOMStock,70.33,2020-01-03,Close,Sell,13,0,26.68999999999994,940.9799999999999

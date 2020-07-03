@@ -178,7 +178,7 @@ def main():
     for i in range(len(threshTransList)):
         transaction = pd.Series(threshTransList[i], index = threshDF.columns)
         threshDF = threshDF.append(transaction, ignore_index = True)
-    threshDF.to_csv(os.path.join(Path(_configKeys.PAPER_RESULTS_FOLDER), name+"_thresholdByEstimate.csv"))
+    threshDF.to_csv(os.path.join(Path(_configKeys.PAPER_RESULTS_FOLDER), name+"_lasso_threshold.csv"))
 
     controlTransList = controlPortfolio.getTransactions()
     controlDF = pd.DataFrame(columns = ["Date", "Time", "Ticker", "Price", "Transaction Type", "Shares before", "Shares After", "Balance Before", "Balance After"])

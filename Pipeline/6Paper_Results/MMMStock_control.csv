@@ -1,0 +1,3 @@
+,Date,Time,Ticker,Price,Transaction Type,Shares before,Shares After,Balance Before,Balance After
+0,MMMStock,239.01,2018-02-26,Open,Buy,0,4,1000,43.960000000000036
+1,MMMStock,178.45,2020-01-03,Close,Sell,4,0,43.960000000000036,757.76

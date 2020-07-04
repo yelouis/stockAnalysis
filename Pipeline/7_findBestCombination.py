@@ -13,8 +13,8 @@ def main():
 '''
 makeProfitComparisonCSVS with look at all of the results in the 6Paper_Results folder and make a csv for every stock showcasing the profit in this format:
 
-                   Elastic Profit   Lasso Profit    Control Profit
-beta1 w/ best alpha       x              x                 x
+                   Lasso Profit    Control Profit
+beta1 w/ best alpha       x              x
 beta2 w/ best alpha       x              x
 beta3 w/ best alpha       x              x
 beta4 w/ best alpha       x              x
@@ -48,10 +48,6 @@ def makeProfitComparisonCSVS():
                 fileType = "lasso"
                 abValue = abValue.split("_lasso_threshold")[0]
                 recordAlphaBeta(abDict, abValue, profit, fileType)
-            elif "elastic" in algoFile:
-                fileType = "elastic"
-                abValue = abValue.split("_elastic_threshold")[0]
-                recordAlphaBeta(abDict, abValue, profit, fileType)
         abUnsortedRows = abDict.items()
         abSortedRows = sorted(abUnsortedRows)
         dfList = []
@@ -59,19 +55,15 @@ def makeProfitComparisonCSVS():
             row = abSortedRows[i]
             abSortedRows[i][1].append(controlProfit)
             dfList.append([row[0]] + row[1])
-        tickerDF = pd.DataFrame(dfList, columns=["Beta / Alpha", "Elastic Profit", "Lasso Profit", "Control Profit"])
+        tickerDF = pd.DataFrame(dfList, columns=["Beta / Alpha", "Lasso Profit", "Control Profit"])
         tickerDF.to_csv(os.path.join(Path(_configKeys.PROFIT_COMPARISONS_FOLDER), ticker+"_profit_comparison.csv"))
 
 def recordAlphaBeta(dictionary, alphabeta, profit, fileType): #dictionary to check in, alphabeta to check for, profit is the profit to keep track of, fileType to say which index to add the profit into
     if alphabeta not in dictionary:
         if fileType == "lasso":
-            dictionary[alphabeta] = ["N/A", profit]
-        elif fileType == "elastic":
-            dictionary[alphabeta] = [profit, "N/A"]
+            dictionary[alphabeta] = [profit]
     else:
         if fileType == "lasso":
-            dictionary[alphabeta][1] = profit #This case implies we already have a recorded elastic profit structured as dict[abValue] = [elasticProfit, "N/A"]
-        elif fileType == "elastic":
-            dictionary[alphabeta][0] = profit #This case implies we already have a recorded lasso profit structured as dict[abValue] = ["N/A", lassoProfit]
+            dictionary[alphabeta][0] = profit #This case implies we already have a recorded elastic profit structured as dict[abValue] = [elasticProfit, "N/A"]
 
 main()

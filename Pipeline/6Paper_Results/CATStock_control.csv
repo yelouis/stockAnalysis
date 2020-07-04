@@ -1,0 +1,3 @@
+,Date,Time,Ticker,Price,Transaction Type,Shares before,Shares After,Balance Before,Balance After
+0,CATStock,163.05,2018-02-26,Open,Buy,0,6,1000,21.699999999999932
+1,CATStock,148.44,2020-01-03,Close,Sell,6,0,21.699999999999932,912.3399999999999

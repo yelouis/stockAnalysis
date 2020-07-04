@@ -229,8 +229,11 @@ def makePredictionsDict(lassoDF, threshold):
                         #look into np.arrays
                         #np.array(featureWeekList) * coefficient
                         #predictionList + featureWeekList (if both ar np.arrays)
-                        featureWeekDataPoint = featureWeekList[x]
-                        predictionList[x] += coefficient * featureWeekDataPoint
+                        try:
+                            featureWeekDataPoint = featureWeekList[x]
+                            predictionList[x] += coefficient * featureWeekDataPoint
+                        except:
+                            predictionList[x] += 0
 
 
             predictionsDict[yValueName+"_Predicted"] = predictionList

@@ -221,19 +221,20 @@ def makePredictionsDict(lassoDF, threshold):
                     #Changed accessing correct column ------------------------------
 
                     #print (str(featureStockCol))
-                    featureWeekList = list(featureStockDF[xValueName].values[:-1])
-                    #print (len(featureWeekList)) #CORRECT SIZE
-                    for x in range(len(featureWeekList[:-1])):
-                        #Multiplies this column's values by the coefficient and adds the result to the total prediction list
+                    try:
+                        featureWeekList = list(featureStockDF[xValueName].values[:-1])
+                        #print (len(featureWeekList)) #CORRECT SIZE
+                        for x in range(len(featureWeekList[:-1])):
+                            #Multiplies this column's values by the coefficient and adds the result to the total prediction list
 
-                        #look into np.arrays
-                        #np.array(featureWeekList) * coefficient
-                        #predictionList + featureWeekList (if both ar np.arrays)
-                        try:
+                            #look into np.arrays
+                            #np.array(featureWeekList) * coefficient
+                            #predictionList + featureWeekList (if both ar np.arrays)
                             featureWeekDataPoint = featureWeekList[x]
                             predictionList[x] += coefficient * featureWeekDataPoint
-                        except:
-                            predictionList[x] += 0
+                    except:
+                        print(str(xValueName) + " does not exists in current data")
+
 
 
             predictionsDict[yValueName+"_Predicted"] = predictionList

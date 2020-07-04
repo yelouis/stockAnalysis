@@ -42,7 +42,6 @@ def main():
     '''
     Run importing and binning on current data.
     '''
-    print()
 
     _configKeys.STARTPULL = "14/01/2018"
     _configKeys.ENDPULL = datetime.datetime.strftime(datetime.datetime.date(datetime.datetime.now()),'%d/%m/%Y')
@@ -54,6 +53,12 @@ def main():
     _configKeys.STANDARDIZED_FOLDER = "3Standardized_Binned_Real/"
     _configKeys.SUCCESSFULSTANDARDIZEDBINS = "3successfulStandardizedBins_Real.csv"
     _configKeys.YVALUETICKER = symbol #we need to actually pick something to trade
+
+    pipelineP1.main()
+    pipelineP2.main()
+    pipelineP3.main()
+    pipelineP4.main()
+    pipelineP5.main()
 
 
 if __name__ == "__main__":

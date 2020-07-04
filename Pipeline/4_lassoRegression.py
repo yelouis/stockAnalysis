@@ -110,4 +110,5 @@ def main():
     # originaldf = originaldf.append(df, ignore_index=True)
     df.to_csv('4successfulLasso.csv', index=False)
 
-#main()
+if __name__ == "__main__":
+    main()

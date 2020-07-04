@@ -27,3 +27,34 @@ Remind threshold folks that they are using training data now and that is ok.
 They should be trying to find the best threshold within the last 13 weeks (or window_length).
     - Therefore, they should only use data from the last 13 weeks from now, to calculate threshold
 '''
+import datetime
+import _configKeys
+pipelineP1 = __import__('1_stockImporting')
+pipelineP2 = __import__('2_binning')
+pipelineP3 = __import__('3_standardizing')
+pipelineP4 = __import__('4_lassoRegression')
+pipelineP5 = __import__('5_testing')
+pipelineP6 = __import__('6_paperTrading')
+
+
+
+def main():
+    '''
+    Run importing and binning on current data.
+    '''
+    print()
+
+    _configKeys.STARTPULL = "14/01/2018"
+    _configKeys.ENDPULL = datetime.datetime.strftime(datetime.datetime.date(datetime.datetime.now()),'%d/%m/%Y')
+    _configKeys.FIRSTINDEX = "2018-01-14"
+    _configKeys.LASTINDEX = datetime.datetime.strftime(datetime.datetime.date(datetime.datetime.now()),'%Y-%m-%d')
+    _configKeys.DATA_FOLDER = "1Data_Real/"
+    _configKeys.BINNED_FOLDER = "2Binned_Real/"
+    _configKeys.SUCCESSFULWEEKBINS = "2successfulWeekBinsReal.csv"
+    _configKeys.STANDARDIZED_FOLDER = "3Standardized_Binned_Real/"
+    _configKeys.SUCCESSFULSTANDARDIZEDBINS = "3successfulStandardizedBins_Real.csv"
+    _configKeys.YVALUETICKER = symbol #we need to actually pick something to trade
+
+
+if __name__ == "__main__":
+    main()

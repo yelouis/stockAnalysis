@@ -145,4 +145,5 @@ def main():
     #Now we throw this dataframe into a csv file and add it to a 2successfulWeekBins.csv
 
 
-#main()
+if __name__ == "__main__":
+    main()

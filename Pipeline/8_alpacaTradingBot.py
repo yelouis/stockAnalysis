@@ -33,4 +33,5 @@ def main():
         # If we only have stocks and the limit condition is met, SELL
 
 
-main()
+if __name__ == "__main__":
+    main()

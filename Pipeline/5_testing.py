@@ -367,4 +367,5 @@ def Estimate_Unstandardized(standardized_value, known_values, window_length):
 
     return estimated_value
 
-#main()
+if __name__ == "__main__":
+    main()

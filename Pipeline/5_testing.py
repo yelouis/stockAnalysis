@@ -211,17 +211,17 @@ def makePredictionsDict(lassoDF, threshold):
                     #xValueName: stock name/ticker
                     xValueName = lassoDF.iloc[i][1]
                     print(str(_configKeys.STANDARDIZED_FOLDER) + xValueName.split("_")[0]+".csv")
-                    featureStockDF = pd.read_csv(os.path.join(Path(_configKeys.STANDARDIZED_FOLDER), xValueName.split("_")[0]+".csv"))
-
-                    #print (str(xValueName))
-                    #This code gives us the weekly data for the affecting feature
-                    #print (featureStockDF.columns)
-                    #print()
-
-                    #Changed accessing correct column ------------------------------
-
-                    #print (str(featureStockCol))
                     try:
+                        featureStockDF = pd.read_csv(os.path.join(Path(_configKeys.STANDARDIZED_FOLDER), xValueName.split("_")[0]+".csv"))
+
+                        #print (str(xValueName))
+                        #This code gives us the weekly data for the affecting feature
+                        #print (featureStockDF.columns)
+                        #print()
+
+                        #Changed accessing correct column ------------------------------
+
+                        #print (str(featureStockCol))
                         featureWeekList = list(featureStockDF[xValueName].values[:-1])
                         #print (len(featureWeekList)) #CORRECT SIZE
                         for x in range(len(featureWeekList[:-1])):

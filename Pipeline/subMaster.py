@@ -10,31 +10,31 @@ pipelineP6 = __import__('6_paperTrading')
 
 def main():
 
-#    '''
-#    Run importing and binning on 2016 data.
-#    '''
-#    _configKeys.STARTPULL = "03/01/2016"
-#    _configKeys.ENDPULL = "07/01/2018"
-#    _configKeys.FIRSTINDEX = "2016-01-03"
-#    _configKeys.LASTINDEX = "2018-01-07"
-#    _configKeys.DATA_FOLDER = "1Data_2016/"
-#    _configKeys.BINNED_FOLDER = "2Binned_2016/"
-#    _configKeys.SUCCESSFULWEEKBINS = "2successfulWeekBins2016.csv"
-#    pipelineP1.main()
-#    pipelineP2.main()
-#
-#    '''
-#    Run importing and binning on 2018 data
-#    '''
-#    _configKeys.STARTPULL = "14/01/2018"
-#    _configKeys.ENDPULL = "05/01/2020"
-#    _configKeys.FIRSTINDEX = "2018-01-14"
-#    _configKeys.LASTINDEX = "2020-01-05"
-#    _configKeys.DATA_FOLDER = "1Data/"
-#    _configKeys.BINNED_FOLDER = "2Binned/"
-#    _configKeys.SUCCESSFULWEEKBINS = "2successfulWeekBins2018.csv"
-#    pipelineP1.main()
-#    pipelineP2.main()
+    '''
+    Run importing and binning on 2016 data.
+    '''
+    _configKeys.STARTPULL = "03/01/2016"
+    _configKeys.ENDPULL = "07/01/2018"
+    _configKeys.FIRSTINDEX = "2016-01-03"
+    _configKeys.LASTINDEX = "2018-01-07"
+    _configKeys.DATA_FOLDER = "1Data_2016/"
+    _configKeys.BINNED_FOLDER = "2Binned_2016/"
+    _configKeys.SUCCESSFULWEEKBINS = "2successfulWeekBins2016.csv"
+    pipelineP1.main()
+    pipelineP2.main()
+
+    '''
+    Run importing and binning on 2018 data
+    '''
+    _configKeys.STARTPULL = "14/01/2018"
+    _configKeys.ENDPULL = "05/01/2020"
+    _configKeys.FIRSTINDEX = "2018-01-14"
+    _configKeys.LASTINDEX = "2020-01-05"
+    _configKeys.DATA_FOLDER = "1Data/"
+    _configKeys.BINNED_FOLDER = "2Binned/"
+    _configKeys.SUCCESSFULWEEKBINS = "2successfulWeekBins2018.csv"
+    pipelineP1.main()
+    pipelineP2.main()
 
     '''
     Run the rest of the pipeline for a particular beta value

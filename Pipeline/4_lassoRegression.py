@@ -91,7 +91,7 @@ def main():
     yValueDict = readYValues()
 
     alpha = .1
-    for counter in range(4):
+    for counter in range(9):
         allYValueResults = pd.DataFrame()
         start_time = time.time()
         for yValueName in yValueDict:
@@ -102,7 +102,7 @@ def main():
         listOfSuccessfulLasso.append(str(_configKeys.YVALUETICKER) + str(format(alpha, '.1f')) +"_alpha"+ str(int(beta)) + "_beta")
         allYValueResults.to_csv(path)
         print("--- %s seconds ---" % (time.time() - start_time))
-        alpha += 0.1
+        alpha += 0.05
 
     successfulDict = {"FileName" : listOfSuccessfulLasso}
     df = pd.DataFrame(successfulDict, columns = ["FileName"])

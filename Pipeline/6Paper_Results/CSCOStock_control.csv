@@ -1,3 +1,3 @@
 ,Date,Time,Ticker,Price,Transaction Type,Shares before,Shares After,Balance Before,Balance After
-0,CSCOStock,44.3,2018-02-26,Open,Buy,0,22,1000,25.40000000000009
-1,CSCOStock,47.63,2020-01-03,Close,Sell,22,0,25.40000000000009,1073.2600000000002
+0,CSCOStock,43.5,2018-06-04,Open,Buy,0,22,1000,43.0
+1,CSCOStock,47.63,2020-01-03,Close,Sell,22,0,43.0,1090.8600000000001

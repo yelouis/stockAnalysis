@@ -1,23 +1,15 @@
-#DATES MUST BE SUNDAYS!!
-# STARTPULL_2016 = "03/01/2016"
-# ENDPULL_2016 = "07/01/2018"
-# FIRSTINDEX_2016 = "2016-01-03"
-# LASTINDEX_2016 = "2018-01-07"
-#
-# DATA_FOLDER = "1Data_2016/"
-# BINNED_FOLDER = "2Binned_2016/"
-# STANDARDIZED_FOLDER = "3Standardized_Binned_2016/"
+import datetime
 
 
 STARTPULL = "14/01/2018"
-ENDPULL = "05/01/2020"
+ENDPULL = datetime.datetime.strftime(datetime.datetime.date(datetime.datetime.now()),'%d/%m/%Y')
 FIRSTINDEX = "2018-01-14"
-LASTINDEX = "2020-01-05"
+LASTINDEX = datetime.datetime.strftime(datetime.datetime.date(datetime.datetime.now()),'%Y-%m-%d')
 
 DATA_FOLDER = "1Data/"
 BINNED_FOLDER = "2Binned/"
 STANDARDIZED_FOLDER = "3Standardized_Binned/"
-SUCCESSFULSTANDARDIZEDBINS = "3successfulStandardizedBins_2018.csv"
+SUCCESSFULSTANDARDIZEDBINS = "3successfulStandardizedBins.csv"
 SUCCESSFULWEEKBINS = "2successfulWeekBins.csv"
 
 LASSO_RESULTS_FOLDER = "4Lasso_Results"

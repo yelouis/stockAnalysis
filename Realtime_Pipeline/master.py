@@ -47,10 +47,10 @@ def main():
     _configKeys.ENDPULL = datetime.datetime.strftime(datetime.datetime.date(datetime.datetime.now()),'%d/%m/%Y')
     _configKeys.FIRSTINDEX = "2018-01-14"
     _configKeys.LASTINDEX = datetime.datetime.strftime(datetime.datetime.date(datetime.datetime.now()),'%Y-%m-%d')
-    _configKeys.DATA_FOLDER = "1Data_Real/"
-    _configKeys.BINNED_FOLDER = "2Binned_Real/"
+    _configKeys.DATA_FOLDER = "1Data/"
+    _configKeys.BINNED_FOLDER = "2Binned/"
     _configKeys.SUCCESSFULWEEKBINS = "2successfulWeekBinsReal.csv"
-    _configKeys.STANDARDIZED_FOLDER = "3Standardized_Binned_Real/"
+    _configKeys.STANDARDIZED_FOLDER = "3Standardized_Binned/"
     _configKeys.SUCCESSFULSTANDARDIZEDBINS = "3successfulStandardizedBins_Real.csv"
     _configKeys.YVALUETICKER = symbol #we need to actually pick something to trade
 

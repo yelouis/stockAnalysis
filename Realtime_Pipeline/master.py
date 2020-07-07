@@ -33,7 +33,7 @@ pipelineP1 = __import__('1_stockImporting')
 pipelineP2 = __import__('2_binning')
 pipelineP3 = __import__('3_standardizing')
 pipelineP4 = __import__('4_lassoRegression')
-pipelineP5 = __import__('5_testing')
+pipelineP5 = __import__('5_createEstimation')
 pipelineP6 = __import__('6_paperTrading')
 
 
@@ -42,17 +42,6 @@ def main():
     '''
     Run importing and binning on current data.
     '''
-
-    _configKeys.STARTPULL = "14/01/2018"
-    _configKeys.ENDPULL = datetime.datetime.strftime(datetime.datetime.date(datetime.datetime.now()),'%d/%m/%Y')
-    _configKeys.FIRSTINDEX = "2018-01-14"
-    _configKeys.LASTINDEX = datetime.datetime.strftime(datetime.datetime.date(datetime.datetime.now()),'%Y-%m-%d')
-    _configKeys.DATA_FOLDER = "1Data/"
-    _configKeys.BINNED_FOLDER = "2Binned/"
-    _configKeys.SUCCESSFULWEEKBINS = "2successfulWeekBinsReal.csv"
-    _configKeys.STANDARDIZED_FOLDER = "3Standardized_Binned/"
-    _configKeys.SUCCESSFULSTANDARDIZEDBINS = "3successfulStandardizedBins_Real.csv"
-    _configKeys.YVALUETICKER = symbol #we need to actually pick something to trade
 
     pipelineP1.main()
     pipelineP2.main()

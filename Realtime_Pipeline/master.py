@@ -1,32 +1,4 @@
-'''
-This will be the master file that runs everything.
 
-Create new folders liek 1Data_RealTime to allow testing to still work on older folders
-
-Run files 1-3 on 2018-now (last Sunday) data
-
-Pick a stock/etf/commodity that we are permanently going to stick with.
-
-Run a file that tells us what the best alpha and beta values to use
-
-Run that stock/etf/commodity in file 4-5
-
-Run the papertrading file and have it return:
-    - Buy price, sell price.
-        - Buy Price = Lasso Prediction (Average Max) + - some threshold
-        - Sell Price = Lasso Prediction (Average Min) + - some threshold
-    - Save buy and sell price in a csv file.
-
-Pass the buy and sell price to file called (realTimeAlphca) during the trading hours.
-Create a transaction and portfolio class to keep track of the trades made by realTimeAlphca
-and save that to a csv.
-'''
-
-'''
-Remind threshold folks that they are using training data now and that is ok.
-They should be trying to find the best threshold within the last 13 weeks (or window_length).
-    - Therefore, they should only use data from the last 13 weeks from now, to calculate threshold
-'''
 import datetime
 import _configKeys
 pipelineP1 = __import__('1_stockImporting')
@@ -47,6 +19,31 @@ def main():
     pipelineP2.main()
     pipelineP3.main()
     pipelineP4.main()
+
+
+    '''
+    Pseudocode:
+        - Nothing needs to be changed in pipeline 1-4
+    Pipeline 1-3 gets us to a standardized and binned format for our data
+
+    Need to optimize pipeline 5 so that it only creates an estimation using the most
+    recent window length of data.
+        - Rename pipeline 5 to 5_createEstimation.py instead of 5_testing.py
+        - Multiply coefficient from lasso results to just the last window length
+            row of data from the standardizing output files
+
+    Need to optimize part 6 of the pipeline so I can just get the threshold to use.
+        - Rename 6_paperTrading to 6_calculateLimits
+        - Calculate how far off the predictions were from the actual value from the output of the 5_createEstimation file
+            to create thresholds
+        - Add those thresholds to the predict highs and lows value of the current week and return them as limits to
+            our real time orders.
+
+    Have 8_alpacaTradingBot.py take in these limits and create orders for the week.
+        - Find out how to use requests.get(ACCOUNT_URL, headers = HEADERS) to get day trading value
+
+    '''
+
     pipelineP5.main()
 
 

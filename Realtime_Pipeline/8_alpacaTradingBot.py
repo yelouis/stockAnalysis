@@ -25,6 +25,8 @@ def create_order(symbol, qty, side, type, time_in_force, limit_price):
     return json.loads(r.content)
 
 def main():
+    print(get_account())
+    quit()
     # Algorithm for creating orders
     # Order documentation: https://alpaca.markets/docs/api-documentation/how-to/orders/
 

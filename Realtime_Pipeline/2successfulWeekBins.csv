@@ -82,7 +82,6 @@ ATLCStock,Stock
 CHRWStock,Stock
 SIRIStock,Stock
 ALPNStock,Stock
-PCARStock,Stock
 PAASStock,Stock
 AMZNStock,Stock
 ROSTStock,Stock
@@ -145,7 +144,6 @@ GDStock,Stock
 DTEStock,Stock
 ADIStock,Stock
 VFCStock,Stock
-AGNStock,Stock
 CAHStock,Stock
 XELStock,Stock
 DHIStock,Stock
@@ -182,7 +180,6 @@ EMRStock,Stock
 CLXStock,Stock
 COPStock,Stock
 CLStock,Stock
-RTNStock,Stock
 NEStock,Stock
 PNWStock,Stock
 RFStock,Stock
@@ -191,7 +188,6 @@ METStock,Stock
 EXCStock,Stock
 BAXStock,Stock
 OXYStock,Stock
-SStock,Stock
 SOStock,Stock
 TPRStock,Stock
 LENStock,Stock
@@ -236,7 +232,6 @@ PBRStock,Stock
 MHOStock,Stock
 GWWStock,Stock
 JCPStock,Stock
-DOStock,Stock
 STZStock,Stock
 AMTStock,Stock
 TVStock,Stock
@@ -247,7 +242,6 @@ EP_pcStock,Stock
 STCStock,Stock
 BLLStock,Stock
 HIGStock,Stock
-AKSStock,Stock
 HSYStock,Stock
 SITCStock,Stock
 DXCStock,Stock
@@ -275,6 +269,7 @@ RStock,Stock
 SLMStock,Stock
 MUStock,Stock
 AVYStock,Stock
+WFTIQStock,Stock
 MROStock,Stock
 CFStock,Stock
 APAStock,Stock
@@ -352,7 +347,6 @@ RHIStock,Stock
 SPGStock,Stock
 IBNStock,Stock
 BIGStock,Stock
-AVPStock,Stock
 JCIStock,Stock
 CMIStock,Stock
 ALLStock,Stock
@@ -377,7 +371,6 @@ COFStock,Stock
 PCGStock,Stock
 NSCStock,Stock
 AFLStock,Stock
-CHKStock,Stock
 HOGStock,Stock
 EQRStock,Stock
 PBIStock,Stock
@@ -462,7 +455,6 @@ RDYStock,Stock
 LNNStock,Stock
 PGStock,Stock
 WYStock,Stock
-ICAYYStock,Stock
 ADPStock,Stock
 DNRStock,Stock
 MDRXStock,Stock
@@ -474,7 +466,6 @@ KDPStock,Stock
 LOWStock,Stock
 MIDDStock,Stock
 VALEStock,Stock
-CPLStock,Stock
 UALStock,Stock
 NFLXStock,Stock
 NWSStock,Stock
@@ -594,7 +585,6 @@ AUTOStock,Stock
 ACADStock,Stock
 ACFNStock,Stock
 ACHCStock,Stock
-ACHNStock,Stock
 ACIWStock,Stock
 ACLSStock,Stock
 ACNBStock,Stock
@@ -618,6 +608,7 @@ AGNCStock,Stock
 AGYSStock,Stock
 AHPIStock,Stock
 AIMCStock,Stock
+AIRTStock,Stock
 AKRXStock,Stock
 ALCOStock,Stock
 ALGNStock,Stock
@@ -658,13 +649,11 @@ APWCStock,Stock
 ARAYStock,Stock
 JANStock,Stock
 VERStock,Stock
-ARCWStock,Stock
 AREXStock,Stock
 THRMStock,Stock
 ARKRStock,Stock
 ARLPStock,Stock
 AROWStock,Stock
-ARQLStock,Stock
 TRECStock,Stock
 ARTNAStock,Stock
 ARTWStock,Stock
@@ -672,6 +661,7 @@ ARWRStock,Stock
 ASBStock,Stock
 ASFIStock,Stock
 ASGNStock,Stock
+ASMIYStock,Stock
 ASNAStock,Stock
 ASRVStock,Stock
 ASTCStock,Stock
@@ -692,6 +682,7 @@ ATROStock,Stock
 AUBNStock,Stock
 AUDCStock,Stock
 AVAVStock,Stock
+DVCRStock,Stock
 AVEOStock,Stock
 AVIDStock,Stock
 SRPTStock,Stock
@@ -730,6 +721,7 @@ GRBKStock,Stock
 BIOSStock,Stock
 BJRIStock,Stock
 BKEPStock,Stock
+BKORStock,Stock
 BKSCStock,Stock
 BLDRStock,Stock
 BLINStock,Stock
@@ -757,9 +749,9 @@ BSRRStock,Stock
 BSTCStock,Stock
 BUROFStock,Stock
 BUSEStock,Stock
-BVSNStock,Stock
 BWENStock,Stock
 PTVCBStock,Stock
+BYFCStock,Stock
 CAASStock,Stock
 CACStock,Stock
 CACCStock,Stock
@@ -838,7 +830,6 @@ CNMDStock,Stock
 CNSLStock,Stock
 CNTFYStock,Stock
 CNTYStock,Stock
-VIEWFStock,Stock
 COHRStock,Stock
 COHUStock,Stock
 COKEStock,Stock
@@ -860,12 +851,10 @@ CREGStock,Stock
 CRESYStock,Stock
 CRISStock,Stock
 CRMBQStock,Stock
-CORVStock,Stock
 CRMTStock,Stock
 CRNTStock,Stock
 CRVLStock,Stock
 CRWSStock,Stock
-CSFLStock,Stock
 CSGPStock,Stock
 CSGSStock,Stock
 CSIIStock,Stock
@@ -875,6 +864,7 @@ CSPIStock,Stock
 CSWCStock,Stock
 CTBIStock,Stock
 CYRNStock,Stock
+HKTVYStock,Stock
 CTGStock,Stock
 CTHRStock,Stock
 CTIBStock,Stock
@@ -893,11 +883,9 @@ CWBCStock,Stock
 CWCOStock,Stock
 CWSTStock,Stock
 CXDCStock,Stock
-CYStock,Stock
 CYANStock,Stock
 CYBEStock,Stock
 CYCCStock,Stock
-CYOUStock,Stock
 CYTKStock,Stock
 CYTRStock,Stock
 PSTVStock,Stock
@@ -918,6 +906,7 @@ DGLYStock,Stock
 DHILStock,Stock
 LLITStock,Stock
 DIODStock,Stock
+DISCBStock,Stock
 DISCKStock,Stock
 DJCOStock,Stock
 DMLPStock,Stock
@@ -1091,7 +1080,6 @@ GTIMStock,Stock
 GTLSStock,Stock
 ONCTStock,Stock
 GUREStock,Stock
-GYROStock,Stock
 HAStock,Stock
 HAFCStock,Stock
 HALLStock,Stock
@@ -1107,7 +1095,6 @@ HCSGStock,Stock
 HDSNStock,Stock
 HEESStock,Stock
 HELEStock,Stock
-HFBLStock,Stock
 HFWAStock,Stock
 HGSHStock,Stock
 HSONStock,Stock
@@ -1142,7 +1129,6 @@ HWKNStock,Stock
 HZNPStock,Stock
 IARTStock,Stock
 IBCPStock,Stock
-IBKCStock,Stock
 IBKRStock,Stock
 IBOCStock,Stock
 ICADStock,Stock
@@ -1156,7 +1142,6 @@ PWFLStock,Stock
 IEPStock,Stock
 IESCStock,Stock
 TILEStock,Stock
-IGLDStock,Stock
 IIIStock,Stock
 IIINStock,Stock
 IINStock,Stock
@@ -1166,23 +1151,19 @@ IMKTAStock,Stock
 IMMRStock,Stock
 IMMUStock,Stock
 IMOSStock,Stock
-INAPStock,Stock
 INDBStock,Stock
 INFIStock,Stock
 INFNStock,Stock
 INODStock,Stock
 INSMStock,Stock
-INTGStock,Stock
 INTLStock,Stock
 INVEStock,Stock
 INWKStock,Stock
 IOSPStock,Stock
 IPARStock,Stock
-IPHSStock,Stock
 IRBTStock,Stock
 IRDMStock,Stock
 IRIXStock,Stock
-IROQStock,Stock
 IRWDStock,Stock
 ISBCStock,Stock
 ISIGStock,Stock
@@ -1276,23 +1257,19 @@ MCEPStock,Stock
 MCHXStock,Stock
 MCRIStock,Stock
 MDCAStock,Stock
-MDCOStock,Stock
 SOHOStock,Stock
 SSKNStock,Stock
 MEOHStock,Stock
 MERCStock,Stock
 MFNCStock,Stock
 PPIHStock,Stock
-MFSFStock,Stock
 MGEEStock,Stock
 MGICStock,Stock
 MGLNStock,Stock
 MGPIStock,Stock
 MGRCStock,Stock
-MGYRStock,Stock
 MHLDStock,Stock
 MINDStock,Stock
-MINIStock,Stock
 MITKStock,Stock
 MKSIStock,Stock
 MKTXStock,Stock
@@ -1436,7 +1413,6 @@ PFBIStock,Stock
 PFINStock,Stock
 PFSWStock,Stock
 PGCStock,Stock
-PGNXStock,Stock
 SIVBStock,Stock
 BWAStock,Stock
 PWRStock,Stock
@@ -1465,7 +1441,6 @@ ROLStock,Stock
 RMDStock,Stock
 MSCIStock,Stock
 CCLStock,Stock
-WCGStock,Stock
 AREStock,Stock
 TFXStock,Stock
 WABStock,Stock
@@ -1567,9 +1542,9 @@ PLGStock,Stock
 WRNStock,Stock
 SIMStock,Stock
 AMSStock,Stock
+BDLStock,Stock
 BGIStock,Stock
-BWLaStock,Stock
-CUOStock,Stock
+CKXStock,Stock
 ELMDStock,Stock
 EVBNStock,Stock
 GSVStock,Stock
@@ -1579,11 +1554,8 @@ INSStock,Stock
 JOBStock,Stock
 TMQStock,Stock
 NPNStock,Stock
-YUMAStock,Stock
 PLMStock,Stock
-SGBStock,Stock
 TATStock,Stock
-ALOStock,Stock
 TRXStock,Stock
 NOGStock,Stock
 VHCStock,Stock
@@ -1596,7 +1568,6 @@ ACYStock,Stock
 APTStock,Stock
 PLAGStock,Stock
 AMPEStock,Stock
-MICRStock,Stock
 AWXStock,Stock
 BTNStock,Stock
 BCVStock,Stock
@@ -1608,7 +1579,6 @@ CVUStock,Stock
 CVMStock,Stock
 CETStock,Stock
 CCFStock,Stock
-CVRStock,Stock
 CPHIStock,Stock
 GLVStock,Stock
 GLQStock,Stock
@@ -1659,7 +1629,6 @@ AUMNStock,Stock
 GVStock,Stock
 AIMStock,Stock
 HUSAStock,Stock
-IECStock,Stock
 IBIOStock,Stock
 IMHStock,Stock
 IORStock,Stock
@@ -1670,8 +1639,6 @@ IDNStock,Stock
 VKIStock,Stock
 ISRStock,Stock
 LGLStock,Stock
-LTSStock,Stock
-LBYStock,Stock
 CEIStock,Stock
 MHHStock,Stock
 MXCStock,Stock
@@ -1702,7 +1669,6 @@ SVTStock,Stock
 SIFStock,Stock
 XPLStock,Stock
 SSYStock,Stock
-SRCIStock,Stock
 SYNStock,Stock
 TGCStock,Stock
 TMPStock,Stock
@@ -1729,7 +1695,6 @@ AAMCStock,Stock
 AIRIStock,Stock
 CANFStock,Stock
 DGSEStock,Stock
-LIQTStock,Stock
 NSPRStock,Stock
 ENSVStock,Stock
 XXIIStock,Stock
@@ -1808,7 +1773,6 @@ LLStock,Stock
 PNMStock,Stock
 PZNStock,Stock
 SPRStock,Stock
-PYXStock,Stock
 AWIStock,Stock
 AXLStock,Stock
 CCUStock,Stock
@@ -1866,7 +1830,6 @@ INNStock,Stock
 JBTStock,Stock
 JKSStock,Stock
 KWStock,Stock
-MDRStock,Stock
 MSAStock,Stock
 NATStock,Stock
 NAVStock,Stock
@@ -1877,7 +1840,6 @@ SJIStock,Stock
 SMPStock,Stock
 STWDStock,Stock
 TRTNStock,Stock
-TAPaStock,Stock
 ARCOStock,Stock
 AWRStock,Stock
 CSUStock,Stock
@@ -1892,7 +1854,6 @@ SXIStock,Stock
 SXTStock,Stock
 AATStock,Stock
 AINStock,Stock
-AXEStock,Stock
 BBWStock,Stock
 BHEStock,Stock
 BLXStock,Stock
@@ -1976,7 +1937,6 @@ GPIStock,Stock
 HILStock,Stock
 JLLStock,Stock
 KBStock,Stock
-LPTStock,Stock
 LXPStock,Stock
 MLIStock,Stock
 MTLStock,Stock
@@ -2030,7 +1990,6 @@ DQStock,Stock
 DYStock,Stock
 FBCStock,Stock
 HTHStock,Stock
-INXNStock,Stock
 IOStock,Stock
 KOPStock,Stock
 KROStock,Stock
@@ -2042,7 +2001,6 @@ MPXStock,Stock
 MYEStock,Stock
 NCStock,Stock
 OCNStock,Stock
-OMNStock,Stock
 PLOWStock,Stock
 SAHStock,Stock
 SONStock,Stock
@@ -2067,6 +2025,7 @@ HBMStock,Stock
 HHCStock,Stock
 IPIStock,Stock
 JWaStock,Stock
+JWbStock,Stock
 TLRDStock,Stock
 NLSStock,Stock
 RTWStock,Stock
@@ -2088,7 +2047,6 @@ AERStock,Stock
 CCCStock,Stock
 CELStock,Stock
 CNAStock,Stock
-CSSStock,Stock
 CVEStock,Stock
 DCIStock,Stock
 DLBStock,Stock
@@ -2097,7 +2055,6 @@ EGOStock,Stock
 ELYStock,Stock
 FCNStock,Stock
 FORStock,Stock
-GDIStock,Stock
 GEFbStock,Stock
 GPXStock,Stock
 HNIStock,Stock
@@ -2126,7 +2083,6 @@ HStock,Stock
 HSBCStock,Stock
 HLStock,Stock
 TRQStock,Stock
-JAGStock,Stock
 KOSStock,Stock
 LADStock,Stock
 SRStock,Stock
@@ -2160,7 +2116,6 @@ CUKStock,Stock
 DHTStock,Stock
 LEAFStock,Stock
 ENZStock,Stock
-GNCStock,Stock
 HAEStock,Stock
 EHCStock,Stock
 MDCStock,Stock
@@ -2172,7 +2127,6 @@ PAMStock,Stock
 RDNStock,Stock
 SBStock,Stock
 SKXStock,Stock
-SSIStock,Stock
 STLStock,Stock
 ALGStock,Stock
 EMEStock,Stock
@@ -2198,7 +2152,6 @@ GEOStock,Stock
 NEUStock,Stock
 SRIStock,Stock
 TACStock,Stock
-AYRStock,Stock
 BAPStock,Stock
 CLSStock,Stock
 CMREStock,Stock
@@ -2283,24 +2236,20 @@ GLTStock,Stock
 HEIStock,Stock
 IPHIStock,Stock
 KAIStock,Stock
-KEMStock,Stock
 LDLStock,Stock
 MDStock,Stock
 MOGaStock,Stock
-MOGbStock,Stock
 MTZStock,Stock
 NNIStock,Stock
 REVStock,Stock
 RGSStock,Stock
 CALXStock,Stock
 CEOStock,Stock
-COTStock,Stock
 CUBEStock,Stock
 CZZStock,Stock
 EBFStock,Stock
 EDNStock,Stock
 GGGStock,Stock
-REDFYStock,Stock
 AVVIYStock,Stock
 SKHHYStock,Stock
 NJDCYStock,Stock
@@ -2328,9 +2277,11 @@ AGLXYStock,Stock
 ACGBYStock,Stock
 AAGIYStock,Stock
 EADSYStock,Stock
+ASEKYStock,Stock
+AJINYStock,Stock
 AKBTYStock,Stock
 AKZOYStock,Stock
-AZSEYStock,Stock
+ALGGYStock,Stock
 ALBKYStock,Stock
 ALSMYStock,Stock
 AWCMYStock,Stock
@@ -2339,10 +2290,7 @@ ANGPYStock,Stock
 NGLOYStock,Stock
 AHCHYStock,Stock
 AMKBYStock,Stock
-APEMYStock,Stock
-ARCAYStock,Stock
 ARKAYStock,Stock
-ARZTYStock,Stock
 ASGLYStock,Stock
 AHKSYStock,Stock
 ASOMYStock,Stock
@@ -2364,6 +2312,7 @@ BASFYStock,Stock
 BAYRYStock,Stock
 BMWYYStock,Stock
 BBSEYStock,Stock
+BZQIYStock,Stock
 BDVSYStock,Stock
 BNPQYStock,Stock
 BHKLYStock,Stock
@@ -2373,11 +2322,11 @@ BTLCYStock,Stock
 BZLFYStock,Stock
 BURBYStock,Stock
 BYDDYStock,Stock
-CCGGYStock,Stock
 CGEMYStock,Stock
 CLLDYStock,Stock
 CABGYStock,Stock
 CRRFYStock,Stock
+CGUSYStock,Stock
 CSIOYStock,Stock
 CPCAYStock,Stock
 CJPRYStock,Stock
@@ -2420,9 +2369,7 @@ The 3D PrintingEtf,ETF
 ARK Israeli Innovation HedgedEtf,ETF
 Arrow Reserve Capital ManagementEtf,ETF
 Arrow Dow Jones Global YieldEtf,ETF
-Arrow Dogs of the WorldEtf,ETF
 Arrow QVM Equity FactorEtf,ETF
-Arrow Investments DWA TacticalEtf,ETF
 Assured Guaranty Municipal Holdings IncEtf,ETF
 iPath Bloomberg Commodity Total Return Exp 12 JuneEtf,ETF
 Barclays ETN Plus Select MLPEtf,ETF
@@ -2456,7 +2403,6 @@ Columbia EM Core ex-ChinaEtf,ETF
 Columbia India ConsumerEtf,ETF
 Columbia Sustainable US Equity IncomeEtf,ETF
 Columbia Sustainable International Equity IncomeEtf,ETF
-Columbia Sustainable Global Equity IncomeEtf,ETF
 Columbia Diversified Fixed Income AllocationEtf,ETF
 Victory CEMP Developed Enhanced Volatility WeighteEtf,ETF
 Victory CEMP US Discovery Enhanced Volatility WeigEtf,ETF
@@ -2469,11 +2415,9 @@ Victory CEMP International High Dividend VolatilitEtf,ETF
 Victory CEMP US Small Cap Volatility WeightedEtf,ETF
 Victory CEMP International Volatility WeightedEtf,ETF
 Credit Suisse X-Links Monthly Pay 2xLeveraged MortEtf,ETF
-Credit Suisse X-Links Monthly Pay 2xLeveraged AlerEtf,ETF
 Credit Suisse X Links Gold Shares Covered CallEtf,ETF
 Credit Suisse X Links Silver Shares Covered CallEtf,ETF
 Credit Suisse FI Large Cap Growth EnhancedEtf,ETF
-Credit Suisse X Links Multi Asset High IncomeEtf,ETF
 CSOP FTSE China A50 USEtf,ETF
 Davis Select FinancialEtf,ETF
 Davis Select WorldwideEtf,ETF
@@ -2489,7 +2433,6 @@ Deutsche X-trackers MSCI EAFE High Dividend YieldEtf,ETF
 Deutsche X-trackers Municipal Infrastructure RevenEtf,ETF
 Deutsche X-trackers MSCI Emerging Markets Hedged EEtf,ETF
 Deutsche X trackers Russell 1000Etf,ETF
-Deutsche X-trackers Investment Grade Bond InterestEtf,ETF
 Deutsche X-trackers Harvest CSI 500Etf,ETF
 Deutsche X-trackers MSCI All World ex US Hedged EqEtf,ETF
 Deutsche X-trackers MSCI All World ex US High DiviEtf,ETF
@@ -2497,8 +2440,6 @@ Deutsche X trackers FTSE DevelopedEtf,ETF
 Deutsche X-trackers JPX-Nikkei 400 EquityEtf,ETF
 Deutsche X-trackers MSCI EurozoneEtf,ETF
 Deutsche X-trackers MSCI All China EquityEtf,ETF
-Deutsche X-trackers Emerging Markets Bond InterestEtf,ETF
-Deutsche X-trackers High Yield Corporate Bond InteEtf,ETF
 Deutsche X-trackers MSCI Germany Hedged EquityEtf,ETF
 Deutsche Xtrackers MSCI Southern EUEtf,ETF
 Deutsche X-trackers CSI 300 China A-Shares HedgedEtf,ETF
@@ -2509,7 +2450,6 @@ Direxion Daily Junior Gold Miners Bear 3X SharesEtf,ETF
 Direxion Daily S&P 500 Bear 3X SharesEtf,ETF
 Direxion Daily Semiconductor Bear 3X SharesEtf,ETF
 Direxion Daily Junior Gold Miners Bull 3X SharesEtf,ETF
-Direxion Daily Natural Gas Related Bull 3X SharesEtf,ETF
 Direxion Daily Small Cap Bear 3X SharesEtf,ETF
 Direxion Daily S&P 500 Bull 3X SharesEtf,ETF
 Direxion Daily Energy Bull 3X SharesEtf,ETF
@@ -2530,10 +2470,8 @@ Direxion Daily CSI 300 China A SharEtf,ETF
 Direxion Daily FTSE CHINA Bear 3x SharesEtf,ETF
 Direxion Daily South Korea Bull 3X SharesEtf,ETF
 Direxion Daily Technology Bull 3X SharesEtf,ETF
-Direxion Daily Russia Bear 3X SharesEtf,ETF
 Direxion Daily Emerging Markets Bull 3X SharesEtf,ETF
 Direxion NASDAQ-100 Equal Weighted SharesEtf,ETF
-Direxion Daily Natural Gas Related Bear 3XEtf,ETF
 Direxion Daily Emerging Markets Bear 3X SharesEtf,ETF
 Direxion Daily Homebuilders & Supplies Bull 3X ShaEtf,ETF
 Direxion Daily Real Estate Bull 3X SharesEtf,ETF
@@ -2555,22 +2493,17 @@ Direxion All Cap Insider Sentiment SharesEtf,ETF
 Direxion Daily Latin America Bull 3X SharesEtf,ETF
 Direxion Daily Industrials Bull 3X SharesEtf,ETF
 Direxion Daily FTSE Europe Bull 3X SharesEtf,ETF
-Direxion Daily Regional Banks Bear 3X SharesEtf,ETF
 Direxion Daily CSI 300 ChinaEtf,ETF
 Direxion Daily Pharmaceutical & Medical Bull 2X ShEtf,ETF
 Direxion Daily SP 500 BullEtf,ETF
-Direxion Daily Developed Markets Bear 3XEtf,ETF
 Direxion Daily S&P 500 Bear 1X SharesEtf,ETF
 Direxion Daily 7-10 Year Treasury Bull 3X SharesEtf,ETF
-Direxion Daily Mid Cap Bear 3X SharesEtf,ETF
 Direxion Daily MSCI Mexico Bull 3X SharesEtf,ETF
 Direxion Daily Japan Bull 3x SharesEtf,ETF
 Direxion Daily 20+ Year Treasury Bear 1X SharesEtf,ETF
 Direxion Auspice Broad Commodity StrategyEtf,ETF
-Direxion Daily European Financials Bull 2X SharesEtf,ETF
 Direxion Daily Small Cap Bull 2X SharesEtf,ETF
 Direxion Daily Small Cap Bull 1.25X SharesEtf,ETF
-Direxion Daily Total Bond Market Bear 1X SharesEtf,ETF
 Doubleline Opportunistic CreditEtf,ETF
 Rogers International Commodity Total ReturnEtf,ETF
 Rogers International Commodity Agriculture Total REtf,ETF
@@ -2594,7 +2527,6 @@ ETFS Physical Palladium SharesEtf,ETF
 ETFS Bloomberg All Commodity Strategy K-1 FreeEtf,ETF
 ETFS Bloomberg All Commodity Longer Dated StrategyEtf,ETF
 U.S. Global GO GOLD and Precious Metal MinersEtf,ETF
-Deep ValueEtf,ETF
 AlphaClone Alternative AlphaEtf,ETF
 Aptus Behavioral MomentumEtf,ETF
 Change Finance Diversified Imp US Large Cap FossilEtf,ETF
@@ -2636,7 +2568,6 @@ First Trust Enhanced Short MaturityEtf,ETF
 First Trust North American Energy InfrastructureEtf,ETF
 First Trust ISE-Revere Natural GasEtf,ETF
 First Trust Consumer Staples AlphaDEXEtf,ETF
-First Trust Low Duration OpportunitiesEtf,ETF
 First Trust Senior LoanEtf,ETF
 First Trust Financial AlphaDEXEtf,ETF
 First Trust Large Cap Core AlphaDEXEtf,ETF
@@ -2742,7 +2673,6 @@ First Trust Developed Markets ex-US Small Cap AlphEtf,ETF
 First Trust Australia AlphaDEXEtf,ETF
 First Trust Morningstar Managed Futures StrategyEtf,ETF
 First Trust Nasdaq PharmEtf,ETF
-First Trust South Korea AlphaDEXEtf,ETF
 EquityCompass Tactical Risk ManagerEtf,ETF
 EquityCompass Equity Risk ManagerEtf,ETF
 FlexShares Morningstar Global Upstream Natural ResEtf,ETF
@@ -2783,7 +2713,6 @@ Franklin LibertyQ US Small Cap EquityEtf,ETF
 Franklin FTSE TaiwanEtf,ETF
 Franklin FTSE AustraliaEtf,ETF
 Franklin FTSE Hong KongEtf,ETF
-Franklin Liberty International OpportunitiesEtf,ETF
 Franklin FTSE BrazilEtf,ETF
 Franklin FTSE CanadaEtf,ETF
 Franklin FTSE ItalyEtf,ETF
@@ -2849,7 +2778,6 @@ Goldman Sachs Equal Weight U.S. Large Cap EquityEtf,ETF
 Goldman Sachs ActiveBeta Japan EquityEtf,ETF
 Goldman Sachs Hedge Industry VIPEtf,ETF
 Goldman Sachs ActiveBeta Europe EquityEtf,ETF
-Claymore CEF GS Connect Due 12102037Etf,ETF
 GS Connect S&P GSCI Enhanced Commodity Total ReturEtf,ETF
 GraniteShares Gold TrustEtf,ETF
 GraniteShares HIPS US High IncomeEtf,ETF
@@ -2865,7 +2793,6 @@ Guggenheim Invest S&P 500 Pure GrowthEtf,ETF
 Guggenheim Invest Defensive EquityEtf,ETF
 Guggenheim Invest S&P 500 Equal Weight TechnologyEtf,ETF
 Guggenheim Invest Mid-Cap CoreEtf,ETF
-Invesco Shipping ETFEtf,ETF
 Guggenheim S&P 500 Top 50Etf,ETF
 Guggenheim Invest S&P SmallCap 600 Pure ValueEtf,ETF
 Guggenheim CurrencyShares Australian DollarEtf,ETF
@@ -2882,25 +2809,16 @@ Guggenheim Invest S&P 500 Equal Weight FinancialsEtf,ETF
 Guggenheim Dow Jones Industrial Average DividendEtf,ETF
 Guggenheim CurrencyShares Canadian DollarEtf,ETF
 Guggenheim Invest Raymond James SB-1 EquityEtf,ETF
-Guggenheim Invest Frontier MarketsEtf,ETF
 Guggenheim S&P Spin-OffEtf,ETF
 Guggenheim MSCI Global TimberEtf,ETF
-Guggenheim Invest China Small CapEtf,ETF
 Guggenheim Invest S&P 500 Equal Weight IndustrialsEtf,ETF
 Guggenheim Invest S&P SmallCap 600 Pure GrowthEtf,ETF
-Guggenheim Invest China Real EstateEtf,ETF
 Guggenheim S&P 500 Equal Weight Real EstateEtf,ETF
 Guggenheim Invest S&P 500 Equal Weight MaterialsEtf,ETF
 Guggenheim Invest S&P MidCap 400 Pure GrowthEtf,ETF
-Guggenheim Invest BRICEtf,ETF
-Guggenheim SP High Income InfrastrEtf,ETF
 Guggenheim Invest S&P 500 Equal Weight Consumer DiEtf,ETF
 Guggenheim S&P SmallCap 600 EWEtf,ETF
-Guggenheim Invest Insider SentimentEtf,ETF
 Guggenheim S&P MidCap 400 EWEtf,ETF
-Guggenheim Invest S&P Global Dividend OpptysEtf,ETF
-Guggenheim MSCI EM Equal Country WeightEtf,ETF
-Guggenheim CurrencyShares Swedish KronaEtf,ETF
 Hartford Multifactor Low Volatility US EquityEtf,ETF
 Hartford Multifactor Low Volatility InternationalEtf,ETF
 Horizons SP 500 Covered CallEtf,ETF
@@ -2911,7 +2829,6 @@ Elkhorn S&P High Quality PreferredEtf,ETF
 Innovator IBD ETF LeadersEtf,ETF
 Invesco 1-30 Laddered TreasuryEtf,ETF
 Invesco Buyback AchieversEtf,ETF
-iPath Series B S&P GSCI Crude Oil TREtf,ETF
 IQ Merger ArbitrageEtf,ETF
 IQ Chaikin US Large CapEtf,ETF
 IQ Chaikin US Small CapEtf,ETF
@@ -2926,7 +2843,6 @@ IQ Hedge Macro TrackerEtf,ETF
 IQ 50 Percent Hedged FTSE JapanEtf,ETF
 IQ Global Agribusiness Small CapEtf,ETF
 IQ Hedge Event-Driven TrackerEtf,ETF
-IQ Enhanced Core Bond USEtf,ETF
 IQ Real ReturnEtf,ETF
 iShares MSCI Emerging MarketsEtf,ETF
 iShares SilverEtf,ETF
@@ -3183,14 +3099,12 @@ iShares MSCI Finland CappedEtf,ETF
 iShares GNMA BondEtf,ETF
 iShares Morningstar Mid-Cap ValueEtf,ETF
 iShares MSCI ACWI Low Carbon TargetEtf,ETF
-iShares iBonds Mar 2020 CorporateEtf,ETF
 iShares MSCI Global ImpactEtf,ETF
 iShares Core 5-10Etf,ETF
 iShares Edge US Fxd Incm Bal RskEtf,ETF
 iShares Morningstar Large-CapEtf,ETF
 iShares Interest Rate Hedged 10YEtf,ETF
 iShares US PharmaceuticalsEtf,ETF
-iShares iBonds Mar 2020 Corp ex-FinancialsEtf,ETF
 iShares Edge MSCI Intl Size FactorEtf,ETF
 iShares MSCI Israel CappedEtf,ETF
 iShares Russell 2500Etf,ETF
@@ -3242,8 +3156,6 @@ Janus Short Duration IncomeEtf,ETF
 Janus Long-Term CareEtf,ETF
 Janus SmallMid Cap Growth AlphaEtf,ETF
 Janus Small Cap Growth AlphaEtf,ETF
-Janus ObesityEtf,ETF
-Janus OrganicsEtf,ETF
 John Hancock Multifactor Mid CapEtf,ETF
 John Hancock Multifactor Small CapEtf,ETF
 John Hancock Multifactor Large CapEtf,ETF
@@ -3263,13 +3175,9 @@ JPMorgan Diversified Return International EquityEtf,ETF
 JPMorgan Diversified Return US Small Cap EquityEtf,ETF
 JPMorgan Diversified Return EmerginEtf,ETF
 JPMorgan Diversified Return US Mid Cap EquityEtf,ETF
-JPMorgan Diversified AlternativeEtf,ETF
 JPMorgan Disciplined High YieldEtf,ETF
 JPMorgan Diversified Return US EquityEtf,ETF
 JPMorgan Global Bond Opportunities ETFEtf,ETF
-JPMorgan Diversified Return Global EquityEtf,ETF
-JPMorgan Diversified Return Europe EquityEtf,ETF
-JPMorgan Event DrivenEtf,ETF
 KraneShares CSI China InternetEtf,ETF
 KraneShares Bosera MSCI China A ShareEtf,ETF
 KraneShares Zacks New ChinaEtf,ETF
@@ -3284,11 +3192,8 @@ Hartford Emerging MarketsEtf,ETF
 Hartford Multifactor REITEtf,ETF
 Legg Mason Low Volatility High DividendEtf,ETF
 Legg Mason International Low Volatility High DividEtf,ETF
-Legg Mason EM Low Volatility High DividendEtf,ETF
 ClearBridge All Cap GrowthEtf,ETF
 Main Sector RotationEtf,ETF
-iPath  US Treasury 10-year BearEtf,ETF
-iPath US Treasury Long Bond BearEtf,ETF
 iPath US Treasury 2 year BearEtf,ETF
 iPath US Treasury 5-year BearEtf,ETF
 Morgan Stanley Cushing MLP High Income Exp 21 MarEtf,ETF
@@ -3310,16 +3215,7 @@ Oppenheimer Ultra Div RevenueEtf,ETF
 Oppenheimer Large Cap RevenueEtf,ETF
 Oppenheimer Mid Cap RevenueEtf,ETF
 Oppenheimer Small Cap RevenueEtf,ETF
-Oppenheimer Fin RevenueEtf,ETF
 Oppenheimer Russell 2000 Dynamic MultifactorEtf,ETF
-Oppenheimer Russell 1000 Yield FactorEtf,ETF
-Oppenheimer Global ESG RevenueEtf,ETF
-Oppenheimer Russell 1000 Value FactorEtf,ETF
-Oppenheimer ESG RevenueEtf,ETF
-Oppenheimer Russell 1000 Low Volatility FactorEtf,ETF
-Oppenheimer Russell 1000 Momentum FactorEtf,ETF
-Oppenheimer Russell 1000 Size FactorEtf,ETF
-Oppenheimer Russell 1000 Quality FactorEtf,ETF
 ETFMG Alternative Harvest ETFEtf,ETF
 YieldShares High IncomeEtf,ETF
 Tortoise North American PipelineEtf,ETF
@@ -3336,7 +3232,6 @@ US Global JetsEtf,ETF
 TrimTabs Float ShrinkEtf,ETF
 VictoryShares US Multi-Factor Minimum VolatilityEtf,ETF
 VictoryShares EM High Div Volatility WtdEtf,ETF
-Forensic Accounting Long-ShortEtf,ETF
 Reality Shares DIVSEtf,ETF
 Reverse Cap Weighted U.S. Large CapEtf,ETF
 Virtus Newfleet Multi-Sector Unconstrained BondEtf,ETF
@@ -3347,8 +3242,6 @@ Reality Shares Divcon Dividend DefenderEtf,ETF
 Point Bridge GOP Stock TrackerEtf,ETF
 Virtus Newfleet Dynamic CreditEtf,ETF
 Sit Rising RateEtf,ETF
-Validea Market LegendsEtf,ETF
-Virtus Glovista EMEtf,ETF
 Pacer Trendpilot 750Etf,ETF
 Pacer Trendpilot 450Etf,ETF
 Pacer Trendpilot 100Etf,ETF
@@ -3401,7 +3294,6 @@ PowerShares WilderHill Clean EnergyEtf,ETF
 Powershares S&P 500 High Beta PortfolioEtf,ETF
 PowerShares DB Base MetalsEtf,ETF
 PowerShares S&P Emerging Markets Low VolatilityEtf,ETF
-PowerShares FTSE RAFI US 1000 PortfolioEtf,ETF
 PowerShares DWA Financial Momentum PortfolioEtf,ETF
 PowerShares Dynamic SoftwareEtf,ETF
 PowerShares International Dividend Achievers PortfEtf,ETF
@@ -3413,7 +3305,6 @@ PowerShares Aerospace & DefenseEtf,ETF
 PowerShares DB Precious MetalsEtf,ETF
 PowerShares KBW Premium Yield Equity REIT PortfoliEtf,ETF
 PowerShares Water ResourcesEtf,ETF
-BLDRS Developed Markets 100 ADREtf,ETF
 PowerShares Global Listed Private EquityEtf,ETF
 PowerShares KBW High Dividend Yield FinancialEtf,ETF
 PowerShares DB US Dollar BearishEtf,ETF
@@ -3435,14 +3326,12 @@ PowerShares FTSE RAFI Developed Markets ex-USEtf,ETF
 PowerShares Dynamic Energy Exploration & ProductioEtf,ETF
 PowerShares DWA Technology Momentum PortfolioEtf,ETF
 PowerShares mntl Invest Grade Corp Bond PortfolioEtf,ETF
-PowerShares DWA Tactical Multi-Asset IncomeEtf,ETF
 PowerShares Active US Real EstateEtf,ETF
 PowerShares VRDO Tax-Free Weekly PortfolioEtf,ETF
 PowerShares CleantechEtf,ETF
 PowerShares Dynamic SemiconductorsEtf,ETF
 PowerShares Dynamic Large Cap GrowthEtf,ETF
 PowerShares New York AMT-Free Municipal Bond PortfEtf,ETF
-PowerShares Golden Dragon China PortEtf,ETF
 PowerShares Nasdaq InternetEtf,ETF
 DB Gold Double Long Exp 15 Feb 2038Etf,ETF
 PowerShares Global Clean EnergyEtf,ETF
@@ -3452,7 +3341,6 @@ PowerShares Dynamic Building & ConstructionEtf,ETF
 PowerShares S&P SmallCap High Dividend Low VolatilEtf,ETF
 PowerShares Global Water PortfolioEtf,ETF
 PowerShares S&P SmallCap Information TechnologyEtf,ETF
-PowerShares FTSE RAFI Developed Markets ex-US SmalEtf,ETF
 PowerShares SP 500 Value PortfolioEtf,ETF
 Invesco S and P SmallCap Value with MomentumEtf,ETF
 PowerShares S&P SmallCap Health CareEtf,ETF
@@ -3465,12 +3353,10 @@ PowerShares Dynamic Biotechnology & GenomeEtf,ETF
 ProShares Decline of the Retail StoreEtf,ETF
 Invesco S and P SmallCap MomentumEtf,ETF
 PowerShares DWA Consumer Cyclicals Momentum PortfoEtf,ETF
-PowerShares DWA Tactical Sector Rotation PortfolioEtf,ETF
 PowerShares International Corporate BondEtf,ETF
 Invesco S and P 500 Value with MomentumEtf,ETF
 PowerShares Dynamic NetworkingEtf,ETF
 PowerShares KBW Regional Banking PortfolioEtf,ETF
-PowerShares FTSE International Low Beta Equal WeigEtf,ETF
 PowerShares S&P SmallCap UtilitiesEtf,ETF
 PowerShares DWA Energy Momentum PortfolioEtf,ETF
 PowerShares Dynamic Food & BeverageEtf,ETF
@@ -3481,7 +3367,6 @@ BLDRS Emerging Markets 50 ADREtf,ETF
 Invesco S and P MidCap QualityEtf,ETF
 PowerShares Dynamic Leisure & EntertainmentEtf,ETF
 PowerShares S&P SmallCap IndustrialsEtf,ETF
-PowerShares LadderRite 0-5 Year Corporate BondEtf,ETF
 PowerShares S&P SmallCap MaterialsEtf,ETF
 PowerShares S&P EM Momentum PortEtf,ETF
 Invesco S and P MidCap Value with MomentumEtf,ETF
@@ -3490,18 +3375,13 @@ PowerShares Russell Top 200 Equal WeightEtf,ETF
 PowerShares DWA Basic Materials Momentum PortfolioEtf,ETF
 PowerShares PureBeta MSCI USA PortfolioEtf,ETF
 PowerShares Dynamic MarketEtf,ETF
-PowerShares DWA NASDAQ Momentum PortfolioEtf,ETF
-PowerShares Dynamic RetailEtf,ETF
 PowerShares S&P SmallCap Consumer DiscretionaryEtf,ETF
-BLDRS Asia 50 ADREtf,ETF
 PowerShares S&P SmallCap Quality PortfolioEtf,ETF
 PowerShares S&P International Developed High DividEtf,ETF
 PowerShares PureBeta FTSE Developed ex-North AmeriEtf,ETF
 PowerShares PureBeta MSCI USA Small Cap PortfolioEtf,ETF
 PowerShares S&P Int Dev Momentum PortEtf,ETF
 PowerShares PureBeta FTSE EM PortfolioEtf,ETF
-DB Crude Oil Double Short Exp 01 Jun 2038Etf,ETF
-BLDRS Europe Select ADREtf,ETF
 PowerShares DB G10 Currency HarvestEtf,ETF
 DB Gold Short Exp 15 Feb 2038Etf,ETF
 PowerShares PureBeta 0-5 US TIPS PortfolioEtf,ETF
@@ -3524,11 +3404,9 @@ ProShares UltraShort QQQEtf,ETF
 ProShares Ultra Bloomberg Crude OilEtf,ETF
 ProShares Short QQQEtf,ETF
 ProShares Short VIX Short-Term FuturesEtf,ETF
-ProShares UltraPro 3x Crude OilEtf,ETF
 ProShares UltraPro Short Dow 30Etf,ETF
 ProShares Short 20+ Yr TreasuryEtf,ETF
 ProShares Ultra S&P500Etf,ETF
-ProShares UltraPro 3x Short Crude OilEtf,ETF
 ProShares UltraShort Russell2000Etf,ETF
 ProShares Ultra Bloomberg Natural GasEtf,ETF
 ProShares UltraShort Dow30Etf,ETF
@@ -3568,9 +3446,7 @@ ProShares UltraShort FTSE China 50Etf,ETF
 ProShares UltraShort EuroEtf,ETF
 ProShares Ultra Basic MaterialsEtf,ETF
 ProShares UltraShort Real EstateEtf,ETF
-Proshares UltraPro NASDAQ BiotechnologyEtf,ETF
 ProShares Ultra FTSE EuropeEtf,ETF
-ProShares UltraPro Short Financial Select SectorEtf,ETF
 ProShares MSCI EAFE Dividend GrowersEtf,ETF
 ProShares Ultra UtilitiesEtf,ETF
 ProShares UltraShort IndustrialsEtf,ETF
@@ -3582,7 +3458,6 @@ ProShares Ultra FTSE China 50Etf,ETF
 ProShares UltraPro Short MidCap400Etf,ETF
 ProShares UltraShort MidCap400Etf,ETF
 ProShares UltraShort Basic MaterialsEtf,ETF
-ProShares UltraPro Financial Select SectorEtf,ETF
 ProShares Ultra EuroEtf,ETF
 ProShares UltraShort UtilitiesEtf,ETF
 ProShares UltraShort 7-10 Year TreasuryEtf,ETF
@@ -3603,7 +3478,6 @@ ProShares Ultra MSCI Emerging MarketsEtf,ETF
 ProShares UltraShort MSCI JapanEtf,ETF
 ProShares Ultra YenEtf,ETF
 ProShares Ultra MSCI Brazil CappedEtf,ETF
-ProShares UltraPro Short NASDAQ BiotechnologyEtf,ETF
 ProShares Ultra IndustrialsEtf,ETF
 ProShares Ultra MSCI EAFEEtf,ETF
 ProShares Short Oil & GasEtf,ETF
@@ -3788,7 +3662,6 @@ SPDR MSCI World StrategicFactorsEtf,ETF
 SPDR MFS Systematic Growth EquityEtf,ETF
 SPDR S&P Capital MarketsEtf,ETF
 SPDR Russell 1000 MomentumEtf,ETF
-SPDR S&P Technology HardwareEtf,ETF
 SPDR Solactive CanadaEtf,ETF
 SPDR Solactive JapanEtf,ETF
 SPDR MSCI ACWI Low Carbon TargetEtf,ETF
@@ -3796,7 +3669,6 @@ SPDR S&P 1500 Value TiltEtf,ETF
 SPDR Global DowEtf,ETF
 SPDR S&P Kensho Smart MobilityEtf,ETF
 SPDR Russell 1000 Yield FocusEtf,ETF
-SPDR SP 500 BuybackEtf,ETF
 SPDR S&P Kensho Intelligent StructuresEtf,ETF
 SPDR MSCI EM Fossil Fuel FreeEtf,ETF
 SPDR Solactive United KingdomEtf,ETF
@@ -3806,8 +3678,6 @@ SPDR EURO STOXX Small CapEtf,ETF
 Fieldstone UVA Unconstrained Medium-Term Fixed IncEtf,ETF
 Sprott Physical SilverEtf,ETF
 Sprott Physical GoldEtf,ETF
-US Market Rotation StrategyEtf,ETF
-EcoLogical StrategyEtf,ETF
 Teucrium SugarEtf,ETF
 Teucrium CornEtf,ETF
 Teucrium WheatEtf,ETF
@@ -3815,28 +3685,14 @@ Teucrium SoybeanEtf,ETF
 Teucrium AgriculturalEtf,ETF
 UBS E-TRACS Alerian MLP Infrastructure Exp 02 AprEtf,ETF
 UBS E-TRACS Alerian MLPEtf,ETF
-UBS ETRACS 2xMonthly Leveraged Alerian MLP Infra BEtf,ETF
-UBS E-TRACS Monthly Pay 2xLeveraged Mortgage REITEtf,ETF
-UBS ETRACS Monthly Pay 2XEtf,ETF
-UBS ETRACS ProShares Daily 3x Long CrudeEtf,ETF
-UBS ETRACS ProShares Daily 3x Inverse CrudeEtf,ETF
-UBS AG ETRACS Monthly Pay 2X US Small Cap High DivEtf,ETF
 UBS E-TRACS Bloomberg CMCIEtf,ETF
-UBS E-TRACS 2xLeveraged Long Wells Fargo BusinessEtf,ETF
 UBS E-TRACS Linked to the Wells Fargo Business DevEtf,ETF
-UBS ETRACS Monthly Pay 2X US High Dividend Low VolEtf,ETF
 UBS AG FI Enhanced Global High YieldEtf,ETF
-UBS ETRACS Monthly Pay 2X Diversified High IncomeEtf,ETF
-UBS ETRACS 2xMonthly Leveraged S&P MLP BEtf,ETF
-UBS ETRACS Monthly Pay 2xLeveragedEtf,ETF
 UBS AG FI Enhanced Large Cap GrowthEtf,ETF
-UBS AG ETRACS Monthly Reset 2X ISE Exclusively HomEtf,ETF
 UBS AG FI Enhanced Europe 50Etf,ETF
 UBS ETRACS Bloomberg CMCI AgricultureEtf,ETF
-UBS ETRACS Monthly Pay 2X Wells Fargo MLP ex EnergEtf,ETF
 UBS E-TRACS linked to DBloomberg Commodity Total REtf,ETF
 UBS E-TRACS Monthly Pay 2xLeveraged S&P DividendEtf,ETF
-UBS E-TRACS Monthly Pay 2xLeveraged Dow Jones SeleEtf,ETF
 UBS E-TRACS Alerian Natural Gas MLPEtf,ETF
 UBS E-TRACS Bloomberg CMCI FoodEtf,ETF
 USAA Core Intermediate-Term BondEtf,ETF
@@ -3894,17 +3750,13 @@ VanEck Vectors High Income MLPEtf,ETF
 VanEck Vectors Morningstar International MoatEtf,ETF
 VanEck Vectors NDR CMG Long Flat AllocationEtf,ETF
 VanEck Vectors Oil RefinersEtf,ETF
-VanEck Vectors ChinaAMC A-ShareEtf,ETF
 VanEck Vectors Natural ResourcesEtf,ETF
 VanEck Vectors Low Carbon EnergyEtf,ETF
 VanEck Vectors Green BondEtf,ETF
-Morgan Stanley Market Vectors 2X EuroEtf,ETF
 VanEck Vectors Russia Small-CapEtf,ETF
 VanEck Vectors ChinaAMC China BondEtf,ETF
 VanEck Vectors IsraelEtf,ETF
 VanEck Vectors Environmental ServicesEtf,ETF
-Morgan Stanley Market Vectors Double Short EuroEtf,ETF
-Morgan Stanley Market Vectors Renminbi USDEtf,ETF
 Vanguard FTSE Emerging MarketsEtf,ETF
 Vanguard REITEtf,ETF
 Vanguard FTSE Developed MarketsEtf,ETF
@@ -3977,20 +3829,9 @@ Vanguard S&P Mid Cap 400 GrowthEtf,ETF
 Vanguard Russell 3000Etf,ETF
 Vanguard S&P Small Cap 600 GrowthEtf,ETF
 VelocityShares 3x Long Natural Gas linked to S&P GEtf,ETF
-VelocityShares Daily 2x VIX Short Term linked to SEtf,ETF
-VelocityShares 3x Inverse Crude S&P GSCI EREtf,ETF
-VelocityShares 3x Long Crude S&P GSCI EREtf,ETF
 VelocityShares 3x Inverse Natural Gas linked to S&Etf,ETF
-VelocityShares 3x Long Silver linked to S&P GSCI SEtf,ETF
-VelocityShares 3x Inverse Silver linked to S&P GSCEtf,ETF
-VelocityShares 3x Long Gold linked to SP GSCI GoldEtf,ETF
-VelocityShares 3x Inverse Gold linked to S&P GSCIEtf,ETF
-VelocityShares VIX Short Term linked to SP 500 VIXEtf,ETF
-VelocityShares Daily Inverse VIX Medium TermEtf,ETF
-VelocityShares 1x Long VSTOXX FuturesEtf,ETF
 VelocityShares Daily 4X Long USD vs. EUREtf,ETF
 VelocityShares Daily 4X Long EUR vs. USDEtf,ETF
-VelocityShares 1x Daily Inverse VSTOXX FuturesEtf,ETF
 Vident International EquityEtf,ETF
 Vident Core U.S. EquityEtf,ETF
 Vident Core U.S. Bond StrategyEtf,ETF
@@ -4032,41 +3873,27 @@ WisdomTree CBOE S&P 500 PutWrite StrategyEtf,ETF
 WisdomTree Emerging Markets Local DebtEtf,ETF
 WisdomTree Europe SmallCap DividendEtf,ETF
 Wisdom Tree Dividend Ex-FinancialsEtf,ETF
-WisdomTree Middle East DividendEtf,ETF
 WisdomTree US SmallCap Quality Dividend GrowthEtf,ETF
 WisdomTree Managed Futures StrategyEtf,ETF
-WisdomTree Dynamic LongShort U.S. EquityEtf,ETF
 WisdomTree International MidCap DividendEtf,ETF
 WisdomTree Dynamic Currency Hedged International SEtf,ETF
 WisdomTree Global High DividendEtf,ETF
-WisdomTree Negative Duration High Yield BondEtf,ETF
 WisdomTree Fundamental U.S. High Yield Corporate BEtf,ETF
 WisdomTree Global ex US Quality Dividend GrowthEtf,ETF
-WisdomTree EM Dividend FundEtf,ETF
 WisdomTree Japan SmallCap DividendEtf,ETF
 WisdomTree China ex-State-Owned EnterprisesEtf,ETF
 WisdomTree Global ex-US Real EstateEtf,ETF
 WisdomTree Emerging Markets Quality Dividend GrowtEtf,ETF
 WisdomTree Japan Hedged SmallCap EquityEtf,ETF
 WisdomTree Europe Hedged SmallCap EquityEtf,ETF
-WisdomTree Barclays Negative Duration US AggregateEtf,ETF
 Wisdom Tree International Dividend Ex-FinancialsEtf,ETF
 WisdomTree Europe Quality Dividend GrowthEtf,ETF
-WisdomTree Balanced IncomeEtf,ETF
-WisdomTree Dynamic Bearish U.S. Equity FundEtf,ETF
 WisdomTree Germany Hedged EquityEtf,ETF
-WisdomTree Emerging Markets Consumer GrowthEtf,ETF
 WisdomTree Bloomberg US Dollar BullishEtf,ETF
 WisdomTree Emerging Currency StrategyEtf,ETF
 WisdomTree Chinese Yuan StrategyEtf,ETF
-WisdomTree Total EarningsEtf,ETF
 WisdomTree LargeCap ValueEtf,ETF
-WisdomTree Dynamic Currency Hedged International QEtf,ETF
-WisdomTree ICBCCS S&P China 500Etf,ETF
 WisdomTree Emerging Markets Corporate BondEtf,ETF
-WisdomTree Japan MultifactorEtf,ETF
-WisdomTree Asia-Pacific ex-JapanEtf,ETF
-WisdomTree Europe MultifactorEtf,ETF
 Xtrackers Low Beta High Yield BondEtf,ETF
 Xtrackers Short Duration High YieldEtf,ETF
 GoldCommodity,Commodity

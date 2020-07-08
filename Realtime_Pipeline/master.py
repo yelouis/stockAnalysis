@@ -19,6 +19,7 @@ def main():
     pipelineP2.main()
     pipelineP3.main()
     pipelineP4.main()
+    quit()
 
 
     '''

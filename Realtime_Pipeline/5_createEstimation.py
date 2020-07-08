@@ -57,25 +57,21 @@ def makePredictionsDict(lassoDF, threshold):
     dateDF = pd.read_csv(os.path.join(Path(_configKeys.STANDARDIZED_FOLDER), _configKeys.YVALUETICKER+".csv"))
     dates = list(dateDF["Date"].values)
     #print (len(predictionsDict))
-    predictionsDict ["Date"] = dates[1:]
+    predictionsDict["Date"] = dates[1:]
     #print (len(predictionsDict))
     xValueNames = list(lassoDF['Feature Name'].values)
 
     for column in lassoDF.columns:
         if "_coefficients" in str(column):
 
-            predictionList = [] #predictionList is a list where each index corresponds with a week and the value at each index is the
-            #summation of the multiplications of every coefficient and the corresponding value of the feature name at the corresponding week
+            predictionList = []
 
-            #count() returns the number of non-NAN rows in a dataframe
-            #shape() returns a tuple containing the dimension of the dataframe as: (height, width)
-
-            #Changed initialization of predictionList -------------------------------------
             predictionList = [0]*(dateDF.shape[0]-1)
 
             coefficients = list(lassoDF[column].values)
             yValueName = column.split("_")[:-1]
             yValueName = str(yValueName[0]) + "_" + str(yValueName[1]) + "_" + str(yValueName[2])
+
             for i in range(len(coefficients)):
                 coefficient = coefficients[i]
                 if abs(coefficient) > threshold:
@@ -83,29 +79,27 @@ def makePredictionsDict(lassoDF, threshold):
                     #xValueName: stock name/ticker
                     xValueName = lassoDF.iloc[i][1]
                     print(str(_configKeys.STANDARDIZED_FOLDER) + xValueName.split("_")[0]+".csv")
-                    try:
-                        featureStockDF = pd.read_csv(os.path.join(Path(_configKeys.STANDARDIZED_FOLDER), xValueName.split("_")[0]+".csv"))
+                    featureStockDF = pd.read_csv(os.path.join(Path(_configKeys.STANDARDIZED_FOLDER), xValueName.split("_")[0]+".csv"))
 
-                        #print (str(xValueName))
-                        #This code gives us the weekly data for the affecting feature
-                        #print (featureStockDF.columns)
-                        #print()
+                    #print (str(xValueName))
+                    #This code gives us the weekly data for the affecting feature
+                    #print (featureStockDF.columns)
+                    #print()
 
-                        #Changed accessing correct column ------------------------------
+                    #Changed accessing correct column ------------------------------
 
-                        #print (str(featureStockCol))
-                        featureWeekList = list(featureStockDF[xValueName].values[:-1])
-                        #print (len(featureWeekList)) #CORRECT SIZE
-                        for x in range(len(featureWeekList[:-1])):
-                            #Multiplies this column's values by the coefficient and adds the result to the total prediction list
+                    #print (str(featureStockCol))
+                    featureWeekList = list(featureStockDF[xValueName].values[:-1])
+                    #print (len(featureWeekList)) #CORRECT SIZE
+                    for x in range(len(featureWeekList[:-1])):
+                        #Multiplies this column's values by the coefficient and adds the result to the total prediction list
 
-                            #look into np.arrays
-                            #np.array(featureWeekList) * coefficient
-                            #predictionList + featureWeekList (if both ar np.arrays)
-                            featureWeekDataPoint = featureWeekList[x]
-                            predictionList[x] += coefficient * featureWeekDataPoint
-                    except:
-                        print(str(xValueName) + " does not exists in current data")
+                        #look into np.arrays
+                        #np.array(featureWeekList) * coefficient
+                        #predictionList + featureWeekList (if both ar np.arrays)
+                        featureWeekDataPoint = featureWeekList[x]
+                        predictionList[x] += coefficient * featureWeekDataPoint
+                    print(str(xValueName) + " does not exists in current data")
 
             predictionsDict[yValueName+"_Predicted"] = predictionList
             predictionsDict[yValueName+"_Actual"] = predictionList

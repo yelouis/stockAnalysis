@@ -92,7 +92,7 @@ def makeUnstandardizedTestingDF(stdDF, window_length):
 
         if "Actual" in col:
             #print(str(len(actualList)) + "Actual")
-            unstdDF[col] = actualList[window_length:]
+            unstdDF[col] = actualList[window_length-1:]
 
     return unstdDF
 

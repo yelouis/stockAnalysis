@@ -247,3 +247,6 @@ def main():
     successfulDict = {"FileName" : [name]}
     df = pd.DataFrame(successfulDict, columns = ["FileName"])
     df.to_csv('5successfulTesting.csv', index=False)
+
+if __name__ == "__main__":
+    main()

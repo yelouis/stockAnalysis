@@ -110,6 +110,9 @@ calc: (a6 - mean([a2, a3, a4, a5, a6]))/ std.[a2, a3, a4, a5, a6] -> guess s6
         something()
 '''
 
+
+
+
 def makeUnstandardizedTestingDF(stdDF, window_length):
     columnList = list(stdDF.keys())
     ticker = columnList[1].split("_")[0]
@@ -134,9 +137,10 @@ def makeUnstandardizedTestingDF(stdDF, window_length):
             unstandardizedListPredicted = []
             #TODO: Need to use Cole's list
             # unstandardizedListPredicted = calculate_unstandardized(predList, actualList, window_length)
-            for i in range(len(predList)):
+            for j in range(len(predList)):
                 #indexing
-                unstandardizedListPredicted.append(Estimate_Unstandardized(predList[i], actualList[i:i+window_length-1], window_length))
+                #unstandardizedListPredicted.append(Estimate_Unstandardized(predList[i], actualList[i:i+window_length-1], window_length))
+                unstandardizedListPredicted.append(Estimate_Unstandardized(predList[j], actualList[len(actualList) - len(predList) + j - _configKeys.WINDOW_LENGTH + 1:len(actualList) - len(predList) + j], window_length))
 
             '''
             for i in range(len(predList)):
@@ -148,7 +152,9 @@ def makeUnstandardizedTestingDF(stdDF, window_length):
 
         if "Actual" in col:
             #print(str(len(actualList)) + "Actual")
-            unstdDF[col] = actualList[window_length:]
+            #unstdDF[col] = actualList[window_length:]
+            unstdDF[col] = actualList[-len(predList):]
+
 
     return unstdDF
 

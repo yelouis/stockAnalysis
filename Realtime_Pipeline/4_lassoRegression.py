@@ -98,8 +98,8 @@ def main():
             yValues = yValueDict[yValueName]
             singleYValueResult = lassoRegressionImplement(xValues, yValues, xValueNames, yValueName, alpha, beta)
             allYValueResults = pd.concat([allYValueResults, singleYValueResult], axis=1, sort=False)
-        path = os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), str(_configKeys.YVALUETICKER) + str(format(alpha, '.1f')) +"_alpha"+ str(int(beta)) + "_beta" + '.csv')
-        listOfSuccessfulLasso.append(str(_configKeys.YVALUETICKER) + str(format(alpha, '.1f')) +"_alpha"+ str(int(beta)) + "_beta")
+        path = os.path.join(Path(_configKeys.LASSO_RESULTS_FOLDER), str(_configKeys.YVALUETICKER) + str(round(alpha, 2)) +"_alpha"+ str(int(beta)) + "_beta" + '.csv')
+        listOfSuccessfulLasso.append(str(_configKeys.YVALUETICKER) + str(round(alpha, 2)) +"_alpha"+ str(int(beta)) + "_beta")
         allYValueResults.to_csv(path)
         print("--- %s seconds ---" % (time.time() - start_time))
         alpha += 0.05

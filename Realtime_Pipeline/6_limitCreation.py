@@ -37,8 +37,8 @@ def calculateLimitPrice(estimationFileName_df):
     buyPredictedValues = list(estimationFileName_df[buy_marker_predicted].values)[:-1]
     buyActualValues = list(estimationFileName_df[buy_marker_actual].values)[:-1]
 
-    sellPrice = initialSellPrice - calculateMeanError(sellActualValues, sellPredictedValues)
-    buyPrice = initialBuyPrice - calculateMeanError(buyActualValues, buyPredictedValues)
+    sellPrice = initialSellPrice + calculateMeanError(sellActualValues, sellPredictedValues)
+    buyPrice = initialBuyPrice + calculateMeanError(buyActualValues, buyPredictedValues)
 
     limitsDict = {"Sell_Price": [sellPrice], "Buy_Price": [buyPrice]}
 

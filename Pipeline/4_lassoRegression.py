@@ -91,7 +91,7 @@ def main():
     yValueDict = readYValues()
 
     alpha = 0.05
-    for counter in range(9):
+    for counter in range(10):
         allYValueResults = pd.DataFrame()
         start_time = time.time()
         for yValueName in yValueDict:

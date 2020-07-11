@@ -40,7 +40,7 @@ def calculateLimitPrice(estimationFileName_df):
     sellPrice = initialSellPrice + calculateMeanError(sellActualValues, sellPredictedValues)
     buyPrice = initialBuyPrice + calculateMeanError(buyActualValues, buyPredictedValues)
 
-    limitsDict = {"Sell_Price": [sellPrice], "Buy_Price": [buyPrice]}
+    limitsDict = {"Date": [_configKeys.LASTINDEX], "Sell_Price": [sellPrice], "Buy_Price": [buyPrice]}
 
     return limitsDict
 
@@ -54,7 +54,7 @@ def main():
     estimationFileName = findCSV()
     estimationFileName_df = pd.read_csv(os.path.join(Path(_configKeys.TESTING_RESULTS_FOLDER), estimationFileName + "_test_results.csv"), low_memory=False)
     limits_Dict = calculateLimitPrice(estimationFileName_df)
-    limits_df = pd.DataFrame(limits_Dict, columns = ["Sell_Price", "Buy_Price"])
+    limits_df = pd.DataFrame(limits_Dict, columns = ["Date", "Sell_Price", "Buy_Price"])
 
     limits_df.to_csv(os.path.join(Path(_configKeys.LIMIT_RESULTS_FOLDER), estimationFileName+"_limit_results.csv"))
 
